@@ -100,6 +100,9 @@ def build(
     posted_iso = iso(posted_at)
     location = classify.clean_text(location) or "Not specified"
 
+    if config.US_ONLY and classify.is_us_location(location) is False:
+        return None
+
     job = {
         "id": job_id,
         "company": classify.clean_text(company) or "Unknown company",

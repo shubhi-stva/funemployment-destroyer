@@ -23,8 +23,31 @@ Two standing rules drive every filter in the collector:
    requirement, no numeric GPA floor, entry-level seniority, and no meaningful
    prior-experience ask (`FULLTIME_MAX_YEARS`, default 1).
 
+3. **United States only.** Postings positively identified as abroad are
+   dropped.
+
 Everything else — non-tech roles, degree-gated roles, GPA floors, and anything
 mid-level or above — is dropped at collection time.
+
+### Location filtering
+
+`classify.is_us_location()` returns True / False / None. Only a positive
+*False* is dropped, so a location too vague to place either way (a bare
+"Remote", an unlabelled office name) is kept — these boards are overwhelmingly
+US-based, and dropping the ambiguous cases would lose real US roles. Set
+`FD_US_ONLY=0` to disable the filter.
+
+A multi-site posting counts as US when *any* of its sites is —
+"London, England, New York, New York" is still open to someone in New York.
+
+Two traps worth knowing, both of which bit during implementation:
+
+- **Canadian provinces look like US states.** "Sparwood, BC" is British
+  Columbia. Provinces are checked before the US test.
+- **Substring matching is not enough.** "columbia" (Columbia, MD) matches
+  inside "British Columbia", which let a Vancouver posting through as US.
+  Matching is word-boundary aware, and accents are folded for comparison so
+  "München" is recognised despite NFKD splitting the umlaut.
 
 Seniority that cannot be positively established is treated as mid-level and
 dropped. An unstated level is not evidence of an open door, so the board stays

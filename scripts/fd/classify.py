@@ -604,3 +604,203 @@ def score_priority(job: dict) -> int:
             pass
 
     return max(0, min(5, score))
+
+# ------------------------------------------------------------------ country
+
+US_STATES = {
+    "alabama": "al", "alaska": "ak", "arizona": "az", "arkansas": "ar",
+    "california": "ca", "colorado": "co", "connecticut": "ct", "delaware": "de",
+    "florida": "fl", "georgia": "ga", "hawaii": "hi", "idaho": "id",
+    "illinois": "il", "indiana": "in", "iowa": "ia", "kansas": "ks",
+    "kentucky": "ky", "louisiana": "la", "maine": "me", "maryland": "md",
+    "massachusetts": "ma", "michigan": "mi", "minnesota": "mn",
+    "mississippi": "ms", "missouri": "mo", "montana": "mt", "nebraska": "ne",
+    "nevada": "nv", "new hampshire": "nh", "new jersey": "nj",
+    "new mexico": "nm", "new york": "ny", "north carolina": "nc",
+    "north dakota": "nd", "ohio": "oh", "oklahoma": "ok", "oregon": "or",
+    "pennsylvania": "pa", "rhode island": "ri", "south carolina": "sc",
+    "south dakota": "sd", "tennessee": "tn", "texas": "tx", "utah": "ut",
+    "vermont": "vt", "virginia": "va", "washington": "wa",
+    "west virginia": "wv", "wisconsin": "wi", "wyoming": "wy",
+    "district of columbia": "dc", "puerto rico": "pr",
+}
+
+# Abbreviations only count with a comma or boundary in front, so "IN" in
+# "Built IN Public" or "OR" in "Remote OR Hybrid" is not read as a state.
+_STATE_ABBR_RE = re.compile(
+    r"(?:,\s*|\(\s*)(" + "|".join(sorted(set(US_STATES.values()))) + r")\b\.?",
+    re.I,
+)
+_STATE_NAME_RE = re.compile(
+    r"\b(" + "|".join(sorted(US_STATES, key=len, reverse=True)) + r")\b", re.I
+)
+# "Thornton CO 80023" -- state abbreviation followed by a ZIP code.
+_US_ZIP_RE = re.compile(
+    r"\b(" + "|".join(sorted(set(US_STATES.values()))) + r")\s+\d{5}\b", re.I
+)
+# A leading "TX, Coppell".
+_US_LEADING_ABBR_RE = re.compile(
+    r"^\s*(" + "|".join(sorted(set(US_STATES.values()))) + r")\s*,", re.I
+)
+
+_US_COUNTRY_RE = re.compile(
+    r"\b(?:united states(?: of america)?|u\.?s\.?a\.?|usa|us)\b"
+    r"|\bnationwide\b|\banywhere in the u\.?s",
+    re.I,
+)
+
+# US cities distinctive enough to stand alone. Deliberately excludes names
+# shared with a foreign city -- Cambridge, Birmingham, Manchester, Portland,
+# Vancouver, London -- which must carry a state to count.
+_US_CITIES = {
+    "san francisco", "new york city", "nyc", "brooklyn", "manhattan",
+    "los angeles", "san diego", "san jose", "silicon valley", "palo alto",
+    "mountain view", "sunnyvale", "santa clara", "menlo park", "cupertino",
+    "redwood city", "berkeley", "oakland", "pasadena", "santa monica",
+    "culver city", "el segundo", "torrance", "irvine", "long beach",
+    "sacramento", "fremont", "seattle", "bellevue", "redmond", "kirkland",
+    "austin", "dallas", "houston", "plano", "richardson", "frisco",
+    "san antonio", "fort worth", "denver", "boulder", "colorado springs",
+    "chicago", "evanston", "atlanta", "miami", "orlando", "tampa",
+    "jacksonville", "philadelphia", "pittsburgh", "phoenix", "tempe",
+    "scottsdale", "chandler", "tucson", "detroit", "ann arbor",
+    "minneapolis", "st. paul", "saint paul", "nashville", "memphis",
+    "charlotte", "raleigh", "durham", "chapel hill", "columbus",
+    "indianapolis", "kansas city", "st. louis", "saint louis", "milwaukee",
+    "cincinnati", "cleveland", "salt lake city", "provo",
+    "las vegas", "reno", "boise", "portland, or", "baltimore",
+    "washington dc", "washington, d.c.", "arlington", "alexandria",
+    "reston", "mclean", "herndon", "bethesda", "rockville", "new orleans",
+    "birmingham, al", "huntsville", "omaha", "des moines", "madison",
+    "hoboken", "jersey city", "newark", "princeton", "stamford",
+    "new haven", "providence", "hartford", "buffalo", "rochester",
+    "syracuse", "albany", "pittsford", "spacex site", "boston", "alameda",
+    "scotts valley", "burbank", "thornton", "coppell", "redwood shores",
+}
+
+# Canadian provinces, which look exactly like US state abbreviations.
+_CA_PROVINCES = (
+    "british columbia", "ontario", "quebec", "alberta", "manitoba",
+    "saskatchewan", "nova scotia", "new brunswick", "newfoundland",
+    "prince edward island", "yukon", "nunavut", "northwest territories",
+)
+_CA_ABBR_RE = re.compile(
+    r"(?:,\s*|\(\s*)(bc|on|qc|ab|mb|sk|ns|nb|nl|pe|yt|nt|nu)\b\.?", re.I
+)
+
+# Region labels that are inherently not a US location.
+_NON_US_REGIONS = (
+    "latin america", "latam", "emea", "apac", "asia pacific", "middle east",
+    "europe", "eu remote", "worldwide", "global remote",
+)
+
+_NON_US_COUNTRIES = (
+    "united kingdom", "england", "scotland", "wales", "northern ireland",
+    "ireland", "canada", "mexico", "brazil", "argentina", "chile", "colombia",
+    "peru", "uruguay", "costa rica", "panama", "india", "china", "japan",
+    "south korea", "korea", "taiwan", "hong kong", "singapore", "malaysia",
+    "indonesia", "thailand", "vietnam", "philippines", "australia",
+    "new zealand", "germany", "france", "spain", "portugal", "italy",
+    "netherlands", "belgium", "luxembourg", "switzerland", "austria",
+    "sweden", "norway", "denmark", "finland", "iceland", "poland",
+    "czech republic", "czechia", "slovakia", "hungary", "romania",
+    "bulgaria", "greece", "turkey", "ukraine", "russia", "estonia",
+    "latvia", "lithuania", "croatia", "serbia", "slovenia", "israel",
+    "united arab emirates", "uae", "saudi arabia", "qatar", "egypt",
+    "nigeria", "kenya", "south africa", "ghana", "morocco", "pakistan",
+    "bangladesh", "sri lanka", "nepal",
+)
+
+_NON_US_CITIES = (
+    "london", "manchester", "birmingham, uk", "edinburgh", "glasgow",
+    "bristol", "leeds", "cambridge, uk", "oxford, uk", "belfast", "cardiff",
+    "dublin", "cork", "toronto", "vancouver, bc", "montreal", "ottawa",
+    "calgary", "waterloo, on", "bangalore", "bengaluru", "hyderabad",
+    "mumbai", "new delhi", "gurgaon", "gurugram", "noida", "pune",
+    "chennai", "kolkata", "ahmedabad", "berlin", "munich", "munchen",
+    "hamburg", "frankfurt", "cologne", "stuttgart", "dusseldorf", "paris",
+    "lyon", "toulouse", "marseille", "amsterdam", "rotterdam", "eindhoven",
+    "utrecht", "the hague", "brussels", "antwerp", "ghent", "zurich",
+    "geneva", "basel", "bern", "lausanne", "zug", "vienna",
+    "stockholm", "gothenburg", "oslo", "copenhagen", "helsinki",
+    "reykjavik", "warsaw", "krakow", "wroclaw", "gdansk",
+    "prague", "brno", "bratislava", "budapest", "bucharest", "cluj",
+    "sofia", "athens", "istanbul", "ankara", "kyiv", "kiev", "moscow",
+    "tallinn", "riga", "vilnius", "zagreb", "belgrade", "ljubljana",
+    "madrid", "barcelona", "valencia", "lisbon", "porto", "rome", "milan",
+    "turin", "sydney", "melbourne", "brisbane", "perth", "adelaide",
+    "canberra", "auckland", "wellington", "christchurch", "tokyo", "osaka",
+    "kyoto", "seoul", "busan", "beijing", "shanghai", "shenzhen",
+    "guangzhou", "hangzhou", "taipei", "tel aviv", "jerusalem", "haifa",
+    "herzliya", "dubai", "abu dhabi", "doha", "riyadh", "cairo", "lagos",
+    "nairobi", "cape town", "johannesburg", "manila", "cebu", "jakarta",
+    "bangkok", "ho chi minh", "hanoi", "kuala lumpur", "sao paulo",
+    "rio de janeiro", "buenos aires", "santiago", "bogota",
+    "lima", "mexico city", "monterrey", "guadalajara",
+)
+
+
+def _fold(text: str) -> str:
+    """Strip combining marks so accented place names compare as plain ASCII."""
+    return "".join(ch for ch in text if not unicodedata.combining(ch))
+
+
+def _mentions(haystack: str, needles) -> bool:
+    """Word-boundary containment.
+
+    Plain substring matching is wrong here: "columbia" (Columbia, MD) matches
+    inside "British Columbia", which let a Vancouver posting through as US.
+    """
+    for needle in needles:
+        start = 0
+        while True:
+            i = haystack.find(needle, start)
+            if i == -1:
+                break
+            before = haystack[i - 1] if i > 0 else " "
+            after_i = i + len(needle)
+            after = haystack[after_i] if after_i < len(haystack) else " "
+            if not before.isalpha() and not after.isalpha():
+                return True
+            start = i + 1
+    return False
+
+
+def is_us_location(location: str) -> bool | None:
+    """True if the location is in the US, False if abroad, None if unclear.
+
+    A posting listing several sites counts as US when *any* of them is in the
+    US -- "London, England, New York, New York" is still open to someone
+    based in New York.
+    """
+    # clean_text applies NFKD, which splits "u" from its umlaut, so a needle
+    # like "munchen" cannot match "Mu<combining diaeresis>nchen". Drop the
+    # combining marks for matching only -- display text is untouched.
+    text = _fold(norm(location))
+    if not text:
+        return None
+
+    # A Canadian province abbreviation is checked before the US test, because
+    # "BC" and "ON" are shaped exactly like US state abbreviations.
+    canadian = _CA_ABBR_RE.search(text) or _mentions(text, _CA_PROVINCES)
+
+    us = bool(
+        _US_COUNTRY_RE.search(text)
+        or _STATE_ABBR_RE.search(text)
+        or _STATE_NAME_RE.search(text)
+        or _US_ZIP_RE.search(text)
+        or _US_LEADING_ABBR_RE.search(text)
+        or _mentions(text, _US_CITIES)
+    )
+
+    if canadian and not us:
+        return False
+    if us:
+        return True
+
+    if (_mentions(text, _NON_US_COUNTRIES)
+            or _mentions(text, _NON_US_CITIES)
+            or _mentions(text, _NON_US_REGIONS)):
+        return False
+
+    return None

@@ -76,5 +76,11 @@ if os.environ.get("FD_INCLUDE_UNSPECIFIED") == "1":
 # years-of-experience minimum above FULLTIME_MAX_YEARS is dropped, as is
 # anything whose seniority could not be positively established -- an unstated
 # level is not evidence of an open door.
+# United States only. Postings positively identified as abroad are dropped;
+# a location too vague to place either way (a bare "Remote", an unlabelled
+# office name) is kept, since these boards are overwhelmingly US-based and
+# dropping them would lose real US roles.
+US_ONLY = os.environ.get("FD_US_ONLY", "1") == "1"
+
 FULLTIME_MAX_LEVEL = 1  # see classify.LEVEL_RANK; 1 == Entry Level
 FULLTIME_MAX_YEARS = 0  # any quoted years-of-experience ask disqualifies
