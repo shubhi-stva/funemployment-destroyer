@@ -66,19 +66,34 @@ _DEGREE_MENTION = re.compile(
 _WINDOW_BEFORE = 90
 _WINDOW_AFTER = 150
 
-# An explicit escape hatch: the degree is one acceptable path, not the only one.
+# A genuine escape hatch: the posting says outright that no degree is needed.
+#
+# "Bachelor's degree OR equivalent practical experience" is deliberately NOT
+# here. It is not an open door -- it is a degree gate whose only alternative
+# is years of professional experience. Someone with neither fails both
+# branches, so treating it as "no degree required" surfaced exactly the roles
+# this board exists to filter out.
 _ESCAPE_RE = re.compile(
+    r"no degree"
+    r"|degree (?:is )?not (?:required|necessary|needed)"
+    r"|not required"
+    r"|we do not require"
+    r"|do(?:es)? not require a (?:college |university )?degree"
+    r"|regardless of (?:degree|education|background)"
+    r"|self[- ]taught"
+    r"|bootcamp"
+    r"|no formal education"
+    r"|degree[- ]?free"
+)
+
+# "Degree or equivalent experience" -- a gate with an experience-shaped
+# alternative. Treated as a requirement, because the alternative is exactly
+# the thing an early-career candidate does not have.
+_DEGREE_OR_EXPERIENCE_RE = re.compile(
     r"or equivalent"
     r"|equivalent (?:practical |work |industry |professional |relevant )?experience"
     r"|in lieu of"
-    r"|not required"
-    r"|no degree"
-    r"|degree (?:is )?not"
     r"|or (?:relevant|practical|comparable) experience"
-    r"|we do not require"
-    r"|regardless of (?:degree|education)"
-    r"|self[- ]taught"
-    r"|bootcamp"
 )
 
 _PREFERRED_RE = re.compile(
@@ -144,6 +159,15 @@ _GRAD_RE = re.compile(
     r"|\bms\b(?=\s*(?:in|or|/|,|degree)\b)"
 )
 
+# Degree-level undergraduate signals ONLY. Used by the graduate-only test,
+# where loose words like "junior" (which appears in plenty of job titles and
+# body copy) were wrongly cancelling a real "graduate degree" requirement.
+_UNDERGRAD_DEGREE_RE = re.compile(
+    r"\b(?:bachelor'?s|bachelors|b\.s\.|b\.a\.|bsc|ba/bs|bs/ms|undergrad(?:uate)?"
+    r"|associate'?s)\b"
+    r"|\b(?:bs|ba)\b(?=\s*(?:in|or|/|,|degree)\b)"
+)
+
 # Undergraduate alternatives. "New grad"/"recent graduate" describe someone
 # finishing a bachelor's, so they must NOT count as graduate-level signals.
 _UNDERGRAD_RE = re.compile(
@@ -200,8 +224,8 @@ def is_graduate_only(title: str, text_lower: str) -> bool:
     if not _GRAD_RE.search(text_lower):
         return False
     # Graduate credentials mentioned -- keep it only if an undergraduate
-    # route is offered too.
-    return not _UNDERGRAD_RE.search(text_lower)
+    # *degree* route is offered too. Weak words like "junior" do not count.
+    return not _UNDERGRAD_DEGREE_RE.search(text_lower)
 
 
 def has_gpa_requirement(text_lower: str) -> bool:
@@ -241,6 +265,10 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
             enrolled = True
         if _ESCAPE_RE.search(window):
             escape = True
+        elif _DEGREE_OR_EXPERIENCE_RE.search(window):
+            # A degree-or-experience gate. Both branches are closed to
+            # someone without a degree and without professional experience.
+            required = True
         elif _PREFERRED_RE.search(window):
             preferred = True
         else:
@@ -342,6 +370,20 @@ NON_TECH_HINTS = (
     "product specialist", "operations specialist", "payroll specialist",
     "hr specialist", "recruiting coordinator", "content strategist",
     "designer", "ux research", "ui/ux", "product design",
+    # Engineering disciplines that are not software. The generic "engineer"
+    # keyword below was sweeping these in as Software Engineering -- 9% of
+    # the board was civil and structural work. Bare "mechanical" and
+    # "electrical" are deliberately NOT listed: those are frequently robotics
+    # roles, which is a category the board does want.
+    "civil engineer", "civil engineering", "structural engineer",
+    "structural engineering", "bridge", "water resources", "wastewater",
+    "environmental engineer", "environmental engineering", "chemical engineer",
+    "chemical engineering", "petroleum", "geotechnical", "hvac", "mep ",
+    "nuclear engineer", "mining engineer", "metallurg", "biomedical",
+    "industrial engineer", "industrial engineering", "industrial environmental",
+    "manufacturing engineer", "process engineer", "packaging engineer",
+    "acoustic", "welding", "piping", "surveying", "land development",
+    "site design", "architectural", "construction",
     # Operations / physical
     "operations manager", "supervisor", "fulfillment", "inventory",
     "shipping", "logistics", "warehouse", "supply chain", "manufacturing",
@@ -351,16 +393,24 @@ NON_TECH_HINTS = (
 
 
 
+def is_non_tech_title(title: str) -> bool:
+    """True when the title itself rules the role out of scope.
+
+    This is a *positive rejection*, distinct from "no category matched", and
+    callers must not paper over it with a fallback category.
+    """
+    title_hay = f" {norm(title)} "
+    return any(hint in title_hay for hint in NON_TECH_HINTS)
+
+
 def classify_category(title: str, department: str = "") -> str | None:
     """Return one of the eight categories, or None if it is not a tech role."""
     hay = f" {norm(title)} {norm(department)} "
 
     # A hard non-tech signal in the *title* disqualifies immediately, so
-    # "Sales Engineer" and "Marketing Analyst" do not slip into Data.
-    title_hay = f" {norm(title)} "
-    for hint in NON_TECH_HINTS:
-        if hint in title_hay:
-            return None
+    # "Sales Engineer" and "Civil Engineering Intern" cannot slip through.
+    if is_non_tech_title(title):
+        return None
 
     for category, keywords in CATEGORY_RULES:
         if any(keyword in hay for keyword in keywords):
@@ -421,7 +471,13 @@ LEVEL_RANK = {
 _SENIOR_RE = re.compile(r"\b(senior|sr\.?|lead|manager|head of)\b")
 _STAFF_RE = re.compile(r"\b(staff|principal|distinguished|fellow|director|vp|vice president|chief)\b")
 _ENTRY_RE = re.compile(r"\b(new ?grad|graduate|entry[- ]level|early career|junior|jr\.?|associate|apprentice|university grad|campus)\b")
-_YEARS_RE = re.compile(r"(\d{1,2})\+?\s*(?:-|to|–)?\s*(?:\d{1,2})?\s*years?(?:'| of)?\s+(?:of\s+)?(?:relevant\s+|professional\s+|industry\s+)?experience")
+# Allows words between the count and "experience": the earlier version
+# required them to be adjacent and so missed "2+ years of professional
+# software engineering experience", letting a mid-level role through.
+_YEARS_RE = re.compile(
+    r"(\d{1,2})\s*\+?\s*(?:-|to|\u2013|\u2014)?\s*(?:\d{1,2})?\s*\+?\s*"
+    r"years?\b[^.\n;]{0,70}?\bexperience\b"
+)
 
 
 # Postings that say outright that no background is needed.

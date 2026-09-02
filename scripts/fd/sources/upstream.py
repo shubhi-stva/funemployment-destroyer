@@ -42,7 +42,14 @@ def collect() -> list[dict]:
         if not job_id or not title or not url:
             continue
 
-        # Prefer our own title-based bucketing; fall back to the feed's.
+        # A title that is positively non-tech is rejected outright. The feed's
+        # own coarse category must not resurrect it -- that fallback was
+        # reinstating civil-engineering internships as "Software".
+        if classify.is_non_tech_title(title):
+            continue
+
+        # Otherwise prefer our own bucketing, falling back to the feed's hint
+        # only when our classifier simply found no match.
         category = classify.classify_category(title, row.get("category") or "")
         if category is None:
             category = CATEGORY_HINT.get((row.get("category") or "").strip().lower())
