@@ -94,7 +94,8 @@ degree mention and reads the ~240-character window around it:
 
 | Window contains | Verdict |
 | --- | --- |
-| "or equivalent experience", "in lieu of", "no degree" | **No degree required** |
+| "no degree required", "self-taught", "bootcamp welcome" | **No degree required** |
+| "degree **or equivalent experience**", "in lieu of" | **Degree required** -> dropped |
 | "preferred", "a plus", "nice to have", "bonus" | **Degree preferred** |
 | "currently enrolled", "pursuing", "rising senior" | **Currently enrolled** |
 | nothing qualifying it (a bare bullet) | **Degree required** → dropped |
@@ -120,6 +121,16 @@ The chip is shown only where it tells you something actionable:
 
 Equal-opportunity boilerplate is skipped, and bare `master` is ignored so
 *"learn and master complex systems"* is not read as a master's degree.
+
+### Why "or equivalent experience" is a gate
+
+*"Bachelor's degree **or equivalent practical experience**"* is not an open
+door. It is a degree requirement whose only alternative is years of
+professional experience, and a candidate with neither fails both branches. It
+is classified **Degree required** and dropped from full-time results.
+
+Treating it as "no degree required" was surfacing exactly the roles this board
+exists to filter out.
 
 GPA is separate: a numeric floor anywhere in the posting (`3.0 GPA`,
 `minimum GPA of 3.5`) drops a full-time role outright, unless the posting
@@ -305,6 +316,17 @@ follow the same rule, so "open opportunities" means what is still outstanding.
 
 Favorites deliberately does *not* hide applied roles: it is a list curated by
 hand, and applying to something should not silently empty it.
+
+### Engineering disciplines
+
+The generic "engineer" keyword once swept in civil, structural, HVAC and
+water-resources roles as Software Engineering -- about 9% of the board. Those
+disciplines are excluded by title. Bare "mechanical" and "electrical" are
+deliberately still allowed, since those are frequently robotics roles.
+
+A title that is positively non-tech is a hard rejection: the upstream feed's
+own coarse category cannot override it. That fallback was reinstating
+civil-engineering internships as "Software".
 
 ## Company icons
 
