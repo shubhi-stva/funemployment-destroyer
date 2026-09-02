@@ -545,12 +545,14 @@ def score_priority(job: dict) -> int:
     if job.get("workMode") == WORKMODE_REMOTE:
         score += 1
 
-    # Freshness: anything inside the New window gets a nudge.
-    first_seen = job.get("firstSeen")
-    if first_seen:
+    # Freshness, measured from the posting date.
+    stamp = job.get("postedAt") or job.get("firstSeen")
+    if stamp:
         try:
-            seen = datetime.fromisoformat(first_seen.replace("Z", "+00:00"))
-            age_h = (datetime.now(timezone.utc) - seen).total_seconds() / 3600
+            posted = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+            if posted.tzinfo is None:
+                posted = posted.replace(tzinfo=timezone.utc)
+            age_h = (datetime.now(timezone.utc) - posted).total_seconds() / 3600
             if age_h <= 24:
                 score += 1
         except ValueError:

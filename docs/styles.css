@@ -399,16 +399,13 @@ body {
   border-top: 1px solid var(--border);
 }
 
-.timing { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
-
 .posted {
   margin: 0;
   font-size: .78rem;
   font-family: var(--mono);
   color: var(--accent-text);
+  min-width: 0;
 }
-
-.discovered { margin: 0; font-size: .72rem; color: var(--muted); font-family: var(--mono); }
 
 .actions { display: flex; align-items: center; gap: 6px; }
 

@@ -213,7 +213,7 @@ Each job:
 | `workMode` | `On site`, `Hybrid`, `Remote` |
 | `url` | Original posting; opens in a new tab |
 | `postedAt` | ISO datetime the company posted it. Kept date-only when the source gave no time of day, so the card never invents a "12:00 AM". |
-| `firstSeen` | ISO datetime this system first saw it — drives "New" and Newest/Oldest sort |
+| `firstSeen` | ISO datetime this system first saw it. Internal only — not displayed, and no longer used for sorting. |
 | `degreeRequirement` | `No degree required`, `Degree preferred`, `Currently enrolled`, `Degree required`, `Not specified` |
 | `experienceLevel` | e.g. `Intern`, `Entry Level`, `Mid Level` |
 | `status` | `open` / `closed` |
@@ -227,15 +227,23 @@ partially-populated feed still renders.
 Filter dropdown options are derived from the data at runtime — adding a new
 category or location to `jobs.json` requires no frontend change.
 
-### A job is "New" when
+### Recency
 
-`firstSeen` is within the last 72 hours (`CONFIG.newWindowHours` in `app.js`,
-`NEW_WINDOW_HOURS` in `config.py` — keep them in sync).
+Everything the UI calls recent is measured from **`postedAt`** — when the
+company published the role — not from when this collector noticed it:
 
-`firstSeen` is the moment **this collector** first saw the posting, not the date
-the ATS claims. It is persisted in `data/seen.json` across runs, because ATS
-publish dates are routinely backdated and would make the New badge meaningless.
-`seen.json` holds only job ids and timestamps — no personal activity.
+- **Newest / Oldest** sort by `postedAt`
+- The **New** badge means posted within the last 72 hours
+  (`CONFIG.newWindowHours` in `app.js`, `NEW_WINDOW_HOURS` in `config.py`)
+- The priority score's freshness bonus uses `postedAt`
+
+`firstSeen` still exists in the data and in `data/seen.json`, because it is the
+stable anchor that keeps a posting's identity across runs, but it is no longer
+shown on cards and no longer affects ordering.
+
+Caveat worth knowing: a handful of sources publish a date with no time of day,
+which sorts as midnight UTC, and an employer that re-publishes an old req can
+reset its `postedAt`. Both are the ATS's data, not a bug here.
 
 ## Personal state stays out of git
 

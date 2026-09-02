@@ -208,7 +208,9 @@
     };
     job.firstSeenTime = toTime(job.firstSeen);
     job.postedTime = toTime(job.postedAt);
-    job.isNew = isNew(job.firstSeenTime);
+    // Recency everywhere is measured from when the company posted the role,
+    // not when this collector happened to notice it.
+    job.isNew = isNew(job.postedTime || job.firstSeenTime);
     job.haystack = [job.company, job.title, job.category, job.location]
       .join(' ').toLowerCase();
     return job;
@@ -262,7 +264,7 @@
     var sorted = jobs.slice();
     switch (UI.sort) {
       case 'oldest':
-        sorted.sort(function (a, b) { return a.firstSeenTime - b.firstSeenTime; });
+        sorted.sort(function (a, b) { return sortTime(a) - sortTime(b); });
         break;
       case 'company':
         sorted.sort(function (a, b) {
@@ -271,13 +273,19 @@
         break;
       case 'priority':
         sorted.sort(function (a, b) {
-          return (b.priority - a.priority) || (b.firstSeenTime - a.firstSeenTime);
+          return (b.priority - a.priority) || (sortTime(b) - sortTime(a));
         });
         break;
       default: // newest
-        sorted.sort(function (a, b) { return b.firstSeenTime - a.firstSeenTime; });
+        sorted.sort(function (a, b) { return sortTime(b) - sortTime(a); });
     }
     return sorted;
+  }
+
+  // Posting date is the ordering key. firstSeen is only a fallback for the
+  // rare posting whose source published no date at all.
+  function sortTime(job) {
+    return job.postedTime || job.firstSeenTime;
   }
 
   function activeFilterCount() {
@@ -442,8 +450,6 @@
     var posted = field(node, 'postedAt');
     posted.textContent = job.postedAt ? 'Posted ' + formatDateTime(job.postedAt) : '';
     posted.hidden = !job.postedAt;
-
-    field(node, 'firstSeen').textContent = 'Found ' + formatDate(job.firstSeen);
 
     var apply = field(node, 'url');
     if (job.url) {

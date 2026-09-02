@@ -91,17 +91,22 @@ def apply_first_seen(jobs: list[dict], seen: dict[str, str]) -> dict[str, str]:
     return updated
 
 
+def _sort_stamp(job: dict) -> datetime | None:
+    """Ordering key: when the company posted it, not when we found it."""
+    return _parse(job.get("postedAt")) or _parse(job.get("firstSeen"))
+
+
 def prune(jobs: list[dict]) -> list[dict]:
-    """Drop stale postings, sort newest-first, and cap the payload."""
+    """Drop stale postings, sort newest-posted first, and cap the payload."""
     cutoff = datetime.now(timezone.utc) - timedelta(days=config.MAX_AGE_DAYS)
 
     fresh = []
     for job in jobs:
-        stamp = _parse(job.get("firstSeen")) or _parse(job.get("postedAt"))
+        stamp = _sort_stamp(job)
         if stamp is None or stamp >= cutoff:
             fresh.append(job)
 
-    fresh.sort(key=lambda j: _parse(j.get("firstSeen")) or datetime.min.replace(tzinfo=timezone.utc),
+    fresh.sort(key=lambda j: _sort_stamp(j) or datetime.min.replace(tzinfo=timezone.utc),
                reverse=True)
 
     if config.MAX_JOBS and len(fresh) > config.MAX_JOBS:
@@ -132,7 +137,7 @@ def summarise(jobs: list[dict]) -> dict:
         "internships": count(lambda j: j["type"] == "Internship"),
         "fullTime": count(lambda j: j["type"] == "Full Time"),
         "newLast72h": count(
-            lambda j: (_parse(j.get("firstSeen")) or datetime.min.replace(tzinfo=timezone.utc))
+            lambda j: (_sort_stamp(j) or datetime.min.replace(tzinfo=timezone.utc))
             >= now - window
         ),
         "noDegreeRequired": count(
