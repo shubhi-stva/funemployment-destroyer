@@ -31,10 +31,14 @@ BASE = "https://{tenant}.{dc}.myworkdayjobs.com"
 
 # Server-side queries, so we page through a fraction of each board rather
 # than all of it.
-SEARCHES = ("intern", "new grad", "university graduate", "entry level")
+# Kept deliberately short. Board coverage grew from 128 to 248 and pushed a
+# collection run to 16 minutes, uncomfortably close to the workflow timeout;
+# these three terms catch effectively the same postings as five did, because
+# results overlap heavily and the title screen runs afterwards anyway.
+SEARCHES = ("intern", "new grad", "entry level")
 
 PAGE = 20
-MAX_PAGES = 5          # per search term, per board
+MAX_PAGES = 3          # per search term, per board
 
 
 def load_sites() -> dict:

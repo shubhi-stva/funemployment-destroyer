@@ -364,19 +364,25 @@ steadily without any single run becoming expensive.
 
 ### Companies that cannot be collected
 
-Some large employers run their own career sites behind bot protection and
-publish no usable public API:
+Some large employers block automated access outright:
 
-| Company | Status |
+| Company | Response to a non-browser client |
 | --- | --- |
-| Tesla | `cua-api` returns **403** to non-browser clients |
-| TikTok / ByteDance | careers API **302**-redirects automated requests |
-| Apple, Google, Meta, Microsoft | no public unauthenticated job API |
+| Tesla | **403** on every careers API path |
+| TikTok / ByteDance | **302** redirect away from the jobs API |
+| Apple | **301** to a not-found page |
+| Meta | **400** |
+| LinkedIn | responds, but `robots.txt` is `Disallow: /` |
 
-Working around those measures would mean impersonating a browser to defeat a
-protection the company put there deliberately, so they are simply absent.
-They can still be reached through the upstream feed if it happens to carry
-them.
+These are deliberate controls, not gaps to route around. Reaching them would
+mean forging a browser identity to defeat anti-bot measures, and in
+LinkedIn's case ignoring an explicit machine-readable directive and their
+terms of service -- from a public repository, under the repository owner's
+name. They are therefore absent by design.
+
+The practical alternatives are the employers' own email job alerts, or an
+aggregator API whose terms permit programmatic access (Adzuna and USAJobs
+both offer free keys).
 
 ## Company icons
 
