@@ -227,6 +227,19 @@ This repo and site are public; application activity is not. Hidden jobs drop
 out of every list and can be restored from the collapsed drawer below the
 results.
 
+## Typography
+
+The UI uses **San Francisco**, Apple's system typeface, referenced through the
+system font stack (`-apple-system`, `BlinkMacSystemFont`, `system-ui`) rather
+than bundled. Apple's licence covers SF for app UI on Apple platforms, not
+redistribution, so shipping the font files in a public repo would violate it —
+and referencing the installed system copy is both legal and free of any
+download.
+
+On Apple devices this renders in real SF. Elsewhere it falls through to Segoe
+UI Variable (Windows), Roboto (Android), then Inter if installed. Numerals use
+SF Mono via `ui-monospace`.
+
 ## Known limits
 
 - **"As soon as posted" means ~30 minutes.** GitHub's cron queue is not
