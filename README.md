@@ -1,461 +1,331 @@
 # Funemployment Destroyer
 
-A personal tech internship and full-time job discovery dashboard.
-Static site, vanilla HTML/CSS/JS, hosted on GitHub Pages at:
+My personal job board. It goes out every 30 minutes, checks a few thousand
+company career pages, throws out everything I'm not eligible for, and puts
+what's left on a page I actually want to look at.
 
-https://shubhi-stva.github.io/funemployment-destroyer/
+Live at https://shubhi-stva.github.io/funemployment-destroyer/
 
-This is deliberately **not** a generic job board. It surfaces and organises a
-curated set of opportunities, with filters shaped around what actually matters
-to me (degree requirements, work mode, category, experience level).
+It's a static site. Vanilla HTML, CSS and JS, no framework, no backend, no
+database. The whole thing is a Python script that writes a JSON file and a
+page that reads it.
 
-## What it collects
+## What makes the cut
 
-Two standing rules drive every filter in the collector:
+Two things, and everything else gets dropped before it ever reaches the site.
 
-1. **Undergraduate internships — all seasons.** Summer, Fall, Spring, Winter,
-   co-ops. Roles requiring a master's, PhD or MBA are dropped, including the
-   "Graduate Intern" / "Graduate Co-op" labels that Intel and Altera use for
-   grad students. A posting offering both routes ("Bachelor's/Master's") is
-   kept.
-2. **Entry-level full-time tech roles where a degree is not a strict
-   requirement.** Kept unless the posting makes a bachelor's degree
-   mandatory. "Degree preferred", "degree or equivalent experience", and
-   postings that never mention education all qualify -- only an explicit
-   requirement (a bare qualifications bullet, or "(required)") disqualifies.
-   The GPA, seniority and prior-experience gates still apply.
+Undergraduate internships, any season. Summer, Fall, Spring, Winter, co-ops.
+If a posting wants a master's, a PhD or an MBA it's gone. That includes the
+"Graduate Intern" and "Graduate Co-op" wording Intel and Altera use for grad
+students, which reads like a normal internship title until you look it up.
 
-3. **United States only.** Postings positively identified as abroad are
-   dropped.
+Entry level full time roles where a degree isn't mandatory. A posting
+survives unless it makes a bachelor's a hard requirement. "Preferred" is
+fine. "Degree or equivalent experience" is fine. Never mentioning education
+at all is fine. The only thing that kills it is a real requirement, either
+spelled out or sitting there as a bare bullet under Qualifications.
 
-Everything else — non-tech roles, degree-gated roles, GPA floors, and anything
-mid-level or above — is dropped at collection time.
+On top of that: no GPA floors, no years of experience asked for, US only,
+and it has to be a tech role.
 
-### Location filtering
+## How the degree filter works
 
-`classify.is_us_location()` returns True / False / None. Only a positive
-*False* is dropped, so a location too vague to place either way (a bare
-"Remote", an unlabelled office name) is kept — these boards are overwhelmingly
-US-based, and dropping the ambiguous cases would lose real US roles. Set
-`FD_US_ONLY=0` to disable the filter.
+This decides whether something wastes my time, so it's fussier than the
+rest of the pipeline.
 
-A multi-site posting counts as US when *any* of its sites is —
-"London, England, New York, New York" is still open to someone in New York.
-
-Two traps worth knowing, both of which bit during implementation:
-
-- **Canadian provinces look like US states.** "Sparwood, BC" is British
-  Columbia. Provinces are checked before the US test.
-- **Substring matching is not enough.** "columbia" (Columbia, MD) matches
-  inside "British Columbia", which let a Vancouver posting through as US.
-  Matching is word-boundary aware, and accents are folded for comparison so
-  "München" is recognised despite NFKD splitting the umlaut.
-
-Seniority that cannot be positively established is treated as mid-level and
-dropped. An unstated level is not evidence of an open door, so the board stays
-smaller and more trustworthy rather than larger and more speculative.
-
-## How it works
-
-```
-GitHub Actions (every 30 min)
-  └─ scripts/collect.py
-       ├─ upstream internship CSV   (zshah101/...-Tech-Internships, MIT)
-       ├─ Greenhouse board API      ~1,034 companies
-       ├─ Lever postings API        ~375 companies
-       └─ Ashby posting API         ~687 companies
-            ↓  classify · filter · dedupe · rank
-       docs/data/jobs.json  →  committed  →  GitHub Pages
-```
-
-The frontend is unchanged by any of this: it still just reads `jobs.json`.
-
-### Sources
-
-| Source | Endpoint | Gives us |
-| --- | --- | --- |
-| Greenhouse | `boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true` | Full description, departments, first-published date |
-| Workday | `POST {tenant}.{dc}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` | ~1,750 employers incl. NVIDIA, Salesforce, Intel, Snap |
-| Lever | `api.lever.co/v0/postings/{slug}?mode=json` | Plain-text description, `workplaceType`, `commitment` |
-| Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` | `descriptionHtml`, `workplaceType`, `employmentType` |
-| Internship feed | [`zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships`](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) | ~460 internships, already deduped, refreshed every 30 min |
-
-All four are public, unauthenticated, read-only endpoints. The company →
-board-slug list (`data/companies.json`, 4,579 entries) also comes from that
-MIT-licensed repo; `scripts/refresh_companies.py` re-pulls it.
-
-### How the degree filter works
-
-This is the part that decides whether a job is worth your time, so it is
-deliberately careful. Real postings almost never say *"a degree is required"* —
-they put a bare bullet under Qualifications:
+Real postings almost never say "a degree is required." What they do is put a
+line under Qualifications that reads:
 
 > Bachelor's degree in Computer Science, Engineering, or related field.
 
-So rather than pattern-matching the whole posting, `fd/classify.py` finds every
-degree mention and reads the ~240-character window around it:
+So instead of scanning the whole posting for keywords, the collector finds
+every mention of a degree and reads the text right next to it. Whichever
+qualifier sits closest wins:
 
-| Window contains | Verdict |
+| What's next to the degree | Verdict |
 | --- | --- |
-| "no degree required", "self-taught", "bootcamp welcome" | **No degree required** |
-| "degree **or equivalent experience**", "in lieu of" | **Degree required** -> dropped |
-| "preferred", "a plus", "nice to have", "bonus" | **Degree preferred** |
-| "currently enrolled", "pursuing", "rising senior" | **Currently enrolled** |
-| nothing qualifying it (a bare bullet) | **Degree required** → dropped |
+| "no degree required", "self-taught", "bootcamp welcome" | No degree required |
+| "or equivalent experience", "in lieu of" | Degree or equivalent |
+| "preferred", "a plus", "nice to have" | Degree preferred |
+| "currently enrolled", "pursuing", "rising senior" | Currently enrolled |
+| nothing at all, just the bullet | Degree required, dropped |
 
-Windows inside pay or benefits text are skipped too. "Final compensation will
-be determined based on degree level" is a salary note, not a requirement —
-reading it as one previously mislabelled 68 internships as "Degree required".
+Proximity matters more than it sounds. A posting once listed:
 
-Internships are never reported as requiring a completed degree: a posting
-listing "Bachelor's degree in X" means the degree is *in progress*, which is
-what being an intern is, so anything short of an explicit no-degree-needed
-becomes **Currently enrolled**.
+```
+Bachelor's degree in computer science (required)
+Master's degree in computer science (preferred)
+```
 
-### The degree badge on cards
+A naive keyword scan sees "preferred" and lets it through. Reading the
+closest qualifier gets it right.
 
-The chip is shown only where it tells you something actionable:
+Two other things this had to learn:
 
-| Card | Chip |
+Equal opportunity boilerplate and pay text get skipped. "Final compensation
+will be determined based on degree level" is a salary note, not a
+requirement, and reading it as one was mislabelling dozens of internships.
+
+Internships are never reported as needing a finished degree. A bachelor's
+listed on an internship is in progress. That's what an internship is.
+
+## Why "or equivalent experience" is its own category
+
+"Bachelor's degree or equivalent practical experience" is not the open door
+it looks like. The alternative to the degree is years of professional work,
+which is exactly what someone starting out doesn't have. Both branches are
+shut.
+
+But this is different:
+
+> a degree in CS, or equivalent experience (projects, bootcamp, open source,
+> we care about what you can build)
+
+That one spells out what equivalent means, and it's portfolio work. So the
+collector checks whether the posting defines it. If it does and the answer is
+projects rather than years on the job, it counts as open.
+
+## Where the jobs come from
+
+| Source | What it gives |
 | --- | --- |
-| Internship | never shown — enrolment is implied by the role |
-| Full time, no degree required | **shown** |
-| Full time, degree preferred | hidden — a preference is not a gate |
+| Greenhouse | `boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true`, full description in one request |
+| Lever | `api.lever.co/v0/postings/{slug}?mode=json`, plain text description plus work mode |
+| Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` |
+| Workday | `POST {tenant}.{dc}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs`, roughly 1,750 employers |
+| Internship feed | [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships), MIT licensed |
 
-Equal-opportunity boilerplate is skipped, and bare `master` is ignored so
-*"learn and master complex systems"* is not read as a master's degree.
+All public, unauthenticated, read only. The company to board mapping in
+`data/companies.json` comes from that same MIT project.
 
-### Why "or equivalent experience" is a gate
+### Workday is annoying and worth it
 
-*"Bachelor's degree **or equivalent practical experience**"* is not an open
-door. It is a degree requirement whose only alternative is years of
-professional experience, and a candidate with neither fails both branches. It
-is classified **Degree required** and dropped from full-time results.
+Workday is by far the biggest ATS in the list, about 1,750 of the 4,600 or so
+employers in the list, including NVIDIA, Salesforce, Intel, Accenture and Snap. It nearly
+got skipped, because a Workday board is addressed by three values (tenant,
+data centre, site path) and the company list only gives me the tenant.
 
-Treating it as "no degree required" was surfacing exactly the roles this board
-exists to filter out.
+So `data/workday_sites.json` holds the coordinates I've confirmed, seeded
+from real URLs in the internship feed.
+`scripts/discover_workday.py` probes the plausible combinations for the ones
+I haven't resolved yet and caches both hits and misses, so dead ends aren't
+retried forever. It runs 40 tenants per collection, so coverage keeps
+climbing on its own and no single run gets expensive.
 
-GPA is separate: a numeric floor anywhere in the posting (`3.0 GPA`,
-`minimum GPA of 3.5`) drops a full-time role outright, unless the posting
-explicitly waives it.
+### What I can't get
 
-Postings that never mention education at all are classified `Not specified` and
-**excluded from full-time results by default** — silence is not evidence of an
-open door. Run the workflow manually with *"Also keep full-time roles that never
-mention a degree"* checked, or set `FD_INCLUDE_UNSPECIFIED=1`, to widen the net.
+Some companies block automated access outright:
 
-## Running the collector yourself
+| Company | What it returns |
+| --- | --- |
+| Tesla | 403 on every careers API path |
+| TikTok | 302 redirect away from the jobs API |
+| Apple | 301 to a not found page |
+| Meta | 400 |
+| LinkedIn | responds, but robots.txt says `Disallow: /` |
+
+These are deliberate blocks, not endpoints I failed to find. Getting past
+them means pretending to be a browser to defeat anti bot measures, and with
+LinkedIn also ignoring an explicit directive and their terms. This repo is
+public and runs on a schedule under my name, so no thanks. Email alerts on
+those five sites take ten minutes to set up once.
+
+## Whose job is it anyway
+
+A board's registered name isn't always the employer. Some are aggregators.
+The `internshiplist2000` board carries 29 Geotab roles under the name
+"Internship List", which is how I ended up clicking Apply on a card that said
+one company and landed on another.
+
+So the employer gets worked out in three steps, each one only used if the
+last fails:
+
+1. The board name, with board wording trimmed off. "IntegraFEC
+   Internships" becomes IntegraFEC.
+2. The posting text, which nearly always names the company in the first
+   couple of lines. "Who we are: Geotab is..." gives me Geotab.
+3. The board slug, which often carries it when nothing else does.
+   `axontalentcommunity` gives me Axon.
+
+Getting the name right also fixes the logo, since icons are looked up by
+company.
+
+## Running it
 
 ```bash
 pip install -r scripts/requirements.txt
 
-python scripts/collect.py                    # full run (~5 min, ~2,100 boards)
-python scripts/collect.py --limit 25 --dry-run   # smoke test, writes nothing
+python scripts/collect.py                        # full run
+python scripts/collect.py --limit 25 --dry-run   # quick check, writes nothing
 python scripts/collect.py --ats lever            # one platform
-python scripts/collect.py --no-upstream          # skip the internship feed
+python scripts/discover_workday.py --limit 100   # find more Workday boards
+python scripts/audit.py --type "Full Time" -v    # re-check what's published
 ```
 
-Env knobs: `FD_MAX_WORKERS`, `FD_MAX_JOBS`, `FD_MAX_AGE_DAYS`,
-`FD_BOARD_LIMIT`, `FD_INCLUDE_UNSPECIFIED`.
+Knobs: `FD_MAX_WORKERS`, `FD_MAX_JOBS`, `FD_MAX_AGE_DAYS`, `FD_BOARD_LIMIT`,
+`FD_US_ONLY`. To loosen the full time filter, edit `FULLTIME_MAX_LEVEL` and
+`FULLTIME_MAX_YEARS` in `scripts/fd/config.py`.
 
-To widen the full-time net, raise `FULLTIME_MAX_LEVEL` / `FULLTIME_MAX_YEARS` in
-`scripts/fd/config.py`.
+The collector won't write an empty `jobs.json`, so a bad network run leaves
+the last good data alone.
 
-The collector refuses to write an empty `jobs.json`, so a bad network run
-leaves the last good data in place.
+## Looking at it locally
 
-## Project structure
+Just open `docs/index.html`. It works from disk: the page tries
+`data/jobs.json` and falls back to `data/jobs.js`, which is the same payload
+as a script tag, for when the browser blocks fetch on `file://`.
+
+For something closer to production:
+
+```bash
+cd docs && python3 -m http.server 8000
+```
+
+## Layout
 
 ```
-docs/                     the published site (GitHub Pages root)
+docs/                     the published site
   index.html
   styles.css
   app.js
-  data/jobs.json          generated -- do not hand-edit
-  data/jobs.js            same payload, for opening index.html from disk
-  .nojekyll
+  data/jobs.json          generated, don't hand edit
+  data/jobs.js            same payload, for opening the file directly
 scripts/
-  collect.py              collector entry point
-  refresh_companies.py    re-pull the board list
-  requirements.txt
+  collect.py              main entry point
+  audit.py                re-checks published listings against live postings
+  discover_workday.py     finds Workday board coordinates
+  stamp_assets.py         cache busting for css and js
   fd/
-    config.py             every tunable knob
-    classify.py           degree / GPA / category / work mode / seniority
-    record.py             build + vet one job record
-    http.py               pooled session, retries, thread fan-out
-    build.py              dedupe, firstSeen persistence, prune, write
-    sources/              greenhouse.py lever.py ashby.py upstream.py
+    config.py             every knob
+    classify.py           degree, GPA, category, location, seniority, season
+    record.py             builds and vets one job
+    enrich.py             fetches descriptions the feed didn't include
+    logos.py              company name to domain
+    http.py               pooled sessions, retries, thread fan out
+    build.py              dedupe, prune, write
+    sources/              greenhouse, lever, ashby, workday, upstream
 data/
-  companies.json          4,579 company -> ATS slug mappings
-  seen.json               id -> when we first saw it (NOT personal state)
-  logos.json              company -> domain cache for company icons
+  companies.json          company to ATS mapping
+  workday_sites.json      confirmed Workday board coordinates
+  logos.json              company to domain cache
+  seen.json               when each posting was first spotted
 .github/workflows/
-  collect.yml             the every-30-minutes job
+  collect.yml             the every 30 minutes job
 ```
 
-All asset paths are relative (`./styles.css`, `./app.js`, `./data/jobs.json`),
-so the site works under the `/funemployment-destroyer/` project path without a
-`<base>` tag and without hardcoding a domain.
+## The data file
 
-## Previewing locally
-
-**Just double-click `docs/index.html`.** It works from disk: the page tries
-`data/jobs.json` first and falls back to `data/jobs.js` (the same payload as a
-`<script>` assignment) when the browser blocks `fetch()` on `file://`.
-
-For a preview that matches production exactly, serve it over HTTP:
-
-```bash
-cd docs
-python3 -m http.server 8000
-```
-
-Then open http://localhost:8000 — note this only works while that command is
-still running; closing the terminal stops the server.
-
-Any static server works — e.g. `npx serve docs` or `php -S localhost:8000 -t docs`.
-
-## Turning it on
-
-**Pages:** Settings → Pages → Source: *Deploy from a branch*, branch `main`,
-folder `/docs`.
-
-**Collection:** Settings → Actions → General → Workflow permissions:
-*Read and write permissions*. The workflow needs this to commit refreshed
-listings back to the repo.
-
-Then run **Actions → Collect jobs → Run workflow** once to seed it; after that
-the every-30-minutes schedule takes over. GitHub disables scheduled workflows on
-repos with no activity for 60 days, so it will pause if you stop touching the
-repo entirely.
-
-## Data model
-
-`docs/data/jobs.json` is either a bare array of jobs, or an object:
-
-```json
-{ "generatedAt": "ISO-8601", "schemaVersion": 1, "jobs": [ ... ] }
-```
-
-Each job:
+`docs/data/jobs.json` is `{ generatedAt, schemaVersion, stats, seasons, jobs }`.
 
 | Field | Notes |
 | --- | --- |
-| `id` | Stable unique string. Used as the localStorage key — must not change between runs. |
-| `company` | |
-| `title` | |
-| `type` | `Internship` or `Full Time` |
-| `category` | Software Engineering, AI / Machine Learning, Data, Cybersecurity, Cloud / Infrastructure, Developer Productivity, Product Engineering, Robotics |
-| `season` | Earliest term named, e.g. `Summer 2027`; `null` for full-time |
-| `seasons` | Every term the posting names. "Spring/Summer/Fall 2027" becomes three entries, so the role appears under each. An empty list means the posting named no term and is treated as open to any. |
-| `companyDomain` | Resolved company website, used to fetch a company icon. Empty when unresolved — the card falls back to a monogram. |
-| `location` | Free text, e.g. `New York, NY` |
-| `workMode` | `On site`, `Hybrid`, `Remote` |
-| `url` | Original posting; opens in a new tab |
-| `postedAt` | ISO datetime the company posted it. Kept date-only when the source gave no time of day, so the card never invents a "12:00 AM". |
-| `firstSeen` | ISO datetime this system first saw it. Internal only — not displayed, and no longer used for sorting. |
-| `degreeRequirement` | `No degree required`, `Degree or equivalent`, `Degree preferred`, `Currently enrolled`, `Degree required`, `Not specified` |
-| `experienceLevel` | e.g. `Intern`, `Entry Level`, `Mid Level` |
-| `status` | `open` / `closed` |
-| `priority` | Number, 0–5. Drives "Highest priority" sort. |
-| `source` | ATS or site the job came from |
-| `notes` | Short free-text note shown on the card |
+| `id` | ATS requisition id. Not stable, see below. |
+| `key` | Hash of company, title and location. This is the real identity. |
+| `company`, `title`, `location`, `url` | |
+| `companyUrl` | The board page. The company name on each card links here. |
+| `companyDomain` | Used for the icon. Empty means the card falls back to a monogram. |
+| `type` | Internship or Full Time |
+| `category` | One of eight buckets |
+| `season` / `seasons` | "Spring/Summer/Fall 2027" becomes three entries so it shows under each. Empty list means no season named, treated as open to any. |
+| `workMode` | On site, Hybrid, Remote, Not specified |
+| `postedAt` | Kept date only when the source gave no time, so cards never invent a midnight |
+| `firstSeen` | Internal. Not shown, not used for sorting. |
+| `degreeRequirement` | No degree required, Degree or equivalent, Degree preferred, Currently enrolled, Degree required, Not specified |
+| `experienceLevel` | Intern or Entry Level (nothing else survives) |
+| `priority` | 0 to 5, drives the priority sort |
+| `notes` | Short line shown on the card |
 
-Missing fields are normalised to sensible defaults in `normaliseJob()`, so a
-partially-populated feed still renders.
+Missing fields get sensible defaults, so a partly populated feed still
+renders. Filter options are built from the data at runtime, so adding a new
+category or location needs no frontend change.
 
-Filter dropdown options are derived from the data at runtime — adding a new
-category or location to `jobs.json` requires no frontend change.
+## Recency
 
-### Recency
+Everything the page calls recent is measured from `postedAt`, the date the
+company published the role. Not from when I found it. It used to do that and the sort
+order looked wrong because of it.
 
-Everything the UI calls recent is measured from **`postedAt`** — when the
-company published the role — not from when this collector noticed it:
+The New badge means posted in the last 24 hours.
 
-- **Newest / Oldest** sort by `postedAt`
-- The **New** badge means posted within the last 24 hours
-  (`CONFIG.newWindowHours` in `app.js`, `NEW_WINDOW_HOURS` in `config.py`)
-- The priority score's freshness bonus uses `postedAt`
+Worth knowing: ATS publish dates can be reset. If an employer re-lists an old
+requisition, it jumps to the top even though it isn't new.
 
-`firstSeen` still exists in the data and in `data/seen.json`, because it is the
-stable anchor that keeps a posting's identity across runs, but it is no longer
-shown on cards and no longer affects ordering.
+## My clicks stay in my browser
 
-Caveat worth knowing: a handful of sources publish a date with no time of day,
-which sorts as midnight UTC, and an employer that re-publishes an old req can
-reset its `postedAt`. Both are the ATS's data, not a bug here.
+Favorites, applied and hidden live in `localStorage` under `fd.state.v1`.
+This repo is public, so none of that belongs in it.
 
-## Personal state stays out of git
-
-**Favorites, Applied, and Hidden are never written to `jobs.json`.** They live
-in `localStorage` under the key `fd.state.v1`:
-
-```json
-{ "favorites": ["job-id"], "applied": ["job-id"], "hidden": ["job-id"] }
-```
-
-This repo and site are public; application activity is not. Hidden jobs drop
-out of every list and can be restored from the collapsed drawer below the
-results.
-
-## Typography
-
-The UI uses **San Francisco**, Apple's system typeface, referenced through the
-system font stack (`-apple-system`, `BlinkMacSystemFont`, `system-ui`) rather
-than bundled. Apple's licence covers SF for app UI on Apple platforms, not
-redistribution, so shipping the font files in a public repo would violate it —
-and referencing the installed system copy is both legal and free of any
-download.
-
-On Apple devices this renders in real SF. Elsewhere it falls through to Segoe
-UI Variable (Windows), Roboto (Android), then Inter if installed. Numerals use
-SF Mono via `ui-monospace`.
-
-### Applied roles leave the discovery list
-
-Marking a job **Applied** removes it from All, Internships, Full Time and New,
-and it lives in the Applied tab from then on. The header stats and tab counts
-follow the same rule, so "open opportunities" means what is still outstanding.
-
-Favorites deliberately does *not* hide applied roles: it is a list curated by
-hand, and applying to something should not silently empty it.
-
-### Engineering disciplines
-
-The generic "engineer" keyword once swept in civil, structural, HVAC and
-water-resources roles as Software Engineering -- about 9% of the board. Those
-disciplines are excluded by title. Bare "mechanical" and "electrical" are
-deliberately still allowed, since those are frequently robotics roles.
-
-A title that is positively non-tech is a hard rejection: the upstream feed's
-own coarse category cannot override it. That fallback was reinstating
-civil-engineering internships as "Software".
-
-### Whose job is it?
-
-An ATS board's registered name is not always the employer. Some are
-third-party aggregators -- the `internshiplist2000` board carries 29 Geotab
-roles under the name "Internship List" -- and others append board wording
-("IntegraFEC - Internships", "Axon ... Join Our Talent Community").
-
-The employer is resolved in three steps, each used only if the previous
-fails:
-
-1. **The board name**, with board-describing suffixes trimmed.
-2. **The posting text**, which nearly always names the employer in its
-   opening lines ("Who we are: Geotab is...", "At Stripe, we...").
-3. **The board slug**, which often carries it even when nothing else does
-   ("axontalentcommunity" -> Axon).
-
-Getting this right also fixes the logo, since icons are looked up by company
-name.
-
-### Workday board discovery
-
-Workday is the largest ATS in the company list -- about 1,750 of 4,579
-employers -- and a board is addressed by tenant + data centre + site path,
-while the list supplies only the tenant. Verified coordinates live in
-`data/workday_sites.json`, seeded from real URLs in the upstream feed.
-
-`scripts/discover_workday.py` probes the plausible combinations for tenants
-we have not resolved and caches both outcomes, so dead ends are not retried
-forever. It runs each collection with `--limit 60`, so coverage grows
-steadily without any single run becoming expensive.
-
-### Companies that cannot be collected
-
-Some large employers block automated access outright:
-
-| Company | Response to a non-browser client |
-| --- | --- |
-| Tesla | **403** on every careers API path |
-| TikTok / ByteDance | **302** redirect away from the jobs API |
-| Apple | **301** to a not-found page |
-| Meta | **400** |
-| LinkedIn | responds, but `robots.txt` is `Disallow: /` |
-
-These are deliberate controls, not gaps to route around. Reaching them would
-mean forging a browser identity to defeat anti-bot measures, and in
-LinkedIn's case ignoring an explicit machine-readable directive and their
-terms of service -- from a public repository, under the repository owner's
-name. They are therefore absent by design.
-
-The practical alternatives are the employers' own email job alerts, or an
-aggregator API whose terms permit programmatic access (Adzuna and USAJobs
-both offer free keys).
-
-## Company icons
-
-Job URLs point at ATS hosts, never the employer, so the domain is looked up
-from the company name via Clearbit's autocomplete endpoint and cached in
-`data/logos.json` — later runs only query companies not already cached. The
-card then loads `icons.duckduckgo.com/ip3/{domain}.ico` (DuckDuckGo rather
-than Google, so icon requests are not tied to a Google profile).
-
-About 70% of companies resolve. The rest — and any icon that 404s — fall back
-to a monogram tinted by a hash of the company name, so every card shows an
-identity and none shows a broken image.
-
-## Personal state survives a re-post
-
-Favorites, applied and hidden are stored under `key` -- a hash of company,
-title and location -- rather than the ATS requisition id. Requisition ids are
-not stable: an employer re-listing a role gets a new number, Workday paths
+They're keyed on `key`, not on the ATS id, and that matters. Requisition ids
+aren't stable. An employer re-listing a role gets a new number, Workday paths
 shift, and a dedupe tie can flip which id survives a run. Three postings
 changed id between two consecutive runs while being the same job, which under
-id-based storage would have silently cleared them from Applied.
+id based storage would have quietly cleared them out of Applied.
 
-Entries saved before this change (bare ids) are still recognised, so nothing
-already marked was lost.
+Anything saved before that change still works.
 
-## Asset caching
+Marking something applied takes it out of All, Internships, Full Time and
+New, and it lives in Applied from then on. Favorites is left alone on
+purpose, since that's a list I curated by hand and applying to something
+shouldn't empty it.
 
-GitHub Pages serves every file with `cache-control: max-age=600` and no
-version in the URL, so after a deploy a browser keeps using the `styles.css`
-and `app.js` it already has -- the page looks unchanged, and only a hard
-refresh fixes it. Nobody should need to know that.
+## Checking my own work
 
-`scripts/stamp_assets.py` appends a content hash to those links in
-`index.html` (`./styles.css?v=ce6f477ddc`), making each deploy a genuinely new
-URL. The hash changes only when the file's bytes change, so unchanged assets
-still cache normally. It runs on every collection and is idempotent.
+`scripts/audit.py` re-fetches the live postings behind everything on the site
+and works out the verdicts again from the raw text, instead of trusting what
+the collector stored. It runs on every collection, report only, so a
+classifier bug shows up in the run log rather than on the page.
 
-## Verification
+It has already caught things I missed by eye, including a full time role
+published as "No degree required" whose posting said the opposite.
 
-`scripts/audit.py` re-fetches the live postings behind `docs/data/jobs.json`
-and re-derives every gate from the raw text, rather than trusting the stored
-fields. It runs on every scheduled collection (report-only, so a regression
-shows up in the run log without blocking the data refresh).
+Currently around 880 of 1,000 listings get verified against their full text.
+The rest are on platforms with no reachable description (Oracle,
+SmartRecruiters), so those can only be checked by title.
 
-```bash
-python scripts/audit.py                  # everything
-python scripts/audit.py --type "Full Time" -v   # with the offending text
-```
+## Cache busting
 
-Current coverage: ~430 of 560 postings verified against full text. The
-remainder are on ATS platforms with no reachable description (Oracle,
-SmartRecruiters), and can only be checked by title.
+GitHub Pages serves everything with `cache-control: max-age=600` and no
+version in the URL, so after a deploy the browser keeps using the CSS and JS
+it already has. The page looks unchanged and only a hard refresh fixes it,
+which is a stupid thing to have to know.
 
-Postings from the upstream feed arrive title-only. `fd/enrich.py` fetches
-their descriptions from Workday's per-job endpoint so they face the same
-full-text gates as boards we poll directly -- without it, about half the
-board was screened by title alone.
+`scripts/stamp_assets.py` appends a content hash to the asset links, so every
+deploy is a URL the browser has genuinely never seen. The hash only changes
+when the file does, so nothing loses its cache for no reason.
 
-## Known limits
+## Setup
 
-- **"As soon as posted" means ~30 minutes.** GitHub's cron queue is not
-  punctual enough for a tighter schedule, and a static site has nothing to push
-  to. Trigger a run by hand from the Actions tab when you want it now.
-- **Output is capped at 3,000 jobs** (`FD_MAX_JOBS`), newest first, and anything
-  first seen more than 45 days ago is pruned. Both keep the page fast.
-- **Work mode is often `Not specified`** — Greenhouse simply does not expose it,
-  and many postings never say. Lever and Ashby do.
-- **Classification is heuristic.** It errs toward dropping a borderline job
-  rather than showing one that turns out to want a degree. Always confirm on the
-  posting itself before spending an application.
+Pages: Settings, then Pages, source "Deploy from a branch", branch `main`,
+folder `/docs`.
 
-## Attribution
+The workflow needs no permission changes, it declares `contents: write`
+itself.
 
-The internship feed and the company board list come from
-[`zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships`](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships),
-used under the MIT License.
+GitHub disables scheduled workflows after 60 days of no repo activity, so it
+will pause if I stop touching this entirely.
+
+## Things that are true and slightly annoying
+
+Every 30 minutes is the floor. GitHub's cron queue isn't punctual and a
+static site has nothing to push to, so expect 30 to 60 minutes in practice.
+The Run workflow button is instant.
+
+Work mode is often "Not specified" because Greenhouse doesn't expose it and
+plenty of postings never say.
+
+Classification is heuristic. It errs toward dropping a borderline job rather
+than showing one that turns out to want a degree. Check the actual posting
+before spending an application on it.
+
+Output is capped at 3,000 jobs, newest first, and anything first seen more
+than 45 days ago gets pruned.
+
+## Credits
+
+The internship feed and the company to board mapping both come from
+[zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships),
+used under the MIT License. Saved me building a company list from scratch.
+
+The UI uses San Francisco through the system font stack rather than bundling
+it, since Apple's licence covers app UI on Apple platforms and not
+redistribution.
