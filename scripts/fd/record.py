@@ -25,6 +25,12 @@ def iso(value) -> str:
         parsed = datetime.fromisoformat(text.replace("Z", "+00:00"))
     except ValueError:
         return ""
+
+    # A date-only source ("2026-09-01") carries no time of day. Keep it
+    # date-only so the card shows a date rather than a fabricated midnight.
+    if "T" not in text and " " not in text:
+        return parsed.date().isoformat()
+
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc).isoformat()
@@ -68,11 +74,15 @@ def build(
 
     if not internship:
         # --- full-time gate -------------------------------------------------
+        # Three independent conditions, all required: no degree gate, no GPA
+        # floor, and genuinely open to someone with no track record.
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
             return None
         if classify.has_gpa_requirement(haystack):
             return None
         if classify.LEVEL_RANK.get(experience, 9) > config.FULLTIME_MAX_LEVEL:
+            return None
+        if classify.requires_prior_experience(haystack):
             return None
 
     posted_iso = iso(posted_at)
@@ -105,9 +115,14 @@ def summarise(body: str, degree: str, internship: bool) -> str:
     bits = []
     if degree == classify.DEGREE_NO:
         bits.append("No degree gate")
-    years = classify.min_years_required(body.lower())
-    if years and not internship:
-        bits.append(f"{years}+ yrs experience asked")
+    if not internship:
+        low = body.lower()
+        if classify._NO_EXPERIENCE_RE.search(low):
+            bits.append("No experience required")
+        else:
+            years = classify.min_years_required(low)
+            if years:
+                bits.append(f"{years}+ yrs experience asked")
     if not bits:
         return ""
     return " · ".join(bits)

@@ -7,9 +7,11 @@
   --text: #14161d;
   --muted: #61667a;
   --border: #e2e5ee;
-  --accent: #4f46e5;
-  --accent-soft: #eceafe;
-  --accent-text: #4338ca;
+  --accent: #f4a0c0;          /* baby pink -- the identity colour */
+  --accent-strong: #d1497f;   /* deeper rose for borders, focus, links */
+  --accent-soft: #fdeaf2;     /* tinted fills: chips, brand mark, active tab */
+  --accent-text: #b03668;     /* pink that still passes contrast on light bg */
+  --on-accent: #3d0a22;       /* text sitting ON baby pink -- never white */
   --new: #0f766e;
   --new-soft: #d8f3ef;
   --radius: 14px;
@@ -27,9 +29,11 @@
     --text: #eceef4;
     --muted: #9aa1b4;
     --border: #262b37;
-    --accent: #8b83ff;
-    --accent-soft: #232041;
-    --accent-text: #c3bdff;
+    --accent: #f7b5d0;
+    --accent-strong: #f4a0c0;
+    --accent-soft: #3a1e2b;
+    --accent-text: #f9c8dc;
+    --on-accent: #2b0716;
     --new: #4fd1c5;
     --new-soft: #10312e;
     --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .3);
@@ -67,7 +71,7 @@ body {
 }
 .skip-link:focus { left: 12px; }
 
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 2px; }
 
 /* ---------- Header ---------- */
 
@@ -98,6 +102,22 @@ body {
   line-height: 1.15;
 }
 
+
+.byline {
+  margin: 5px 0 0;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.byline span {
+  color: var(--accent-text);
+  /* A hairline rule under the name, in the accent -- signature, not shouting. */
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
 
 .stats {
   display: grid;
@@ -147,7 +167,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.search:focus-within { border-color: var(--accent); }
+.search:focus-within { border-color: var(--accent-strong); }
 
 .search-icon { color: var(--muted); font-size: 1.25rem; padding-right: 10px; }
 
@@ -180,18 +200,19 @@ body {
   white-space: nowrap;
 }
 
-.btn:hover { border-color: var(--accent); color: var(--accent-text); }
+.btn:hover { border-color: var(--accent-strong); color: var(--accent-text); }
 
 .btn.primary {
   background: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
+  font-weight: 600;
 }
-.btn.primary:hover { filter: brightness(1.08); color: #fff; }
+.btn.primary:hover { filter: brightness(1.06); color: var(--on-accent); }
 
 .pill {
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
   border-radius: 999px;
   font-family: var(--mono);
   font-size: .72rem;
@@ -225,7 +246,7 @@ body {
 
 .tab.is-active {
   background: var(--accent-soft);
-  border-color: var(--accent);
+  border-color: var(--accent-strong);
   color: var(--accent-text);
   font-weight: 600;
 }
@@ -359,7 +380,16 @@ body {
   border-top: 1px solid var(--border);
 }
 
-.discovered { margin: 0; font-size: .78rem; color: var(--muted); font-family: var(--mono); }
+.timing { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+.posted {
+  margin: 0;
+  font-size: .78rem;
+  font-family: var(--mono);
+  color: var(--accent-text);
+}
+
+.discovered { margin: 0; font-size: .72rem; color: var(--muted); font-family: var(--mono); }
 
 .actions { display: flex; align-items: center; gap: 6px; }
 
@@ -375,8 +405,8 @@ body {
   padding: 0;
 }
 
-.icon-btn:hover { border-color: var(--accent); color: var(--accent-text); }
-.icon-btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+.icon-btn:hover { border-color: var(--accent-strong); color: var(--accent-text); }
+.icon-btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent-strong); color: var(--accent-text); }
 
 /* ---------- Empty / error states ---------- */
 
@@ -443,7 +473,23 @@ body {
 
 @media (max-width: 720px) {
   .wrap { padding: 0 14px; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .byline {
+  margin: 5px 0 0;
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.byline span {
+  color: var(--accent-text);
+  /* A hairline rule under the name, in the accent -- signature, not shouting. */
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+.stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .search-row { flex-direction: column; }
   .results { grid-template-columns: 1fr; }
   .card-foot { align-items: stretch; }

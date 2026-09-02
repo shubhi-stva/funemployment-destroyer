@@ -13,6 +13,8 @@ import re
 import unicodedata
 from datetime import datetime, timezone
 
+from . import config
+
 # --------------------------------------------------------------------- text
 
 _TAG_RE = re.compile(r"<[^>]+>")
@@ -256,6 +258,12 @@ NON_TECH_HINTS = (
     "solution architect", "solutions engineer", "solutions consultant",
     "sales engineer", "implementation", "onboarding", "trainer",
     "scrum master", "business analyst", "compliance", "auditor",
+    "support specialist", "support associate", "help desk", "helpdesk",
+    "service desk", "desktop support", "project assistant",
+    "project coordinator", "administrative assistant", "executive assistant",
+    "implementation specialist", "sales specialist", "marketing specialist",
+    "product specialist", "operations specialist", "payroll specialist",
+    "hr specialist", "recruiting coordinator", "content strategist",
     "designer", "ux research", "ui/ux", "product design",
     # Operations / physical
     "operations manager", "supervisor", "fulfillment", "inventory",
@@ -339,11 +347,27 @@ _ENTRY_RE = re.compile(r"\b(new ?grad|graduate|entry[- ]level|early career|junio
 _YEARS_RE = re.compile(r"(\d{1,2})\+?\s*(?:-|to|–)?\s*(?:\d{1,2})?\s*years?(?:'| of)?\s+(?:of\s+)?(?:relevant\s+|professional\s+|industry\s+)?experience")
 
 
+# Postings that say outright that no background is needed.
+_NO_EXPERIENCE_RE = re.compile(
+    r"no (?:prior |previous |professional |work |relevant )?experience (?:is )?(?:required|necessary|needed)"
+    r"|no experience necessary"
+    r"|0[-\s]*(?:to|-)?\s*1\s*years?"
+    r"|entry[- ]level"
+    r"|new ?grad(?:uate)?"
+    r"|early[- ]career"
+    r"|we will train|training provided|will train you"
+    r"|suitable for (?:recent )?graduates"
+)
+
+
 def classify_experience(title: str, text_lower: str, is_internship: bool) -> str:
     if is_internship:
         return "Intern"
 
     t = norm(title)
+    # Seniority in the title is the strongest signal and outranks the body --
+    # a "Senior Engineer" posting that mentions "entry-level" somewhere in its
+    # boilerplate is still a senior role.
     if _STAFF_RE.search(t):
         return "Staff+"
     if _SENIOR_RE.search(t):
@@ -351,7 +375,7 @@ def classify_experience(title: str, text_lower: str, is_internship: bool) -> str
     if _ENTRY_RE.search(t):
         return "Entry Level"
 
-    # Fall back to the years-of-experience ask in the body.
+    # The years-of-experience ask is the next most reliable thing.
     match = _YEARS_RE.search(text_lower)
     if match:
         years = int(match.group(1))
@@ -362,7 +386,25 @@ def classify_experience(title: str, text_lower: str, is_internship: bool) -> str
         if years <= 7:
             return "Senior"
         return "Staff+"
+
+    # No years quoted: an explicit "no experience required" still qualifies.
+    if _NO_EXPERIENCE_RE.search(text_lower):
+        return "Entry Level"
+
+    # Genuinely unstated. Guessing "Entry Level" here would flood the board
+    # with mid-level roles, so stay honest and let the caller drop it.
     return "Mid Level"
+
+
+def requires_prior_experience(text_lower: str) -> bool:
+    """True when the posting quotes any years-of-experience minimum.
+
+    An explicit "no experience required" wins, and "0-1 years" parses to 0,
+    so genuinely open roles still pass.
+    """
+    if _NO_EXPERIENCE_RE.search(text_lower):
+        return False
+    return min_years_required(text_lower) > config.FULLTIME_MAX_YEARS
 
 
 def min_years_required(text_lower: str) -> int:

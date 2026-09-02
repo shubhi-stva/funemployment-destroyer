@@ -430,6 +430,10 @@
     notes.textContent = job.notes;
     notes.hidden = !job.notes;
 
+    var posted = field(node, 'postedAt');
+    posted.textContent = job.postedAt ? 'Posted ' + formatDateTime(job.postedAt) : '';
+    posted.hidden = !job.postedAt;
+
     field(node, 'firstSeen').textContent = 'Found ' + formatDate(job.firstSeen);
 
     var apply = field(node, 'url');
@@ -459,6 +463,24 @@
     if (!t) return 'date unknown';
     var d = new Date(t);
     return d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function formatDateTime(iso) {
+    var t = toTime(iso);
+    if (!t) return 'date unknown';
+    var d = new Date(t);
+    var date = d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+
+    // A date-only value ("2026-09-01") carries no real time of day -- showing
+    // "12:00 AM" for it would be inventing precision the source never had.
+    if (!hasTimeComponent(iso)) return date;
+
+    var time = d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+    return date + ' at ' + time;
+  }
+
+  function hasTimeComponent(iso) {
+    return typeof iso === 'string' && iso.indexOf('T') !== -1;
   }
 
   function renderEmptyState() {

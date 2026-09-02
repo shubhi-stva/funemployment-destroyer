@@ -69,6 +69,10 @@ FULLTIME_ALLOWED_DEGREE: tuple[str, ...] = (
 if os.environ.get("FD_INCLUDE_UNSPECIFIED") == "1":
     FULLTIME_ALLOWED_DEGREE += ("Not specified",)
 
-# Full-time seniority we care about. Postings above this are dropped -- a
-# Distinguished Engineer opening is not a useful lead here.
-FULLTIME_MAX_LEVEL = 3  # see classify.LEVEL_RANK; 3 == Senior
+# Full-time roles must be genuinely open to someone starting out: entry level,
+# and asking for no meaningful prior experience. Anything that quotes a
+# years-of-experience minimum above FULLTIME_MAX_YEARS is dropped, as is
+# anything whose seniority could not be positively established -- an unstated
+# level is not evidence of an open door.
+FULLTIME_MAX_LEVEL = 1  # see classify.LEVEL_RANK; 1 == Entry Level
+FULLTIME_MAX_YEARS = 0  # any quoted years-of-experience ask disqualifies

@@ -14,11 +14,17 @@ to me (degree requirements, work mode, category, experience level).
 Two standing rules drive every filter in the collector:
 
 1. **Internships — all seasons.** Summer, Fall, Spring, Winter, co-ops.
-2. **Full-time tech roles with no degree or GPA gate.** A posting is kept only
-   when its text shows no hard education requirement.
+2. **Entry-level full-time tech roles with no degree, GPA, or experience gate.**
+   A full-time posting is kept only when *all four* hold: no hard education
+   requirement, no numeric GPA floor, entry-level seniority, and no meaningful
+   prior-experience ask (`FULLTIME_MAX_YEARS`, default 1).
 
-Everything else — non-tech roles, degree-gated full-time roles, postings with a
-numeric GPA floor, Staff/Principal+ openings — is dropped at collection time.
+Everything else — non-tech roles, degree-gated roles, GPA floors, and anything
+mid-level or above — is dropped at collection time.
+
+Seniority that cannot be positively established is treated as mid-level and
+dropped. An unstated level is not evidence of an open door, so the board stays
+smaller and more trustworthy rather than larger and more speculative.
 
 ## How it works
 
@@ -91,6 +97,9 @@ python scripts/collect.py --no-upstream          # skip the internship feed
 
 Env knobs: `FD_MAX_WORKERS`, `FD_MAX_JOBS`, `FD_MAX_AGE_DAYS`,
 `FD_BOARD_LIMIT`, `FD_INCLUDE_UNSPECIFIED`.
+
+To widen the full-time net, raise `FULLTIME_MAX_LEVEL` / `FULLTIME_MAX_YEARS` in
+`scripts/fd/config.py`.
 
 The collector refuses to write an empty `jobs.json`, so a bad network run
 leaves the last good data in place.
@@ -180,7 +189,7 @@ Each job:
 | `location` | Free text, e.g. `New York, NY` |
 | `workMode` | `On site`, `Hybrid`, `Remote` |
 | `url` | Original posting; opens in a new tab |
-| `postedAt` | ISO date the company posted it |
+| `postedAt` | ISO datetime the company posted it. Kept date-only when the source gave no time of day, so the card never invents a "12:00 AM". |
 | `firstSeen` | ISO datetime this system first saw it — drives "New" and Newest/Oldest sort |
 | `degreeRequirement` | `No degree required`, `Degree preferred`, `Currently enrolled`, `Degree required`, `Not specified` |
 | `experienceLevel` | e.g. `Intern`, `Entry Level`, `Mid Level` |
