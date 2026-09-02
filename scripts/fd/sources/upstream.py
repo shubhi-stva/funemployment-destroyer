@@ -84,7 +84,7 @@ def collect() -> list[dict]:
 
         jobs.append({
             "id": job_id,
-            "company": classify.clean_text(row.get("company")) or "Unknown company",
+            "company": record.resolve_company(row.get("company") or "", "", job_id),
             "title": title,
             "type": "Internship",
             "category": category,
@@ -101,6 +101,7 @@ def collect() -> list[dict]:
             "priority": 0,
             "source": _source_label(job_id),
             "companyDomain": "",
+            "companyUrl": record.careers_url(url),
             "notes": " · ".join(notes),
         })
 

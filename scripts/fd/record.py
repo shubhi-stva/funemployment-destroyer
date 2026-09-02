@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import datetime, timezone
+from urllib.parse import urlparse
 
 from . import classify, config
 
@@ -41,6 +42,47 @@ def iso(value) -> str:
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc).isoformat()
+
+
+def resolve_company(name: str, description: str, job_id: str) -> str:
+    """Employer name: board name, else the posting text, else the board slug."""
+    resolved = classify.clean_company_name(name, description)
+    if resolved and not classify.is_generic_company(resolved):
+        return resolved
+
+    parts = job_id.split(":")
+    if len(parts) >= 2:
+        from_slug = classify.company_from_slug(parts[1])
+        if from_slug:
+            return from_slug
+    return resolved or "Unknown company"
+
+
+def careers_url(job_url: str) -> str:
+    """The board page a posting lives on -- the employer's live job listing.
+
+    Derived by trimming the job-specific tail off the posting URL, so it
+    works for any board without a per-platform table.
+    """
+    if not job_url:
+        return ""
+    try:
+        parsed = urlparse(job_url)
+    except ValueError:
+        return ""
+
+    parts = [p for p in parsed.path.split("/") if p]
+    origin = f"{parsed.scheme}://{parsed.netloc}"
+
+    # greenhouse: /{slug}/jobs/{id}   lever & ashby: /{slug}/{uuid}
+    if "jobs" in parts:
+        parts = parts[:parts.index("jobs")]
+    elif "job" in parts:               # workday: /{site}/job/{loc}/{title}
+        parts = parts[:parts.index("job")]
+    elif len(parts) > 1:
+        parts = parts[:1]
+
+    return origin + ("/" + "/".join(parts) if parts else "")
 
 
 def build(
@@ -116,7 +158,7 @@ def build(
 
     job = {
         "id": job_id,
-        "company": classify.clean_text(company) or "Unknown company",
+        "company": resolve_company(company, description, job_id),
         "title": title,
         "type": "Internship" if internship else "Full Time",
         "category": category,
@@ -133,6 +175,7 @@ def build(
         "priority": 0,  # scored in build.py, once firstSeen is final
         "source": source,
         "companyDomain": "",   # filled in by fd.logos.attach()
+        "companyUrl": careers_url(url),
         "notes": summarise(body, degree, internship),
     }
     return job

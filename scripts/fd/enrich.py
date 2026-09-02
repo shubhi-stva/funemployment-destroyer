@@ -91,6 +91,11 @@ def _revalidate(job: dict) -> list[dict]:
         job["degreeRequirement"] = degree
         job["experienceLevel"] = level
 
+    # The board name may describe the board rather than the employer; the
+    # description usually names the real company.
+    if classify.is_generic_company(job.get("company", "")):
+        job["company"] = record.resolve_company(job["company"], text, job["id"])
+
     # Fill in details the CSV could not give us.
     if not job.get("seasons"):
         seasons = classify.extract_seasons(job["title"], text)

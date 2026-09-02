@@ -200,6 +200,7 @@
       season: str(raw.season),
       seasons: Array.isArray(raw.seasons) ? raw.seasons.slice() : (raw.season ? [str(raw.season)] : []),
       companyDomain: str(raw.companyDomain),
+      companyUrl: str(raw.companyUrl),
       location: str(raw.location) || 'Not specified',
       workMode: str(raw.workMode) || 'Not specified',
       url: str(raw.url),
@@ -474,7 +475,14 @@
     var node = el.template.content.firstElementChild.cloneNode(true);
     node.dataset.id = job.id;
 
-    field(node, 'company').textContent = job.company;
+    var companyEl = field(node, 'company');
+    companyEl.textContent = job.company;
+    if (job.companyUrl) {
+      companyEl.href = job.companyUrl;
+      companyEl.setAttribute('aria-label', 'All openings at ' + job.company);
+    } else {
+      companyEl.removeAttribute('href');
+    }
     field(node, 'title').textContent = job.title;
     field(node, 'type').textContent = job.type;
     field(node, 'category').textContent = job.category;

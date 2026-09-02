@@ -968,3 +968,114 @@ def is_us_location(location: str) -> bool | None:
         return False
 
     return None
+
+
+# ------------------------------------------------------------------ company
+
+# Board names that describe the board rather than the employer. Some are
+# third-party aggregators posting on behalf of other companies -- the
+# "Internship List" board carries 29 Geotab roles under its own name.
+_GENERIC_BOARD_RE = re.compile(
+    r"^(?:internship list|job board|jobs? board|talent (?:community|network)|"
+    r"join our talent community|careers?(?: page| site)?|open (?:roles|positions))$"
+    r"|internship list",
+    re.I,
+)
+
+# Suffixes describing the board, to be trimmed off an otherwise real name:
+# "IntegraFEC - Internships" -> "IntegraFEC".
+_BOARD_SUFFIX_RE = re.compile(
+    r"\s*[-\u2013(]*\s*(?:"
+    r"internships?|co-?op(?: opportunities)?|opportunities|careers? page|"
+    r"careers? site|careers?|campus(?: - website)?|website|job board|"
+    r"university recruiting|early careers?|talent community|hiring"
+    r")\s*\)?\s*$",
+    re.I,
+)
+
+# The employer usually names itself in the opening lines of its own posting.
+# Only the lead-in is case-insensitive: the captured name must still start
+# with a capital, which is what distinguishes "Geotab" from ordinary prose.
+_COMPANY_FROM_TEXT = (
+    re.compile(r"(?i:who we are)[:\s]+([A-Z][\w&.'\-]*(?:\s+[A-Z][\w&.'\-]*){0,3})"),
+    re.compile(r"(?i:\babout)\s+([A-Z][\w&.'\-]*(?:\s+[A-Z][\w&.'\-]*){0,2})\s*[:\-\u2013]"),
+    re.compile(r"(?i:\bat)\s+([A-Z][\w&.'\-]*(?:\s+[A-Z][\w&.'\-]*){0,2}),\s+(?i:we)\b"),
+    re.compile(r"^\s*([A-Z][\w&.'\-]*(?:\s+[A-Z][\w&.'\-]*){0,2})\s+(?i:is)\s+(?i:a|an|the)\b"),
+)
+
+_STOPWORDS = {
+    "we", "our", "the", "this", "join", "here", "as", "you", "your", "it",
+    "who", "what", "why", "about", "welcome", "hello", "job", "role",
+    "position", "internship", "company", "team",
+}
+
+
+def is_generic_company(name: str) -> bool:
+    """True when the board name does not identify a real employer."""
+    stripped = clean_text(name)
+    return bool(_GENERIC_BOARD_RE.search(stripped))
+
+
+def company_from_text(description: str) -> str | None:
+    """Pull the employer's own name out of the opening of its posting."""
+    text = clean_text(description)[:600]
+    if not text:
+        return None
+
+    for pattern in _COMPANY_FROM_TEXT:
+        found = pattern.search(text)
+        if not found:
+            continue
+        name = found.group(1).strip(" .,:;-\u2013")
+        # Trademark marks ride along with the name in body copy.
+        name = name.replace("\u00ae", "").replace("\u2122", "").strip()
+        first = name.split()[0].lower() if name.split() else ""
+        if first in _STOPWORDS or len(name) < 2 or len(name) > 40:
+            continue
+        return name
+    return None
+
+
+def clean_company_name(name: str, description: str = "") -> str:
+    """Best available employer name for a posting.
+
+    Prefers the board's own name, falls back to the description when that
+    name describes the board rather than a company.
+    """
+    name = clean_text(name)
+
+    if is_generic_company(name):
+        from_text = company_from_text(description)
+        if from_text:
+            return from_text
+        return name
+
+    # Trim a board-describing suffix, but never reduce a name to nothing.
+    trimmed = _BOARD_SUFFIX_RE.sub("", name).strip(" -\u2013,")
+    return trimmed or name
+
+
+# Board slugs often carry the employer even when the display name does not:
+# "axontalentcommunity" -> Axon.
+_SLUG_NOISE_RE = re.compile(
+    r"(?:talentcommunity|talentnetwork|talent|community|careers?|jobs?|"
+    r"internships?|interns?|coop|co-op|campus|university|recruiting|"
+    r"hiring|board|portal|list|opportunities|early ?careers?|\d+)+$"
+)
+
+
+def company_from_slug(slug: str) -> str | None:
+    """Recover an employer name from an ATS board slug, or None."""
+    base = re.sub(r"[^a-z0-9]", "", (slug or "").lower())
+    if not base:
+        return None
+
+    # Strip board-describing noise from the end, repeatedly.
+    previous = None
+    while base != previous:
+        previous = base
+        base = _SLUG_NOISE_RE.sub("", base)
+
+    if len(base) < 3 or base in _STOPWORDS:
+        return None
+    return base[0].upper() + base[1:]

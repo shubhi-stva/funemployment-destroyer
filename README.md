@@ -330,6 +330,25 @@ A title that is positively non-tech is a hard rejection: the upstream feed's
 own coarse category cannot override it. That fallback was reinstating
 civil-engineering internships as "Software".
 
+### Whose job is it?
+
+An ATS board's registered name is not always the employer. Some are
+third-party aggregators -- the `internshiplist2000` board carries 29 Geotab
+roles under the name "Internship List" -- and others append board wording
+("IntegraFEC - Internships", "Axon ... Join Our Talent Community").
+
+The employer is resolved in three steps, each used only if the previous
+fails:
+
+1. **The board name**, with board-describing suffixes trimmed.
+2. **The posting text**, which nearly always names the employer in its
+   opening lines ("Who we are: Geotab is...", "At Stripe, we...").
+3. **The board slug**, which often carries it even when nothing else does
+   ("axontalentcommunity" -> Axon).
+
+Getting this right also fixes the logo, since icons are looked up by company
+name.
+
 ## Company icons
 
 Job URLs point at ATS hosts, never the employer, so the domain is looked up
