@@ -17,6 +17,8 @@ COMPANIES_FILE = ROOT / "data" / "companies.json"
 SEEN_FILE = ROOT / "data" / "seen.json"
 # company name -> web domain, used to render a company icon
 LOGO_CACHE = ROOT / "data" / "logos.json"
+# verified Workday board coordinates: tenant -> {dc, site, name}
+WORKDAY_SITES = ROOT / "data" / "workday_sites.json"
 OUTPUT_FILE = ROOT / "docs" / "data" / "jobs.json"
 # Same data as a <script> assignment, for opening index.html from disk.
 FALLBACK_FILE = ROOT / "docs" / "data" / "jobs.js"
@@ -39,7 +41,7 @@ MAX_WORKERS = int(os.environ.get("FD_MAX_WORKERS", "24"))
 MAX_RETRIES = 2
 
 # Boards to poll. Ordered so the cheapest/densest platforms run first.
-ENABLED_ATS = ("greenhouse", "lever", "ashby")
+ENABLED_ATS = ("greenhouse", "lever", "ashby", "workday")
 
 # Cap on boards polled per run (0 = no cap). Useful for local smoke tests.
 BOARD_LIMIT = int(os.environ.get("FD_BOARD_LIMIT", "0"))

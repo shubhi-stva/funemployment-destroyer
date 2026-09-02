@@ -25,12 +25,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fd import build, config  # noqa: E402
 from fd import enrich  # noqa: E402
-from fd.sources import ashby, greenhouse, lever, upstream  # noqa: E402
+from fd.sources import ashby, greenhouse, lever, upstream, workday  # noqa: E402
 
 POLLERS = {
     "greenhouse": greenhouse.collect,
     "lever": lever.collect,
     "ashby": ashby.collect,
+    "workday": workday.collect,
 }
 
 log = logging.getLogger("fd")

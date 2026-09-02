@@ -1,0 +1,552 @@
+{
+ "2020companies": {
+  "dc": null,
+  "site": null,
+  "name": "2020 Companies",
+  "attempts": 1
+ },
+ "23andme": {
+  "dc": null,
+  "site": null,
+  "name": "23andMe",
+  "attempts": 1
+ },
+ "3m": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "3M"
+ },
+ "aaaie": {
+  "dc": null,
+  "site": null,
+  "name": "AAA Club Alliance",
+  "attempts": 1
+ },
+ "aaamidatlantic": {
+  "dc": "wd5",
+  "site": "aaamidatlantic",
+  "name": "AAA Club Alliance"
+ },
+ "abb": {
+  "dc": "wd3",
+  "site": "external_career_page",
+  "name": "ABB"
+ },
+ "abbott": {
+  "dc": "wd5",
+  "site": "abbottcareers",
+  "name": "Abbott"
+ },
+ "abcfinancial": {
+  "dc": null,
+  "site": null,
+  "name": "ABC Fitness",
+  "attempts": 1
+ },
+ "abcsupply": {
+  "dc": "wd1",
+  "site": "abcsupplycareers",
+  "name": "ABC Supply"
+ },
+ "ace": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "AAA Club Alliance"
+ },
+ "airproducts": {
+  "dc": "wd5",
+  "site": "AP0001",
+  "name": "Air Products"
+ },
+ "alliedsolutions": {
+  "dc": "wd501",
+  "site": "Allied_External",
+  "name": "Allied Solutions"
+ },
+ "altera": {
+  "dc": "wd1",
+  "site": "altera",
+  "name": "Altera Corporation"
+ },
+ "ambarella": {
+  "dc": "wd108",
+  "site": "ambarella",
+  "name": "Ambarella"
+ },
+ "amcor": {
+  "dc": "wd5",
+  "site": "amcor_external_career_site",
+  "name": "Amcor"
+ },
+ "americanfidelity": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "American Fidelity"
+ },
+ "analogdevices": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Analog Devices"
+ },
+ "ancestry": {
+  "dc": "wd501",
+  "site": "Careers",
+  "name": "Ancestry"
+ },
+ "aoins": {
+  "dc": "wd5",
+  "site": "AutoOwners",
+  "name": "Auto-Owners Insurance"
+ },
+ "bah": {
+  "dc": "wd1",
+  "site": "bah_jobs",
+  "name": "Booz Allen"
+ },
+ "bcbsla": {
+  "dc": "wd1",
+  "site": "Generation_Blue",
+  "name": "Louisiana Blue"
+ },
+ "brunswick": {
+  "dc": "wd1",
+  "site": "search",
+  "name": "Brunswick"
+ },
+ "caci": {
+  "dc": "wd1",
+  "site": "external",
+  "name": "CACI"
+ },
+ "canadiansolar": {
+  "dc": "wd5",
+  "site": "CanadianSolar",
+  "name": "Canadian Solar"
+ },
+ "cccis": {
+  "dc": "wd1",
+  "site": "broadbean_external",
+  "name": "CCC Intelligent Solutions"
+ },
+ "chemours": {
+  "dc": "wd103",
+  "site": "Chemours",
+  "name": "Chemours"
+ },
+ "clarios": {
+  "dc": "wd5",
+  "site": "clarioscareers",
+  "name": "Clarios"
+ },
+ "clearwateranalytics": {
+  "dc": "wd1",
+  "site": "Clearwater_Analytics_Careers",
+  "name": "CWAN"
+ },
+ "clr": {
+  "dc": "wd5",
+  "site": "CLR_Careers",
+  "name": "Continental Resources"
+ },
+ "cnoinc": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "CNO Financial Group"
+ },
+ "conagrabrands": {
+  "dc": "wd1",
+  "site": "Careers_US",
+  "name": "Conagra Brands"
+ },
+ "copart": {
+  "dc": "wd12",
+  "site": "copart",
+  "name": "Copart"
+ },
+ "crowe": {
+  "dc": "wd12",
+  "site": "external_careers",
+  "name": "Crowe"
+ },
+ "customersbank": {
+  "dc": "wd1",
+  "site": "customersbankcareers",
+  "name": "Customers Bank"
+ },
+ "dairynet": {
+  "dc": "wd1",
+  "site": "DPCcareers",
+  "name": "Dairyland Power Cooperative"
+ },
+ "draftkings": {
+  "dc": "wd1",
+  "site": "Campus_Career_Portal",
+  "name": "DraftKings"
+ },
+ "draper": {
+  "dc": "wd5",
+  "site": "Draper_Careers",
+  "name": "Draper"
+ },
+ "equifax": {
+  "dc": "wd5",
+  "site": "UR_External",
+  "name": "Equifax"
+ },
+ "fanniemae": {
+  "dc": "wd1",
+  "site": "FannieMaeCareers",
+  "name": "Fannie Mae"
+ },
+ "fifththird": {
+  "dc": "wd5",
+  "site": "53careers",
+  "name": "Fifth Third Bank"
+ },
+ "firstam": {
+  "dc": "wd1",
+  "site": "firstamericancareers",
+  "name": "First American"
+ },
+ "flir": {
+  "dc": "wd1",
+  "site": "flircareers",
+  "name": "Teledyne"
+ },
+ "fnbcorp": {
+  "dc": "wd501",
+  "site": "FNBCORP",
+  "name": "First National Bank"
+ },
+ "freddiemac": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Freddie Mac"
+ },
+ "gdit": {
+  "dc": "wd5",
+  "site": "external_career_site",
+  "name": "General Dynamics Information Technology"
+ },
+ "generac": {
+  "dc": "wd5",
+  "site": "external",
+  "name": "Generac"
+ },
+ "genpt": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Genuine Parts Company"
+ },
+ "globalfoundries": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "GlobalFoundries"
+ },
+ "globalhr": {
+  "dc": "wd5",
+  "site": "rec_rtx_ext_gateway",
+  "name": "RTX"
+ },
+ "hcmportal": {
+  "dc": "wd5",
+  "site": "Search",
+  "name": "United Parcel Service (UPS)"
+ },
+ "hdsupply": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "HD Supply"
+ },
+ "hp": {
+  "dc": "wd5",
+  "site": "ExternalCareerSite",
+  "name": "Hewlett Packard (HP)"
+ },
+ "iatinsurancegroup": {
+  "dc": "wd1",
+  "site": "iat",
+  "name": "IAT Insurance Group"
+ },
+ "idexx": {
+  "dc": "wd1",
+  "site": "IDEXX",
+  "name": "IDEXX"
+ },
+ "igsenergy": {
+  "dc": "wd1",
+  "site": "IGS",
+  "name": "IGS Energy"
+ },
+ "ing": {
+  "dc": "wd3",
+  "site": "icsgblcor",
+  "name": "ING"
+ },
+ "ingredion": {
+  "dc": "wd1",
+  "site": "IngredionCareers",
+  "name": "Ingredion"
+ },
+ "intel": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Intel"
+ },
+ "jj": {
+  "dc": "wd5",
+  "site": "JJ",
+  "name": "Johnson & Johnson"
+ },
+ "kbr": {
+  "dc": "wd5",
+  "site": "KBR_Careers",
+  "name": "KBR"
+ },
+ "keybank": {
+  "dc": "wd5",
+  "site": "External_Career_Site",
+  "name": "KeyBank"
+ },
+ "kla": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "KLA"
+ },
+ "leidos": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Leidos"
+ },
+ "magna": {
+  "dc": "wd3",
+  "site": "Magna",
+  "name": "Magna International"
+ },
+ "manulife": {
+  "dc": "wd3",
+  "site": "MFCJH_Jobs",
+  "name": "Manulife Financial"
+ },
+ "marmon": {
+  "dc": "wd501",
+  "site": "Marmon_Careers",
+  "name": "Marmon Holdings"
+ },
+ "marvell": {
+  "dc": "wd1",
+  "site": "marvellcareers",
+  "name": "Marvell"
+ },
+ "mastercard": {
+  "dc": "wd1",
+  "site": "Campus",
+  "name": "Mastercard"
+ },
+ "microchiphr": {
+  "dc": "wd5",
+  "site": "external",
+  "name": "Microchip Technology"
+ },
+ "micron": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Micron"
+ },
+ "monolithicpower": {
+  "dc": "wd12",
+  "site": "MPS_Careers",
+  "name": "Monolithic Power Systems"
+ },
+ "moog": {
+  "dc": "wd5",
+  "site": "moog_external_career_site",
+  "name": "Moog"
+ },
+ "motorolasolutions": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Motorola"
+ },
+ "my7elevenhr": {
+  "dc": "wd12",
+  "site": "Careers",
+  "name": "7-Eleven"
+ },
+ "ncnu": {
+  "dc": null,
+  "site": null,
+  "name": "AAA Mountainwest Group",
+  "attempts": 1
+ },
+ "nebraskablue": {
+  "dc": "wd1",
+  "site": "BCBSNE",
+  "name": "BlueCross BlueShield of Nebraska"
+ },
+ "newrez": {
+  "dc": "wd1",
+  "site": "NRZ",
+  "name": "Newrez"
+ },
+ "ngc": {
+  "dc": "wd1",
+  "site": "Northrop_Grumman_External_Site",
+  "name": "Northrop Grumman"
+ },
+ "nike": {
+  "dc": "wd1",
+  "site": "nke",
+  "name": "Nike"
+ },
+ "northwesternmutual": {
+  "dc": "wd5",
+  "site": "corporate-careers",
+  "name": "Northwestern Mutual"
+ },
+ "nrel": {
+  "dc": "wd5",
+  "site": "NLR",
+  "name": "National Laboratory of the Rockies"
+ },
+ "ntrs": {
+  "dc": "wd1",
+  "site": "northerntrust",
+  "name": "Northern Trust"
+ },
+ "nvidia": {
+  "dc": "wd5",
+  "site": "NVIDIAExternalCareerSite",
+  "name": "NVIDIA"
+ },
+ "oneok": {
+  "dc": "wd1",
+  "site": "ONEOK_Early_Careers",
+  "name": "ONEOK"
+ },
+ "oshkoshcorporation": {
+  "dc": "wd5",
+  "site": "Oshkosh",
+  "name": "Oshkosh"
+ },
+ "pentair": {
+  "dc": "wd5",
+  "site": "pentair_careers",
+  "name": "Pentair"
+ },
+ "philips": {
+  "dc": "wd3",
+  "site": "jobs-and-careers",
+  "name": "Philips"
+ },
+ "pimco": {
+  "dc": "wd1",
+  "site": "pimco-careers",
+  "name": "PIMCO"
+ },
+ "psecu": {
+  "dc": "wd12",
+  "site": "PSECU",
+  "name": "PSECU"
+ },
+ "qtsdatacenters": {
+  "dc": "wd5",
+  "site": "qts",
+  "name": "QTS"
+ },
+ "rockwellautomation": {
+  "dc": "wd1",
+  "site": "External_Rockwell_Automation",
+  "name": "Rockwell Automation"
+ },
+ "salesforce": {
+  "dc": "wd12",
+  "site": "External_Career_Site",
+  "name": "Salesforce"
+ },
+ "sbdinc": {
+  "dc": "wd1",
+  "site": "Stanley_Black_Decker_Career_Site",
+  "name": "Stanley Black & Decker"
+ },
+ "snapchat": {
+  "dc": "wd1",
+  "site": "snap",
+  "name": "Snap"
+ },
+ "stryker": {
+  "dc": "wd1",
+  "site": "StrykerCareers",
+  "name": "Stryker"
+ },
+ "tencent": {
+  "dc": "wd1",
+  "site": "Tencent_Careers",
+  "name": "Tencent"
+ },
+ "thales": {
+  "dc": "wd3",
+  "site": "careers",
+  "name": "Thales"
+ },
+ "thehartford": {
+  "dc": "wd5",
+  "site": "Careers_External",
+  "name": "The Hartford"
+ },
+ "tiaa": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "TIAA"
+ },
+ "trwd": {
+  "dc": "wd1",
+  "site": "TRWDCareers",
+  "name": "Tarrant Regional Water District"
+ },
+ "usfoods": {
+  "dc": "wd1",
+  "site": "usfoodscareersExternal",
+  "name": "US Foods"
+ },
+ "valeo": {
+  "dc": "wd3",
+  "site": "valeo_jobs",
+  "name": "Valeo"
+ },
+ "vanguard": {
+  "dc": "wd5",
+  "site": "vanguard_external",
+  "name": "Vanguard"
+ },
+ "vermeer": {
+  "dc": "wd5",
+  "site": "externalcareersite",
+  "name": "Vermeer"
+ },
+ "warnerbros": {
+  "dc": "wd5",
+  "site": "global",
+  "name": "Warner Bros."
+ },
+ "workday": {
+  "dc": "wd5",
+  "site": "workday",
+  "name": "Workday"
+ },
+ "workiva": {
+  "dc": "wd503",
+  "site": "careers",
+  "name": "Workiva"
+ },
+ "xcelenergy": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Xcel Energy"
+ },
+ "zoom": {
+  "dc": "wd5",
+  "site": "zoom",
+  "name": "Zoom"
+ }
+}

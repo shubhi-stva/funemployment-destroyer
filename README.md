@@ -75,6 +75,7 @@ The frontend is unchanged by any of this: it still just reads `jobs.json`.
 | Source | Endpoint | Gives us |
 | --- | --- | --- |
 | Greenhouse | `boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true` | Full description, departments, first-published date |
+| Workday | `POST {tenant}.{dc}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs` | ~1,750 employers incl. NVIDIA, Salesforce, Intel, Snap |
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json` | Plain-text description, `workplaceType`, `commitment` |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` | `descriptionHtml`, `workplaceType`, `employmentType` |
 | Internship feed | [`zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships`](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships) | ~460 internships, already deduped, refreshed every 30 min |
@@ -348,6 +349,34 @@ fails:
 
 Getting this right also fixes the logo, since icons are looked up by company
 name.
+
+### Workday board discovery
+
+Workday is the largest ATS in the company list -- about 1,750 of 4,579
+employers -- and a board is addressed by tenant + data centre + site path,
+while the list supplies only the tenant. Verified coordinates live in
+`data/workday_sites.json`, seeded from real URLs in the upstream feed.
+
+`scripts/discover_workday.py` probes the plausible combinations for tenants
+we have not resolved and caches both outcomes, so dead ends are not retried
+forever. It runs each collection with `--limit 60`, so coverage grows
+steadily without any single run becoming expensive.
+
+### Companies that cannot be collected
+
+Some large employers run their own career sites behind bot protection and
+publish no usable public API:
+
+| Company | Status |
+| --- | --- |
+| Tesla | `cua-api` returns **403** to non-browser clients |
+| TikTok / ByteDance | careers API **302**-redirects automated requests |
+| Apple, Google, Meta, Microsoft | no public unauthenticated job API |
+
+Working around those measures would mean impersonating a browser to defeat a
+protection the company put there deliberately, so they are simply absent.
+They can still be reached through the upstream feed if it happens to carry
+them.
 
 ## Company icons
 
