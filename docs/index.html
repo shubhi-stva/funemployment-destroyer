@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Funemployment Destroyer</title>
+<meta name="description" content="A personal opportunity radar for tech internships and full time roles.">
+<link rel="stylesheet" href="./styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#128293;</text></svg>">
+</head>
+<body>
+<a class="skip-link" href="#results">Skip to results</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">FD</div>
+      <div>
+        <h1>Funemployment Destroyer</h1>
+      </div>
+    </div>
+
+    <dl class="stats" id="stats">
+      <div class="stat"><dt>Open opportunities</dt><dd id="stat-total">—</dd></div>
+      <div class="stat"><dt>Added recently</dt><dd id="stat-new">—</dd></div>
+      <div class="stat"><dt>Internships</dt><dd id="stat-internships">—</dd></div>
+      <div class="stat"><dt>Full time</dt><dd id="stat-fulltime">—</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Search and filters">
+    <div class="search-row">
+      <label class="search" for="search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" autocomplete="off"
+               placeholder="Search company, title, category, or location…"
+               aria-label="Search opportunities">
+      </label>
+      <button type="button" class="btn ghost" id="toggle-filters" aria-expanded="false" aria-controls="filters">
+        Filters <span class="pill" id="filter-count" hidden>0</span>
+      </button>
+    </div>
+
+    <nav class="tabs" id="tabs" aria-label="Views">
+      <button class="tab is-active" data-tab="all" aria-current="page">All <span class="count" data-count="all"></span></button>
+      <button class="tab" data-tab="internships">Internships <span class="count" data-count="internships"></span></button>
+      <button class="tab" data-tab="fulltime">Full Time <span class="count" data-count="fulltime"></span></button>
+      <button class="tab" data-tab="new">New <span class="count" data-count="new"></span></button>
+      <button class="tab" data-tab="favorites">Favorites <span class="count" data-count="favorites"></span></button>
+      <button class="tab" data-tab="applied">Applied <span class="count" data-count="applied"></span></button>
+    </nav>
+
+    <div class="filters" id="filters" hidden>
+      <div class="filter"><label for="f-type">Job type</label><select id="f-type" data-filter="type"></select></div>
+      <div class="filter"><label for="f-category">Category</label><select id="f-category" data-filter="category"></select></div>
+      <div class="filter"><label for="f-location">Location</label><select id="f-location" data-filter="location"></select></div>
+      <div class="filter"><label for="f-workMode">Work mode</label><select id="f-workMode" data-filter="workMode"></select></div>
+      <div class="filter"><label for="f-degreeRequirement">Degree requirement</label><select id="f-degreeRequirement" data-filter="degreeRequirement"></select></div>
+      <div class="filter"><label for="f-experienceLevel">Experience level</label><select id="f-experienceLevel" data-filter="experienceLevel"></select></div>
+      <div class="filter filter-actions">
+        <button type="button" class="btn ghost" id="clear-filters">Reset filters</button>
+      </div>
+    </div>
+
+    <div class="result-bar">
+      <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
+      <label class="sort" for="sort">Sort
+        <select id="sort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="company">Company A–Z</option>
+          <option value="priority">Highest priority</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section id="results" class="results" aria-live="polite"></section>
+
+  <section class="hidden-drawer" id="hidden-drawer" hidden>
+    <details>
+      <summary><span id="hidden-summary">Hidden opportunities</span></summary>
+      <div class="hidden-body">
+        <p class="muted">Out of sight, still on record. Restore anything you buried too hastily.</p>
+        <ul class="hidden-list" id="hidden-list"></ul>
+        <button type="button" class="btn ghost" id="restore-all">Restore all</button>
+      </div>
+    </details>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Favorites, applied, and hidden state live only in this browser's localStorage — never in the repo.</p>
+    <p class="muted" id="data-stamp"></p>
+  </div>
+</footer>
+
+<template id="job-card-template">
+  <article class="card">
+    <header class="card-head">
+      <div class="card-title">
+        <p class="company" data-field="company"></p>
+        <h2 class="title" data-field="title"></h2>
+      </div>
+      <div class="card-flags">
+        <span class="badge badge-new" data-field="new" hidden>New</span>
+        <span class="priority" data-field="priority"></span>
+      </div>
+    </header>
+
+    <ul class="meta">
+      <li class="chip chip-type" data-field="type"></li>
+      <li class="chip" data-field="category"></li>
+      <li class="chip" data-field="location"></li>
+      <li class="chip" data-field="workMode"></li>
+      <li class="chip" data-field="degreeRequirement"></li>
+      <li class="chip" data-field="experienceLevel"></li>
+      <li class="chip chip-season" data-field="season" hidden></li>
+    </ul>
+
+    <p class="notes" data-field="notes"></p>
+
+    <footer class="card-foot">
+      <p class="discovered" data-field="firstSeen"></p>
+      <div class="actions">
+        <button type="button" class="icon-btn" data-action="favorite" aria-pressed="false" title="Favorite">★<span class="sr-only">Favorite</span></button>
+        <button type="button" class="icon-btn" data-action="applied" aria-pressed="false" title="Mark applied">✓<span class="sr-only">Applied</span></button>
+        <button type="button" class="icon-btn" data-action="hide" title="Hide">✕<span class="sr-only">Hide</span></button>
+        <a class="btn primary" data-field="url" target="_blank" rel="noopener noreferrer">Apply</a>
+      </div>
+    </footer>
+  </article>
+</template>
+
+<script src="./app.js"></script>
+</body>
+</html>
