@@ -83,8 +83,8 @@
     internships: function (job) { return job.type === 'Internship'; },
     fulltime:    function (job) { return job.type === 'Full Time'; },
     'new':       function (job) { return job.isNew; },
-    favorites:   function (job) { return Storage.has('favorites', job.id); },
-    applied:     function (job) { return Storage.has('applied', job.id); }
+    favorites:   function (job) { return Storage.has('favorites', job); },
+    applied:     function (job) { return Storage.has('applied', job); }
   };
 
   /* ----------------------------------------------------------------- STORAGE */
@@ -114,21 +114,49 @@
       }
     },
 
-    has: function (key, id) {
-      return Storage.state[key].indexOf(id) !== -1;
+    // Personal state is keyed on job.key -- a hash of company/title/location
+    // -- not the ATS requisition id, which changes when an employer re-posts
+    // a role. Legacy entries stored by id are still honoured, so nothing
+    // saved before this change is lost.
+    ids: function (job) {
+      var out = [];
+      if (job.key) out.push(job.key);
+      if (job.id) out.push(job.id);
+      return out;
     },
 
-    toggle: function (key, id) {
+    has: function (key, job) {
       var list = Storage.state[key];
-      var i = list.indexOf(id);
-      if (i === -1) list.push(id); else list.splice(i, 1);
-      Storage.save();
-      return i === -1;
+      var candidates = Storage.ids(job);
+      for (var i = 0; i < candidates.length; i++) {
+        if (list.indexOf(candidates[i]) !== -1) return true;
+      }
+      return false;
     },
 
-    remove: function (key, id) {
-      var i = Storage.state[key].indexOf(id);
-      if (i !== -1) { Storage.state[key].splice(i, 1); Storage.save(); }
+    toggle: function (key, job) {
+      var list = Storage.state[key];
+      if (Storage.has(key, job)) {
+        Storage.ids(job).forEach(function (candidate) {
+          var i = list.indexOf(candidate);
+          if (i !== -1) list.splice(i, 1);
+        });
+        Storage.save();
+        return false;
+      }
+      list.push(job.key || job.id);
+      Storage.save();
+      return true;
+    },
+
+    remove: function (key, job) {
+      var list = Storage.state[key];
+      var changed = false;
+      Storage.ids(job).forEach(function (candidate) {
+        var i = list.indexOf(candidate);
+        if (i !== -1) { list.splice(i, 1); changed = true; }
+      });
+      if (changed) Storage.save();
     },
 
     clear: function (key) {
@@ -201,6 +229,7 @@
       seasons: Array.isArray(raw.seasons) ? raw.seasons.slice() : (raw.season ? [str(raw.season)] : []),
       companyDomain: str(raw.companyDomain),
       companyUrl: str(raw.companyUrl),
+      key: str(raw.key) || str(raw.id),
       location: str(raw.location) || 'Not specified',
       workMode: str(raw.workMode) || 'Not specified',
       url: str(raw.url),
@@ -240,9 +269,16 @@
     return (Date.now() - time) <= CONFIG.newWindowHours * 60 * 60 * 1000;
   }
 
+  function jobById(id) {
+    for (var i = 0; i < UI.jobs.length; i++) {
+      if (UI.jobs[i].id === id) return UI.jobs[i];
+    }
+    return null;
+  }
+
   function visibleJobs() {
     // Everything except hidden — the base pool for stats and tab counts.
-    return UI.jobs.filter(function (job) { return !Storage.has('hidden', job.id); });
+    return UI.jobs.filter(function (job) { return !Storage.has('hidden', job); });
   }
 
   // Tabs for finding work you have not acted on yet. Once a job is marked
@@ -286,7 +322,7 @@
     var hideApplied = isDiscoveryTab(UI.tab);
 
     return jobs.filter(function (job) {
-      if (hideApplied && Storage.has('applied', job.id)) return false;
+      if (hideApplied && Storage.has('applied', job)) return false;
       return tabTest(job) && matchesFilters(job) && matchesSearch(job, query);
     });
   }
@@ -328,6 +364,7 @@
   var el = {};
 
   function cacheElements() {
+    el.controls = document.querySelector('.controls');
     el.search = document.getElementById('search');
     el.tabs = document.getElementById('tabs');
     el.filters = document.getElementById('filters');
@@ -351,7 +388,7 @@
       if (!node) return;
       var hideApplied = isDiscoveryTab(name);
       node.textContent = pool.filter(function (job) {
-        if (hideApplied && Storage.has('applied', job.id)) return false;
+        if (hideApplied && Storage.has('applied', job)) return false;
         return TABS[name](job);
       }).length;
     });
@@ -535,9 +572,9 @@
 
     var fav = node.querySelector('[data-action="favorite"]');
     var applied = node.querySelector('[data-action="applied"]');
-    fav.setAttribute('aria-pressed', String(Storage.has('favorites', job.id)));
-    applied.setAttribute('aria-pressed', String(Storage.has('applied', job.id)));
-    node.classList.toggle('is-applied', Storage.has('applied', job.id));
+    fav.setAttribute('aria-pressed', String(Storage.has('favorites', job)));
+    applied.setAttribute('aria-pressed', String(Storage.has('applied', job)));
+    node.classList.toggle('is-applied', Storage.has('applied', job));
 
     return node;
   }
@@ -664,8 +701,7 @@
   }
 
   function renderHiddenDrawer() {
-    var ids = Storage.state.hidden;
-    var known = UI.jobs.filter(function (job) { return ids.indexOf(job.id) !== -1; });
+    var known = UI.jobs.filter(function (job) { return Storage.has('hidden', job); });
 
     el.hiddenDrawer.hidden = known.length === 0;
     if (!known.length) return;
@@ -686,7 +722,7 @@
       btn.className = 'btn ghost';
       btn.textContent = 'Restore';
       btn.addEventListener('click', function () {
-        Storage.remove('hidden', job.id);
+        Storage.remove('hidden', job);
         render();
       });
       li.appendChild(btn);
@@ -697,7 +733,7 @@
 
   function renderResultCount(shown, pool) {
     var scope = isDiscoveryTab(UI.tab)
-      ? pool.filter(function (job) { return !Storage.has('applied', job.id); })
+      ? pool.filter(function (job) { return !Storage.has('applied', job); })
       : pool;
 
     var noun = scope.length === 1 ? 'opportunity' : 'opportunities';
@@ -752,6 +788,27 @@
     render();
   }
 
+  // The toolbar gains a hairline divider once the page scrolls, the way
+  // Apple's nav does. A passive scroll listener throttled to one rAF: plain,
+  // cheap, and it does the whole job for a single boolean.
+  function watchToolbar() {
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var scrolled = (window.pageYOffset || document.documentElement.scrollTop) > 8;
+      el.controls.classList.toggle('is-stuck', scrolled);
+    }
+
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }, { passive: true });
+
+    update();
+  }
+
   function bindEvents() {
     el.search.addEventListener('input', debounce(function () {
       UI.query = el.search.value;
@@ -791,15 +848,14 @@
       if (!btn) return;
       var card = btn.closest('.card');
       if (!card) return;
-      var id = card.dataset.id;
+
+      var job = jobById(card.dataset.id);
+      if (!job) return;
 
       switch (btn.dataset.action) {
-        case 'favorite': Storage.toggle('favorites', id); break;
-        case 'applied':  Storage.toggle('applied', id); break;
-        case 'hide':
-          Storage.toggle('hidden', id);
-          // A hidden job should never linger in favorites-only views either.
-          break;
+        case 'favorite': Storage.toggle('favorites', job); break;
+        case 'applied':  Storage.toggle('applied', job); break;
+        case 'hide':     Storage.toggle('hidden', job); break;
       }
       render();
     });
@@ -829,6 +885,7 @@
     Storage.load();
     CONFIG.filterFields.forEach(function (f) { UI.filters[f] = ''; });
     bindEvents();
+    watchToolbar();
 
     loadJobs()
       .then(function (jobs) {

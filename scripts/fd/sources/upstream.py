@@ -103,6 +103,9 @@ def collect() -> list[dict]:
             "companyDomain": "",
             "companyUrl": record.careers_url(url),
             "notes": " · ".join(notes),
+            "key": record.content_key(
+                record.resolve_company(row.get("company") or "", "", job_id),
+                title, location),
         })
 
     log.info("  upstream: %d internships parsed", len(jobs))

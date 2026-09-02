@@ -361,6 +361,18 @@ About 70% of companies resolve. The rest — and any icon that 404s — fall bac
 to a monogram tinted by a hash of the company name, so every card shows an
 identity and none shows a broken image.
 
+## Personal state survives a re-post
+
+Favorites, applied and hidden are stored under `key` -- a hash of company,
+title and location -- rather than the ATS requisition id. Requisition ids are
+not stable: an employer re-listing a role gets a new number, Workday paths
+shift, and a dedupe tie can flip which id survives a run. Three postings
+changed id between two consecutive runs while being the same job, which under
+id-based storage would have silently cleared them from Applied.
+
+Entries saved before this change (bare ids) are still recognised, so nothing
+already marked was lost.
+
 ## Verification
 
 `scripts/audit.py` re-fetches the live postings behind `docs/data/jobs.json`

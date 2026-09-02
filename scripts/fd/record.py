@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 from datetime import datetime, timezone
 from urllib.parse import urlparse
 
@@ -42,6 +43,18 @@ def iso(value) -> str:
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=timezone.utc)
     return parsed.astimezone(timezone.utc).isoformat()
+
+
+def content_key(company: str, title: str, location: str) -> str:
+    """A stable identity for a posting, independent of its requisition id.
+
+    ATS ids are not dependable: an employer re-posting a role gets a new
+    requisition number, and Workday paths shift. Personal state (favorite,
+    applied, hidden) is keyed on this instead, so marking a job applied
+    survives the job being re-listed.
+    """
+    raw = "|".join(part.strip().lower() for part in (company, title, location))
+    return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:12]
 
 
 def resolve_company(name: str, description: str, job_id: str) -> str:
@@ -176,8 +189,10 @@ def build(
         "source": source,
         "companyDomain": "",   # filled in by fd.logos.attach()
         "companyUrl": careers_url(url),
+        "key": "",   # filled in below, once company/title/location are final
         "notes": summarise(body, degree, internship),
     }
+    job["key"] = content_key(job["company"], job["title"], job["location"])
     return job
 
 

@@ -62,15 +62,15 @@ def dedupe(jobs: list[dict]) -> list[dict]:
         if existing is None or _rank(job) > _rank(existing):
             by_id[job["id"]] = job
 
-    by_key: dict[tuple, dict] = {}
+    by_key: dict[str, dict] = {}
     for job in by_id.values():
-        key = (
-            job["company"].lower(),
-            job["title"].lower(),
-            job["location"].lower(),
-        )
+        key = job.get("key") or job["id"]
         existing = by_key.get(key)
         if existing is None or _rank(job) > _rank(existing):
+            by_key[key] = job
+        elif _rank(job) == _rank(existing) and job["id"] < existing["id"]:
+            # Deterministic tie-break. Without one, which id survives can
+            # flip between runs, and any state keyed on it would be lost.
             by_key[key] = job
     return list(by_key.values())
 
