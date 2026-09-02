@@ -343,9 +343,14 @@ body {
 
 .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 
+/* A flex item defaults to min-width:auto, so it refuses to shrink below its
+   content and long company names push straight out of the card. min-width:0
+   lets it shrink, which is also what lets the ellipsis below take effect. */
+.card-title { flex: 1 1 auto; min-width: 0; }
+
 .company {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 7px;
   margin: 0;
   font-size: .78rem;
@@ -357,9 +362,16 @@ body {
 }
 
 .company > span:last-child {
+  /* Wrap to at most two lines rather than truncating on the first: a long
+     name like "SK hynix memory solutions America Inc." stays readable, and
+     the clamp still guarantees the header cannot grow without bound. */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 /* Monogram by default; swapped for the real favicon once it loads. The hue
@@ -367,6 +379,7 @@ body {
    and the fallback still reads as an identity rather than a placeholder. */
 .logo {
   flex: none;
+  margin-top: 1px;
   width: 22px;
   height: 22px;
   display: grid;
@@ -411,9 +424,21 @@ body {
   .logo.logo-img { background: #f4f4f6; }
 }
 
-.title { margin: 3px 0 0; font-size: 1.13rem; letter-spacing: -.015em; line-height: 1.3; }
+.title {
+  margin: 3px 0 0;
+  font-size: 1.13rem;
+  letter-spacing: -.015em;
+  line-height: 1.3;
+  /* Titles wrap, but a single unbroken token (a long URL-ish string or
+     "States-Colorado-Boulder") must break rather than overflow. */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 .card-flags { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex: none; }
+
+/* Belt and braces: nothing may paint outside the card's rounded corners. */
+.card { overflow: hidden; }
 
 .badge-new {
   background: var(--new-soft);
@@ -426,7 +451,7 @@ body {
   text-transform: uppercase;
 }
 
-.meta { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; min-width: 0; }
 
 .chip {
   background: var(--surface-2);
@@ -435,6 +460,8 @@ body {
   padding: 4px 10px;
   font-size: .78rem;
   color: var(--muted);
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .chip-type { background: var(--accent-soft); border-color: transparent; color: var(--accent-text); font-weight: 600; }
@@ -443,7 +470,7 @@ body {
    fact worth surfacing, so give it the same weight as the role type. */
 .chip-degree { background: var(--new-soft); border-color: transparent; color: var(--new); font-weight: 600; }
 
-.notes { margin: 0; color: var(--muted); font-size: .88rem; }
+.notes { margin: 0; color: var(--muted); font-size: .88rem; overflow-wrap: anywhere; }
 
 .card-foot {
   display: flex;
@@ -451,6 +478,7 @@ body {
   justify-content: space-between;
   gap: 10px;
   flex-wrap: wrap;
+  min-width: 0;
   margin-top: auto;
   padding-top: 12px;
   border-top: 1px solid var(--border);
@@ -462,6 +490,7 @@ body {
   font-family: var(--mono);
   color: var(--accent-text);
   min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .actions { display: flex; align-items: center; gap: 6px; }

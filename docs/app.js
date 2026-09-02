@@ -243,6 +243,17 @@
     return UI.jobs.filter(function (job) { return !Storage.has('hidden', job.id); });
   }
 
+  // Tabs for finding work you have not acted on yet. Once a job is marked
+  // applied it leaves these and lives in the Applied tab, so the discovery
+  // list only shows what is still outstanding. Favorites is excluded on
+  // purpose: it is a list curated by hand, and applying to something should
+  // not silently empty it.
+  var DISCOVERY_TABS = ['all', 'internships', 'fulltime', 'new'];
+
+  function isDiscoveryTab(name) {
+    return DISCOVERY_TABS.indexOf(name) !== -1;
+  }
+
   function matchesSearch(job, query) {
     if (!query) return true;
     return query.split(/\s+/).every(function (term) {
@@ -270,7 +281,10 @@
   function applyView(jobs) {
     var tabTest = TABS[UI.tab] || TABS.all;
     var query = UI.query.trim().toLowerCase();
+    var hideApplied = isDiscoveryTab(UI.tab);
+
     return jobs.filter(function (job) {
+      if (hideApplied && Storage.has('applied', job.id)) return false;
       return tabTest(job) && matchesFilters(job) && matchesSearch(job, query);
     });
   }
@@ -336,16 +350,23 @@
   }
 
   function renderStats(pool) {
-    el.stats.total.textContent = pool.length;
-    el.stats.newly.textContent = pool.filter(function (j) { return j.isNew; }).length;
-    el.stats.internships.textContent = pool.filter(TABS.internships).length;
-    el.stats.fulltime.textContent = pool.filter(TABS.fulltime).length;
+    // These describe what is still open to you, so applied roles are out.
+    var open = pool.filter(function (job) { return !Storage.has('applied', job.id); });
+    el.stats.total.textContent = open.length;
+    el.stats.newly.textContent = open.filter(function (j) { return j.isNew; }).length;
+    el.stats.internships.textContent = open.filter(TABS.internships).length;
+    el.stats.fulltime.textContent = open.filter(TABS.fulltime).length;
   }
 
   function renderTabCounts(pool) {
     Object.keys(TABS).forEach(function (name) {
       var node = el.tabs.querySelector('[data-count="' + name + '"]');
-      if (node) node.textContent = pool.filter(TABS[name]).length;
+      if (!node) return;
+      var hideApplied = isDiscoveryTab(name);
+      node.textContent = pool.filter(function (job) {
+        if (hideApplied && Storage.has('applied', job.id)) return false;
+        return TABS[name](job);
+      }).length;
     });
   }
 
@@ -680,11 +701,18 @@
   }
 
   function renderResultCount(shown, pool) {
-    // Agrees with the pool, not the shown count: "1 of 1499 opportunities".
-    var noun = pool.length === 1 ? 'opportunity' : 'opportunities';
-    var text = 'Showing ' + shown + ' of ' + pool.length + ' ' + noun;
-    var hiddenCount = Storage.state.hidden.length;
-    if (hiddenCount) text += ' · ' + hiddenCount + ' hidden';
+    var scope = isDiscoveryTab(UI.tab)
+      ? pool.filter(function (job) { return !Storage.has('applied', job.id); })
+      : pool;
+
+    var noun = scope.length === 1 ? 'opportunity' : 'opportunities';
+    var text = 'Showing ' + shown + ' of ' + scope.length + ' ' + noun;
+
+    var extras = [];
+    if (Storage.state.applied.length) extras.push(Storage.state.applied.length + ' applied');
+    if (Storage.state.hidden.length) extras.push(Storage.state.hidden.length + ' hidden');
+    if (extras.length) text += ' \u00b7 ' + extras.join(' \u00b7 ');
+
     el.resultCount.textContent = text;
   }
 

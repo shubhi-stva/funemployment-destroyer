@@ -297,6 +297,15 @@ On Apple devices this renders in real SF. Elsewhere it falls through to Segoe
 UI Variable (Windows), Roboto (Android), then Inter if installed. Numerals use
 SF Mono via `ui-monospace`.
 
+### Applied roles leave the discovery list
+
+Marking a job **Applied** removes it from All, Internships, Full Time and New,
+and it lives in the Applied tab from then on. The header stats and tab counts
+follow the same rule, so "open opportunities" means what is still outstanding.
+
+Favorites deliberately does *not* hide applied roles: it is a list curated by
+hand, and applying to something should not silently empty it.
+
 ## Company icons
 
 Job URLs point at ATS hosts, never the employer, so the domain is looked up
