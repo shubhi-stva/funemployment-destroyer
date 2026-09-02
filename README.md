@@ -13,7 +13,11 @@ to me (degree requirements, work mode, category, experience level).
 
 Two standing rules drive every filter in the collector:
 
-1. **Internships — all seasons.** Summer, Fall, Spring, Winter, co-ops.
+1. **Undergraduate internships — all seasons.** Summer, Fall, Spring, Winter,
+   co-ops. Roles requiring a master's, PhD or MBA are dropped, including the
+   "Graduate Intern" / "Graduate Co-op" labels that Intel and Altera use for
+   grad students. A posting offering both routes ("Bachelor's/Master's") is
+   kept.
 2. **Entry-level full-time tech roles with no degree, GPA, or experience gate.**
    A full-time posting is kept only when *all four* hold: no hard education
    requirement, no numeric GPA floor, entry-level seniority, and no meaningful
@@ -71,6 +75,25 @@ degree mention and reads the ~240-character window around it:
 | "preferred", "a plus", "nice to have", "bonus" | **Degree preferred** |
 | "currently enrolled", "pursuing", "rising senior" | **Currently enrolled** |
 | nothing qualifying it (a bare bullet) | **Degree required** → dropped |
+
+Windows inside pay or benefits text are skipped too. "Final compensation will
+be determined based on degree level" is a salary note, not a requirement —
+reading it as one previously mislabelled 68 internships as "Degree required".
+
+Internships are never reported as requiring a completed degree: a posting
+listing "Bachelor's degree in X" means the degree is *in progress*, which is
+what being an intern is, so anything short of an explicit no-degree-needed
+becomes **Currently enrolled**.
+
+### The degree badge on cards
+
+The chip is shown only where it tells you something actionable:
+
+| Card | Chip |
+| --- | --- |
+| Internship | never shown — enrolment is implied by the role |
+| Full time, no degree required | **shown** |
+| Full time, degree preferred | hidden — a preference is not a gate |
 
 Equal-opportunity boilerplate is skipped, and bare `master` is ignored so
 *"learn and master complex systems"* is not read as a master's degree.

@@ -106,8 +106,15 @@ _ENROLLED_RE = re.compile(
 # most often an EEO / non-discrimination clause. Windows matching this are
 # ignored entirely.
 _BOILERPLATE_RE = re.compile(
+    # Equal-opportunity / legal boilerplate
     r"equal opportunity|without regard to|discriminat|protected (?:class|veteran)"
     r"|affirmative action|e-verify|reasonable accommodation"
+    # Compensation and benefits. "Final compensation will be determined based
+    # on degree level" is a pay note, not an education requirement -- reading
+    # it as one mislabels a large share of internships.
+    r"|compensation|salary|pay (?:range|rate|band)|hourly rate|stipend"
+    r"|benefits|perks|401\(?k\)?|insurance|equity|bonus|relocation"
+    r"|paid time off|pto\b|vacation"
 )
 
 # "3.0 GPA", "GPA of at least 3.5", "minimum GPA: 3.2"
@@ -125,6 +132,76 @@ DEGREE_PREFERRED = "Degree preferred"
 DEGREE_ENROLLED = "Currently enrolled"
 DEGREE_REQUIRED = "Degree required"
 DEGREE_UNKNOWN = "Not specified"
+
+
+# --- undergraduate vs graduate --------------------------------------------
+
+# "Master's", "PhD", "MBA" -- note the possessive is required on master so the
+# verb ("master new technologies") does not match.
+_GRAD_RE = re.compile(
+    r"\b(?:master'?s|masters|m\.s\.|m\.eng|msc|mba|phd|ph\.d\.|doctoral|doctorate"
+    r"|graduate degree|graduate program|graduate student|post[- ]?doc)\b"
+    r"|\bms\b(?=\s*(?:in|or|/|,|degree)\b)"
+)
+
+# Undergraduate alternatives. "New grad"/"recent graduate" describe someone
+# finishing a bachelor's, so they must NOT count as graduate-level signals.
+_UNDERGRAD_RE = re.compile(
+    r"\b(?:bachelor'?s|bachelors|b\.s\.|b\.a\.|bsc|ba/bs|bs/ms|undergrad(?:uate)?"
+    r"|associate'?s|sophomore|junior|senior year|freshman"
+    r"|new ?grad(?:uate)?|recent graduate|college student|university student)\b"
+    r"|\b(?:bs|ba)\b(?=\s*(?:in|or|/|,|degree)\b)"
+)
+
+# Undergraduate routes as named in a *title*. Deliberately excludes the
+# "new grad" family, which says nothing about which degree is being finished.
+_UNDERGRAD_TITLE_RE = re.compile(
+    r"\b(?:bachelor'?s|bachelors|b\.s\.|b\.a\.|ba/bs|undergrad(?:uate)?"
+    r"|associate'?s)\b"
+    r"|\b(?:bs|ba)\b(?=\s*(?:in|or|/|,|degree|\'s)\b)"
+)
+
+# Titles that are graduate-only on their face.
+_GRAD_TITLE_RE = re.compile(
+    r"\b(?:phd|ph\.d\.|doctoral|mba|masters?'?s?|graduate)\b(?![- ]?grad\b)"
+)
+
+
+def is_graduate_only(title: str, text_lower: str) -> bool:
+    """True when the role is open only to master's/PhD candidates.
+
+    The test is comparative, not absolute: a posting saying "Bachelor's or
+    Master's degree" is open to undergraduates and must be kept. Only when
+    graduate credentials are named and no undergraduate path is offered
+    anywhere is the role genuinely closed to an undergrad.
+    """
+    t = norm(title)
+
+    # An explicit graduate credential in the title is checked FIRST. "Applied
+    # Scientist, PhD New Grad" is a new graduate *of a PhD* -- the "new grad"
+    # wording does not make it open to undergraduates.
+    # "Graduate Intern" / "Graduate Co-op" is the standard industry label for
+    # an intern pursuing a master's or PhD -- Intel and Altera pair it with
+    # "Undergraduate Intern" for bachelor's students. The word only counts
+    # when attached to the role, so "New Graduate" is unaffected.
+    if re.search(r"\b(?:phd|ph\.d\.|mba|doctoral|masters?'?s?)\b", t) or \
+       re.search(r"\bgraduate\s+(?:intern|co-?op|student|program|research)", t):
+        # ...unless the title also names an undergraduate route, as in
+        # "(2028 Bachelor's/Master's graduates)". "New grad" deliberately does
+        # not count here, for the reason above.
+        return not _UNDERGRAD_TITLE_RE.search(t)
+
+    # No graduate credential named: new-grad framing is undergraduate-friendly.
+    if re.search(r"new ?grad|recent graduate", t):
+        return False
+
+    if not text_lower:
+        return False
+    if not _GRAD_RE.search(text_lower):
+        return False
+    # Graduate credentials mentioned -- keep it only if an undergraduate
+    # route is offered too.
+    return not _UNDERGRAD_RE.search(text_lower)
 
 
 def has_gpa_requirement(text_lower: str) -> bool:

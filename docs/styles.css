@@ -382,6 +382,10 @@ body {
 
 .chip-type { background: var(--accent-soft); border-color: transparent; color: var(--accent-text); font-weight: 600; }
 
+/* Shown only for full-time roles with no degree gate -- the one education
+   fact worth surfacing, so give it the same weight as the role type. */
+.chip-degree { background: var(--new-soft); border-color: transparent; color: var(--new); font-weight: 600; }
+
 .notes { margin: 0; color: var(--muted); font-size: .88rem; }
 
 .card-foot {

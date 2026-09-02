@@ -69,8 +69,20 @@ def build(
     haystack = f"{title.lower()} {text_lower}"
 
     internship = classify.is_internship_role(title, commitment)
+
+    # Undergraduate only: drop anything that needs a master's, PhD or MBA.
+    if classify.is_graduate_only(title, haystack):
+        return None
+
     degree = classify.classify_degree(haystack, internship)
     experience = classify.classify_experience(title, text_lower, internship)
+
+    if internship and degree != classify.DEGREE_NO:
+        # An internship posting that lists "Bachelor's degree in X" means the
+        # degree is in progress, not finished -- that is what being an intern
+        # is. Collapse everything except an explicit no-degree-needed to
+        # "Currently enrolled" rather than reporting a completed degree.
+        degree = classify.DEGREE_ENROLLED
 
     if not internship:
         # --- full-time gate -------------------------------------------------

@@ -416,7 +416,16 @@
     field(node, 'category').textContent = job.category;
     field(node, 'location').textContent = job.location;
     field(node, 'workMode').textContent = job.workMode;
-    field(node, 'degreeRequirement').textContent = job.degreeRequirement;
+    // The degree chip only earns its place when it tells you something you
+    // could act on. Internships are all "currently enrolled" by definition,
+    // and a full-time role that merely prefers a degree is not a gate -- so
+    // the chip appears solely for full-time roles with no degree requirement.
+    var degreeChip = field(node, 'degreeRequirement');
+    var showDegree = job.type !== 'Internship' &&
+                     job.degreeRequirement === 'No degree required';
+    degreeChip.textContent = job.degreeRequirement;
+    degreeChip.hidden = !showDegree;
+    degreeChip.classList.toggle('chip-degree', showDegree);
     field(node, 'experienceLevel').textContent = job.experienceLevel;
 
     var season = field(node, 'season');

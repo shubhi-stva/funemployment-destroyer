@@ -49,6 +49,12 @@ def collect() -> list[dict]:
         if category is None:
             continue
 
+        # Undergraduate only. The feed carries no description, so this is a
+        # title-level test -- record.build() does the full-text version for
+        # postings we poll ourselves.
+        if classify.is_graduate_only(title, ""):
+            continue
+
         season = (row.get("season") or "").strip()
         if season.lower() in ("", "not stated", "unknown"):
             season = classify.extract_season(title) or None
