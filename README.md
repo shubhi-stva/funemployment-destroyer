@@ -340,6 +340,27 @@ About 70% of companies resolve. The rest — and any icon that 404s — fall bac
 to a monogram tinted by a hash of the company name, so every card shows an
 identity and none shows a broken image.
 
+## Verification
+
+`scripts/audit.py` re-fetches the live postings behind `docs/data/jobs.json`
+and re-derives every gate from the raw text, rather than trusting the stored
+fields. It runs on every scheduled collection (report-only, so a regression
+shows up in the run log without blocking the data refresh).
+
+```bash
+python scripts/audit.py                  # everything
+python scripts/audit.py --type "Full Time" -v   # with the offending text
+```
+
+Current coverage: ~430 of 560 postings verified against full text. The
+remainder are on ATS platforms with no reachable description (Oracle,
+SmartRecruiters), and can only be checked by title.
+
+Postings from the upstream feed arrive title-only. `fd/enrich.py` fetches
+their descriptions from Workday's per-job endpoint so they face the same
+full-text gates as boards we poll directly -- without it, about half the
+board was screened by title alone.
+
 ## Known limits
 
 - **"As soon as posted" means ~30 minutes.** GitHub's cron queue is not

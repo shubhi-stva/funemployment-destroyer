@@ -86,6 +86,20 @@ _ESCAPE_RE = re.compile(
     r"|degree[- ]?free"
 )
 
+# When a posting spells out what "equivalent" means and the answer is
+# portfolio work rather than years on the job, the door really is open to an
+# early-career candidate:
+#
+#   "a degree in CS, or equivalent experience (projects, bootcamp, open
+#    source - we care about what you can build)"
+#
+# That is a different promise from a bare "or equivalent practical
+# experience", which in practice means professional years.
+_EQUIVALENT_IS_PORTFOLIO_RE = re.compile(
+    r"(?:project|bootcamp|open[- ]source|portfolio|self[- ]taught|"
+    r"personal work|side project|what you can build|hobby)"
+)
+
 # "Degree or equivalent experience" -- a gate with an experience-shaped
 # alternative. Treated as a requirement, because the alternative is exactly
 # the thing an early-career candidate does not have.
@@ -102,8 +116,8 @@ _PREFERRED_RE = re.compile(
 )
 
 _HARD_REQUIRED_RE = re.compile(
-    r"required|must have|must possess|must hold|minimum|mandatory|essential|"
-    r"you have|requirement"
+    r"\(required\)|required|must have|must possess|must hold|must be|"
+    r"mandatory|essential|minimum of"
 )
 
 _ENROLLED_RE = re.compile(
@@ -247,6 +261,57 @@ def _windows(text_lower: str):
         yield window
 
 
+# Ordered only for tie-breaks; selection is by distance, not by this order.
+_QUALIFIERS = (
+    ("escape", _ESCAPE_RE),
+    ("required", _HARD_REQUIRED_RE),
+    ("degree_or_experience", _DEGREE_OR_EXPERIENCE_RE),
+    ("preferred", _PREFERRED_RE),
+)
+
+
+def _qualifier_for(text_lower: str, m_start: int, m_end: int) -> str | None:
+    """Classify ONE degree mention by the qualifier nearest to it.
+
+    Scanning the whole window for "preferred" is wrong when two requirements
+    sit next to each other:
+
+        Bachelor's degree in computer science (required)
+        Master's degree in computer science (preferred)
+
+    A window around "bachelor's" contains both words. The bachelor's line is
+    a hard requirement, so the qualifier that counts is the closest one --
+    "(required)" here -- not whichever pattern happens to be tested first.
+    Text after the mention is preferred, since qualifiers usually follow.
+    """
+    after = text_lower[m_end:m_end + _WINDOW_AFTER]
+    best = None
+    for kind, pattern in _QUALIFIERS:
+        found = pattern.search(after)
+        if found and (best is None or found.start() < best[0]):
+            best = (found.start(), kind)
+
+    if best and best[1] == "degree_or_experience":
+        # Check whether the posting defines "equivalent" as portfolio work
+        # rather than professional years. Only the text immediately following
+        # the clause counts, so an unrelated later mention cannot soften it.
+        tail = after[best[0]:best[0] + 110]
+        if _EQUIVALENT_IS_PORTFOLIO_RE.search(tail):
+            return "escape"
+
+    if best:
+        return best[1]
+
+    before = text_lower[max(0, m_start - _WINDOW_BEFORE):m_start]
+    best = None
+    for kind, pattern in _QUALIFIERS:
+        for found in pattern.finditer(before):
+            distance = len(before) - found.end()
+            if best is None or distance < best[0]:
+                best = (distance, kind)
+    return best[1] if best else None
+
+
 def classify_degree(text_lower: str, is_internship: bool) -> str:
     """Map posting text to one of the five degreeRequirement values."""
     if not text_lower:
@@ -260,30 +325,37 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
         return DEGREE_NO
 
     escape = preferred = required = enrolled = False
-    for window in _windows(text_lower):
+
+    for match in _DEGREE_MENTION.finditer(text_lower):
+        start = max(0, match.start() - _WINDOW_BEFORE)
+        window = text_lower[start:match.end() + _WINDOW_AFTER]
+        if _BOILERPLATE_RE.search(window):
+            continue
+
         if _ENROLLED_RE.search(window):
             enrolled = True
-        if _ESCAPE_RE.search(window):
+
+        kind = _qualifier_for(text_lower, match.start(), match.end())
+        if kind == "escape":
             escape = True
-        elif _DEGREE_OR_EXPERIENCE_RE.search(window):
-            # A degree-or-experience gate. Both branches are closed to
-            # someone without a degree and without professional experience.
-            required = True
-        elif _PREFERRED_RE.search(window):
+        elif kind == "preferred":
             preferred = True
         else:
-            # A bare degree bullet in a qualifications list is a requirement,
-            # whether or not the posting bothers to say the word.
+            # "required", "degree_or_experience", or a bare bullet with no
+            # qualifier at all -- all of which gate on holding the degree.
             required = True
 
     if is_internship and enrolled:
         return DEGREE_ENROLLED
-    if escape:
-        return DEGREE_NO
+    # A hard requirement anywhere outranks a preference elsewhere: one line
+    # saying a master's is "preferred" does not soften a bachelor's being
+    # "(required)" on the line above.
     if required:
         return DEGREE_REQUIRED
     if preferred:
         return DEGREE_PREFERRED
+    if escape:
+        return DEGREE_NO
     if is_internship and _ENROLLED_RE.search(text_lower):
         return DEGREE_ENROLLED
     return DEGREE_UNKNOWN

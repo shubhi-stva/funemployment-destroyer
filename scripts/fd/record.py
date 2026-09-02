@@ -6,6 +6,13 @@ from datetime import datetime, timezone
 
 from . import classify, config
 
+# Ids rejected by full-text analysis. The upstream internship feed ships no
+# description, so its postings can only be screened by title -- but we poll
+# the same boards ourselves and *do* read their bodies. Recording rejections
+# here lets build.py drop an upstream posting that our own full-text pass
+# already threw out, instead of the weaker check silently reinstating it.
+REJECTED_IDS: set[str] = set()
+
 
 def iso(value) -> str:
     """Coerce whatever an ATS gave us into a UTC ISO-8601 string."""
@@ -60,9 +67,13 @@ def build(
     if not job_id or not title or not url:
         return None
 
+    def reject() -> None:
+        REJECTED_IDS.add(job_id)
+        return None
+
     category = classify.classify_category(title, department)
     if category is None:
-        return None  # not a tech role
+        return reject()  # not a tech role
 
     body = classify.clean_text(description)
     text_lower = body.lower()
@@ -72,7 +83,7 @@ def build(
 
     # Undergraduate only: drop anything that needs a master's, PhD or MBA.
     if classify.is_graduate_only(title, haystack):
-        return None
+        return reject()
 
     degree = classify.classify_degree(haystack, internship)
     experience = classify.classify_experience(title, text_lower, internship)
@@ -89,19 +100,19 @@ def build(
         # Three independent conditions, all required: no degree gate, no GPA
         # floor, and genuinely open to someone with no track record.
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
-            return None
+            return reject()
         if classify.has_gpa_requirement(haystack):
-            return None
+            return reject()
         if classify.LEVEL_RANK.get(experience, 9) > config.FULLTIME_MAX_LEVEL:
-            return None
+            return reject()
         if classify.requires_prior_experience(haystack):
-            return None
+            return reject()
 
     posted_iso = iso(posted_at)
     location = classify.clean_text(location) or "Not specified"
 
     if config.US_ONLY and classify.is_us_location(location) is False:
-        return None
+        return reject()
 
     job = {
         "id": job_id,

@@ -24,6 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fd import build, config  # noqa: E402
+from fd import enrich  # noqa: E402
 from fd.sources import ashby, greenhouse, lever, upstream  # noqa: E402
 
 POLLERS = {
@@ -93,7 +94,12 @@ def main() -> int:
 
     log.info("Collected %d raw postings in %.0fs", len(collected), time.time() - started)
 
-    jobs = build.dedupe(collected)
+    # Upstream postings arrive title-only; fetch their descriptions so they
+    # face the same full-text gates as everything else.
+    collected = enrich.enrich(collected)
+
+    jobs = build.drop_rejected(collected)
+    jobs = build.dedupe(jobs)
     log.info("Deduped to %d", len(jobs))
 
     seen = build.load_seen()

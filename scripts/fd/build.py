@@ -6,7 +6,7 @@ import json
 import logging
 from datetime import datetime, timedelta, timezone
 
-from . import classify, config, logos
+from . import classify, config, logos, record
 
 log = logging.getLogger("fd.build")
 
@@ -31,6 +31,23 @@ def save_seen(seen: dict[str, str]) -> None:
     config.SEEN_FILE.write_text(
         json.dumps({"firstSeen": dict(sorted(seen.items()))}, indent=0) + "\n"
     )
+
+
+def drop_rejected(jobs: list[dict]) -> list[dict]:
+    """Remove postings our own full-text pass rejected.
+
+    The upstream feed screens by title only. When we polled the same board
+    directly and read the full description, that verdict is strictly better
+    informed and wins.
+    """
+    rejected = record.REJECTED_IDS
+    if not rejected:
+        return jobs
+    kept = [j for j in jobs if j["id"] not in rejected]
+    dropped = len(jobs) - len(kept)
+    if dropped:
+        log.info("  dropped %d upstream postings rejected by full-text analysis", dropped)
+    return kept
 
 
 def dedupe(jobs: list[dict]) -> list[dict]:

@@ -52,6 +52,13 @@ jobs:
           FD_INCLUDE_UNSPECIFIED: ${{ inputs.include_unspecified && '1' || '0' }}
         run: python scripts/collect.py
 
+      # Re-reads the live postings behind the freshly written jobs.json and
+      # re-derives every gate from raw text. Report-only: a classifier
+      # regression should be visible in the run log, not block the refresh.
+      - name: Audit listings against live posting text
+        run: python scripts/audit.py
+        continue-on-error: true
+
       - name: Commit if the listings actually changed
         run: |
           git config user.name  "Shubhi Srivastava"
