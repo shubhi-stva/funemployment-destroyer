@@ -3,13 +3,13 @@
   "dc": null,
   "site": null,
   "name": "2020 Companies",
-  "attempts": 1
+  "attempts": 2
  },
  "23andme": {
   "dc": null,
   "site": null,
   "name": "23andMe",
-  "attempts": 1
+  "attempts": 2
  },
  "3m": {
   "dc": "wd1",
@@ -20,7 +20,7 @@
   "dc": null,
   "site": null,
   "name": "AAA Club Alliance",
-  "attempts": 1
+  "attempts": 2
  },
  "aaamidatlantic": {
   "dc": "wd5",
@@ -32,6 +32,11 @@
   "site": "external_career_page",
   "name": "ABB"
  },
+ "abbluecross": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "Alberta Blue Cross"
+ },
  "abbott": {
   "dc": "wd5",
   "site": "abbottcareers",
@@ -41,32 +46,281 @@
   "dc": null,
   "site": null,
   "name": "ABC Fitness",
-  "attempts": 1
+  "attempts": 2
  },
  "abcsupply": {
   "dc": "wd1",
   "site": "abcsupplycareers",
   "name": "ABC Supply"
  },
+ "abglobal": {
+  "dc": null,
+  "site": null,
+  "name": "AllianceBernstein",
+  "attempts": 1
+ },
+ "abrdn": {
+  "dc": "wd3",
+  "site": "abrdn",
+  "name": "Aberdeen"
+ },
+ "academy": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Academy Sports + Outdoors"
+ },
+ "accenture": {
+  "dc": "wd103",
+  "site": "accenturecareers",
+  "name": "Accenture"
+ },
+ "acciona": {
+  "dc": null,
+  "site": null,
+  "name": "ACCIONA",
+  "attempts": 1
+ },
+ "accuray": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Accuray"
+ },
  "ace": {
   "dc": "wd5",
   "site": "Careers",
   "name": "AAA Club Alliance"
+ },
+ "acehardware": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Ace Hardware"
+ },
+ "acelero": {
+  "dc": null,
+  "site": null,
+  "name": "Acelero",
+  "attempts": 1
+ },
+ "acrisure": {
+  "dc": "wd1",
+  "site": "acrisure",
+  "name": "Acrisure"
+ },
+ "activision": {
+  "dc": null,
+  "site": null,
+  "name": "Activision-Blizzard",
+  "attempts": 1
+ },
+ "acushnetgolf": {
+  "dc": null,
+  "site": null,
+  "name": "Acushnet Holdings",
+  "attempts": 1
+ },
+ "acxiomllc": {
+  "dc": null,
+  "site": null,
+  "name": "Acxiom",
+  "attempts": 1
+ },
+ "adient": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Adient"
+ },
+ "adobe": {
+  "dc": null,
+  "site": null,
+  "name": "Adobe",
+  "attempts": 1
+ },
+ "adtran": {
+  "dc": "wd3",
+  "site": "adtran",
+  "name": "Adtran"
+ },
+ "advanceauto": {
+  "dc": null,
+  "site": null,
+  "name": "Advance Auto Parts",
+  "attempts": 1
+ },
+ "aegistherapies": {
+  "dc": null,
+  "site": null,
+  "name": "Aegis Therapies",
+  "attempts": 1
+ },
+ "aes": {
+  "dc": null,
+  "site": null,
+  "name": "AES",
+  "attempts": 2
+ },
+ "ag": {
+  "dc": null,
+  "site": null,
+  "name": "Airbus",
+  "attempts": 1
+ },
+ "aggreko": {
+  "dc": null,
+  "site": null,
+  "name": "Aggreko",
+  "attempts": 1
+ },
+ "agilent": {
+  "dc": "wd5",
+  "site": "agilent_careers",
+  "name": "Agilent Technologies"
+ },
+ "agiliti": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Agiliti"
+ },
+ "agilonhealth": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "agilon health"
+ },
+ "aig": {
+  "dc": "wd1",
+  "site": "aig",
+  "name": "AIG"
+ },
+ "aimco": {
+  "dc": null,
+  "site": null,
+  "name": "Alberta Investment Management Corporation",
+  "attempts": 1
+ },
+ "airliquidehr": {
+  "dc": null,
+  "site": null,
+  "name": "Air Liquide",
+  "attempts": 2
  },
  "airproducts": {
   "dc": "wd5",
   "site": "AP0001",
   "name": "Air Products"
  },
+ "alation": {
+  "dc": null,
+  "site": null,
+  "name": "Alation",
+  "attempts": 1
+ },
+ "albanymed": {
+  "dc": null,
+  "site": null,
+  "name": "Albany Medical College",
+  "attempts": 1
+ },
+ "albemarle": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Albemarle"
+ },
+ "alcon": {
+  "dc": null,
+  "site": null,
+  "name": "Alcon",
+  "attempts": 1
+ },
+ "alegeus": {
+  "dc": null,
+  "site": null,
+  "name": "Alegeus",
+  "attempts": 1
+ },
+ "alfa": {
+  "dc": "wd3",
+  "site": "alfa",
+  "name": "Alfa Financial Software"
+ },
+ "alfalaval": {
+  "dc": null,
+  "site": null,
+  "name": "ALFA LAVAL",
+  "attempts": 1
+ },
+ "alkami": {
+  "dc": "wd12",
+  "site": "alkami",
+  "name": "Alkami Technology"
+ },
+ "alkegen": {
+  "dc": "wd5",
+  "site": "alkegen",
+  "name": "Alkegen"
+ },
+ "allegion": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Allegion"
+ },
+ "allegromicro": {
+  "dc": null,
+  "site": null,
+  "name": "Allegro MicroSystems",
+  "attempts": 1
+ },
+ "alliantenergy": {
+  "dc": null,
+  "site": null,
+  "name": "Alliant Energy",
+  "attempts": 1
+ },
  "alliedsolutions": {
   "dc": "wd501",
   "site": "Allied_External",
   "name": "Allied Solutions"
  },
+ "allina": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Allina Health"
+ },
+ "allisontransmission": {
+  "dc": null,
+  "site": null,
+  "name": "Allison Transmission",
+  "attempts": 1
+ },
+ "allstate": {
+  "dc": "wd5",
+  "site": "allstate_careers",
+  "name": "Allstate Insurance Company"
+ },
+ "alsglobal": {
+  "dc": "wd103",
+  "site": "External",
+  "name": "ALS Global"
+ },
+ "alston": {
+  "dc": null,
+  "site": null,
+  "name": "Alston & Bird Law Firm",
+  "attempts": 1
+ },
+ "altasciences": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Altasciences"
+ },
  "altera": {
   "dc": "wd1",
   "site": "altera",
   "name": "Altera Corporation"
+ },
+ "alteryx": {
+  "dc": null,
+  "site": null,
+  "name": "Alteryx",
+  "attempts": 1
  },
  "ambarella": {
   "dc": "wd108",
@@ -97,6 +351,11 @@
   "dc": "wd5",
   "site": "AutoOwners",
   "name": "Auto-Owners Insurance"
+ },
+ "astrazeneca": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "Alexion"
  },
  "bah": {
   "dc": "wd1",
@@ -377,7 +636,7 @@
   "dc": null,
   "site": null,
   "name": "AAA Mountainwest Group",
-  "attempts": 1
+  "attempts": 2
  },
  "nebraskablue": {
   "dc": "wd1",
@@ -474,6 +733,11 @@
   "site": "snap",
   "name": "Snap"
  },
+ "standoutforgood": {
+  "dc": "wd12",
+  "site": "standoutforgood",
+  "name": "Altar'd State"
+ },
  "stryker": {
   "dc": "wd1",
   "site": "StrykerCareers",
@@ -498,6 +762,12 @@
   "dc": "wd1",
   "site": "Search",
   "name": "TIAA"
+ },
+ "transamerica": {
+  "dc": null,
+  "site": null,
+  "name": "Aegon Asset Management",
+  "attempts": 1
  },
  "trwd": {
   "dc": "wd1",
@@ -528,6 +798,12 @@
   "dc": "wd5",
   "site": "global",
   "name": "Warner Bros."
+ },
+ "wgl": {
+  "dc": null,
+  "site": null,
+  "name": "AltaGas",
+  "attempts": 1
  },
  "workday": {
   "dc": "wd5",
