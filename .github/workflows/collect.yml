@@ -55,6 +55,11 @@ jobs:
       # Re-reads the live postings behind the freshly written jobs.json and
       # re-derives every gate from raw text. Report-only: a classifier
       # regression should be visible in the run log, not block the refresh.
+      # Content-hash the asset URLs so a deploy is never masked by a stale
+      # styles.css or app.js sitting in someone's browser cache.
+      - name: Stamp asset versions
+        run: python scripts/stamp_assets.py
+
       - name: Audit listings against live posting text
         run: python scripts/audit.py
         continue-on-error: true
@@ -71,6 +76,6 @@ jobs:
 
           COUNT=$(python -c "import json;print(len(json.load(open('docs/data/jobs.json'))['jobs']))")
           git add data/seen.json data/companies.json data/logos.json \
-                  docs/data/jobs.json docs/data/jobs.js
+                  docs/data/jobs.json docs/data/jobs.js docs/index.html
           git commit -m "chore(data): refresh listings (${COUNT} open roles)"
           git push

@@ -373,6 +373,18 @@ id-based storage would have silently cleared them from Applied.
 Entries saved before this change (bare ids) are still recognised, so nothing
 already marked was lost.
 
+## Asset caching
+
+GitHub Pages serves every file with `cache-control: max-age=600` and no
+version in the URL, so after a deploy a browser keeps using the `styles.css`
+and `app.js` it already has -- the page looks unchanged, and only a hard
+refresh fixes it. Nobody should need to know that.
+
+`scripts/stamp_assets.py` appends a content hash to those links in
+`index.html` (`./styles.css?v=ce6f477ddc`), making each deploy a genuinely new
+URL. The hash changes only when the file's bytes change, so unchanged assets
+still cache normally. It runs on every collection and is idempotent.
+
 ## Verification
 
 `scripts/audit.py` re-fetches the live postings behind `docs/data/jobs.json`
