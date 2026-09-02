@@ -499,25 +499,70 @@ def is_internship_role(title: str, commitment: str = "") -> bool:
     return bool(_INTERN_RE.search(hay))
 
 
-_SEASON_RE = re.compile(r"\b(summer|fall|autumn|winter|spring)\b[^.\n]{0,12}?\b(20\d{2})\b")
-_SEASON_RE_REV = re.compile(r"\b(20\d{2})\b[^.\n]{0,12}?\b(summer|fall|autumn|winter|spring)\b")
+_SEASON_WORDS = "winter|spring|summer|fall|autumn"
+
+# "Spring/Summer/Fall 2027" -- a run of seasons sharing one year.
+_SEASON_RUN_RE = re.compile(
+    rf"\b((?:{_SEASON_WORDS})(?:\s*(?:/|,|&|\+|-|\bor\b|\band\b)\s*(?:{_SEASON_WORDS}))*)"
+    rf"\s*(?:of\s+)?\b(20\d{{2}})\b"
+)
+# "2027 Summer Analyst" -- year first.
+_SEASON_REV_RE = re.compile(rf"\b(20\d{{2}})\s+((?:{_SEASON_WORDS}))\b")
+
+_SEASON_ORDER = {"Winter": 1, "Spring": 2, "Summer": 3, "Fall": 4}
+
+
+def _canon_season(word: str) -> str:
+    word = word.strip().lower()
+    return "Fall" if word in ("fall", "autumn") else word.capitalize()
+
+
+def season_sort_key(season: str) -> float:
+    """Chronological ordering: Fall 2026 < Winter 2027 < Spring 2027 < ..."""
+    try:
+        name, year = season.rsplit(" ", 1)
+        return int(year) + _SEASON_ORDER.get(name, 9) / 10
+    except (ValueError, AttributeError):
+        return 9999.0
+
+
+def extract_seasons(title: str, text: str = "") -> list[str]:
+    """Every season a posting names, e.g. ['Spring 2027', 'Summer 2027'].
+
+    A posting covering multiple terms genuinely belongs under each of them, so
+    the field is a list. An empty list means the posting named no season --
+    treated downstream as open to any.
+    """
+    found: list[str] = []
+
+    for source in (title, text[:3000]):
+        low = norm(source)
+        if not low:
+            continue
+
+        for run, year in _SEASON_RUN_RE.findall(low):
+            for word in re.split(r"\s*(?:/|,|&|\+|-|\bor\b|\band\b)\s*", run):
+                if word.strip():
+                    label = f"{_canon_season(word)} {year}"
+                    if label not in found:
+                        found.append(label)
+
+        for year, word in _SEASON_REV_RE.findall(low):
+            label = f"{_canon_season(word)} {year}"
+            if label not in found:
+                found.append(label)
+
+        # The title is authoritative -- do not dilute it with body mentions.
+        if found:
+            break
+
+    return sorted(found, key=season_sort_key)
 
 
 def extract_season(title: str, text: str = "") -> str | None:
-    """Best-effort 'Summer 2027' style label from the title, then the body."""
-    for source in (title, text[:2000]):
-        low = norm(source)
-        match = _SEASON_RE.search(low)
-        if match:
-            season, year = match.group(1), match.group(2)
-        else:
-            match = _SEASON_RE_REV.search(low)
-            if not match:
-                continue
-            year, season = match.group(1), match.group(2)
-        season = "Fall" if season in ("fall", "autumn") else season.capitalize()
-        return f"{season} {year}"
-    return None
+    """The single earliest season, kept for the card's summary chip."""
+    seasons = extract_seasons(title, text)
+    return seasons[0] if seasons else None
 
 
 # ----------------------------------------------------------------- priority

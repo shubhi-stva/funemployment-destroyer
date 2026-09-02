@@ -55,9 +55,12 @@ def collect() -> list[dict]:
         if classify.is_graduate_only(title, ""):
             continue
 
-        season = (row.get("season") or "").strip()
-        if season.lower() in ("", "not stated", "unknown"):
-            season = classify.extract_season(title) or None
+        seasons = classify.extract_seasons(title)
+        if not seasons:
+            declared = (row.get("season") or "").strip()
+            if declared.lower() not in ("", "not stated", "unknown"):
+                seasons = [declared]
+        season = seasons[0] if seasons else None
 
         location = classify.clean_text(row.get("location")) or "Not specified"
         posted = record.iso(row.get("posted_at"))
@@ -77,6 +80,7 @@ def collect() -> list[dict]:
             "type": "Internship",
             "category": category,
             "season": season,
+            "seasons": seasons,
             "location": location,
             "workMode": classify.classify_workmode(row.get("remote"), location, ""),
             "url": url,
@@ -87,6 +91,7 @@ def collect() -> list[dict]:
             "status": "open",
             "priority": 0,
             "source": _source_label(job_id),
+            "companyDomain": "",
             "notes": " · ".join(notes),
         })
 

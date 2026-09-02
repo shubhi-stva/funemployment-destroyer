@@ -344,12 +344,71 @@ body {
 .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
 
 .company {
+  display: flex;
+  align-items: center;
+  gap: 7px;
   margin: 0;
   font-size: .78rem;
   font-weight: 600;
   letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--muted);
+  min-width: 0;
+}
+
+.company > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Monogram by default; swapped for the real favicon once it loads. The hue
+   is derived from the company name, so a given firm is always the same tint
+   and the fallback still reads as an identity rather than a placeholder. */
+.logo {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: hsl(var(--logo-hue, 320) 45% 92%);
+  color: hsl(var(--logo-hue, 320) 45% 30%);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  overflow: hidden;
+}
+
+.logo { position: relative; }
+
+.logo.logo-img {
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+/* Stacked over the monogram and transparent until it loads. It must occupy
+   real layout, or loading="lazy" would never fire. */
+.logo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity .15s ease;
+}
+
+.logo.logo-img img { opacity: 1; }
+.logo.logo-img .logo-mono { visibility: hidden; }
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    background: hsl(var(--logo-hue, 320) 30% 24%);
+    color: hsl(var(--logo-hue, 320) 55% 82%);
+  }
+  .logo.logo-img { background: #f4f4f6; }
 }
 
 .title { margin: 3px 0 0; font-size: 1.13rem; letter-spacing: -.015em; line-height: 1.3; }
@@ -366,8 +425,6 @@ body {
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-
-.priority { font-family: var(--mono); font-size: .72rem; color: var(--muted); white-space: nowrap; }
 
 .meta { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0; padding: 0; }
 

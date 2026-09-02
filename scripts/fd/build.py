@@ -6,7 +6,7 @@ import json
 import logging
 from datetime import datetime, timedelta, timezone
 
-from . import classify, config
+from . import classify, config, logos
 
 log = logging.getLogger("fd.build")
 
@@ -146,16 +146,43 @@ def summarise(jobs: list[dict]) -> dict:
     }
 
 
+def _current_season_index(month: int) -> int:
+    """Which season we are in now: Winter 1, Spring 2, Summer 3, Fall 4."""
+    if month <= 2:
+        return 1
+    if month <= 5:
+        return 2
+    if month <= 8:
+        return 3
+    return 4
+
+
 def write(jobs: list[dict]) -> dict:
     """Score, shape, and write docs/data/jobs.json."""
+    logos.attach(jobs)
+
     for job in jobs:
         job["priority"] = classify.score_priority(job)
 
     stats = summarise(jobs)
+    # Offer only terms that have not already passed -- a "Summer 2025" option
+    # is noise. New seasons join the list automatically as postings appear.
+    now = datetime.now(timezone.utc)
+    current_key = now.year + _current_season_index(now.month) / 10
+    seasons = sorted(
+        {
+            s
+            for job in jobs
+            for s in (job.get("seasons") or [])
+            if classify.season_sort_key(s) >= current_key
+        },
+        key=classify.season_sort_key,
+    )
     payload = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "schemaVersion": 1,
         "stats": stats,
+        "seasons": seasons,
         "jobs": jobs,
     }
 

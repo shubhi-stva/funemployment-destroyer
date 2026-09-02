@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[2]
 
 COMPANIES_FILE = ROOT / "data" / "companies.json"
 SEEN_FILE = ROOT / "data" / "seen.json"
+# company name -> web domain, used to render a company icon
+LOGO_CACHE = ROOT / "data" / "logos.json"
 OUTPUT_FILE = ROOT / "docs" / "data" / "jobs.json"
 # Same data as a <script> assignment, for opening index.html from disk.
 FALLBACK_FILE = ROOT / "docs" / "data" / "jobs.js"

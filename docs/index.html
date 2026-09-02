@@ -56,6 +56,7 @@
     <div class="filters" id="filters" hidden>
       <div class="filter"><label for="f-type">Job type</label><select id="f-type" data-filter="type"></select></div>
       <div class="filter"><label for="f-category">Category</label><select id="f-category" data-filter="category"></select></div>
+      <div class="filter"><label for="f-season">Season</label><select id="f-season" data-filter="season"></select></div>
       <div class="filter"><label for="f-location">Location</label><select id="f-location" data-filter="location"></select></div>
       <div class="filter"><label for="f-workMode">Work mode</label><select id="f-workMode" data-filter="workMode"></select></div>
       <div class="filter"><label for="f-degreeRequirement">Degree requirement</label><select id="f-degreeRequirement" data-filter="degreeRequirement"></select></div>
@@ -103,12 +104,14 @@
   <article class="card">
     <header class="card-head">
       <div class="card-title">
-        <p class="company" data-field="company"></p>
+        <p class="company">
+          <span class="logo" data-field="logo" aria-hidden="true"></span>
+          <span data-field="company"></span>
+        </p>
         <h2 class="title" data-field="title"></h2>
       </div>
       <div class="card-flags">
         <span class="badge badge-new" data-field="new" hidden>New</span>
-        <span class="priority" data-field="priority"></span>
       </div>
     </header>
 
@@ -119,7 +122,7 @@
       <li class="chip" data-field="workMode"></li>
       <li class="chip" data-field="degreeRequirement"></li>
       <li class="chip" data-field="experienceLevel"></li>
-      <li class="chip chip-season" data-field="season" hidden></li>
+      <li class="chip chip-season" data-field="seasons" hidden></li>
     </ul>
 
     <p class="notes" data-field="notes"></p>

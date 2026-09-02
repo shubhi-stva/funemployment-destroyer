@@ -63,6 +63,7 @@ jobs:
           fi
 
           COUNT=$(python -c "import json;print(len(json.load(open('docs/data/jobs.json'))['jobs']))")
-          git add data/seen.json data/companies.json docs/data/jobs.json
+          git add data/seen.json data/companies.json data/logos.json \
+                  docs/data/jobs.json docs/data/jobs.js
           git commit -m "chore(data): refresh listings (${COUNT} open roles)"
           git push

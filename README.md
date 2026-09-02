@@ -151,6 +151,7 @@ scripts/
 data/
   companies.json          4,579 company -> ATS slug mappings
   seen.json               id -> when we first saw it (NOT personal state)
+  logos.json              company -> domain cache for company icons
 .github/workflows/
   collect.yml             the every-30-minutes job
 ```
@@ -208,7 +209,9 @@ Each job:
 | `title` | |
 | `type` | `Internship` or `Full Time` |
 | `category` | Software Engineering, AI / Machine Learning, Data, Cybersecurity, Cloud / Infrastructure, Developer Productivity, Product Engineering, Robotics |
-| `season` | e.g. `Summer 2027`, or `null` for full-time |
+| `season` | Earliest term named, e.g. `Summer 2027`; `null` for full-time |
+| `seasons` | Every term the posting names. "Spring/Summer/Fall 2027" becomes three entries, so the role appears under each. An empty list means the posting named no term and is treated as open to any. |
+| `companyDomain` | Resolved company website, used to fetch a company icon. Empty when unresolved — the card falls back to a monogram. |
 | `location` | Free text, e.g. `New York, NY` |
 | `workMode` | `On site`, `Hybrid`, `Remote` |
 | `url` | Original posting; opens in a new tab |
@@ -270,6 +273,18 @@ download.
 On Apple devices this renders in real SF. Elsewhere it falls through to Segoe
 UI Variable (Windows), Roboto (Android), then Inter if installed. Numerals use
 SF Mono via `ui-monospace`.
+
+## Company icons
+
+Job URLs point at ATS hosts, never the employer, so the domain is looked up
+from the company name via Clearbit's autocomplete endpoint and cached in
+`data/logos.json` — later runs only query companies not already cached. The
+card then loads `icons.duckduckgo.com/ip3/{domain}.ico` (DuckDuckGo rather
+than Google, so icon requests are not tied to a Google profile).
+
+About 70% of companies resolve. The rest — and any icon that 404s — fall back
+to a monogram tinted by a hash of the company name, so every card shows an
+identity and none shows a broken image.
 
 ## Known limits
 

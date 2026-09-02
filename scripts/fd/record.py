@@ -107,6 +107,7 @@ def build(
         "type": "Internship" if internship else "Full Time",
         "category": category,
         "season": classify.extract_season(title, body) if internship else None,
+        "seasons": classify.extract_seasons(title, body) if internship else [],
         "location": location,
         "workMode": classify.classify_workmode(ats_workmode, location, text_lower),
         "url": url,
@@ -117,6 +118,7 @@ def build(
         "status": "open",
         "priority": 0,  # scored in build.py, once firstSeen is final
         "source": source,
+        "companyDomain": "",   # filled in by fd.logos.attach()
         "notes": summarise(body, degree, internship),
     }
     return job

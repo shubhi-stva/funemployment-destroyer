@@ -27,6 +27,7 @@
     filterFields: [
       'type',
       'category',
+      'season',
       'location',
       'workMode',
       'degreeRequirement',
@@ -143,6 +144,7 @@
     tab: 'all',
     query: '',
     sort: 'newest',
+    seasonVocabulary: [],
     page: 1,      // how many pages of results are currently rendered
     filters: {}   // field -> selected value ('' means any)
   };
@@ -165,6 +167,7 @@
         // future generator can pick either shape.
         var list = Array.isArray(payload) ? payload : (payload && payload.jobs) || [];
         UI.generatedAt = (payload && payload.generatedAt) || null;
+        UI.seasonVocabulary = (payload && payload.seasons) || [];
         return list.map(normaliseJob).filter(function (job) { return !!job.id; });
       });
   }
@@ -194,6 +197,8 @@
       type: str(raw.type) || 'Full Time',
       category: str(raw.category) || 'Not specified',
       season: str(raw.season),
+      seasons: Array.isArray(raw.seasons) ? raw.seasons.slice() : (raw.season ? [str(raw.season)] : []),
+      companyDomain: str(raw.companyDomain),
       location: str(raw.location) || 'Not specified',
       workMode: str(raw.workMode) || 'Not specified',
       url: str(raw.url),
@@ -248,8 +253,18 @@
   function matchesFilters(job) {
     return CONFIG.filterFields.every(function (field) {
       var wanted = UI.filters[field];
-      return !wanted || job[field] === wanted;
+      if (!wanted) return true;
+      if (field === 'season') return matchesSeason(job, wanted);
+      return job[field] === wanted;
     });
+  }
+
+  // A posting that names no season is open-ended, so it belongs under every
+  // term rather than disappearing the moment a season is selected.
+  function matchesSeason(job, wanted) {
+    if (job.type !== 'Internship') return false;
+    if (!job.seasons.length) return true;
+    return job.seasons.indexOf(wanted) !== -1;
   }
 
   function applyView(jobs) {
@@ -353,6 +368,8 @@
   }
 
   function uniqueValues(field) {
+    if (field === 'season') return seasonOptions();
+
     var seen = {};
     UI.jobs.forEach(function (job) {
       if (job[field]) seen[job[field]] = true;
@@ -366,6 +383,38 @@
       return known.concat(extra);
     }
     return values.sort(function (a, b) { return a.localeCompare(b); });
+  }
+
+  // Every term the data mentions, newest cycles last, chronologically ordered.
+  // New seasons appear here automatically as postings for them show up.
+  function seasonOptions() {
+    var seen = {};
+    UI.seasonVocabulary.forEach(function (season) { seen[season] = true; });
+    UI.jobs.forEach(function (job) {
+      job.seasons.forEach(function (season) { seen[season] = true; });
+    });
+    // Terms that have already ended are not worth offering, even if some
+    // stale posting still mentions one.
+    var floor = currentSeasonKey();
+    return Object.keys(seen)
+      .filter(function (season) { return seasonSortKey(season) >= floor; })
+      .sort(function (a, b) { return seasonSortKey(a) - seasonSortKey(b); });
+  }
+
+  function currentSeasonKey() {
+    var now = new Date();
+    var month = now.getMonth() + 1;
+    var index = month <= 2 ? 1 : month <= 5 ? 2 : month <= 8 ? 3 : 4;
+    return now.getFullYear() + index / 10;
+  }
+
+  var SEASON_ORDER = { Winter: 1, Spring: 2, Summer: 3, Fall: 4 };
+
+  function seasonSortKey(season) {
+    var parts = String(season).split(' ');
+    var year = parseInt(parts[parts.length - 1], 10);
+    if (isNaN(year)) return 9999;
+    return year + (SEASON_ORDER[parts[0]] || 9) / 10;
   }
 
   function makeOption(value, label) {
@@ -422,8 +471,13 @@
     field(node, 'title').textContent = job.title;
     field(node, 'type').textContent = job.type;
     field(node, 'category').textContent = job.category;
-    field(node, 'location').textContent = job.location;
-    field(node, 'workMode').textContent = job.workMode;
+
+    renderLogo(field(node, 'logo'), job);
+
+    // "Not specified" is the absence of information, not information. Chips
+    // carrying it are dropped rather than shown as filler.
+    setChip(field(node, 'location'), job.location);
+    setChip(field(node, 'workMode'), job.workMode);
     // The degree chip only earns its place when it tells you something you
     // could act on. Internships are all "currently enrolled" by definition,
     // and a full-time role that merely prefers a degree is not a gate -- so
@@ -434,14 +488,17 @@
     degreeChip.textContent = job.degreeRequirement;
     degreeChip.hidden = !showDegree;
     degreeChip.classList.toggle('chip-degree', showDegree);
-    field(node, 'experienceLevel').textContent = job.experienceLevel;
+    // "Intern" duplicates the Internship chip and the title, so it only earns
+    // a place when it says something else.
+    var levelChip = field(node, 'experienceLevel');
+    setChip(levelChip, job.experienceLevel);
+    if (job.experienceLevel === 'Intern') levelChip.hidden = true;
 
-    var season = field(node, 'season');
-    season.hidden = !job.season;
-    season.textContent = job.season;
+    var seasons = field(node, 'seasons');
+    seasons.textContent = job.seasons.join(' · ');
+    seasons.hidden = !job.seasons.length;
 
     field(node, 'new').hidden = !job.isNew;
-    field(node, 'priority').textContent = 'Priority ' + job.priority + '/5';
 
     var notes = field(node, 'notes');
     notes.textContent = job.notes;
@@ -467,6 +524,63 @@
     node.classList.toggle('is-applied', Storage.has('applied', job.id));
 
     return node;
+  }
+
+  function setChip(node, value) {
+    node.textContent = value;
+    node.hidden = !value || value === 'Not specified';
+  }
+
+  // DuckDuckGo's icon service turns a domain into the company's favicon
+  // without tying the request to a Google profile. Anything that fails -- no
+  // domain resolved, or a 404 -- leaves the monogram in place, so a card is
+  // never left with a broken image.
+  function renderLogo(node, job) {
+    node.innerHTML = '';
+    node.classList.remove('logo-img');
+    node.style.setProperty('--logo-hue', String(hashHue(job.company)));
+
+    var mono = document.createElement('span');
+    mono.className = 'logo-mono';
+    mono.textContent = monogram(job.company);
+    node.appendChild(mono);
+
+    if (!job.companyDomain) return;
+
+    // The image goes into the DOM immediately, transparent and stacked over
+    // the monogram, and is revealed once it loads.
+    //
+    // Deliberately eager. Two lazy-loading traps were hit here: an image
+    // appended only on load never becomes visible so never loads at all, and
+    // even in-document, Chrome would not fire load for these 22px
+    // opacity-0 icons. They are ~1KB each and pagination caps the page at 60
+    // cards, so eager costs little and always works.
+    var img = document.createElement('img');
+    img.alt = '';
+    img.loading = 'eager';
+    img.decoding = 'async';
+    img.addEventListener('load', function () {
+      if (img.naturalWidth > 1) node.classList.add('logo-img');
+    });
+    img.addEventListener('error', function () { img.remove(); });
+    img.src = 'https://icons.duckduckgo.com/ip3/' + job.companyDomain + '.ico';
+    node.appendChild(img);
+  }
+
+  function monogram(name) {
+    var words = String(name).replace(/[^A-Za-z0-9 ]/g, ' ').trim().split(/\s+/);
+    if (!words[0]) return '?';
+    if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+    return (words[0][0] + words[1][0]).toUpperCase();
+  }
+
+  // Deterministic hue per company, so a given firm always gets the same tint.
+  function hashHue(name) {
+    var hash = 0;
+    for (var i = 0; i < name.length; i++) {
+      hash = (hash * 31 + name.charCodeAt(i)) % 360;
+    }
+    return hash;
   }
 
   function field(root, name) {
