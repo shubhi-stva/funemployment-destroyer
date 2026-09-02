@@ -364,7 +364,6 @@
   var el = {};
 
   function cacheElements() {
-    el.controls = document.querySelector('.controls');
     el.search = document.getElementById('search');
     el.tabs = document.getElementById('tabs');
     el.filters = document.getElementById('filters');
@@ -788,27 +787,6 @@
     render();
   }
 
-  // The toolbar gains a hairline divider once the page scrolls, the way
-  // Apple's nav does. A passive scroll listener throttled to one rAF: plain,
-  // cheap, and it does the whole job for a single boolean.
-  function watchToolbar() {
-    var ticking = false;
-
-    function update() {
-      ticking = false;
-      var scrolled = (window.pageYOffset || document.documentElement.scrollTop) > 8;
-      el.controls.classList.toggle('is-stuck', scrolled);
-    }
-
-    window.addEventListener('scroll', function () {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(update);
-    }, { passive: true });
-
-    update();
-  }
-
   function bindEvents() {
     el.search.addEventListener('input', debounce(function () {
       UI.query = el.search.value;
@@ -885,7 +863,6 @@
     Storage.load();
     CONFIG.filterFields.forEach(function (f) { UI.filters[f] = ''; });
     bindEvents();
-    watchToolbar();
 
     loadJobs()
       .then(function (jobs) {

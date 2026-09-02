@@ -124,7 +124,7 @@ body {
 
 .site-header {
   background: transparent;
-  padding: 56px 0 26px;
+  padding: 48px 0 20px;
 }
 
 .brand { display: flex; align-items: center; gap: 16px; }
@@ -169,33 +169,30 @@ body {
 
 /* --------------------------------------------------------------- toolbar */
 
-/* Sticky and frosted, the way Apple's global nav behaves. */
-.controls {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  padding: 14px 0 10px;
-  background: var(--bg);                                    /* fallback */
-  background: color-mix(in srgb, var(--bg) 82%, transparent);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  backdrop-filter: saturate(180%) blur(20px);
-  border-bottom: 1px solid transparent;
-  transition: border-color var(--fast), background var(--fast);
+/* Scrolls away with the page rather than pinning to the top. */
+.controls { padding: 4px 0 0; }
+
+/* One compact row: search, filters, and sort pushed to the right. */
+.search-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
-.controls.is-stuck { border-bottom-color: var(--border-soft); }
-
-.search-row { display: flex; gap: 10px; align-items: stretch; }
 
 .search {
   position: relative;
-  flex: 1 1 auto;
+  /* Bounded rather than full-bleed: a search field the width of the page
+     reads as a banner, and the eye has to travel it before reaching the
+     filters. */
+  flex: 1 1 300px;
+  max-width: 420px;
   display: flex;
   align-items: center;
   background: var(--surface-2);
   border: 1px solid transparent;
   border-radius: var(--radius-pill);
-  padding: 0 20px;
+  padding: 0 16px;
   transition: background var(--fast), border-color var(--fast), box-shadow var(--fast);
 }
 
@@ -205,7 +202,7 @@ body {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-.search-icon { color: var(--muted); font-size: 1.15rem; padding-right: 12px; }
+.search-icon { color: var(--muted); font-size: 1.05rem; padding-right: 10px; }
 
 .search input {
   flex: 1;
@@ -213,8 +210,8 @@ body {
   background: transparent;
   color: inherit;
   font: inherit;
-  font-size: 1rem;
-  padding: 13px 0;
+  font-size: .95rem;
+  padding: 10px 0;
   outline: none;
   min-width: 0;
 }
@@ -228,9 +225,9 @@ body {
   background: var(--surface);
   color: inherit;
   font: inherit;
-  font-size: .94rem;
+  font-size: .9rem;
   font-weight: 500;
-  padding: 11px 20px;
+  padding: 9px 17px;
   cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
@@ -268,8 +265,8 @@ body {
 
 .tabs {
   display: flex;
-  gap: 8px;
-  margin: 14px 0 0;
+  gap: 7px;
+  margin: 10px 0 0;
   overflow-x: auto;
   scrollbar-width: none;
   padding-bottom: 2px;
@@ -283,9 +280,9 @@ body {
   background: var(--surface-2);
   color: var(--muted);
   border-radius: var(--radius-pill);
-  padding: 9px 18px;
+  padding: 7px 15px;
   font: inherit;
-  font-size: .92rem;
+  font-size: .88rem;
   font-weight: 500;
   cursor: pointer;
   white-space: nowrap;
@@ -314,9 +311,9 @@ body {
 .filters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 14px;
-  margin-top: 14px;
-  padding: 20px;
+  gap: 12px;
+  margin-top: 12px;
+  padding: 16px;
   background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
@@ -357,23 +354,16 @@ body {
 
 .filter-actions { justify-content: flex-end; }
 
-.result-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 26px 0 16px;
-}
+.result-bar { margin: 14px 0 14px; }
 
-.result-count { margin: 0; color: var(--muted); font-size: .92rem; }
+.result-count { margin: 0; color: var(--muted); font-size: .85rem; }
 
 .sort {
-  display: inline-flex; align-items: center; gap: 10px;
-  font-size: .74rem; font-weight: 600; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--muted);
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;      /* pushed to the right edge of the row */
 }
-.sort select { width: auto; }
+.sort select { width: auto; padding: 9px 12px; font-size: .88rem; }
 
 /* --------------------------------------------------------------- results */
 
@@ -657,7 +647,8 @@ body {
   body { font-size: 16px; }
   .wrap { padding: 0 16px; }
   .site-header { padding: 34px 0 18px; }
-  .search-row { flex-direction: column; }
+  .search { max-width: none; flex-basis: 100%; }
+  .sort { margin-left: 0; }
   .results { grid-template-columns: 1fr; }
   .card-foot { align-items: stretch; }
   .actions { width: 100%; }

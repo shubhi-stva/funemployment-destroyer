@@ -36,6 +36,15 @@
       <button type="button" class="btn ghost" id="toggle-filters" aria-expanded="false" aria-controls="filters">
         Filters <span class="pill" id="filter-count" hidden>0</span>
       </button>
+      <label class="sort" for="sort">
+        <span class="sr-only">Sort by</span>
+        <select id="sort">
+          <option value="newest">Newest</option>
+          <option value="oldest">Oldest</option>
+          <option value="company">Company A–Z</option>
+          <option value="priority">Highest priority</option>
+        </select>
+      </label>
     </div>
 
     <nav class="tabs" id="tabs" aria-label="Views">
@@ -62,14 +71,6 @@
 
     <div class="result-bar">
       <p class="result-count" id="result-count" role="status" aria-live="polite"></p>
-      <label class="sort" for="sort">Sort
-        <select id="sort">
-          <option value="newest">Newest</option>
-          <option value="oldest">Oldest</option>
-          <option value="company">Company A–Z</option>
-          <option value="priority">Highest priority</option>
-        </select>
-      </label>
     </div>
   </section>
 
