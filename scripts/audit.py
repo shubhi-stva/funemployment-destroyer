@@ -99,8 +99,11 @@ def check(job: dict, body: str) -> list[str]:
             problems.append(f"full-time with a degree gate ({degree})")
         if classify.has_gpa_requirement(hay):
             problems.append("full-time with a GPA floor")
+        # Use title+body, exactly as the collector does. Checking the body
+        # alone flagged "Build & Release Engineer - New Grad" because the
+        # explicit new-grad signal lives in its title.
         years = classify.min_years_required(low)
-        if years > config.FULLTIME_MAX_YEARS and not classify._NO_EXPERIENCE_RE.search(low):
+        if years > config.FULLTIME_MAX_YEARS and not classify._NO_EXPERIENCE_RE.search(hay):
             problems.append(f"full-time asking {years}+ years of experience")
         level = classify.classify_experience(job["title"], low, False)
         if classify.LEVEL_RANK.get(level, 9) > config.FULLTIME_MAX_LEVEL:

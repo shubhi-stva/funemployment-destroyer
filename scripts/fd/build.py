@@ -153,7 +153,8 @@ def summarise(jobs: list[dict]) -> dict:
         "total": len(jobs),
         "internships": count(lambda j: j["type"] == "Internship"),
         "fullTime": count(lambda j: j["type"] == "Full Time"),
-        "newLast72h": count(
+        "newWindowHours": config.NEW_WINDOW_HOURS,
+        "newRecently": count(
             lambda j: (_sort_stamp(j) or datetime.min.replace(tzinfo=timezone.utc))
             >= now - window
         ),

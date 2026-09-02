@@ -157,6 +157,10 @@ _GPA_WAIVED_RE = re.compile(
 )
 
 DEGREE_NO = "No degree required"
+# "Bachelor's degree or equivalent experience" -- the degree is one route, not
+# the only one. Kept distinct from both "required" and "preferred" so the card
+# says exactly what the posting says.
+DEGREE_OR_EQUIV = "Degree or equivalent"
 DEGREE_PREFERRED = "Degree preferred"
 DEGREE_ENROLLED = "Currently enrolled"
 DEGREE_REQUIRED = "Degree required"
@@ -324,7 +328,7 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
                  text_lower):
         return DEGREE_NO
 
-    escape = preferred = required = enrolled = False
+    escape = preferred = required = enrolled = or_equivalent = False
 
     for match in _DEGREE_MENTION.finditer(text_lower):
         start = max(0, match.start() - _WINDOW_BEFORE)
@@ -340,9 +344,11 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
             escape = True
         elif kind == "preferred":
             preferred = True
+        elif kind == "degree_or_experience":
+            or_equivalent = True
         else:
-            # "required", "degree_or_experience", or a bare bullet with no
-            # qualifier at all -- all of which gate on holding the degree.
+            # "required", or a bare bullet with no qualifier at all: both
+            # gate on actually holding the degree.
             required = True
 
     if is_internship and enrolled:
@@ -354,6 +360,8 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
         return DEGREE_REQUIRED
     if preferred:
         return DEGREE_PREFERRED
+    if or_equivalent:
+        return DEGREE_OR_EQUIV
     if escape:
         return DEGREE_NO
     if is_internship and _ENROLLED_RE.search(text_lower):
@@ -435,6 +443,12 @@ NON_TECH_HINTS = (
     "solution architect", "solutions engineer", "solutions consultant",
     "sales engineer", "implementation", "onboarding", "trainer",
     "scrum master", "business analyst", "compliance", "auditor",
+    # Physical security and facilities work. The Cybersecurity keywords were
+    # sweeping these in -- "Security Associate - 1st Shift" is a guard post.
+    "security associate", "security officer", "protective services",
+    "loss prevention", "1st shift", "2nd shift", "3rd shift", "night shift",
+    "icqa", "footwear", "apparel", "merchandis", "financial analyst",
+    "survey operations", "operations center", "dispatcher",
     "support specialist", "support associate", "help desk", "helpdesk",
     "service desk", "desktop support", "project assistant",
     "project coordinator", "administrative assistant", "executive assistant",
@@ -865,6 +879,28 @@ _NON_US_CITIES = (
     "bangkok", "ho chi minh", "hanoi", "kuala lumpur", "sao paulo",
     "rio de janeiro", "buenos aires", "santiago", "bogota",
     "lima", "mexico city", "monterrey", "guadalajara",
+    # Engineering and outsourcing hubs that were classified "unknown" and so
+    # kept: Craiova (Romania) and Kaunas (Lithuania) both reached the site.
+    "craiova", "iasi", "timisoara", "brasov", "constanta", "sibiu",
+    "poznan", "lodz", "katowice", "gdynia", "szczecin", "lublin",
+    "kaunas", "klaipeda", "tartu", "kosice", "plzen", "ostrava",
+    "debrecen", "szeged", "varna", "plovdiv", "skopje", "tirana",
+    "sarajevo", "podgorica", "chisinau", "minsk", "lviv", "kharkiv",
+    "odesa", "dnipro", "yerevan", "tbilisi", "baku", "almaty", "tashkent",
+    "sheffield", "nottingham", "newcastle", "liverpool", "southampton",
+    "aberdeen", "galway", "limerick", "bilbao", "seville", "malaga",
+    "zaragoza", "bologna", "florence", "naples", "genoa", "lucerne",
+    "graz", "linz", "salzburg", "malmo", "uppsala", "bergen", "trondheim",
+    "aarhus", "espoo", "tampere", "turku", "nuremberg", "leipzig",
+    "dresden", "bonn", "essen", "dortmund", "bordeaux", "nantes", "lille",
+    "grenoble", "rennes",
+    "hsinchu", "kaohsiung", "nagoya", "fukuoka", "sapporo", "yokohama",
+    "incheon", "daegu", "chengdu", "wuhan", "nanjing", "suzhou", "tianjin",
+    "qingdao", "dalian", "xiamen", "jaipur", "indore", "coimbatore",
+    "kochi", "nagpur", "vadodara", "chandigarh", "thiruvananthapuram",
+    "colombo", "dhaka", "karachi", "lahore", "islamabad", "kathmandu",
+    "da nang", "chiang mai", "surabaya", "bandung", "penang", "johor",
+    "davao", "queenstown",
 )
 
 

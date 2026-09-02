@@ -21,7 +21,7 @@
   var CONFIG = {
     dataUrl: './data/jobs.json',        // relative — works under /funemployment-destroyer/
     fallbackUrl: './data/jobs.js',      // same data as a <script>, for file://
-    newWindowHours: 72,
+    newWindowHours: 24,
     pageSize: 60,               // cards rendered before 'Show more'
     storageKey: 'fd.state.v1',
     filterFields: [
@@ -39,6 +39,7 @@
       workMode: ['On site', 'Hybrid', 'Remote', 'Not specified'],
       degreeRequirement: [
         'No degree required',
+        'Degree or equivalent',
         'Degree preferred',
         'Currently enrolled',
         'Degree required',
@@ -326,12 +327,6 @@
   var el = {};
 
   function cacheElements() {
-    el.stats = {
-      total: document.getElementById('stat-total'),
-      newly: document.getElementById('stat-new'),
-      internships: document.getElementById('stat-internships'),
-      fulltime: document.getElementById('stat-fulltime')
-    };
     el.search = document.getElementById('search');
     el.tabs = document.getElementById('tabs');
     el.filters = document.getElementById('filters');
@@ -347,15 +342,6 @@
     el.restoreAll = document.getElementById('restore-all');
     el.dataStamp = document.getElementById('data-stamp');
     el.template = document.getElementById('job-card-template');
-  }
-
-  function renderStats(pool) {
-    // These describe what is still open to you, so applied roles are out.
-    var open = pool.filter(function (job) { return !Storage.has('applied', job.id); });
-    el.stats.total.textContent = open.length;
-    el.stats.newly.textContent = open.filter(function (j) { return j.isNew; }).length;
-    el.stats.internships.textContent = open.filter(TABS.internships).length;
-    el.stats.fulltime.textContent = open.filter(TABS.fulltime).length;
   }
 
   function renderTabCounts(pool) {
@@ -505,7 +491,8 @@
     // the chip appears solely for full-time roles with no degree requirement.
     var degreeChip = field(node, 'degreeRequirement');
     var showDegree = job.type !== 'Internship' &&
-                     job.degreeRequirement === 'No degree required';
+                     (job.degreeRequirement === 'No degree required' ||
+                      job.degreeRequirement === 'Degree or equivalent');
     degreeChip.textContent = job.degreeRequirement;
     degreeChip.hidden = !showDegree;
     degreeChip.classList.toggle('chip-degree', showDegree);
@@ -720,7 +707,6 @@
     var pool = visibleJobs();
     var shown = sortJobs(applyView(pool));
 
-    renderStats(pool);
     renderTabCounts(pool);
     renderJobs(shown);
     renderResultCount(shown.length, pool);

@@ -18,10 +18,12 @@ Two standing rules drive every filter in the collector:
    "Graduate Intern" / "Graduate Co-op" labels that Intel and Altera use for
    grad students. A posting offering both routes ("Bachelor's/Master's") is
    kept.
-2. **Entry-level full-time tech roles with no degree, GPA, or experience gate.**
-   A full-time posting is kept only when *all four* hold: no hard education
-   requirement, no numeric GPA floor, entry-level seniority, and no meaningful
-   prior-experience ask (`FULLTIME_MAX_YEARS`, default 1).
+2. **Entry-level full-time tech roles where a degree is not a strict
+   requirement.** Kept unless the posting makes a bachelor's degree
+   mandatory. "Degree preferred", "degree or equivalent experience", and
+   postings that never mention education all qualify -- only an explicit
+   requirement (a bare qualifications bullet, or "(required)") disqualifies.
+   The GPA, seniority and prior-experience gates still apply.
 
 3. **United States only.** Postings positively identified as abroad are
    dropped.
@@ -251,7 +253,7 @@ Each job:
 | `url` | Original posting; opens in a new tab |
 | `postedAt` | ISO datetime the company posted it. Kept date-only when the source gave no time of day, so the card never invents a "12:00 AM". |
 | `firstSeen` | ISO datetime this system first saw it. Internal only — not displayed, and no longer used for sorting. |
-| `degreeRequirement` | `No degree required`, `Degree preferred`, `Currently enrolled`, `Degree required`, `Not specified` |
+| `degreeRequirement` | `No degree required`, `Degree or equivalent`, `Degree preferred`, `Currently enrolled`, `Degree required`, `Not specified` |
 | `experienceLevel` | e.g. `Intern`, `Entry Level`, `Mid Level` |
 | `status` | `open` / `closed` |
 | `priority` | Number, 0–5. Drives "Highest priority" sort. |
@@ -270,7 +272,7 @@ Everything the UI calls recent is measured from **`postedAt`** — when the
 company published the role — not from when this collector noticed it:
 
 - **Newest / Oldest** sort by `postedAt`
-- The **New** badge means posted within the last 72 hours
+- The **New** badge means posted within the last 24 hours
   (`CONFIG.newWindowHours` in `app.js`, `NEW_WINDOW_HOURS` in `config.py`)
 - The priority score's freshness bonus uses `postedAt`
 

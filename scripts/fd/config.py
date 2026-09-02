@@ -55,22 +55,24 @@ MAX_AGE_DAYS = int(os.environ.get("FD_MAX_AGE_DAYS", "45"))
 
 # A posting counts as "New" in the UI within this window. Kept in sync with
 # CONFIG.newWindowHours in docs/app.js.
-NEW_WINDOW_HOURS = 72
+NEW_WINDOW_HOURS = 24
 
 # --- What we actually want -----------------------------------------------
 
-# Full-time roles are kept only when the posting shows no hard degree or GPA
-# gate. "Not specified" -- the posting simply never mentions education -- is
-# excluded by default: silence is not evidence of an open door, and including
-# it roughly tripled the output with roles that mostly do want a degree.
-# Set FD_INCLUDE_UNSPECIFIED=1 to widen the net.
+# Full-time roles are kept unless a bachelor's degree is a STRICT
+# requirement. Everything softer qualifies:
+#   - the posting says no degree is needed
+#   - a degree is merely preferred
+#   - a degree OR equivalent experience is accepted
+#   - education is never mentioned at all
+# Only "Degree required" -- a bare qualifications bullet, or an explicit
+# "(required)" -- is disqualifying.
 FULLTIME_ALLOWED_DEGREE: tuple[str, ...] = (
     "No degree required",
     "Degree preferred",
+    "Degree or equivalent",
+    "Not specified",
 )
-if os.environ.get("FD_INCLUDE_UNSPECIFIED") == "1":
-    FULLTIME_ALLOWED_DEGREE += ("Not specified",)
-
 # Full-time roles must be genuinely open to someone starting out: entry level,
 # and asking for no meaningful prior experience. Anything that quotes a
 # years-of-experience minimum above FULLTIME_MAX_YEARS is dropped, as is

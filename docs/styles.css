@@ -93,7 +93,7 @@ body {
 .site-header {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 28px 0 24px;
+  padding: 26px 0 22px;
 }
 
 .brand { display: flex; align-items: center; gap: 14px; }
@@ -132,36 +132,6 @@ body {
   /* A hairline rule under the name, in the accent -- signature, not shouting. */
   border-bottom: 1px solid var(--accent);
   padding-bottom: 2px;
-}
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 22px 0 0;
-}
-
-.stat {
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 12px 14px;
-}
-
-.stat dt {
-  margin: 0;
-  font-size: .72rem;
-  text-transform: uppercase;
-  letter-spacing: .07em;
-  color: var(--muted);
-}
-
-.stat dd {
-  margin: 4px 0 0;
-  font-family: var(--mono);
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: -.03em;
 }
 
 /* ---------- Controls ---------- */
@@ -575,32 +545,11 @@ body {
 
 @media (max-width: 720px) {
   .wrap { padding: 0 14px; }
-  .byline {
-  margin: 5px 0 0;
-  font-size: .74rem;
-  font-weight: 500;
-  letter-spacing: .22em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-.byline span {
-  color: var(--accent-text);
-  /* A hairline rule under the name, in the accent -- signature, not shouting. */
-  border-bottom: 1px solid var(--accent);
-  padding-bottom: 2px;
-}
-
-.stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .search-row { flex-direction: column; }
   .results { grid-template-columns: 1fr; }
   .card-foot { align-items: stretch; }
   .actions { width: 100%; }
   .actions .btn.primary { flex: 1; }
-}
-
-@media (max-width: 400px) {
-  .stat dd { font-size: 1.35rem; }
 }
 
 .show-more { grid-column: 1 / -1; display: flex; justify-content: center; padding: 8px 0 4px; }
