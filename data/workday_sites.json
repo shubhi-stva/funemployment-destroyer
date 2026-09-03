@@ -176,7 +176,7 @@
   "dc": null,
   "site": null,
   "name": "Azuria Corporation",
-  "attempts": 2
+  "attempts": 3
  },
  "aegistherapies": {
   "dc": null,
@@ -254,7 +254,7 @@
   "dc": null,
   "site": null,
   "name": "Asahi Kasei Corporation",
-  "attempts": 2
+  "attempts": 3
  },
  "alation": {
   "dc": null,
@@ -509,7 +509,7 @@
   "dc": null,
   "site": null,
   "name": "Anoka County Minnesota",
-  "attempts": 2
+  "attempts": 3
  },
  "antares": {
   "dc": "wd5",
@@ -530,7 +530,7 @@
   "dc": null,
   "site": null,
   "name": "Applied Information Sciences",
-  "attempts": 2
+  "attempts": 3
  },
  "aptiv": {
   "dc": "wd5",
@@ -586,7 +586,7 @@
   "dc": null,
   "site": null,
   "name": "Aristocrat Leisure",
-  "attempts": 2
+  "attempts": 3
  },
  "aritzia": {
   "dc": "wd3",
@@ -597,49 +597,49 @@
   "dc": null,
   "site": null,
   "name": "Arkansas Blue Cross",
-  "attempts": 2
+  "attempts": 3
  },
  "arlo": {
   "dc": null,
   "site": null,
   "name": "Arlo",
-  "attempts": 2
+  "attempts": 3
  },
  "armaninollp": {
   "dc": null,
   "site": null,
   "name": "Armanino",
-  "attempts": 2
+  "attempts": 3
  },
  "arraytechinc": {
   "dc": null,
   "site": null,
   "name": "ARRAY Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "arrow": {
   "dc": null,
   "site": null,
   "name": "Arrow Electronics",
-  "attempts": 2
+  "attempts": 3
  },
  "arrowstreetcapital": {
   "dc": null,
   "site": null,
   "name": "Arrowstreet Capital",
-  "attempts": 2
+  "attempts": 3
  },
  "ascendperformancematerials": {
   "dc": null,
   "site": null,
   "name": "Ascend Performance Materials",
-  "attempts": 2
+  "attempts": 3
  },
  "ascensushr": {
   "dc": null,
   "site": null,
   "name": "Ascensus",
-  "attempts": 2
+  "attempts": 3
  },
  "asda": {
   "dc": "wd103",
@@ -650,7 +650,7 @@
   "dc": null,
   "site": null,
   "name": "Ashland",
-  "attempts": 2
+  "attempts": 3
  },
  "askbio": {
   "dc": "wd12",
@@ -666,7 +666,7 @@
   "dc": null,
   "site": null,
   "name": "ASML",
-  "attempts": 2
+  "attempts": 3
  },
  "aspentech": {
   "dc": "wd5",
@@ -682,7 +682,7 @@
   "dc": null,
   "site": null,
   "name": "Associated Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "assurant": {
   "dc": "wd1",
@@ -693,7 +693,7 @@
   "dc": null,
   "site": null,
   "name": "Astemo",
-  "attempts": 2
+  "attempts": 3
  },
  "astrazeneca": {
   "dc": "wd3",
@@ -704,13 +704,13 @@
   "dc": null,
   "site": null,
   "name": "Astreya",
-  "attempts": 2
+  "attempts": 3
  },
  "asu": {
   "dc": null,
   "site": null,
   "name": "Arizona State University",
-  "attempts": 2
+  "attempts": 3
  },
  "asuep": {
   "dc": "wd5",
@@ -747,7 +747,7 @@
   "dc": null,
   "site": null,
   "name": "Austal USA",
-  "attempts": 2
+  "attempts": 3
  },
  "autodesk": {
   "dc": null,
@@ -774,7 +774,7 @@
   "dc": null,
   "site": null,
   "name": "Availity",
-  "attempts": 2
+  "attempts": 3
  },
  "avav": {
   "dc": "wd1",
@@ -790,13 +790,13 @@
   "dc": null,
   "site": null,
   "name": "Aviagen",
-  "attempts": 2
+  "attempts": 3
  },
  "avisbudget": {
   "dc": null,
   "site": null,
   "name": "Avis Budget Group",
-  "attempts": 2
+  "attempts": 3
  },
  "aviva": {
   "dc": "wd1",
@@ -812,7 +812,7 @@
   "dc": null,
   "site": null,
   "name": "AWE",
-  "attempts": 2
+  "attempts": 3
  },
  "awg": {
   "dc": null,
@@ -844,7 +844,7 @@
   "dc": null,
   "site": null,
   "name": "Axis Capital",
-  "attempts": 2
+  "attempts": 3
  },
  "axos": {
   "dc": "wd5",
@@ -860,13 +860,13 @@
   "dc": null,
   "site": null,
   "name": "Bacardi",
-  "attempts": 2
+  "attempts": 3
  },
  "badgermeter": {
   "dc": null,
   "site": null,
   "name": "Badger Meter",
-  "attempts": 1
+  "attempts": 2
  },
  "bah": {
   "dc": "wd1",
@@ -877,7 +877,7 @@
   "dc": null,
   "site": null,
   "name": "Bain Capital",
-  "attempts": 1
+  "attempts": 2
  },
  "baird": {
   "dc": "wd1",
@@ -893,7 +893,7 @@
   "dc": null,
   "site": null,
   "name": "Baker Tilly",
-  "attempts": 1
+  "attempts": 2
  },
  "baldwin": {
   "dc": "wd1",
@@ -904,19 +904,19 @@
   "dc": null,
   "site": null,
   "name": "Banner Health",
-  "attempts": 1
+  "attempts": 2
  },
  "barclays": {
   "dc": null,
   "site": null,
   "name": "Barclays",
-  "attempts": 1
+  "attempts": 2
  },
  "barnard": {
   "dc": null,
   "site": null,
   "name": "Barnard College",
-  "attempts": 1
+  "attempts": 2
  },
  "barr": {
   "dc": "wd1",
@@ -927,7 +927,7 @@
   "dc": null,
   "site": null,
   "name": "Barry-Wehmiller",
-  "attempts": 2
+  "attempts": 4
  },
  "basspro": {
   "dc": "wd1",
@@ -943,7 +943,7 @@
   "dc": null,
   "site": null,
   "name": "Baystate Health",
-  "attempts": 1
+  "attempts": 2
  },
  "bbva": {
   "dc": "wd3",
@@ -1055,7 +1055,7 @@
   "dc": null,
   "site": null,
   "name": "Automated Media",
-  "attempts": 2
+  "attempts": 3
  },
  "draftkings": {
   "dc": "wd1",
@@ -1121,7 +1121,7 @@
   "dc": null,
   "site": null,
   "name": "Bank of America",
-  "attempts": 2
+  "attempts": 4
  },
  "globalfoundries": {
   "dc": "wd1",
@@ -1341,7 +1341,7 @@
   "dc": null,
   "site": null,
   "name": "Apex Fintech Solutions",
-  "attempts": 2
+  "attempts": 3
  },
  "pentair": {
   "dc": "wd5",
@@ -1458,7 +1458,7 @@
   "dc": null,
   "site": null,
   "name": "Antech Diagnostics",
-  "attempts": 2
+  "attempts": 3
  },
  "vermeer": {
   "dc": "wd5",
