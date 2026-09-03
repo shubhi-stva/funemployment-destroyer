@@ -111,7 +111,11 @@ def _revalidate(job: dict) -> list[dict]:
 
 def enrich(jobs: list[dict]) -> list[dict]:
     """Re-screen every posting that has no description yet."""
-    candidates = [j for j in jobs if workday_api(j.get("url", ""))]
+    # Only postings that arrived without a description. Directly polled
+    # Workday boards already carry one, and re-fetching them was doubling the
+    # work of every run for nothing.
+    candidates = [j for j in jobs
+                  if not j.get("_hasBody") and workday_api(j.get("url", ""))]
     if not candidates:
         return jobs
 

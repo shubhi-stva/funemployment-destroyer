@@ -182,6 +182,11 @@ def write(jobs: list[dict]) -> dict:
     for job in jobs:
         job["priority"] = classify.score_priority(job)
 
+    # Internal markers never reach the published file.
+    for job in jobs:
+        for field in [k for k in job if k.startswith("_")]:
+            job.pop(field)
+
     stats = summarise(jobs)
     # Offer only terms that have not already passed -- a "Summer 2025" option
     # is noise. New seasons join the list automatically as postings appear.

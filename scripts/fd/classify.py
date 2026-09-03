@@ -171,10 +171,17 @@ DEGREE_UNKNOWN = "Not specified"
 
 # "Master's", "PhD", "MBA" -- note the possessive is required on master so the
 # verb ("master new technologies") does not match.
+# PhD, MBA and the explicit "graduate degree" phrasings are unambiguous.
+# "Master's" is not: postings use it as a verb ("master's the team's business
+# domain within 1 month"), which was reading as a graduate requirement and
+# dropping perfectly good internships. So it only counts when a degree word
+# follows close behind.
 _GRAD_RE = re.compile(
-    r"\b(?:master'?s|masters|m\.s\.|m\.eng|msc|mba|phd|ph\.d\.|doctoral|doctorate"
+    r"\b(?:m\.s\.|m\.eng|msc|mba|phd|ph\.d\.|doctoral|doctorate"
     r"|graduate degree|graduate program|graduate student|post[- ]?doc)\b"
     r"|\bms\b(?=\s*(?:in|or|/|,|degree)\b)"
+    r"|\b(?:master'?s|masters)\b(?=[^.]{0,40}?\b(?:degree|program|student|"
+    r"candidate|level|in|of\s+science|of\s+engineering)\b)"
 )
 
 # Degree-level undergraduate signals ONLY. Used by the graduate-only test,
@@ -375,7 +382,7 @@ def classify_degree(text_lower: str, is_internship: bool) -> str:
 CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
     ("AI / Machine Learning", (
         "machine learning", "deep learning", "artificial intelligence",
-        " ai ", "ai/ml", "ml engineer", "mle", "nlp", "computer vision",
+        "ai", "ml", "ai/ml", "genai", "llm", "mle", "nlp", "computer vision",
         "research scientist", "applied scientist", "llm", "generative ai",
         "genai", "ml infrastructure", "ml platform", "perception research",
     )),
@@ -408,7 +415,7 @@ CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
         "business intelligence", "data platform", "etl", "data warehouse",
         "quantitative", "statistician", "data analyst", "decision science",
         "analytics engineer", "bi engineer", "machine learning analyst",
-        "research analyst", "data architect",
+        "research analyst", "data architect", "data",
     )),
     ("Product Engineering", (
         "product engineer", "full stack", "fullstack", "front end", "frontend",
@@ -416,7 +423,7 @@ CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
         "ui engineer", "growth engineer", "application engineer",
     )),
     ("Software Engineering", (
-        "software engineer", "software developer", "swe", "backend",
+        "software", "software engineer", "software developer", "swe", "backend",
         "back end", "software development", "programmer", "engineer",
         "developer", "systems programmer", "compiler", "embedded",
         "firmware", "game engineer", "graphics",
@@ -449,7 +456,8 @@ NON_TECH_HINTS = (
     "loss prevention", "1st shift", "2nd shift", "3rd shift", "night shift",
     "icqa", "footwear", "apparel", "merchandis", "financial analyst",
     "survey operations", "operations center", "dispatcher",
-    "support specialist", "support associate", "help desk", "helpdesk",
+    "data entry", "support specialist", "support associate", "help desk",
+    "helpdesk",
     "service desk", "desktop support", "project assistant",
     "project coordinator", "administrative assistant", "executive assistant",
     "implementation specialist", "sales specialist", "marketing specialist",
@@ -479,14 +487,68 @@ NON_TECH_HINTS = (
 
 
 
+def _mentions(haystack: str, needles) -> bool:
+    """Word-boundary containment.
+
+    Plain substring matching is wrong here: "columbia" (Columbia, MD) matches
+    inside "British Columbia", which let a Vancouver posting through as US.
+    """
+    for needle in needles:
+        start = 0
+        while True:
+            i = haystack.find(needle, start)
+            if i == -1:
+                break
+            before = haystack[i - 1] if i > 0 else " "
+            after_i = i + len(needle)
+            after = haystack[after_i] if after_i < len(haystack) else " "
+            if not before.isalpha() and not after.isalpha():
+                return True
+            start = i + 1
+    return False
+
+
+# Minimum needle length before a trailing suffix is tolerated. Short tokens
+# stay strict, so "ai" cannot match "air" and "data" cannot match "database".
+_SUFFIX_MIN = 5
+
+
+def _mentions_word(haystack: str, needles) -> bool:
+    """Containment that is strict at the start and forgiving at the end.
+
+    The start must fall on a word boundary, which is what stops "bridge"
+    matching "Cambridge". The end tolerates an alphabetic suffix on longer
+    needles, so "software engineer" still matches "software engineering" and
+    "robot" matches "robotics" -- requiring a boundary at both ends silently
+    dropped every gerund form and cost about 180 listings.
+    """
+    for needle in needles:
+        allow_suffix = len(needle.strip()) >= _SUFFIX_MIN
+        start = 0
+        while True:
+            i = haystack.find(needle, start)
+            if i == -1:
+                break
+            before = haystack[i - 1] if i > 0 else " "
+            after_i = i + len(needle)
+            after = haystack[after_i] if after_i < len(haystack) else " "
+            if not before.isalpha() and (allow_suffix or not after.isalpha()):
+                return True
+            start = i + 1
+    return False
+
+
 def is_non_tech_title(title: str) -> bool:
     """True when the title itself rules the role out of scope.
 
     This is a *positive rejection*, distinct from "no category matched", and
     callers must not paper over it with a fallback category.
+
+    Matching is word-boundary aware. Plain substring matching had "bridge",
+    added to drop civil-engineering Bridge Engineer roles, firing on
+    "Cambridge" and quietly rejecting real software jobs.
     """
-    title_hay = f" {norm(title)} "
-    return any(hint in title_hay for hint in NON_TECH_HINTS)
+    return _mentions_word(f" {norm(title)} ", NON_TECH_HINTS)
 
 
 def classify_category(title: str, department: str = "") -> str | None:
@@ -499,7 +561,7 @@ def classify_category(title: str, department: str = "") -> str | None:
         return None
 
     for category, keywords in CATEGORY_RULES:
-        if any(keyword in hay for keyword in keywords):
+        if _mentions_word(hay, keywords):
             return category
     return None
 
@@ -907,27 +969,6 @@ _NON_US_CITIES = (
 def _fold(text: str) -> str:
     """Strip combining marks so accented place names compare as plain ASCII."""
     return "".join(ch for ch in text if not unicodedata.combining(ch))
-
-
-def _mentions(haystack: str, needles) -> bool:
-    """Word-boundary containment.
-
-    Plain substring matching is wrong here: "columbia" (Columbia, MD) matches
-    inside "British Columbia", which let a Vancouver posting through as US.
-    """
-    for needle in needles:
-        start = 0
-        while True:
-            i = haystack.find(needle, start)
-            if i == -1:
-                break
-            before = haystack[i - 1] if i > 0 else " "
-            after_i = i + len(needle)
-            after = haystack[after_i] if after_i < len(haystack) else " "
-            if not before.isalpha() and not after.isalpha():
-                return True
-            start = i + 1
-    return False
 
 
 def is_us_location(location: str) -> bool | None:

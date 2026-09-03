@@ -193,6 +193,9 @@ def build(
         "notes": summarise(body, degree, internship),
     }
     job["key"] = content_key(job["company"], job["title"], job["location"])
+    # Internal marker (stripped before writing): this record was built from a
+    # real description, so the enrichment pass must not re-fetch it.
+    job["_hasBody"] = bool(body)
     return job
 
 
