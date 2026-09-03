@@ -41,7 +41,8 @@ MAX_WORKERS = int(os.environ.get("FD_MAX_WORKERS", "24"))
 MAX_RETRIES = 2
 
 # Boards to poll. Ordered so the cheapest/densest platforms run first.
-ENABLED_ATS = ("greenhouse", "lever", "ashby", "workday")
+ENABLED_ATS = ("greenhouse", "lever", "ashby", "workday",
+               "smartrecruiters", "workable")
 
 # Cap on boards polled per run (0 = no cap). Useful for local smoke tests.
 BOARD_LIMIT = int(os.environ.get("FD_BOARD_LIMIT", "0"))
@@ -52,8 +53,16 @@ BOARD_LIMIT = int(os.environ.get("FD_BOARD_LIMIT", "0"))
 # Newest-first, so this trims the stale tail, not fresh postings.
 MAX_JOBS = int(os.environ.get("FD_MAX_JOBS", "3000"))
 
-# Drop anything first seen longer ago than this.
-MAX_AGE_DAYS = int(os.environ.get("FD_MAX_AGE_DAYS", "45"))
+# Drop postings older than this.
+#
+# This was 45 days, which quietly deleted jobs that were still open. Summer
+# recruiting opens in July and runs for months: Akuna's Summer 2027
+# internships were posted on 13 July, were still live on their board, and
+# were being pruned at 51 days old. Every board is re-polled from scratch on
+# each run, so a posting only appears here if it is still listed right now.
+# The window is really a safety net against stale entries in the upstream
+# feed, so it can be generous.
+MAX_AGE_DAYS = int(os.environ.get("FD_MAX_AGE_DAYS", "150"))
 
 # A posting counts as "New" in the UI within this window. Kept in sync with
 # CONFIG.newWindowHours in docs/app.js.

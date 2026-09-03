@@ -25,13 +25,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from fd import build, config  # noqa: E402
 from fd import enrich  # noqa: E402
-from fd.sources import ashby, greenhouse, lever, upstream, workday  # noqa: E402
+from fd.sources import (ashby, greenhouse, lever, smartrecruiters,  # noqa: E402
+                        upstream, workable, workday)
 
 POLLERS = {
     "greenhouse": greenhouse.collect,
     "lever": lever.collect,
     "ashby": ashby.collect,
     "workday": workday.collect,
+    "smartrecruiters": smartrecruiters.collect,
+    "workable": workable.collect,
 }
 
 log = logging.getLogger("fd")

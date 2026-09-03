@@ -93,6 +93,8 @@ projects rather than years on the job, it counts as open.
 | Lever | `api.lever.co/v0/postings/{slug}?mode=json`, plain text description plus work mode |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{slug}` |
 | Workday | `POST {tenant}.{dc}.myworkdayjobs.com/wday/cxs/{tenant}/{site}/jobs`, roughly 1,750 employers |
+| SmartRecruiters | `api.smartrecruiters.com/v1/companies/{slug}/postings`, about 280 employers |
+| Workable | `apply.workable.com/api/v1/widget/accounts/{slug}?details=true`, about 145 employers, description included inline |
 | Internship feed | [zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships](https://github.com/zshah101/Automated-List-Of-Summer-2027-and-Fall-2026-Tech-Internships), MIT licensed |
 
 All public, unauthenticated, read only. The company to board mapping in
@@ -317,8 +319,13 @@ Classification is heuristic. It errs toward dropping a borderline job rather
 than showing one that turns out to want a degree. Check the actual posting
 before spending an application on it.
 
-Output is capped at 3,000 jobs, newest first, and anything first seen more
-than 45 days ago gets pruned.
+Output is capped at 3,000 jobs, newest first, and anything older than 150
+days gets pruned. That window used to be 45 days and it was quietly deleting
+jobs that were still open: Akuna's Summer 2027 internships went up on 13 July
+and were being dropped at 51 days old while still live on the board. Summer
+recruiting opens in July and runs for months. Every board is re-polled from
+scratch each run anyway, so a posting only shows up if it is listed right
+now.
 
 ## Credits
 

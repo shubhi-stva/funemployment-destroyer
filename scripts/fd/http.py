@@ -85,6 +85,8 @@ def fan_out(func: Callable[[Any], list], items: Iterable[Any], label: str) -> li
     items = list(items)
     results: list = []
     done = 0
+    failures = 0
+
     with ThreadPoolExecutor(max_workers=config.MAX_WORKERS) as pool:
         futures = {pool.submit(func, item): item for item in items}
         for future in as_completed(futures):
@@ -92,8 +94,16 @@ def fan_out(func: Callable[[Any], list], items: Iterable[Any], label: str) -> li
             try:
                 results.extend(future.result() or [])
             except Exception as err:  # noqa: BLE001 - resilience is the point
+                failures += 1
                 log.debug("%s worker failed for %r: %s", label, futures[future], err)
             if done % 250 == 0 or done == len(items):
                 log.info("  %s: %d/%d boards polled, %d postings kept",
                          label, done, len(items), len(results))
+
+    # A board that errors is skipped silently by design, but silence hid a
+    # real problem once: postings vanished from the site for a run and it
+    # looked like a filter bug. Say so instead.
+    if failures:
+        log.warning("  %s: %d/%d boards failed this run and were skipped",
+                    label, failures, len(items))
     return results
