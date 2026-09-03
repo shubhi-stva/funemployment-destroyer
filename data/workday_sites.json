@@ -866,7 +866,7 @@
   "dc": null,
   "site": null,
   "name": "Badger Meter",
-  "attempts": 2
+  "attempts": 3
  },
  "bah": {
   "dc": "wd1",
@@ -877,7 +877,7 @@
   "dc": null,
   "site": null,
   "name": "Bain Capital",
-  "attempts": 2
+  "attempts": 3
  },
  "baird": {
   "dc": "wd1",
@@ -893,7 +893,7 @@
   "dc": null,
   "site": null,
   "name": "Baker Tilly",
-  "attempts": 2
+  "attempts": 3
  },
  "baldwin": {
   "dc": "wd1",
@@ -904,19 +904,19 @@
   "dc": null,
   "site": null,
   "name": "Banner Health",
-  "attempts": 2
+  "attempts": 3
  },
  "barclays": {
   "dc": null,
   "site": null,
   "name": "Barclays",
-  "attempts": 2
+  "attempts": 3
  },
  "barnard": {
   "dc": null,
   "site": null,
   "name": "Barnard College",
-  "attempts": 2
+  "attempts": 3
  },
  "barr": {
   "dc": "wd1",
@@ -943,17 +943,54 @@
   "dc": null,
   "site": null,
   "name": "Baystate Health",
-  "attempts": 2
+  "attempts": 3
+ },
+ "bb": {
+  "dc": null,
+  "site": null,
+  "name": "Blackberry",
+  "attempts": 3
  },
  "bbva": {
   "dc": "wd3",
   "site": "bbva",
   "name": "Banco Bilbao Vizcaya Argentaria"
  },
+ "bcbsa": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Blue Cross Blue Shield"
+ },
+ "bcbsaz": {
+  "dc": "wd1",
+  "site": "bcbsazcareers",
+  "name": "Blue Cross Blue Shield of Arizona"
+ },
+ "bcbsks": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Blue Cross and Blue Shield of Kansas"
+ },
  "bcbsla": {
   "dc": "wd1",
   "site": "Generation_Blue",
   "name": "Louisiana Blue"
+ },
+ "bcbsmn": {
+  "dc": null,
+  "site": null,
+  "name": "Blue Cross and Blue Shield of Minnesota",
+  "attempts": 1
+ },
+ "bcbsnc": {
+  "dc": "wd5",
+  "site": "bcbsnc",
+  "name": "Blue Cross and Blue Shield of North Carolina"
+ },
+ "bcbsri": {
+  "dc": "wd1",
+  "site": "bcbsricareers",
+  "name": "Blue Cross and Blue Shield of Rhode Island"
  },
  "bcbst": {
   "dc": "wd1",
@@ -969,7 +1006,105 @@
   "dc": null,
   "site": null,
   "name": "Becton Dickinson",
+  "attempts": 4
+ },
+ "becu": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "BECU"
+ },
+ "beigene": {
+  "dc": "wd5",
+  "site": "beigene",
+  "name": "BeOne"
+ },
+ "belk": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Belk"
+ },
+ "benefis": {
+  "dc": null,
+  "site": null,
+  "name": "Benefis Health System",
+  "attempts": 1
+ },
+ "bestbuycanada": {
+  "dc": null,
+  "site": null,
+  "name": "Best Buy",
+  "attempts": 1
+ },
+ "bestfriends": {
+  "dc": "wd1",
+  "site": "bestfriendscareers",
+  "name": "Best Friends"
+ },
+ "betmgminc": {
+  "dc": null,
+  "site": null,
+  "name": "BetMGM",
+  "attempts": 1
+ },
+ "biamp": {
+  "dc": "wd12",
+  "site": "biamp",
+  "name": "Biamp"
+ },
+ "bigcommerce": {
+  "dc": null,
+  "site": null,
+  "name": "BigCommerce",
+  "attempts": 1
+ },
+ "biibhr": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Biogen"
+ },
+ "bilh": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Beth Israel Lahey Health"
+ },
+ "biotechne": {
+  "dc": "wd5",
+  "site": "biotechne",
+  "name": "Bio-Techne"
+ },
+ "bird": {
+  "dc": null,
+  "site": null,
+  "name": "Bird Construction",
+  "attempts": 1
+ },
+ "bjswholesaleclub": {
+  "dc": null,
+  "site": null,
+  "name": "BJ's Wholesale Club",
+  "attempts": 1
+ },
+ "blackrock": {
+  "dc": null,
+  "site": null,
+  "name": "BlackRock",
   "attempts": 2
+ },
+ "blackstone": {
+  "dc": "wd1",
+  "site": "blackstone_careers",
+  "name": "Blackstone"
+ },
+ "bloomberg": {
+  "dc": null,
+  "site": null,
+  "name": "Bloomberg Industry Group",
+  "attempts": 1
+ },
+ "bloomenergy": {
+  "dc": "wd1",
+  "site": "bloomenergycareers",
+  "name": "Bloom Energy"
  },
  "bmo": {
   "dc": "wd3",
@@ -1268,6 +1403,12 @@
   "dc": "wd12",
   "site": "Careers",
   "name": "7-Eleven"
+ },
+ "myhcm": {
+  "dc": null,
+  "site": null,
+  "name": "Betway",
+  "attempts": 1
  },
  "ncnu": {
   "dc": null,
