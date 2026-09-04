@@ -688,7 +688,7 @@
   "dc": null,
   "site": null,
   "name": "Aspen Dental",
-  "attempts": 2
+  "attempts": 3
  },
  "aspentech": {
   "dc": "wd5",
@@ -1372,6 +1372,11 @@
   "name": "Brigham Young University - Provo",
   "attempts": 3
  },
+ "caa": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Creative Artists Agency"
+ },
  "cableone": {
   "dc": null,
   "site": null,
@@ -1563,6 +1568,12 @@
   "dc": null,
   "site": null,
   "name": "Constellation Brands",
+  "attempts": 2
+ },
+ "cbrlgroup": {
+  "dc": null,
+  "site": null,
+  "name": "Cracker Barrel",
   "attempts": 1
  },
  "cc": {
@@ -1928,7 +1939,7 @@
   "dc": null,
   "site": null,
   "name": "Collectors",
-  "attempts": 2
+  "attempts": 3
  },
  "collegeboard": {
   "dc": "wd1",
@@ -1939,13 +1950,13 @@
   "dc": null,
   "site": null,
   "name": "Colliers",
-  "attempts": 2
+  "attempts": 3
  },
  "collin": {
   "dc": null,
   "site": null,
   "name": "Collin College",
-  "attempts": 2
+  "attempts": 3
  },
  "colpipe": {
   "dc": "wd1",
@@ -1962,19 +1973,19 @@
   "dc": null,
   "site": null,
   "name": "Comcast",
-  "attempts": 2
+  "attempts": 3
  },
  "comfortsystemsusa": {
   "dc": null,
   "site": null,
   "name": "Comfort Systems USA",
-  "attempts": 2
+  "attempts": 3
  },
  "commercebank": {
   "dc": null,
   "site": null,
   "name": "Commerce Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "compassion": {
   "dc": "wd5",
@@ -1995,13 +2006,13 @@
   "dc": null,
   "site": null,
   "name": "Conde Nast",
-  "attempts": 2
+  "attempts": 3
  },
  "conning": {
   "dc": null,
   "site": null,
   "name": "Conning",
-  "attempts": 2
+  "attempts": 3
  },
  "conocophillips": {
   "dc": "wd1",
@@ -2032,7 +2043,7 @@
   "dc": null,
   "site": null,
   "name": "Copeland",
-  "attempts": 1
+  "attempts": 2
  },
  "coreandmain": {
   "dc": "wd1",
@@ -2048,13 +2059,13 @@
   "dc": null,
   "site": null,
   "name": "Cornell University",
-  "attempts": 1
+  "attempts": 2
  },
  "corpay": {
   "dc": null,
   "site": null,
   "name": "Corpay",
-  "attempts": 1
+  "attempts": 2
  },
  "corteva": {
   "dc": "wd5",
@@ -2066,16 +2077,89 @@
   "site": "costarcareers",
   "name": "CoStar Group"
  },
+ "countryfinancial": {
+  "dc": null,
+  "site": null,
+  "name": "COUNTRY Financial",
+  "attempts": 1
+ },
+ "covestro": {
+  "dc": null,
+  "site": null,
+  "name": "Covestro",
+  "attempts": 1
+ },
+ "cox": {
+  "dc": null,
+  "site": null,
+  "name": "Cox",
+  "attempts": 1
+ },
+ "coxhealth": {
+  "dc": "wd5",
+  "site": "coxhealth_External",
+  "name": "CoxHealth"
+ },
+ "cranecompany": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Crane Co."
+ },
+ "creationtech": {
+  "dc": null,
+  "site": null,
+  "name": "Creation Technologies",
+  "attempts": 1
+ },
+ "creditacceptance": {
+  "dc": null,
+  "site": null,
+  "name": "Credit Acceptance Careers",
+  "attempts": 1
+ },
+ "crestnicholson": {
+  "dc": null,
+  "site": null,
+  "name": "Crest Nicholson",
+  "attempts": 1
+ },
+ "criteo": {
+  "dc": null,
+  "site": null,
+  "name": "Criteo",
+  "attempts": 1
+ },
+ "crosscountrymortgage": {
+  "dc": null,
+  "site": null,
+  "name": "CrossCountry Mortgage",
+  "attempts": 1
+ },
+ "crowdstrike": {
+  "dc": "wd5",
+  "site": "crowdstrikecareers",
+  "name": "Crowdstrike"
+ },
  "crowe": {
   "dc": "wd12",
   "site": "external_careers",
   "name": "Crowe"
  },
+ "csagroup": {
+  "dc": "wd3",
+  "site": "csagroup",
+  "name": "CSA Group"
+ },
  "csiweb": {
   "dc": null,
   "site": null,
   "name": "Computer Services",
-  "attempts": 2
+  "attempts": 3
+ },
+ "csl": {
+  "dc": "wd1",
+  "site": "csl_External",
+  "name": "CSL"
  },
  "cspire-telapex": {
   "dc": null,
@@ -2089,10 +2173,44 @@
   "name": "C&S Wholesale Grocers",
   "attempts": 3
  },
+ "cubic": {
+  "dc": null,
+  "site": null,
+  "name": "Cubic",
+  "attempts": 2
+ },
+ "curriculumassociates": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Curriculum Associates"
+ },
+ "curtisswright": {
+  "dc": null,
+  "site": null,
+  "name": "Curtiss-Wright Corporation",
+  "attempts": 1
+ },
  "customersbank": {
   "dc": "wd1",
   "site": "customersbankcareers",
   "name": "Customers Bank"
+ },
+ "cvshealth": {
+  "dc": null,
+  "site": null,
+  "name": "CVS Health",
+  "attempts": 2
+ },
+ "cw": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Cushman & Wakefield"
+ },
+ "cws": {
+  "dc": null,
+  "site": null,
+  "name": "CWS",
+  "attempts": 1
  },
  "dairynet": {
   "dc": "wd1",
@@ -2247,6 +2365,11 @@
   "site": "JJ",
   "name": "Johnson & Johnson"
  },
+ "kauai": {
+  "dc": "wd1",
+  "site": "KAUAI_External_Career_Site",
+  "name": "County of Kauai"
+ },
  "kbr": {
   "dc": "wd5",
   "site": "KBR_Careers",
@@ -2307,6 +2430,12 @@
   "dc": "wd1",
   "site": "Campus",
   "name": "Mastercard"
+ },
+ "mckesson": {
+  "dc": null,
+  "site": null,
+  "name": "CoverMyMeds",
+  "attempts": 1
  },
  "microchiphr": {
   "dc": "wd5",
@@ -2517,7 +2646,7 @@
   "dc": null,
   "site": null,
   "name": "Corewell Health",
-  "attempts": 1
+  "attempts": 2
  },
  "spgi": {
   "dc": "wd5",
