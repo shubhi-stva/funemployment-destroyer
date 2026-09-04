@@ -256,6 +256,11 @@
   "name": "Asahi Kasei Corporation",
   "attempts": 3
  },
+ "aksteel": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Cleveland-Cliffs"
+ },
  "alation": {
   "dc": null,
   "site": null,
@@ -769,7 +774,7 @@
   "dc": null,
   "site": null,
   "name": "City of Austin",
-  "attempts": 1
+  "attempts": 2
  },
  "autodesk": {
   "dc": null,
@@ -926,6 +931,11 @@
   "dc": "wd1",
   "site": "baldwin",
   "name": "Baldwin Group"
+ },
+ "baltimorecity": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "City of Baltimore"
  },
  "bannerhealth": {
   "dc": null,
@@ -1547,12 +1557,18 @@
   "dc": null,
   "site": null,
   "name": "Chanel",
-  "attempts": 2
+  "attempts": 3
  },
  "cccis": {
   "dc": "wd1",
   "site": "broadbean_external",
   "name": "CCC Intelligent Solutions"
+ },
+ "ccf": {
+  "dc": null,
+  "site": null,
+  "name": "Cleveland Clinic",
+  "attempts": 1
  },
  "cdk": {
   "dc": "wd1",
@@ -1568,7 +1584,7 @@
   "dc": null,
   "site": null,
   "name": "Chuck E. Cheese",
-  "attempts": 1
+  "attempts": 2
  },
  "cengage": {
   "dc": null,
@@ -1600,7 +1616,7 @@
   "dc": null,
   "site": null,
   "name": "Centific",
-  "attempts": 2
+  "attempts": 3
  },
  "centrica": {
   "dc": "wd3",
@@ -1621,24 +1637,30 @@
   "dc": null,
   "site": null,
   "name": "Chamberlain Group",
-  "attempts": 2
+  "attempts": 3
  },
  "championx": {
   "dc": "wd1",
   "site": "championx_External",
   "name": "ChampionX"
  },
+ "charlottenc": {
+  "dc": null,
+  "site": null,
+  "name": "City of Charlotte",
+  "attempts": 1
+ },
  "chartermfg": {
   "dc": null,
   "site": null,
   "name": "Charter Manufacturing",
-  "attempts": 2
+  "attempts": 3
  },
  "chaucergroup": {
   "dc": null,
   "site": null,
   "name": "Chaucer Group",
-  "attempts": 2
+  "attempts": 3
  },
  "chemours": {
   "dc": "wd103",
@@ -1649,6 +1671,12 @@
   "dc": "wd1",
   "site": "chenmed",
   "name": "ChenMed"
+ },
+ "chess": {
+  "dc": null,
+  "site": null,
+  "name": "CNM Central New Mexico Community College",
+  "attempts": 1
  },
  "chevron": {
   "dc": "wd5",
@@ -1680,7 +1708,7 @@
   "dc": null,
   "site": null,
   "name": "Children's Hospital of Philadelphia",
-  "attempts": 2
+  "attempts": 4
  },
  "chordenergy": {
   "dc": "wd1",
@@ -1711,7 +1739,7 @@
   "dc": null,
   "site": null,
   "name": "Cincinnati Children’s Hospital and Medical Center",
-  "attempts": 1
+  "attempts": 2
  },
  "cinemark": {
   "dc": "wd1",
@@ -1738,7 +1766,7 @@
   "dc": null,
   "site": null,
   "name": "Circle K",
-  "attempts": 1
+  "attempts": 2
  },
  "cisco": {
   "dc": "wd5",
@@ -1749,34 +1777,103 @@
   "dc": null,
   "site": null,
   "name": "Center for Internet Security (CIS)",
-  "attempts": 2
+  "attempts": 3
  },
  "cisive": {
   "dc": null,
   "site": null,
   "name": "Cisive",
-  "attempts": 1
+  "attempts": 2
  },
  "citi": {
   "dc": null,
   "site": null,
   "name": "Citi",
-  "attempts": 2
+  "attempts": 4
+ },
+ "cityofburlington": {
+  "dc": null,
+  "site": null,
+  "name": "City of Burlington",
+  "attempts": 1
+ },
+ "cityofvancouver": {
+  "dc": null,
+  "site": null,
+  "name": "City of Vancouver",
+  "attempts": 1
+ },
+ "clarioclinical": {
+  "dc": "wd1",
+  "site": "clarioclinical_careers",
+  "name": "Clairo"
  },
  "clarios": {
   "dc": "wd5",
   "site": "clarioscareers",
   "name": "Clarios"
  },
+ "clarivate": {
+  "dc": "wd3",
+  "site": "clarivate_careers",
+  "name": "Clarivate"
+ },
+ "claytonhomes": {
+  "dc": null,
+  "site": null,
+  "name": "Clayton",
+  "attempts": 1
+ },
+ "clearesult": {
+  "dc": null,
+  "site": null,
+  "name": "CLEAResult",
+  "attempts": 1
+ },
  "clearwateranalytics": {
   "dc": "wd1",
   "site": "Clearwater_Analytics_Careers",
   "name": "CWAN"
  },
+ "cliftonlarsonallen": {
+  "dc": null,
+  "site": null,
+  "name": "CliftonLarsonAllen",
+  "attempts": 1
+ },
+ "clio": {
+  "dc": null,
+  "site": null,
+  "name": "Clio",
+  "attempts": 1
+ },
+ "clorox": {
+  "dc": "wd1",
+  "site": "clorox",
+  "name": "Clorox"
+ },
+ "cloudera": {
+  "dc": null,
+  "site": null,
+  "name": "Cloudera",
+  "attempts": 1
+ },
  "clr": {
   "dc": "wd5",
   "site": "CLR_Careers",
   "name": "Continental Resources"
+ },
+ "cmcmarkets": {
+  "dc": null,
+  "site": null,
+  "name": "CMC Markets",
+  "attempts": 1
+ },
+ "cmegroup": {
+  "dc": null,
+  "site": null,
+  "name": "CME Group",
+  "attempts": 1
  },
  "cmu": {
   "dc": null,
@@ -1784,16 +1881,26 @@
   "name": "Carnegie Mellon University",
   "attempts": 3
  },
+ "cna": {
+  "dc": "wd1",
+  "site": "cna_careers",
+  "name": "CNA Insurance"
+ },
  "cni": {
   "dc": null,
   "site": null,
   "name": "Chickasaw Nation Industries",
-  "attempts": 1
+  "attempts": 2
  },
  "cnoinc": {
   "dc": "wd5",
   "site": "Careers",
   "name": "CNO Financial Group"
+ },
+ "cogeco": {
+  "dc": "wd3",
+  "site": "cogeco_careers",
+  "name": "Cogeco"
  },
  "conagrabrands": {
   "dc": "wd1",
@@ -1995,6 +2102,11 @@
   "site": "Search",
   "name": "KLA"
  },
+ "largo": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "City of Largo"
+ },
  "leidos": {
   "dc": "wd5",
   "site": "External",
@@ -2123,6 +2235,11 @@
   "site": "NVIDIAExternalCareerSite",
   "name": "NVIDIA"
  },
+ "olatheks": {
+  "dc": "wd1",
+  "site": "olatheks",
+  "name": "City Of Olathe"
+ },
  "oneok": {
   "dc": "wd1",
   "site": "ONEOK_Early_Careers",
@@ -2149,7 +2266,7 @@
   "dc": null,
   "site": null,
   "name": "CFA Institute",
-  "attempts": 2
+  "attempts": 3
  },
  "osv-chegg": {
   "dc": null,
@@ -2261,6 +2378,12 @@
   "dc": "wd3",
   "site": "careers",
   "name": "Thales"
+ },
+ "theclaremontcolleges": {
+  "dc": null,
+  "site": null,
+  "name": "Claremont McKenna College",
+  "attempts": 1
  },
  "thehartford": {
   "dc": "wd5",
