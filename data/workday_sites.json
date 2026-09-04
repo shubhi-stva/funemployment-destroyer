@@ -688,7 +688,7 @@
   "dc": null,
   "site": null,
   "name": "Aspen Dental",
-  "attempts": 1
+  "attempts": 2
  },
  "aspentech": {
   "dc": "wd5",
@@ -1559,6 +1559,12 @@
   "name": "Cboe",
   "attempts": 3
  },
+ "cbrands": {
+  "dc": null,
+  "site": null,
+  "name": "Constellation Brands",
+  "attempts": 1
+ },
  "cc": {
   "dc": null,
   "site": null,
@@ -1574,7 +1580,7 @@
   "dc": null,
   "site": null,
   "name": "Cleveland Clinic",
-  "attempts": 2
+  "attempts": 3
  },
  "cdk": {
   "dc": "wd1",
@@ -1654,7 +1660,7 @@
   "dc": null,
   "site": null,
   "name": "City of Charlotte",
-  "attempts": 2
+  "attempts": 3
  },
  "chartermfg": {
   "dc": null,
@@ -1682,7 +1688,7 @@
   "dc": null,
   "site": null,
   "name": "CNM Central New Mexico Community College",
-  "attempts": 2
+  "attempts": 3
  },
  "chevron": {
   "dc": "wd5",
@@ -1801,13 +1807,13 @@
   "dc": null,
   "site": null,
   "name": "City of Burlington",
-  "attempts": 2
+  "attempts": 3
  },
  "cityofvancouver": {
   "dc": null,
   "site": null,
   "name": "City of Vancouver",
-  "attempts": 2
+  "attempts": 3
  },
  "clarioclinical": {
   "dc": "wd1",
@@ -1828,13 +1834,13 @@
   "dc": null,
   "site": null,
   "name": "Clayton",
-  "attempts": 2
+  "attempts": 3
  },
  "clearesult": {
   "dc": null,
   "site": null,
   "name": "CLEAResult",
-  "attempts": 2
+  "attempts": 3
  },
  "clearwateranalytics": {
   "dc": "wd1",
@@ -1845,13 +1851,13 @@
   "dc": null,
   "site": null,
   "name": "CliftonLarsonAllen",
-  "attempts": 2
+  "attempts": 3
  },
  "clio": {
   "dc": null,
   "site": null,
   "name": "Clio",
-  "attempts": 2
+  "attempts": 3
  },
  "clorox": {
   "dc": "wd1",
@@ -1862,7 +1868,7 @@
   "dc": null,
   "site": null,
   "name": "Cloudera",
-  "attempts": 2
+  "attempts": 3
  },
  "clr": {
   "dc": "wd5",
@@ -1873,13 +1879,13 @@
   "dc": null,
   "site": null,
   "name": "CMC Markets",
-  "attempts": 2
+  "attempts": 3
  },
  "cmegroup": {
   "dc": null,
   "site": null,
   "name": "CME Group",
-  "attempts": 2
+  "attempts": 3
  },
  "cmu": {
   "dc": null,
@@ -1922,7 +1928,7 @@
   "dc": null,
   "site": null,
   "name": "Collectors",
-  "attempts": 1
+  "attempts": 2
  },
  "collegeboard": {
   "dc": "wd1",
@@ -1933,13 +1939,13 @@
   "dc": null,
   "site": null,
   "name": "Colliers",
-  "attempts": 1
+  "attempts": 2
  },
  "collin": {
   "dc": null,
   "site": null,
   "name": "Collin College",
-  "attempts": 1
+  "attempts": 2
  },
  "colpipe": {
   "dc": "wd1",
@@ -1950,25 +1956,25 @@
   "dc": null,
   "site": null,
   "name": "Columbia Sportswear Company",
-  "attempts": 2
+  "attempts": 4
  },
  "comcast": {
   "dc": null,
   "site": null,
   "name": "Comcast",
-  "attempts": 1
+  "attempts": 2
  },
  "comfortsystemsusa": {
   "dc": null,
   "site": null,
   "name": "Comfort Systems USA",
-  "attempts": 1
+  "attempts": 2
  },
  "commercebank": {
   "dc": null,
   "site": null,
   "name": "Commerce Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "compassion": {
   "dc": "wd5",
@@ -1989,23 +1995,76 @@
   "dc": null,
   "site": null,
   "name": "Conde Nast",
-  "attempts": 1
+  "attempts": 2
  },
  "conning": {
   "dc": null,
   "site": null,
   "name": "Conning",
-  "attempts": 1
+  "attempts": 2
  },
  "conocophillips": {
   "dc": "wd1",
   "site": "External",
   "name": "ConocoPhillips"
  },
+ "convatec": {
+  "dc": "wd1",
+  "site": "convatec",
+  "name": "ConvaTec Group"
+ },
+ "cooperstandard": {
+  "dc": "wd1",
+  "site": "cooperstandard",
+  "name": "Cooper Standard"
+ },
+ "coorstek": {
+  "dc": "wd1",
+  "site": "coorstekcareers",
+  "name": "CoorsTek"
+ },
  "copart": {
   "dc": "wd12",
   "site": "copart",
   "name": "Copart"
+ },
+ "copeland": {
+  "dc": null,
+  "site": null,
+  "name": "Copeland",
+  "attempts": 1
+ },
+ "coreandmain": {
+  "dc": "wd1",
+  "site": "coreandmain",
+  "name": "Core & Main"
+ },
+ "corebridgefinancial": {
+  "dc": "wd1",
+  "site": "corebridgefinancial",
+  "name": "Corebridge Financial"
+ },
+ "cornell": {
+  "dc": null,
+  "site": null,
+  "name": "Cornell University",
+  "attempts": 1
+ },
+ "corpay": {
+  "dc": null,
+  "site": null,
+  "name": "Corpay",
+  "attempts": 1
+ },
+ "corteva": {
+  "dc": "wd5",
+  "site": "corteva",
+  "name": "Corteva"
+ },
+ "costar": {
+  "dc": "wd1",
+  "site": "costarcareers",
+  "name": "CoStar Group"
  },
  "crowe": {
   "dc": "wd12",
@@ -2016,7 +2075,7 @@
   "dc": null,
   "site": null,
   "name": "Computer Services",
-  "attempts": 1
+  "attempts": 2
  },
  "cspire-telapex": {
   "dc": null,
@@ -2454,6 +2513,12 @@
   "site": "snap",
   "name": "Snap"
  },
+ "spectrumhealth": {
+  "dc": null,
+  "site": null,
+  "name": "Corewell Health",
+  "attempts": 1
+ },
  "spgi": {
   "dc": "wd5",
   "site": "spgi_careers",
@@ -2489,7 +2554,7 @@
   "dc": null,
   "site": null,
   "name": "Claremont McKenna College",
-  "attempts": 2
+  "attempts": 3
  },
  "thehartford": {
   "dc": "wd5",
