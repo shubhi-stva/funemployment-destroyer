@@ -1568,13 +1568,13 @@
   "dc": null,
   "site": null,
   "name": "Constellation Brands",
-  "attempts": 2
+  "attempts": 3
  },
  "cbrlgroup": {
   "dc": null,
   "site": null,
   "name": "Cracker Barrel",
-  "attempts": 1
+  "attempts": 2
  },
  "cc": {
   "dc": null,
@@ -1655,6 +1655,12 @@
   "dc": "wd12",
   "site": "ceritypartnerscareers",
   "name": "Cerity Partners"
+ },
+ "cff": {
+  "dc": null,
+  "site": null,
+  "name": "Cystic Fibrosis Foundation",
+  "attempts": 1
  },
  "chamberlain": {
   "dc": null,
@@ -2043,7 +2049,7 @@
   "dc": null,
   "site": null,
   "name": "Copeland",
-  "attempts": 2
+  "attempts": 3
  },
  "coreandmain": {
   "dc": "wd1",
@@ -2059,13 +2065,13 @@
   "dc": null,
   "site": null,
   "name": "Cornell University",
-  "attempts": 2
+  "attempts": 3
  },
  "corpay": {
   "dc": null,
   "site": null,
   "name": "Corpay",
-  "attempts": 2
+  "attempts": 3
  },
  "corteva": {
   "dc": "wd5",
@@ -2081,19 +2087,19 @@
   "dc": null,
   "site": null,
   "name": "COUNTRY Financial",
-  "attempts": 1
+  "attempts": 2
  },
  "covestro": {
   "dc": null,
   "site": null,
   "name": "Covestro",
-  "attempts": 1
+  "attempts": 2
  },
  "cox": {
   "dc": null,
   "site": null,
   "name": "Cox",
-  "attempts": 1
+  "attempts": 2
  },
  "coxhealth": {
   "dc": "wd5",
@@ -2109,31 +2115,31 @@
   "dc": null,
   "site": null,
   "name": "Creation Technologies",
-  "attempts": 1
+  "attempts": 2
  },
  "creditacceptance": {
   "dc": null,
   "site": null,
   "name": "Credit Acceptance Careers",
-  "attempts": 1
+  "attempts": 2
  },
  "crestnicholson": {
   "dc": null,
   "site": null,
   "name": "Crest Nicholson",
-  "attempts": 1
+  "attempts": 2
  },
  "criteo": {
   "dc": null,
   "site": null,
   "name": "Criteo",
-  "attempts": 1
+  "attempts": 2
  },
  "crosscountrymortgage": {
   "dc": null,
   "site": null,
   "name": "CrossCountry Mortgage",
-  "attempts": 1
+  "attempts": 2
  },
  "crowdstrike": {
   "dc": "wd5",
@@ -2177,7 +2183,7 @@
   "dc": null,
   "site": null,
   "name": "Cubic",
-  "attempts": 2
+  "attempts": 4
  },
  "curriculumassociates": {
   "dc": "wd5",
@@ -2188,7 +2194,7 @@
   "dc": null,
   "site": null,
   "name": "Curtiss-Wright Corporation",
-  "attempts": 1
+  "attempts": 2
  },
  "customersbank": {
   "dc": "wd1",
@@ -2199,7 +2205,7 @@
   "dc": null,
   "site": null,
   "name": "CVS Health",
-  "attempts": 2
+  "attempts": 4
  },
  "cw": {
   "dc": "wd1",
@@ -2210,7 +2216,19 @@
   "dc": null,
   "site": null,
   "name": "CWS",
+  "attempts": 2
+ },
+ "cyrusone": {
+  "dc": null,
+  "site": null,
+  "name": "CyrusOne",
   "attempts": 1
+ },
+ "daikinapplied": {
+  "dc": null,
+  "site": null,
+  "name": "Daikin Applied",
+  "attempts": 2
  },
  "dairynet": {
   "dc": "wd1",
@@ -2435,7 +2453,7 @@
   "dc": null,
   "site": null,
   "name": "CoverMyMeds",
-  "attempts": 1
+  "attempts": 2
  },
  "microchiphr": {
   "dc": "wd5",
@@ -2646,7 +2664,7 @@
   "dc": null,
   "site": null,
   "name": "Corewell Health",
-  "attempts": 2
+  "attempts": 3
  },
  "spgi": {
   "dc": "wd5",
