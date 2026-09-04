@@ -389,6 +389,11 @@
   "name": "Analytical Mechanics Associates",
   "attempts": 3
  },
+ "amarillo": {
+  "dc": "wd5",
+  "site": "AMARILLO_External_Career_Site",
+  "name": "City of Amarillo"
+ },
  "amat": {
   "dc": "wd1",
   "site": "External",
@@ -749,11 +754,22 @@
   "name": "AT&T",
   "attempts": 3
  },
+ "auroragov": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "City of Aurora"
+ },
  "austalusa": {
   "dc": null,
   "site": null,
   "name": "Austal USA",
   "attempts": 3
+ },
+ "austintexas": {
+  "dc": null,
+  "site": null,
+  "name": "City of Austin",
+  "attempts": 1
  },
  "autodesk": {
   "dc": null,
@@ -1218,6 +1234,11 @@
   "name": "BP",
   "attempts": 3
  },
+ "brambles": {
+  "dc": "wd5",
+  "site": "brambles_careers",
+  "name": "CHEP"
+ },
  "braunintertec": {
   "dc": "wd5",
   "site": "brauninterteccareers",
@@ -1497,7 +1518,7 @@
   "dc": null,
   "site": null,
   "name": "Carpenter Technology",
-  "attempts": 2
+  "attempts": 3
  },
  "carters": {
   "dc": "wd1",
@@ -1508,25 +1529,25 @@
   "dc": null,
   "site": null,
   "name": "Caterpillar Inc.",
-  "attempts": 2
+  "attempts": 3
  },
  "cbcrc": {
   "dc": null,
   "site": null,
   "name": "CBC/Radio-Canada",
-  "attempts": 2
+  "attempts": 3
  },
  "cboe": {
   "dc": null,
   "site": null,
   "name": "Cboe",
-  "attempts": 2
+  "attempts": 3
  },
  "cc": {
   "dc": null,
   "site": null,
   "name": "Chanel",
-  "attempts": 1
+  "attempts": 2
  },
  "cccis": {
   "dc": "wd1",
@@ -1543,11 +1564,17 @@
   "site": "Careers",
   "name": "CDW Corporation"
  },
+ "cecentertainment": {
+  "dc": null,
+  "site": null,
+  "name": "Chuck E. Cheese",
+  "attempts": 1
+ },
  "cengage": {
   "dc": null,
   "site": null,
   "name": "Cengage Group",
-  "attempts": 2
+  "attempts": 3
  },
  "cenhud": {
   "dc": "wd5",
@@ -1573,7 +1600,7 @@
   "dc": null,
   "site": null,
   "name": "Centific",
-  "attempts": 1
+  "attempts": 2
  },
  "centrica": {
   "dc": "wd3",
@@ -1594,7 +1621,7 @@
   "dc": null,
   "site": null,
   "name": "Chamberlain Group",
-  "attempts": 1
+  "attempts": 2
  },
  "championx": {
   "dc": "wd1",
@@ -1605,13 +1632,13 @@
   "dc": null,
   "site": null,
   "name": "Charter Manufacturing",
-  "attempts": 1
+  "attempts": 2
  },
  "chaucergroup": {
   "dc": null,
   "site": null,
   "name": "Chaucer Group",
-  "attempts": 1
+  "attempts": 2
  },
  "chemours": {
   "dc": "wd103",
@@ -1623,16 +1650,78 @@
   "site": "chenmed",
   "name": "ChenMed"
  },
+ "chevron": {
+  "dc": "wd5",
+  "site": "jobs",
+  "name": "Chevron Corporation"
+ },
+ "chewy": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Chewy"
+ },
  "chg": {
   "dc": null,
   "site": null,
   "name": "C.H. Guenther",
   "attempts": 3
  },
+ "chipotle": {
+  "dc": "wd5",
+  "site": "chipotlecareers",
+  "name": "Chipotle Mexican Grill"
+ },
+ "choicehotels": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Choice Hotels"
+ },
+ "chop": {
+  "dc": null,
+  "site": null,
+  "name": "Children's Hospital of Philadelphia",
+  "attempts": 2
+ },
+ "chordenergy": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Chord Energy"
+ },
  "chrobinson": {
   "dc": "wd5",
   "site": "chrobinson",
   "name": "C.H. Robinson"
+ },
+ "cibc": {
+  "dc": "wd3",
+  "site": "Search",
+  "name": "CIBC"
+ },
+ "ciena": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Ciena"
+ },
+ "cigna": {
+  "dc": "wd5",
+  "site": "cignacareers",
+  "name": "Cigna Group"
+ },
+ "cincinnatichildrens": {
+  "dc": null,
+  "site": null,
+  "name": "Cincinnati Children’s Hospital and Medical Center",
+  "attempts": 1
+ },
+ "cinemark": {
+  "dc": "wd1",
+  "site": "cinemark",
+  "name": "Cinemark Theatres"
+ },
+ "cineplex": {
+  "dc": "wd3",
+  "site": "cineplex",
+  "name": "Cineplex"
  },
  "cir": {
   "dc": null,
@@ -1640,11 +1729,39 @@
   "name": "Cambridge Investment Research",
   "attempts": 3
  },
+ "circle": {
+  "dc": "wd1",
+  "site": "circle",
+  "name": "Circle"
+ },
+ "circlek": {
+  "dc": null,
+  "site": null,
+  "name": "Circle K",
+  "attempts": 1
+ },
+ "cisco": {
+  "dc": "wd5",
+  "site": "cisco_careers",
+  "name": "Cisco"
+ },
  "cisecurity": {
   "dc": null,
   "site": null,
   "name": "Center for Internet Security (CIS)",
+  "attempts": 2
+ },
+ "cisive": {
+  "dc": null,
+  "site": null,
+  "name": "Cisive",
   "attempts": 1
+ },
+ "citi": {
+  "dc": null,
+  "site": null,
+  "name": "Citi",
+  "attempts": 2
  },
  "clarios": {
   "dc": "wd5",
@@ -1665,7 +1782,13 @@
   "dc": null,
   "site": null,
   "name": "Carnegie Mellon University",
-  "attempts": 2
+  "attempts": 3
+ },
+ "cni": {
+  "dc": null,
+  "site": null,
+  "name": "Chickasaw Nation Industries",
+  "attempts": 1
  },
  "cnoinc": {
   "dc": "wd5",
@@ -2020,13 +2143,13 @@
   "dc": null,
   "site": null,
   "name": "Castleton Commodities International",
-  "attempts": 2
+  "attempts": 3
  },
  "osv-cfainstitute": {
   "dc": null,
   "site": null,
   "name": "CFA Institute",
-  "attempts": 1
+  "attempts": 2
  },
  "osv-chegg": {
   "dc": null,
