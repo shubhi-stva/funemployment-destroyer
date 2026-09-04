@@ -842,6 +842,11 @@ _STATE_NAME_RE = re.compile(
 _US_ZIP_RE = re.compile(
     r"\b(" + "|".join(sorted(set(US_STATES.values()))) + r")\s+\d{5}\b", re.I
 )
+# "Rosemont IL" -- a state abbreviation closing the string with no comma.
+_US_TRAILING_ABBR_RE = re.compile(
+    r"\s(" + "|".join(sorted(set(US_STATES.values()))) + r")\s*$", re.I
+)
+
 # A leading "TX, Coppell".
 _US_LEADING_ABBR_RE = re.compile(
     r"^\s*(" + "|".join(sorted(set(US_STATES.values()))) + r")\s*,", re.I
@@ -879,6 +884,8 @@ _US_CITIES = {
     "hoboken", "jersey city", "newark", "princeton", "stamford",
     "new haven", "providence", "hartford", "buffalo", "rochester",
     "syracuse", "albany", "pittsford", "spacex site", "boston", "alameda",
+    "san mateo", "los altos", "rosemont", "sunnyvale", "milpitas", "campbell",
+    "foster city", "san carlos", "belmont", "emeryville", "richmond, ca",
     "scotts valley", "burbank", "thornton", "coppell", "redwood shores",
 }
 
@@ -893,6 +900,23 @@ _CA_ABBR_RE = re.compile(
 )
 
 # Region labels that are inherently not a US location.
+# ISO country codes and country prefixes seen in real location strings:
+# "Ha Noi, vn", "Grove, Wantage, gb", "SGP - Woodlands", "UK - Macclesfield",
+# "CA-QC-LONGUEUIL", "DE-CELLE-BAKER-HUGHES-STRASSE 1".
+# Codes that double as US state abbreviations are omitted on purpose.
+_FOREIGN_CODE_RE = re.compile(
+    r"(?:^|[\s,.\-])(?:"
+    r"vn|gb|uk|sg|my|th|fr|es|it|nl|be|se|dk|fi|pl|ro|bg|gr|tr|ua|ru|ae|sa|"
+    r"eg|ng|ke|za|ph|jp|kr|cn|tw|hk|au|nz|br|cl|mx|ie|at|ch|cz|sk|hu|pt|qa|"
+    r"kw|jo|lb|pk|bd|lk|np|mm|kh|cr|gt|uy|py|bo|ec|ve|"
+    r"sgp|gbr|can|deu|fra|vnm|tha|mys|ind|chn|jpn|kor|aus|nzl|bra|mex|esp|"
+    r"ita|nld|irl|pol|rou|che|swe|dnk|nor|fin|isr|are|zaf|phl|idn|tur|ukr"
+    r")(?:$|[\s,.\-])"
+)
+
+# "CA-QC-...", "CA.ON.Mississauga" -- Canada with a province code attached.
+_CANADA_PREFIX_RE = re.compile(r"\bca[.\-](?:ab|bc|mb|nb|nl|ns|nt|nu|on|pe|qc|sk|yt)\b")
+
 _NON_US_REGIONS = (
     "latin america", "latam", "emea", "apac", "asia pacific", "middle east",
     "europe", "eu remote", "worldwide", "global remote",
@@ -963,6 +987,12 @@ _NON_US_CITIES = (
     "colombo", "dhaka", "karachi", "lahore", "islamabad", "kathmandu",
     "da nang", "chiang mai", "surabaya", "bandung", "penang", "johor",
     "davao", "queenstown",
+    # Canadian cities beyond the obvious ones
+    "mississauga", "brampton", "markham", "burnaby", "kitchener", "halifax",
+    "winnipeg", "edmonton", "surrey", "laval", "gatineau", "saskatoon",
+    "regina", "moncton", "kelowna", "richmond hill", "scarborough",
+    # Foreign-language address tokens that give the country away
+    "strasse", "strabe", "gmbh", "s.a.s", "b.v.", "sarl", "via ", "calle ",
 )
 
 
@@ -987,28 +1017,52 @@ def is_us_location(location: str) -> bool | None:
 
     # A Canadian province abbreviation is checked before the US test, because
     # "BC" and "ON" are shaped exactly like US state abbreviations.
-    canadian = _CA_ABBR_RE.search(text) or _mentions(text, _CA_PROVINCES)
+    canadian = (
+        _CA_ABBR_RE.search(text)
+        or _mentions(text, _CA_PROVINCES)
+        or _CANADA_PREFIX_RE.search(text)
+    )
 
-    us = bool(
+    # "Milton, Ontario, CA" was reading as US because "CA" matched
+    # California. A province name sitting right before it settles it.
+    province_then_ca = re.search(
+        r"\b(?:" + "|".join(_CA_PROVINCES) + r")\s*,\s*ca\b", text)
+
+    # Strong evidence: the country, a state, or a ZIP. Weak evidence: a city
+    # name that happens to be American. The distinction matters because city
+    # names repeat across countries -- "San Francisco, Heredia, cr" is in
+    # Costa Rica, and a bare city match had it filed as US.
+    us_strong = bool(
         _US_COUNTRY_RE.search(text)
         or _STATE_ABBR_RE.search(text)
         or _STATE_NAME_RE.search(text)
         or _US_ZIP_RE.search(text)
         or _US_LEADING_ABBR_RE.search(text)
-        or _mentions(text, _US_CITIES)
+        or _US_TRAILING_ABBR_RE.search(text)
+    )
+    us_weak = _mentions(text, _US_CITIES)
+    us = us_strong or us_weak
+
+    foreign = bool(
+        _FOREIGN_CODE_RE.search(text)
+        or _mentions(text, _NON_US_COUNTRIES)
+        or _mentions(text, _NON_US_CITIES)
+        or _mentions(text, _NON_US_REGIONS)
     )
 
-    if canadian and not us:
+    if province_then_ca:
+        return False
+    if canadian and not us_strong:
+        return False
+    # An explicit foreign marker beats a bare city name, but not a state or
+    # the country itself: "London, England, New York, New York" is still open
+    # to someone in New York.
+    if foreign and not us_strong:
         return False
     if us:
         return True
 
-    if (_mentions(text, _NON_US_COUNTRIES)
-            or _mentions(text, _NON_US_CITIES)
-            or _mentions(text, _NON_US_REGIONS)):
-        return False
-
-    return None
+    return False if foreign else None
 
 
 # ------------------------------------------------------------------ company

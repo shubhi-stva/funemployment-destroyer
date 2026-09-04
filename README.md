@@ -69,6 +69,37 @@ requirement, and reading it as one was mislabelling dozens of internships.
 Internships are never reported as needing a finished degree. A bachelor's
 listed on an internship is in progress. That's what an internship is.
 
+## Keeping it to the US
+
+`classify.is_us_location()` returns True, False or None, and a posting is
+kept only on True. The location has to be positively identified as being in
+the US.
+
+It used to keep None as well, on the theory that these boards are mostly US
+and the unidentifiable ones were probably fine. They were not. "Ha Noi, vn",
+"UK - Macclesfield", "Grove, Wantage, gb", "SGP - Woodlands" and
+"CA.ON.Mississauga" all got through that gap. There is no finite list of
+foreign towns to exclude, so the burden of proof runs the other way now.
+
+The cost is a few genuinely US roles whose location is too vague to place,
+like a bare "Remote" or "RWC HQ". `FD_US_STRICT=0` keeps those, and
+`FD_US_ONLY=0` turns the filter off entirely.
+
+A posting listing several sites counts as US if any of them is, so
+"London, England, New York, New York" stays.
+
+Three things here caused real bugs and are worth remembering:
+
+Canadian provinces look exactly like US state abbreviations. "Milton,
+Ontario, CA" read as California until the province name was given precedence.
+
+Country codes turn up in every shape: ", vn", "UK - ", "SGP - ", "CA-QC-",
+"DE-...-STRASSE". Codes that double as US state abbreviations (DE, IN, OR,
+CO, AR, ID, LA, MA, PA) are deliberately not treated as countries.
+
+Substring matching is not enough. "columbia" matches inside "British
+Columbia", which once let a Vancouver posting through as US.
+
 ## Why "or equivalent experience" is its own category
 
 "Bachelor's degree or equivalent practical experience" is not the open door

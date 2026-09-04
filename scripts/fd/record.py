@@ -166,7 +166,8 @@ def build(
     posted_iso = iso(posted_at)
     location = classify.clean_text(location) or "Not specified"
 
-    if config.US_ONLY and classify.is_us_location(location) is False:
+    in_us = classify.is_us_location(location)
+    if config.US_ONLY and (in_us is False or (config.US_STRICT and in_us is None)):
         return reject()
 
     job = {

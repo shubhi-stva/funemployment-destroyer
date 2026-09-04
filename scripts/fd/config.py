@@ -89,10 +89,18 @@ FULLTIME_ALLOWED_DEGREE: tuple[str, ...] = (
 # years-of-experience minimum above FULLTIME_MAX_YEARS is dropped, as is
 # anything whose seniority could not be positively established -- an unstated
 # level is not evidence of an open door.
-# United States only. Postings positively identified as abroad are dropped;
-# a location too vague to place either way (a bare "Remote", an unlabelled
-# office name) is kept, since these boards are overwhelmingly US-based and
-# dropping them would lose real US roles.
+# United States only.
+#
+# A posting is kept only when its location can be positively identified as
+# US. Previously anything unidentifiable was kept, on the theory that these
+# boards are mostly US and the ambiguous cases were probably fine. They were
+# not: "Ha Noi, vn", "UK - Macclesfield" and "CA.ON.Mississauga" all reached
+# the site that way. There is no finite list of foreign towns to exclude, so
+# the burden of proof is now the other way round.
+#
+# The cost is a handful of genuinely US roles whose location is too vague to
+# place ("RWC HQ", a bare "Remote"). Set FD_US_STRICT=0 to keep those.
+US_STRICT = os.environ.get("FD_US_STRICT", "1") == "1"
 US_ONLY = os.environ.get("FD_US_ONLY", "1") == "1"
 
 FULLTIME_MAX_LEVEL = 1  # see classify.LEVEL_RANK; 1 == Entry Level

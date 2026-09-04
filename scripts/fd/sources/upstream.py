@@ -70,7 +70,8 @@ def collect() -> list[dict]:
         season = seasons[0] if seasons else None
 
         location = classify.clean_text(row.get("location")) or "Not specified"
-        if config.US_ONLY and classify.is_us_location(location) is False:
+        in_us = classify.is_us_location(location)
+        if config.US_ONLY and (in_us is False or (config.US_STRICT and in_us is None)):
             continue
         posted = record.iso(row.get("posted_at"))
         first_seen = record.iso(row.get("first_seen_at")) or posted
