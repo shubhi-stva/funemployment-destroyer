@@ -1574,7 +1574,7 @@
   "dc": null,
   "site": null,
   "name": "Cracker Barrel",
-  "attempts": 2
+  "attempts": 3
  },
  "cc": {
   "dc": null,
@@ -1660,7 +1660,7 @@
   "dc": null,
   "site": null,
   "name": "Cystic Fibrosis Foundation",
-  "attempts": 1
+  "attempts": 2
  },
  "chamberlain": {
   "dc": null,
@@ -2087,19 +2087,19 @@
   "dc": null,
   "site": null,
   "name": "COUNTRY Financial",
-  "attempts": 2
+  "attempts": 3
  },
  "covestro": {
   "dc": null,
   "site": null,
   "name": "Covestro",
-  "attempts": 2
+  "attempts": 3
  },
  "cox": {
   "dc": null,
   "site": null,
   "name": "Cox",
-  "attempts": 2
+  "attempts": 3
  },
  "coxhealth": {
   "dc": "wd5",
@@ -2115,31 +2115,31 @@
   "dc": null,
   "site": null,
   "name": "Creation Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "creditacceptance": {
   "dc": null,
   "site": null,
   "name": "Credit Acceptance Careers",
-  "attempts": 2
+  "attempts": 3
  },
  "crestnicholson": {
   "dc": null,
   "site": null,
   "name": "Crest Nicholson",
-  "attempts": 2
+  "attempts": 3
  },
  "criteo": {
   "dc": null,
   "site": null,
   "name": "Criteo",
-  "attempts": 2
+  "attempts": 3
  },
  "crosscountrymortgage": {
   "dc": null,
   "site": null,
   "name": "CrossCountry Mortgage",
-  "attempts": 2
+  "attempts": 3
  },
  "crowdstrike": {
   "dc": "wd5",
@@ -2194,7 +2194,7 @@
   "dc": null,
   "site": null,
   "name": "Curtiss-Wright Corporation",
-  "attempts": 2
+  "attempts": 3
  },
  "customersbank": {
   "dc": "wd1",
@@ -2216,24 +2216,58 @@
   "dc": null,
   "site": null,
   "name": "CWS",
-  "attempts": 2
+  "attempts": 3
  },
  "cyrusone": {
   "dc": null,
   "site": null,
   "name": "CyrusOne",
-  "attempts": 1
+  "attempts": 2
  },
  "daikinapplied": {
   "dc": null,
   "site": null,
   "name": "Daikin Applied",
-  "attempts": 2
+  "attempts": 4
  },
  "dairynet": {
   "dc": "wd1",
   "site": "DPCcareers",
   "name": "Dairyland Power Cooperative"
+ },
+ "dalcourmaclaren": {
+  "dc": null,
+  "site": null,
+  "name": "Dalcour Maclaren",
+  "attempts": 1
+ },
+ "dallascollege": {
+  "dc": null,
+  "site": null,
+  "name": "Dallas College",
+  "attempts": 1
+ },
+ "danaher": {
+  "dc": "wd1",
+  "site": "danaherjobs",
+  "name": "Danaher Corporation"
+ },
+ "darktrace": {
+  "dc": null,
+  "site": null,
+  "name": "Darktrace",
+  "attempts": 1
+ },
+ "dataminr": {
+  "dc": "wd12",
+  "site": "dataminr",
+  "name": "Dataminr"
+ },
+ "datarobot": {
+  "dc": null,
+  "site": null,
+  "name": "DataRobot",
+  "attempts": 1
  },
  "dealertire": {
   "dc": null,
@@ -2247,6 +2281,11 @@
   "name": "Bonneville International",
   "attempts": 3
  },
+ "dfwairport": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Dallas Fort Worth International Airport"
+ },
  "draftkings": {
   "dc": "wd1",
   "site": "Campus_Career_Portal",
@@ -2256,6 +2295,11 @@
   "dc": "wd5",
   "site": "Draper_Careers",
   "name": "Draper"
+ },
+ "dtna": {
+  "dc": "wd5",
+  "site": "dtna_External",
+  "name": "Daimler Truck"
  },
  "equifax": {
   "dc": "wd5",
@@ -2453,7 +2497,7 @@
   "dc": null,
   "site": null,
   "name": "CoverMyMeds",
-  "attempts": 2
+  "attempts": 3
  },
  "microchiphr": {
   "dc": "wd5",
