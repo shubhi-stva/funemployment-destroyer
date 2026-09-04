@@ -70,6 +70,10 @@ def _revalidate(job: dict) -> list[dict]:
     if classify.is_graduate_only(job["title"], hay):
         return []
 
+    # Same rule as record.build: any numeric GPA floor disqualifies.
+    if classify.has_gpa_requirement(hay):
+        return []
+
     degree = classify.classify_degree(hay, internship)
 
     if internship:
@@ -80,8 +84,6 @@ def _revalidate(job: dict) -> list[dict]:
         )
     else:
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
-            return []
-        if classify.has_gpa_requirement(hay):
             return []
         if classify.requires_prior_experience(hay):
             return []

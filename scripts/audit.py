@@ -94,11 +94,12 @@ def check(job: dict, body: str) -> list[str]:
             f"degree mismatch: published '{job['degreeRequirement']}', "
             f"text implies '{expected}'")
 
+    if classify.has_gpa_requirement(hay):
+        problems.append("has a GPA requirement")
+
     if not internship:
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
             problems.append(f"full-time with a degree gate ({degree})")
-        if classify.has_gpa_requirement(hay):
-            problems.append("full-time with a GPA floor")
         # Use title+body, exactly as the collector does. Checking the body
         # alone flagged "Build & Release Engineer - New Grad" because the
         # explicit new-grad signal lives in its title.

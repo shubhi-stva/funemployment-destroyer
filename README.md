@@ -25,8 +25,15 @@ fine. "Degree or equivalent experience" is fine. Never mentioning education
 at all is fine. The only thing that kills it is a real requirement, either
 spelled out or sitting there as a bare bullet under Qualifications.
 
-On top of that: no GPA floors, no years of experience asked for, US only,
-and it has to be a tech role.
+On top of that: no GPA floors anywhere, no years of experience asked for, US
+only, and it has to be a tech role.
+
+The GPA rule used to apply only to full time roles, on the reasoning that
+internships quote a GPA all the time so gating on it would empty the board. A
+3.0 cutoff is a cutoff whichever kind of role it sits on, though, and
+Fairlife's internships were showing up while plainly asking for "cumulative
+GPA of 3.0/4.0, or higher". It now applies to everything, which costs about
+150 listings.
 
 ## How the degree filter works
 

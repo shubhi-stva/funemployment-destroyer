@@ -49,7 +49,7 @@ jobs:
       # Grows Workday board coverage a little each run. Capped, and caches
       # both hits and misses, so it stays cheap.
       - name: Discover new Workday boards
-        run: python scripts/discover_workday.py --limit 40
+        run: python scripts/discover_workday.py --limit 25
         continue-on-error: true
 
       - name: Collect jobs

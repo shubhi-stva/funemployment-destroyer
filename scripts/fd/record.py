@@ -150,13 +150,17 @@ def build(
         # "Currently enrolled" rather than reporting a completed degree.
         degree = classify.DEGREE_ENROLLED
 
+    # A numeric GPA floor disqualifies anything, internship included. This
+    # used to apply only to full-time roles, on the grounds that internships
+    # quote a GPA all the time -- but a 3.0 cutoff is a cutoff whichever kind
+    # of role it sits on, and Fairlife's internships were reaching the site
+    # while plainly asking for "cumulative GPA of 3.0/4.0, or higher".
+    if classify.has_gpa_requirement(haystack):
+        return reject()
+
     if not internship:
         # --- full-time gate -------------------------------------------------
-        # Three independent conditions, all required: no degree gate, no GPA
-        # floor, and genuinely open to someone with no track record.
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
-            return reject()
-        if classify.has_gpa_requirement(haystack):
             return reject()
         if classify.LEVEL_RANK.get(experience, 9) > config.FULLTIME_MAX_LEVEL:
             return reject()

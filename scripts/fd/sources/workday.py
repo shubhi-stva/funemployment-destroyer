@@ -38,7 +38,7 @@ BASE = "https://{tenant}.{dc}.myworkdayjobs.com"
 SEARCHES = ("intern", "new grad", "entry level")
 
 PAGE = 20
-MAX_PAGES = 3          # per search term, per board
+MAX_PAGES = 2          # per search term, per board
 
 
 def load_sites() -> dict:
