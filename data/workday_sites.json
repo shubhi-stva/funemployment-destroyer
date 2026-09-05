@@ -376,6 +376,12 @@
   "site": "altera",
   "name": "Altera Corporation"
  },
+ "alterra": {
+  "dc": null,
+  "site": null,
+  "name": "Deer Valley Resort",
+  "attempts": 1
+ },
  "alteryx": {
   "dc": null,
   "site": null,
@@ -1366,6 +1372,12 @@
   "name": "Busey Bank",
   "attempts": 3
  },
+ "bydeluxe": {
+  "dc": null,
+  "site": null,
+  "name": "Deluxe Media",
+  "attempts": 1
+ },
  "byu": {
   "dc": null,
   "site": null,
@@ -1660,7 +1672,7 @@
   "dc": null,
   "site": null,
   "name": "Cystic Fibrosis Foundation",
-  "attempts": 2
+  "attempts": 3
  },
  "chamberlain": {
   "dc": null,
@@ -2222,7 +2234,7 @@
   "dc": null,
   "site": null,
   "name": "CyrusOne",
-  "attempts": 2
+  "attempts": 3
  },
  "daikinapplied": {
   "dc": null,
@@ -2239,13 +2251,13 @@
   "dc": null,
   "site": null,
   "name": "Dalcour Maclaren",
-  "attempts": 1
+  "attempts": 2
  },
  "dallascollege": {
   "dc": null,
   "site": null,
   "name": "Dallas College",
-  "attempts": 1
+  "attempts": 2
  },
  "danaher": {
   "dc": "wd1",
@@ -2256,7 +2268,7 @@
   "dc": null,
   "site": null,
   "name": "Darktrace",
-  "attempts": 1
+  "attempts": 2
  },
  "dataminr": {
   "dc": "wd12",
@@ -2267,6 +2279,34 @@
   "dc": null,
   "site": null,
   "name": "DataRobot",
+  "attempts": 2
+ },
+ "datasite": {
+  "dc": "wd1",
+  "site": "datasite",
+  "name": "Datasite"
+ },
+ "daveandbusters": {
+  "dc": null,
+  "site": null,
+  "name": "Dave & Busters",
+  "attempts": 1
+ },
+ "davidyurman": {
+  "dc": "wd1",
+  "site": "davidyurmancareers",
+  "name": "David Yurman"
+ },
+ "davita": {
+  "dc": null,
+  "site": null,
+  "name": "DaVita",
+  "attempts": 1
+ },
+ "db": {
+  "dc": null,
+  "site": null,
+  "name": "Deutsche Bank",
   "attempts": 1
  },
  "dealertire": {
@@ -2275,11 +2315,63 @@
   "name": "Automated Media",
   "attempts": 3
  },
+ "deckers": {
+  "dc": "wd5",
+  "site": "deckers",
+  "name": "Deckers Brands"
+ },
+ "dedalus": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Dedalus"
+ },
+ "deezee": {
+  "dc": null,
+  "site": null,
+  "name": "Dee Zee",
+  "attempts": 1
+ },
+ "dell": {
+  "dc": null,
+  "site": null,
+  "name": "Dell Technologies",
+  "attempts": 1
+ },
+ "deluxe": {
+  "dc": null,
+  "site": null,
+  "name": "Deluxe",
+  "attempts": 1
+ },
+ "dentsuaegis": {
+  "dc": null,
+  "site": null,
+  "name": "Dentsu",
+  "attempts": 1
+ },
+ "denver": {
+  "dc": null,
+  "site": null,
+  "name": "Denver",
+  "attempts": 1
+ },
+ "denverhealth": {
+  "dc": null,
+  "site": null,
+  "name": "Denver Health",
+  "attempts": 1
+ },
  "deseretmanagement": {
   "dc": null,
   "site": null,
   "name": "Bonneville International",
   "attempts": 3
+ },
+ "desjardins": {
+  "dc": null,
+  "site": null,
+  "name": "Desjardins Group",
+  "attempts": 1
  },
  "dfwairport": {
   "dc": "wd5",
@@ -2305,6 +2397,11 @@
   "dc": "wd5",
   "site": "UR_External",
   "name": "Equifax"
+ },
+ "etsy": {
+  "dc": "wd5",
+  "site": "etsy_careers",
+  "name": "Depop"
  },
  "fanniemae": {
   "dc": "wd1",
@@ -2441,6 +2538,11 @@
   "dc": "wd5",
   "site": "External_Career_Site",
   "name": "KeyBank"
+ },
+ "kiongroup": {
+  "dc": "wd3",
+  "site": "kiongroup",
+  "name": "Dematic"
  },
  "kla": {
   "dc": "wd1",
@@ -2672,6 +2774,12 @@
   "dc": "wd5",
   "site": "qts",
   "name": "QTS"
+ },
+ "rhsc": {
+  "dc": null,
+  "site": null,
+  "name": "Delta Dental",
+  "attempts": 1
  },
  "rockwellautomation": {
   "dc": "wd1",
