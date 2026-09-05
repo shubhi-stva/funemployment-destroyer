@@ -380,7 +380,7 @@
   "dc": null,
   "site": null,
   "name": "Deer Valley Resort",
-  "attempts": 2
+  "attempts": 3
  },
  "alteryx": {
   "dc": null,
@@ -1376,7 +1376,7 @@
   "dc": null,
   "site": null,
   "name": "Deluxe Media",
-  "attempts": 2
+  "attempts": 3
  },
  "byu": {
   "dc": null,
@@ -2290,7 +2290,7 @@
   "dc": null,
   "site": null,
   "name": "Dave & Busters",
-  "attempts": 2
+  "attempts": 3
  },
  "davidyurman": {
   "dc": "wd1",
@@ -2301,13 +2301,13 @@
   "dc": null,
   "site": null,
   "name": "DaVita",
-  "attempts": 2
+  "attempts": 3
  },
  "db": {
   "dc": null,
   "site": null,
   "name": "Deutsche Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "dealertire": {
   "dc": null,
@@ -2329,37 +2329,37 @@
   "dc": null,
   "site": null,
   "name": "Dee Zee",
-  "attempts": 2
+  "attempts": 3
  },
  "dell": {
   "dc": null,
   "site": null,
   "name": "Dell Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "deluxe": {
   "dc": null,
   "site": null,
   "name": "Deluxe",
-  "attempts": 2
+  "attempts": 3
  },
  "dentsuaegis": {
   "dc": null,
   "site": null,
   "name": "Dentsu",
-  "attempts": 2
+  "attempts": 3
  },
  "denver": {
   "dc": null,
   "site": null,
   "name": "Denver",
-  "attempts": 2
+  "attempts": 3
  },
  "denverhealth": {
   "dc": null,
   "site": null,
   "name": "Denver Health",
-  "attempts": 2
+  "attempts": 3
  },
  "deseretmanagement": {
   "dc": null,
@@ -2371,7 +2371,7 @@
   "dc": null,
   "site": null,
   "name": "Desjardins Group",
-  "attempts": 2
+  "attempts": 3
  },
  "devonenergy": {
   "dc": "wd5",
@@ -2392,36 +2392,70 @@
   "dc": null,
   "site": null,
   "name": "Diamondback Energy",
-  "attempts": 1
+  "attempts": 2
  },
  "dickssportinggoods": {
   "dc": null,
   "site": null,
   "name": "Dick's Sporting Goods",
-  "attempts": 1
+  "attempts": 2
  },
  "digikey": {
   "dc": null,
   "site": null,
   "name": "DigiKey",
-  "attempts": 1
+  "attempts": 2
  },
  "dimensional": {
   "dc": null,
   "site": null,
   "name": "Dimensional Fund Advisors",
-  "attempts": 1
+  "attempts": 2
  },
  "directsupply": {
   "dc": null,
   "site": null,
   "name": "Direct Supply",
-  "attempts": 1
+  "attempts": 2
  },
  "dlapiper": {
   "dc": "wd1",
   "site": "dlapiper",
   "name": "DLA Piper"
+ },
+ "dmainc": {
+  "dc": null,
+  "site": null,
+  "name": "Dmainc",
+  "attempts": 1
+ },
+ "dollartree": {
+  "dc": null,
+  "site": null,
+  "name": "Dollar Tree",
+  "attempts": 1
+ },
+ "domo": {
+  "dc": "wd12",
+  "site": "domocareers",
+  "name": "Domo"
+ },
+ "donaldson": {
+  "dc": null,
+  "site": null,
+  "name": "Donaldson Company",
+  "attempts": 1
+ },
+ "doterra": {
+  "dc": "wd1",
+  "site": "doterracareers",
+  "name": "doTERRA"
+ },
+ "dow": {
+  "dc": null,
+  "site": null,
+  "name": "Dow Chemical Company",
+  "attempts": 1
  },
  "draftkings": {
   "dc": "wd1",
@@ -2646,6 +2680,12 @@
   "name": "CoverMyMeds",
   "attempts": 3
  },
+ "meredith": {
+  "dc": null,
+  "site": null,
+  "name": "DotDash Meredith",
+  "attempts": 1
+ },
  "microchiphr": {
   "dc": "wd5",
   "site": "external",
@@ -2824,7 +2864,7 @@
   "dc": null,
   "site": null,
   "name": "Delta Dental",
-  "attempts": 2
+  "attempts": 3
  },
  "rockwellautomation": {
   "dc": "wd1",
