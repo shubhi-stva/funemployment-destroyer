@@ -2471,7 +2471,7 @@
   "dc": null,
   "site": null,
   "name": "Dow Jones",
-  "attempts": 2
+  "attempts": 3
  },
  "draftkings": {
   "dc": "wd1",
@@ -2492,7 +2492,7 @@
   "dc": null,
   "site": null,
   "name": "Driven Brands",
-  "attempts": 2
+  "attempts": 3
  },
  "drivetime": {
   "dc": "wd1",
@@ -2523,13 +2523,13 @@
   "dc": null,
   "site": null,
   "name": "Dutch Bros",
-  "attempts": 2
+  "attempts": 3
  },
  "dxctechnology": {
   "dc": null,
   "site": null,
   "name": "DXC Technology",
-  "attempts": 2
+  "attempts": 3
  },
  "dyson": {
   "dc": "wd3",
@@ -2545,19 +2545,19 @@
   "dc": null,
   "site": null,
   "name": "Eastern Shipbuilding Group",
-  "attempts": 1
+  "attempts": 2
  },
  "ebay": {
   "dc": null,
   "site": null,
   "name": "eBay",
-  "attempts": 1
+  "attempts": 2
  },
  "echo": {
   "dc": null,
   "site": null,
   "name": "Echo Global Logistics",
-  "attempts": 1
+  "attempts": 2
  },
  "ecolab": {
   "dc": "wd1",
@@ -2588,7 +2588,7 @@
   "dc": null,
   "site": null,
   "name": "Elanco",
-  "attempts": 1
+  "attempts": 2
  },
  "elekta": {
   "dc": "wd3",
@@ -2604,13 +2604,50 @@
   "dc": null,
   "site": null,
   "name": "Elevance Health",
+  "attempts": 4
+ },
+ "embryriddle": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Embry-Riddle Aeronautical University"
+ },
+ "emcins": {
+  "dc": null,
+  "site": null,
+  "name": "EMC Insurance",
+  "attempts": 1
+ },
+ "empower": {
+  "dc": "wd12",
+  "site": "empower",
+  "name": "Empower"
+ },
+ "enbridge": {
+  "dc": "wd3",
+  "site": "enbridge_careers",
+  "name": "Enbridge"
+ },
+ "encore": {
+  "dc": null,
+  "site": null,
+  "name": "Encore Capital Group",
   "attempts": 2
+ },
+ "encova": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "Encova"
+ },
+ "energynorthwest": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Energy Northwest"
  },
  "eonnext": {
   "dc": null,
   "site": null,
   "name": "E.ON Next",
-  "attempts": 2
+  "attempts": 3
  },
  "equifax": {
   "dc": "wd5",
@@ -2778,6 +2815,12 @@
   "site": "External",
   "name": "Leidos"
  },
+ "lilly": {
+  "dc": null,
+  "site": null,
+  "name": "Eli Lilly and Company",
+  "attempts": 1
+ },
  "luriechildrens": {
   "dc": null,
   "site": null,
@@ -2865,7 +2908,7 @@
   "dc": null,
   "site": null,
   "name": "DPR Family of Companies",
-  "attempts": 2
+  "attempts": 3
  },
  "myhcm": {
   "dc": null,
@@ -2913,6 +2956,12 @@
   "dc": "wd5",
   "site": "NLR",
   "name": "National Laboratory of the Rockies"
+ },
+ "nshs": {
+  "dc": null,
+  "site": null,
+  "name": "Endeavor Health",
+  "attempts": 1
  },
  "ntrs": {
   "dc": "wd1",
@@ -3005,6 +3054,11 @@
   "dc": "wd5",
   "site": "qts",
   "name": "QTS"
+ },
+ "relx": {
+  "dc": "wd3",
+  "site": "relx",
+  "name": "Elsevier"
  },
  "rhsc": {
   "dc": null,
@@ -3117,7 +3171,7 @@
   "dc": null,
   "site": null,
   "name": "Elavon",
-  "attempts": 1
+  "attempts": 2
  },
  "usfoods": {
   "dc": "wd1",
@@ -3161,6 +3215,12 @@
   "site": null,
   "name": "AltaGas",
   "attempts": 3
+ },
+ "wmeimg": {
+  "dc": null,
+  "site": null,
+  "name": "Endeavor",
+  "attempts": 1
  },
  "workday": {
   "dc": "wd5",
