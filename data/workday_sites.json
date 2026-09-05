@@ -1898,6 +1898,12 @@
   "site": "clorox",
   "name": "Clorox"
  },
+ "cloudbreak": {
+  "dc": null,
+  "site": null,
+  "name": "Equiti",
+  "attempts": 1
+ },
  "cloudera": {
   "dc": null,
   "site": null,
@@ -2620,7 +2626,7 @@
   "dc": null,
   "site": null,
   "name": "EMC Insurance",
-  "attempts": 2
+  "attempts": 3
  },
  "empower": {
   "dc": "wd12",
@@ -2657,7 +2663,7 @@
   "dc": null,
   "site": null,
   "name": "Ensemble Health Partners",
-  "attempts": 1
+  "attempts": 2
  },
  "entegris": {
   "dc": "wd1",
@@ -2684,29 +2690,89 @@
   "dc": null,
   "site": null,
   "name": "Eos Energy Storage",
-  "attempts": 1
+  "attempts": 2
  },
  "epicorsoftware": {
   "dc": null,
   "site": null,
   "name": "Epicor",
-  "attempts": 1
+  "attempts": 2
  },
  "epiqsystems": {
   "dc": null,
   "site": null,
   "name": "Epiq Systems",
-  "attempts": 1
+  "attempts": 2
  },
  "equifax": {
   "dc": "wd5",
   "site": "UR_External",
   "name": "Equifax"
  },
+ "equinix": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Equinix"
+ },
+ "equinor": {
+  "dc": null,
+  "site": null,
+  "name": "Equinor",
+  "attempts": 1
+ },
+ "ercot": {
+  "dc": "wd1",
+  "site": "ercot_careers",
+  "name": "Ercot"
+ },
+ "erickson": {
+  "dc": null,
+  "site": null,
+  "name": "Erickson Senior Living",
+  "attempts": 1
+ },
+ "erm": {
+  "dc": "wd3",
+  "site": "erm_careers",
+  "name": "ERM"
+ },
+ "esab": {
+  "dc": "wd5",
+  "site": "esabcareers",
+  "name": "ESAB Corporation"
+ },
+ "essentiahealth": {
+  "dc": null,
+  "site": null,
+  "name": "Essentia Health",
+  "attempts": 1
+ },
  "etsy": {
   "dc": "wd5",
   "site": "etsy_careers",
   "name": "Depop"
+ },
+ "evercommerce": {
+  "dc": "wd1",
+  "site": "evercommerce_careers",
+  "name": "EverCommerce"
+ },
+ "everestre": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Everest"
+ },
+ "evergreenix": {
+  "dc": null,
+  "site": null,
+  "name": "Everfox",
+  "attempts": 1
+ },
+ "eversource": {
+  "dc": null,
+  "site": null,
+  "name": "Eversource Energy",
+  "attempts": 1
  },
  "fanniemae": {
   "dc": "wd1",
@@ -2783,6 +2849,12 @@
   "dc": "wd5",
   "site": "ExternalCareerSite",
   "name": "Hewlett Packard (HP)"
+ },
+ "hrhub": {
+  "dc": null,
+  "site": null,
+  "name": "Euronext",
+  "attempts": 1
  },
  "humana": {
   "dc": "wd5",
@@ -2868,7 +2940,7 @@
   "dc": null,
   "site": null,
   "name": "Eli Lilly and Company",
-  "attempts": 2
+  "attempts": 3
  },
  "luriechildrens": {
   "dc": null,
@@ -3010,7 +3082,7 @@
   "dc": null,
   "site": null,
   "name": "Endeavor Health",
-  "attempts": 2
+  "attempts": 3
  },
  "ntrs": {
   "dc": "wd1",
@@ -3065,13 +3137,13 @@
   "dc": null,
   "site": null,
   "name": "Environmental Defense Fund",
-  "attempts": 1
+  "attempts": 2
  },
  "osv-enterprise": {
   "dc": null,
   "site": null,
   "name": "Enterprise Bank & Trust",
-  "attempts": 1
+  "attempts": 2
  },
  "ourhrconnect": {
   "dc": null,
@@ -3210,7 +3282,7 @@
   "dc": null,
   "site": null,
   "name": "Ensora Health",
-  "attempts": 1
+  "attempts": 2
  },
  "thinkbrg": {
   "dc": null,
@@ -3270,7 +3342,7 @@
   "dc": null,
   "site": null,
   "name": "EPRI",
-  "attempts": 1
+  "attempts": 2
  },
  "volarisgroup": {
   "dc": null,
@@ -3293,7 +3365,7 @@
   "dc": null,
   "site": null,
   "name": "Endeavor",
-  "attempts": 2
+  "attempts": 3
  },
  "workday": {
   "dc": "wd5",
