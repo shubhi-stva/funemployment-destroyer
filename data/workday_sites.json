@@ -1117,6 +1117,11 @@
   "name": "BetMGM",
   "attempts": 3
  },
+ "bhs": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Baptist Health"
+ },
  "biamp": {
   "dc": "wd12",
   "site": "biamp",
@@ -2392,31 +2397,36 @@
   "dc": null,
   "site": null,
   "name": "Diamondback Energy",
-  "attempts": 2
+  "attempts": 3
  },
  "dickssportinggoods": {
   "dc": null,
   "site": null,
   "name": "Dick's Sporting Goods",
-  "attempts": 2
+  "attempts": 3
  },
  "digikey": {
   "dc": null,
   "site": null,
   "name": "DigiKey",
-  "attempts": 2
+  "attempts": 3
  },
  "dimensional": {
   "dc": null,
   "site": null,
   "name": "Dimensional Fund Advisors",
-  "attempts": 2
+  "attempts": 3
  },
  "directsupply": {
   "dc": null,
   "site": null,
   "name": "Direct Supply",
-  "attempts": 2
+  "attempts": 3
+ },
+ "directv": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "DIRECTV"
  },
  "dlapiper": {
   "dc": "wd1",
@@ -2427,13 +2437,13 @@
   "dc": null,
   "site": null,
   "name": "Dmainc",
-  "attempts": 1
+  "attempts": 2
  },
  "dollartree": {
   "dc": null,
   "site": null,
   "name": "Dollar Tree",
-  "attempts": 1
+  "attempts": 2
  },
  "domo": {
   "dc": "wd12",
@@ -2444,7 +2454,7 @@
   "dc": null,
   "site": null,
   "name": "Donaldson Company",
-  "attempts": 1
+  "attempts": 2
  },
  "doterra": {
   "dc": "wd1",
@@ -2455,6 +2465,12 @@
   "dc": null,
   "site": null,
   "name": "Dow Chemical Company",
+  "attempts": 2
+ },
+ "dowjones": {
+  "dc": null,
+  "site": null,
+  "name": "Dow Jones",
   "attempts": 1
  },
  "draftkings": {
@@ -2467,10 +2483,69 @@
   "site": "Draper_Careers",
   "name": "Draper"
  },
+ "driscolls": {
+  "dc": "wd5",
+  "site": "driscolls",
+  "name": "Driscoll's"
+ },
+ "drivenbrands": {
+  "dc": null,
+  "site": null,
+  "name": "Driven Brands",
+  "attempts": 1
+ },
+ "drivetime": {
+  "dc": "wd1",
+  "site": "drivetime",
+  "name": "DriveTime"
+ },
+ "dssmith": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "DS Smith"
+ },
  "dtna": {
   "dc": "wd5",
   "site": "dtna_External",
   "name": "Daimler Truck"
+ },
+ "duboischemicals": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "DuBois Chemicals"
+ },
+ "dukeenergy": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "Duke Energy"
+ },
+ "dutchbros": {
+  "dc": null,
+  "site": null,
+  "name": "Dutch Bros",
+  "attempts": 1
+ },
+ "dxctechnology": {
+  "dc": null,
+  "site": null,
+  "name": "DXC Technology",
+  "attempts": 1
+ },
+ "dyson": {
+  "dc": "wd3",
+  "site": "dyson_careers",
+  "name": "Dyson"
+ },
+ "earlywarning": {
+  "dc": "wd5",
+  "site": "earlywarningcareers",
+  "name": "Early Warning"
+ },
+ "eonnext": {
+  "dc": null,
+  "site": null,
+  "name": "E.ON Next",
+  "attempts": 1
  },
  "equifax": {
   "dc": "wd5",
@@ -2684,7 +2759,7 @@
   "dc": null,
   "site": null,
   "name": "DotDash Meredith",
-  "attempts": 1
+  "attempts": 2
  },
  "microchiphr": {
   "dc": "wd5",
@@ -2720,6 +2795,12 @@
   "dc": "wd12",
   "site": "Careers",
   "name": "7-Eleven"
+ },
+ "mydpr": {
+  "dc": null,
+  "site": null,
+  "name": "DPR Family of Companies",
+  "attempts": 1
  },
  "myhcm": {
   "dc": null,

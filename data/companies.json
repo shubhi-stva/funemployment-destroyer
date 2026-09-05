@@ -685,6 +685,11 @@
   "ats": "workday"
  },
  {
+  "name": "AiPrise",
+  "slug": "aiprise",
+  "ats": "ashby"
+ },
+ {
   "name": "Air Liquide",
   "slug": "airliquidehr",
   "ats": "workday"
@@ -2612,6 +2617,11 @@
  {
   "name": "Banner Health",
   "slug": "bannerhealth",
+  "ats": "workday"
+ },
+ {
+  "name": "Baptist Health",
+  "slug": "bhs",
   "ats": "workday"
  },
  {
@@ -5670,6 +5680,11 @@
   "ats": "workday"
  },
  {
+  "name": "Credence",
+  "slug": "credence",
+  "ats": "workable"
+ },
+ {
   "name": "Credit Acceptance Careers",
   "slug": "creditacceptance",
   "ats": "workday"
@@ -6437,6 +6452,11 @@
  {
   "name": "Direct Supply",
   "slug": "directsupply",
+  "ats": "workday"
+ },
+ {
+  "name": "DIRECTV",
+  "slug": "directv",
   "ats": "workday"
  },
  {
@@ -7963,6 +7983,11 @@
   "name": "Field AI",
   "slug": "field-ai",
   "ats": "lever"
+ },
+ {
+  "name": "FieldPulse",
+  "slug": "fieldpulse",
+  "ats": "rippling"
  },
  {
   "name": "Fife Council",
@@ -13545,6 +13570,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Metaview",
+  "slug": "metaview",
+  "ats": "ashby"
+ },
+ {
   "name": "Metergy Solutions",
   "slug": "metergysolutions",
   "ats": "lever"
@@ -14320,6 +14350,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Navion Senior Solutions",
+  "slug": "navionsl",
+  "ats": "workable"
+ },
+ {
   "name": "NAXO",
   "slug": "naxo",
   "ats": "rippling"
@@ -15008,6 +15043,11 @@
   "name": "Obsidian Security",
   "slug": "obsidiansecurity",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Obvio",
+  "slug": "obvio",
+  "ats": "ashby"
  },
  {
   "name": "Obvious",
@@ -16433,6 +16473,11 @@
   "name": "PopStroke Holdings LLC",
   "slug": "popstroke-job-board-1924",
   "ats": "rippling"
+ },
+ {
+  "name": "PortmanDentex",
+  "slug": "PortmanDentex",
+  "ats": "smartrecruiters"
  },
  {
   "name": "Poshmark",
@@ -18890,6 +18935,11 @@
   "ats": "workday"
  },
  {
+  "name": "Simon Property Group",
+  "slug": "simon",
+  "ats": "workday"
+ },
+ {
   "name": "Simons Foundation",
   "slug": "simonsfoundation",
   "ats": "workday"
@@ -21100,6 +21150,11 @@
   "ats": "rippling"
  },
  {
+  "name": "Topgolf International",
+  "slug": "topgolf",
+  "ats": "workday"
+ },
+ {
   "name": "Topsort",
   "slug": "topsort",
   "ats": "greenhouse"
@@ -23305,6 +23360,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Xodus Group",
+  "slug": "xodus-group",
+  "ats": "workable"
+ },
+ {
   "name": "Xometry",
   "slug": "xometry",
   "ats": "greenhouse"
@@ -23528,6 +23588,11 @@
   "name": "Zoro",
   "slug": "Zoro",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "ZRS Management",
+  "slug": "zrsmanagement",
+  "ats": "workday"
  },
  {
   "name": "Zscaler",

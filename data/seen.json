@@ -5,6 +5,7 @@
 "amazon:amazon:10517567": "2026-08-28T00:39:24+00:00",
 "amazon:amazon:10529525": "2026-09-04T04:41:06+00:00",
 "ashby:abundant:1ebf7fda-c322-404d-acc3-2757bbd79996": "2026-08-20T00:55:47.174000+00:00",
+"ashby:aiprise:baf8a79b-d035-4bc1-8b12-4ef48e0257ba": "2026-09-05T03:28:50.607000+00:00",
 "ashby:allen-control-systems:3f71ede3-185a-4782-86a9-ebf1e9f55cc6": "2026-05-05T01:01:28.597000+00:00",
 "ashby:ambrook:e458b046-aa7f-4022-bca5-63cdfd495456": "2026-08-22T09:52:26+00:00",
 "ashby:antares:92a0d857-1a5f-4edd-bf95-6289a5cd36ea": "2026-08-31T23:31:55.699000+00:00",
@@ -999,6 +1000,7 @@
 "workday:crowe:/job/Chicago-IL-USA/AI-Functional-Intern_R-71008": "2026-08-13T19:31:29+00:00",
 "workday:crowe:/job/Chicago-IL-USA/Data-Analytics-Developer-Intern_R-71041": "2026-08-14T19:50:41+00:00",
 "workday:crowe:/job/Chicago-IL-USA/Data-Consultant-Intern_R-71042": "2026-08-25",
+"workday:directv:/job/El-Segundo-CA/DIRECTV-for-Business--Operational-Analytics-Intern_R260282": "2026-09-04",
 "workday:draftkings:/job/Boston-MA/Data-Science-Intern-Referral--Summer-2027-_JR14960": "2026-09-01T22:00:29+00:00",
 "workday:draftkings:/job/Boston-MA/Software-Engineer-Intern--Summer-2027-_JR14928": "2026-08-31T15:44:51+00:00",
 "workday:draftkings:/job/Boston-MA/Software-Engineer-Intern-Referral--Summer-2027-_JR14932": "2026-09-01T22:00:29+00:00",
@@ -1197,7 +1199,6 @@
 "workday:workiva:/job/USA---Remote/Spring-2027-Intern---Data-Analytics_R12319": "2026-08-27",
 "workday:workiva:/job/USA---Remote/Summer-2027-Intern---Machine-Learning-Engineering_R12194-1": "2026-08-29T15:52:02+00:00",
 "workday:workiva:/job/USA---Remote/Summer-2027-Intern---Software-Engineering_R12190": "2026-08-29T15:52:02+00:00",
-"workday:xcelenergy:/job/Amarillo-TX-79101/Distribution-Wildfire-Engineer_JR113393-1": "2026-09-01",
-"workday:xcelenergy:/job/Denver-CO-80205/IT-Infrastructure-Intern---CO_JR115917": "2026-08-31T21:22:18+00:00"
+"workday:xcelenergy:/job/Amarillo-TX-79101/Distribution-Wildfire-Engineer_JR113393-1": "2026-09-01"
 }
 }
