@@ -11445,6 +11445,11 @@
   "ats": "workday"
  },
  {
+  "name": "Juicebox",
+  "slug": "juicebox",
+  "ats": "ashby"
+ },
+ {
   "name": "Julius AI",
   "slug": "julius",
   "ats": "ashby"
@@ -19802,6 +19807,11 @@
  {
   "name": "StockX",
   "slug": "stockx",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Stokespacetechnologies",
+  "slug": "stokespacetechnologies",
   "ats": "greenhouse"
  },
  {
