@@ -3441,6 +3441,12 @@
   "dc": null,
   "site": null,
   "name": "Haleon",
+  "attempts": 2
+ },
+ "gtsgbu": {
+  "dc": null,
+  "site": null,
+  "name": "Hitachi",
   "attempts": 1
  },
  "gtweed": {
@@ -3452,7 +3458,7 @@
   "dc": null,
   "site": null,
   "name": "Guardian Life",
-  "attempts": 2
+  "attempts": 3
  },
  "guggenheiminvestment": {
   "dc": "wd5",
@@ -3478,7 +3484,7 @@
   "dc": null,
   "site": null,
   "name": "Gundersen Health System",
-  "attempts": 2
+  "attempts": 3
  },
  "gunvor": {
   "dc": "wd3",
@@ -3505,7 +3511,7 @@
   "dc": null,
   "site": null,
   "name": "Hamilton Lane",
-  "attempts": 1
+  "attempts": 2
  },
  "hancockwhitney": {
   "dc": "wd5",
@@ -3516,7 +3522,7 @@
   "dc": null,
   "site": null,
   "name": "HarbourVest",
-  "attempts": 1
+  "attempts": 2
  },
  "hargreaveslansdown": {
   "dc": "wd3",
@@ -3532,13 +3538,13 @@
   "dc": null,
   "site": null,
   "name": "Harris Computer",
-  "attempts": 1
+  "attempts": 2
  },
  "hastingsdirect": {
   "dc": null,
   "site": null,
   "name": "Hastings Direct",
-  "attempts": 1
+  "attempts": 2
  },
  "hbfuller": {
   "dc": "wd1",
@@ -3559,7 +3565,7 @@
   "dc": null,
   "site": null,
   "name": "HCA Healthcare UK",
-  "attempts": 1
+  "attempts": 2
  },
  "hcmportal": {
   "dc": "wd5",
@@ -3576,10 +3582,96 @@
   "site": "External",
   "name": "HD Supply"
  },
+ "healthfirst": {
+  "dc": "wd1",
+  "site": "healthfirst",
+  "name": "Healthfirst"
+ },
+ "healthplanone": {
+  "dc": null,
+  "site": null,
+  "name": "Health Plan One",
+  "attempts": 1
+ },
+ "healthresearch": {
+  "dc": null,
+  "site": null,
+  "name": "Health Research",
+  "attempts": 1
+ },
+ "hec": {
+  "dc": null,
+  "site": null,
+  "name": "Hilcorp",
+  "attempts": 1
+ },
+ "heidelbergmaterials": {
+  "dc": null,
+  "site": null,
+  "name": "Heidelberg Materials",
+  "attempts": 1
+ },
+ "helenoftroy": {
+  "dc": null,
+  "site": null,
+  "name": "Helen of Troy",
+  "attempts": 1
+ },
+ "hendrick": {
+  "dc": "wd5",
+  "site": "hendrickcareers",
+  "name": "Hendrick Motorsports"
+ },
+ "henryschein": {
+  "dc": null,
+  "site": null,
+  "name": "Henry Schein",
+  "attempts": 1
+ },
+ "highmarkhealth": {
+  "dc": null,
+  "site": null,
+  "name": "Highmark Health",
+  "attempts": 1
+ },
+ "hilbgroup": {
+  "dc": null,
+  "site": null,
+  "name": "Hilb Group",
+  "attempts": 1
+ },
+ "hillenbrand": {
+  "dc": "wd3",
+  "site": "Global",
+  "name": "Hillenbrand"
+ },
+ "hindscc": {
+  "dc": null,
+  "site": null,
+  "name": "Hinds Community College",
+  "attempts": 1
+ },
+ "hiscox": {
+  "dc": null,
+  "site": null,
+  "name": "Hiscox",
+  "attempts": 1
+ },
  "hp": {
   "dc": "wd5",
   "site": "ExternalCareerSite",
   "name": "Hewlett Packard (HP)"
+ },
+ "hpe": {
+  "dc": null,
+  "site": null,
+  "name": "Hewlett Packard Enterprise",
+  "attempts": 2
+ },
+ "hpinc": {
+  "dc": "wd5",
+  "site": "hpinc",
+  "name": "Helmerich & Payne"
  },
  "hrhub": {
   "dc": null,
