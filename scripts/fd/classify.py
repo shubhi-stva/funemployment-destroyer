@@ -1016,6 +1016,19 @@ def is_us_location(location: str) -> bool | None:
     if not text:
         return None
 
+    # An explicit country code in the final field is the most reliable signal
+    # available, so it is read before any state or city heuristic. It needs
+    # the original casing, so it gets the raw string.
+    country = _trailing_country(location)
+    if country == "us":
+        return True
+    if country:
+        return False
+
+    # Other explicit foreign markers in odd formats.
+    if "international" in text or "bundesweit" in text:
+        return False
+
     # A Canadian province abbreviation is checked before the US test, because
     # "BC" and "ON" are shaped exactly like US state abbreviations.
     canadian = (
@@ -1175,3 +1188,58 @@ def company_from_slug(slug: str) -> str | None:
     if len(base) < 3 or base in _STOPWORDS:
         return None
     return base[0].upper() + base[1:]
+
+# Boards commonly emit "City, Region, CountryCode": "Ottawa, ON, ca",
+# "Bengaluru, KA, in", "Amsterdam, NH, nl", "Madrid, MD, es". The final token
+# is a COUNTRY, but almost every one of those codes is also a US state
+# abbreviation (ca, in, de, co, md), so the state rules were claiming them.
+# Reading the last field as a country settles it before anything else looks.
+_ISO2_COUNTRIES = {
+    "ad","ae","af","ag","ai","al","am","ao","aq","ar","as","at","au","aw","ax",
+    "az","ba","bb","bd","be","bf","bg","bh","bi","bj","bl","bm","bn","bo","bq",
+    "br","bs","bt","bv","bw","by","bz","ca","cc","cd","cf","cg","ch","ci","ck",
+    "cl","cm","cn","co","cr","cu","cv","cw","cx","cy","cz","de","dj","dk","dm",
+    "do","dz","ec","ee","eg","eh","er","es","et","fi","fj","fk","fm","fo","fr",
+    "ga","gb","gd","ge","gf","gg","gh","gi","gl","gm","gn","gp","gq","gr","gs",
+    "gt","gu","gw","gy","hk","hm","hn","hr","ht","hu","id","ie","il","im","in",
+    "io","iq","ir","is","it","je","jm","jo","jp","ke","kg","kh","ki","km","kn",
+    "kp","kr","kw","ky","kz","la","lb","lc","li","lk","lr","ls","lt","lu","lv",
+    "ly","ma","mc","md","me","mf","mg","mh","mk","ml","mm","mn","mo","mp","mq",
+    "mr","ms","mt","mu","mv","mw","mx","my","mz","na","nc","ne","nf","ng","ni",
+    "nl","no","np","nr","nu","nz","om","pa","pe","pf","pg","ph","pk","pl","pm",
+    "pn","pr","ps","pt","pw","py","qa","re","ro","rs","ru","rw","sa","sb","sc",
+    "sd","se","sg","sh","si","sj","sk","sl","sm","sn","so","sr","ss","st","sv",
+    "sx","sy","sz","tc","td","tf","tg","th","tj","tk","tl","tm","tn","to","tr",
+    "tt","tv","tw","tz","ua","ug","um","us","uy","uz","va","vc","ve","vg","vi",
+    "vn","vu","wf","ws","ye","yt","za","zm","zw",
+}
+
+
+def _trailing_country(raw_location: str) -> str | None:
+    """Country code in the last comma-separated field, if there is one.
+
+    Takes the ORIGINAL string rather than the lowercased one, because case is
+    the only thing separating the two meanings. Boards write the country in
+    lower case and the state in upper: "Ottawa, ON, ca" is Canada, while
+    "Jessup, MD" is Maryland. Half the US state abbreviations are also ISO
+    country codes (NE Niger, TN Tunisia, MD Moldova, CA Canada, IN India,
+    DE Germany, CO Colombia), so ignoring case flagged American jobs as
+    foreign.
+
+    At least three fields are required, so a two-part "Boise, ID" stays a
+    city and state rather than becoming Indonesia.
+    """
+    parts = [part.strip() for part in (raw_location or "").split(",")]
+    if len(parts) < 3:
+        return None
+
+    last = parts[-1]
+    if len(last) != 2 or not last.isalpha():
+        return None
+
+    if last.isupper():
+        # A state abbreviation, unless it is spelling out the country.
+        return "us" if last == "US" else None
+
+    return last.lower() if last.islower() and last.lower() in _ISO2_COUNTRIES else None
+
