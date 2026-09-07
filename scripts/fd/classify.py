@@ -1243,3 +1243,78 @@ def _trailing_country(raw_location: str) -> str | None:
 
     return last.lower() if last.islower() and last.lower() in _ISO2_COUNTRIES else None
 
+
+# ------------------------------------------------------- graduation window
+
+# Numbers are a point in the year, so windows can be compared directly.
+_MONTH_KEYS = {
+    "january": 1, "jan": 1, "february": 2, "feb": 2, "march": 3, "mar": 3,
+    "april": 4, "apr": 4, "may": 5, "june": 6, "jun": 6, "july": 7, "jul": 7,
+    "august": 8, "aug": 8, "september": 9, "sep": 9, "sept": 9,
+    "october": 10, "oct": 10, "november": 11, "nov": 11, "december": 12,
+    "dec": 12,
+}
+# Seasons sit mid-window: spring runs to about June, so Spring 2028 covers a
+# March 2028 graduation.
+_SEASON_KEYS = {"winter": 1, "spring": 4, "summer": 7, "fall": 10, "autumn": 10}
+
+_GRAD_SEGMENT_RE = re.compile(r"graduat\w*[^.;]{0,200}")
+_DATED_RE = re.compile(
+    r"\b(" + "|".join(list(_MONTH_KEYS) + list(_SEASON_KEYS)) + r")\b[^.;]{0,18}?\b(20\d{2})\b"
+)
+_BARE_YEAR_RE = re.compile(r"\b(20\d{2})\b")
+# "2028 or beyond" places no ceiling on when you finish.
+_OPEN_ENDED_RE = re.compile(r"\b(?:or\s+(?:beyond|later|after|thereafter)|onwards?)\b")
+
+
+def _date_key(year: int, month: int) -> float:
+    return year + month / 12.0
+
+
+def graduation_key(date_str: str) -> float:
+    """Turn a "YYYY-MM" setting into a comparable key."""
+    try:
+        year, month = date_str.split("-")
+        return _date_key(int(year), int(month))
+    except (ValueError, AttributeError):
+        return 0.0
+
+
+def latest_graduation_allowed(text_lower: str) -> float | None:
+    """The newest graduation date a posting will accept, if it names one.
+
+    Returns None when the posting sets no ceiling, either because it never
+    mentions graduation timing or because it says something like "2028 or
+    beyond".
+    """
+    if not text_lower:
+        return None
+
+    latest = None
+    for segment in _GRAD_SEGMENT_RE.findall(text_lower):
+        if _OPEN_ENDED_RE.search(segment):
+            return None       # explicitly unbounded
+
+        for word, year in _DATED_RE.findall(segment):
+            month = _MONTH_KEYS.get(word) or _SEASON_KEYS.get(word)
+            if month:
+                key = _date_key(int(year), month)
+                latest = key if latest is None else max(latest, key)
+
+        if latest is None:
+            # No month or season, so fall back to bare years. Treated as the
+            # end of the year, which is the generous reading.
+            for year in _BARE_YEAR_RE.findall(segment):
+                key = _date_key(int(year), 12)
+                latest = key if latest is None else max(latest, key)
+
+    return latest
+
+
+def graduates_too_early(text_lower: str, my_graduation: str) -> bool:
+    """True when the posting's graduation window closes before you finish."""
+    mine = graduation_key(my_graduation)
+    if not mine:
+        return False
+    latest = latest_graduation_allowed(text_lower)
+    return latest is not None and latest < mine

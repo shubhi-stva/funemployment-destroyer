@@ -74,6 +74,9 @@ def _revalidate(job: dict) -> list[dict]:
     if classify.has_gpa_requirement(hay):
         return []
 
+    if classify.graduates_too_early(hay, config.GRADUATION_DATE):
+        return []
+
     degree = classify.classify_degree(hay, internship)
 
     if internship:

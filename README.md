@@ -79,6 +79,33 @@ requirement, and reading it as one was mislabelling dozens of internships.
 Internships are never reported as needing a finished degree. A bachelor's
 listed on an internship is in progress. That's what an internship is.
 
+## Graduation timing
+
+I graduate March 2028, set as `GRADUATION_DATE` in `scripts/fd/config.py`
+(`FD_GRADUATION_DATE` overrides it).
+
+Plenty of postings name a graduation window, and if it closes before I finish
+there is no point applying: the resume screen alone will drop me. Scale AI's
+new grad role asks for "a graduation date in Fall 2026 or Spring 2027", so it
+goes, while their internship wants "Fall 2027 or Spring 2028" and stays.
+
+The parser reads the text after any mention of graduating, pulls out every
+month, season and year it finds, and takes the latest one as the ceiling.
+Phrasings in the wild vary a lot:
+
+- "graduating in fall/winter 2027 or spring 2028"
+- "graduation date between December 2027 and June 2028"
+- "graduate before December 2027"
+- "graduating by August 2027"
+- "graduate date in early to mid 2026"
+- "graduating in 2028 or beyond"
+
+Seasons are read at their midpoint, so Spring 2028 covers a March 2028
+finish. A bare year counts as December of that year, which is the generous
+reading. "Or beyond" and "or later" mean no ceiling at all, so those stay.
+Only the upper bound is checked, never a lower one, since the risk is being
+screened out for finishing too late.
+
 ## Keeping it to the US
 
 `classify.is_us_location()` returns True, False or None, and a posting is

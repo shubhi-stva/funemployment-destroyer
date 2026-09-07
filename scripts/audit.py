@@ -97,6 +97,10 @@ def check(job: dict, body: str) -> list[str]:
     if classify.has_gpa_requirement(hay):
         problems.append("has a GPA requirement")
 
+    if classify.graduates_too_early(hay, config.GRADUATION_DATE):
+        latest = classify.latest_graduation_allowed(hay)
+        problems.append(f"graduation window closes at {latest:.2f}, before {config.GRADUATION_DATE}")
+
     if not internship:
         if degree not in config.FULLTIME_ALLOWED_DEGREE:
             problems.append(f"full-time with a degree gate ({degree})")

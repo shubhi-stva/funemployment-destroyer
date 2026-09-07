@@ -158,6 +158,12 @@ def build(
     if classify.has_gpa_requirement(haystack):
         return reject()
 
+    # A posting naming a graduation window that closes before you finish will
+    # screen you out on the resume alone, so it is no use whether it is an
+    # internship or a new grad role.
+    if classify.graduates_too_early(haystack, config.GRADUATION_DATE):
+        return reject()
+
     if not internship:
         # --- full-time gate -------------------------------------------------
         if degree not in config.FULLTIME_ALLOWED_DEGREE:

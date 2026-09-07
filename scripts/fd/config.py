@@ -105,3 +105,9 @@ US_ONLY = os.environ.get("FD_US_ONLY", "1") == "1"
 
 FULLTIME_MAX_LEVEL = 1  # see classify.LEVEL_RANK; 1 == Entry Level
 FULLTIME_MAX_YEARS = 0  # any quoted years-of-experience ask disqualifies
+
+# When you graduate, as "YYYY-MM". Postings that name a graduation window
+# ending before this are dropped: a role asking for "a graduation date in
+# Fall 2026 or Spring 2027" will screen you out on the resume alone, whether
+# it is an internship or a new grad role.
+GRADUATION_DATE = os.environ.get("FD_GRADUATION_DATE", "2028-03")
