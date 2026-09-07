@@ -1058,6 +1058,12 @@
   "site": "bcbsnc",
   "name": "Blue Cross and Blue Shield of North Carolina"
  },
+ "bcbsnj": {
+  "dc": null,
+  "site": null,
+  "name": "Horizon NJ Health",
+  "attempts": 1
+ },
  "bcbsri": {
   "dc": "wd1",
   "site": "bcbsricareers",
@@ -3447,7 +3453,7 @@
   "dc": null,
   "site": null,
   "name": "Hitachi",
-  "attempts": 2
+  "attempts": 3
  },
  "gtweed": {
   "dc": "wd1",
@@ -3572,6 +3578,11 @@
   "site": "Search",
   "name": "United Parcel Service (UPS)"
  },
+ "hcpss": {
+  "dc": "wd1",
+  "site": "hcpss",
+  "name": "Howard County Public School System"
+ },
  "hcsc": {
   "dc": "wd1",
   "site": "hcsc_External",
@@ -3591,31 +3602,31 @@
   "dc": null,
   "site": null,
   "name": "Health Plan One",
-  "attempts": 2
+  "attempts": 3
  },
  "healthresearch": {
   "dc": null,
   "site": null,
   "name": "Health Research",
-  "attempts": 2
+  "attempts": 3
  },
  "hec": {
   "dc": null,
   "site": null,
   "name": "Hilcorp",
-  "attempts": 2
+  "attempts": 3
  },
  "heidelbergmaterials": {
   "dc": null,
   "site": null,
   "name": "Heidelberg Materials",
-  "attempts": 2
+  "attempts": 3
  },
  "helenoftroy": {
   "dc": null,
   "site": null,
   "name": "Helen of Troy",
-  "attempts": 2
+  "attempts": 3
  },
  "hendrick": {
   "dc": "wd5",
@@ -3626,19 +3637,24 @@
   "dc": null,
   "site": null,
   "name": "Henry Schein",
-  "attempts": 2
+  "attempts": 3
+ },
+ "hhmi": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Howard Hughes Medical Institute (HHMI)"
  },
  "highmarkhealth": {
   "dc": null,
   "site": null,
   "name": "Highmark Health",
-  "attempts": 2
+  "attempts": 3
  },
  "hilbgroup": {
   "dc": null,
   "site": null,
   "name": "Hilb Group",
-  "attempts": 2
+  "attempts": 3
  },
  "hillenbrand": {
   "dc": "wd3",
@@ -3649,13 +3665,13 @@
   "dc": null,
   "site": null,
   "name": "Hinds Community College",
-  "attempts": 2
+  "attempts": 3
  },
  "hiscox": {
   "dc": null,
   "site": null,
   "name": "Hiscox",
-  "attempts": 2
+  "attempts": 3
  },
  "hitachi": {
   "dc": "wd1",
@@ -3666,6 +3682,12 @@
   "dc": null,
   "site": null,
   "name": "Hong Kong Exchanges",
+  "attempts": 2
+ },
+ "hl": {
+  "dc": null,
+  "site": null,
+  "name": "Houlihan Lokey",
   "attempts": 1
  },
  "hntb": {
@@ -3682,6 +3704,18 @@
   "dc": null,
   "site": null,
   "name": "Holman",
+  "attempts": 2
+ },
+ "horizonmedia": {
+  "dc": null,
+  "site": null,
+  "name": "Horizon media",
+  "attempts": 1
+ },
+ "howard": {
+  "dc": null,
+  "site": null,
+  "name": "Howard University",
   "attempts": 1
  },
  "hp": {
@@ -3706,10 +3740,38 @@
   "name": "Euronext",
   "attempts": 3
  },
+ "hss": {
+  "dc": "wd1",
+  "site": "hss_careers",
+  "name": "Hospital for Special Surgery (HSS)"
+ },
+ "hubinternational": {
+  "dc": "wd1",
+  "site": "hubinternational",
+  "name": "HUB International"
+ },
  "humana": {
   "dc": "wd5",
   "site": "HUMANA_External_Career_Site",
   "name": "CenterWell"
+ },
+ "huntelec": {
+  "dc": null,
+  "site": null,
+  "name": "Hunt Electric",
+  "attempts": 1
+ },
+ "huntington": {
+  "dc": null,
+  "site": null,
+  "name": "Huntington Bancshares",
+  "attempts": 1
+ },
+ "hyperiongrp": {
+  "dc": null,
+  "site": null,
+  "name": "Howden",
+  "attempts": 1
  },
  "iatinsurancegroup": {
   "dc": "wd1",
@@ -4113,6 +4175,11 @@
   "dc": "wd1",
   "site": "snap",
   "name": "Snap"
+ },
+ "spectris": {
+  "dc": "wd3",
+  "site": "spectris_careers",
+  "name": "Hottinger Brüel & Kjaer (HBK)"
  },
  "spectrumhealth": {
   "dc": null,
