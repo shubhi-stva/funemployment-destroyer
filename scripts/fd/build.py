@@ -116,9 +116,18 @@ def _sort_stamp(job: dict) -> datetime | None:
 def prune(jobs: list[dict]) -> list[dict]:
     """Drop stale postings, sort newest-posted first, and cap the payload."""
     cutoff = datetime.now(timezone.utc) - timedelta(days=config.MAX_AGE_DAYS)
+    now = datetime.now(timezone.utc)
+    season_floor = now.year + _current_season_index(now.month) / 10
 
     fresh = []
     for job in jobs:
+        # A posting for a term that has already started is not applicable:
+        # a "Summer 2026" internship is no use in September 2026. Postings
+        # naming no season are open ended and stay.
+        seasons = job.get("seasons") or []
+        if seasons and all(classify.season_sort_key(s) < season_floor for s in seasons):
+            continue
+
         stamp = _sort_stamp(job)
         if stamp is None or stamp >= cutoff:
             fresh.append(job)

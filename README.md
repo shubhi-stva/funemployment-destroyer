@@ -14,7 +14,10 @@ page that reads it.
 
 Two things, and everything else gets dropped before it ever reaches the site.
 
-Undergraduate internships, any season. Summer, Fall, Spring, Winter, co-ops.
+Undergraduate internships, any season still ahead. Summer, Fall, Spring,
+Winter, co-ops. A term that has already started is no use, so a "Summer 2026"
+posting is dropped once Summer 2026 has begun. Postings naming no season are
+open ended and stay.
 If a posting wants a master's, a PhD or an MBA it's gone. That includes the
 "Graduate Intern" and "Graduate Co-op" wording Intel and Altera use for grad
 students, which reads like a normal internship title until you look it up.

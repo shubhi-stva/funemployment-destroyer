@@ -477,6 +477,7 @@ NON_TECH_HINTS = (
     "industrial engineer", "industrial engineering", "industrial environmental",
     "manufacturing engineer", "process engineer", "packaging engineer",
     "acoustic", "welding", "piping", "surveying", "land development",
+    "fire protection", "plumbing", "landscape", "transportation planning",
     "site design", "architectural", "construction",
     # Operations / physical
     "operations manager", "supervisor", "fulfillment", "inventory",
