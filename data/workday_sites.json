@@ -3441,13 +3441,13 @@
   "dc": null,
   "site": null,
   "name": "Haleon",
-  "attempts": 2
+  "attempts": 3
  },
  "gtsgbu": {
   "dc": null,
   "site": null,
   "name": "Hitachi",
-  "attempts": 1
+  "attempts": 2
  },
  "gtweed": {
   "dc": "wd1",
@@ -3511,7 +3511,7 @@
   "dc": null,
   "site": null,
   "name": "Hamilton Lane",
-  "attempts": 2
+  "attempts": 3
  },
  "hancockwhitney": {
   "dc": "wd5",
@@ -3522,7 +3522,7 @@
   "dc": null,
   "site": null,
   "name": "HarbourVest",
-  "attempts": 2
+  "attempts": 3
  },
  "hargreaveslansdown": {
   "dc": "wd3",
@@ -3538,13 +3538,13 @@
   "dc": null,
   "site": null,
   "name": "Harris Computer",
-  "attempts": 2
+  "attempts": 3
  },
  "hastingsdirect": {
   "dc": null,
   "site": null,
   "name": "Hastings Direct",
-  "attempts": 2
+  "attempts": 3
  },
  "hbfuller": {
   "dc": "wd1",
@@ -3565,7 +3565,7 @@
   "dc": null,
   "site": null,
   "name": "HCA Healthcare UK",
-  "attempts": 2
+  "attempts": 3
  },
  "hcmportal": {
   "dc": "wd5",
@@ -3591,31 +3591,31 @@
   "dc": null,
   "site": null,
   "name": "Health Plan One",
-  "attempts": 1
+  "attempts": 2
  },
  "healthresearch": {
   "dc": null,
   "site": null,
   "name": "Health Research",
-  "attempts": 1
+  "attempts": 2
  },
  "hec": {
   "dc": null,
   "site": null,
   "name": "Hilcorp",
-  "attempts": 1
+  "attempts": 2
  },
  "heidelbergmaterials": {
   "dc": null,
   "site": null,
   "name": "Heidelberg Materials",
-  "attempts": 1
+  "attempts": 2
  },
  "helenoftroy": {
   "dc": null,
   "site": null,
   "name": "Helen of Troy",
-  "attempts": 1
+  "attempts": 2
  },
  "hendrick": {
   "dc": "wd5",
@@ -3626,19 +3626,19 @@
   "dc": null,
   "site": null,
   "name": "Henry Schein",
-  "attempts": 1
+  "attempts": 2
  },
  "highmarkhealth": {
   "dc": null,
   "site": null,
   "name": "Highmark Health",
-  "attempts": 1
+  "attempts": 2
  },
  "hilbgroup": {
   "dc": null,
   "site": null,
   "name": "Hilb Group",
-  "attempts": 1
+  "attempts": 2
  },
  "hillenbrand": {
   "dc": "wd3",
@@ -3649,12 +3649,39 @@
   "dc": null,
   "site": null,
   "name": "Hinds Community College",
-  "attempts": 1
+  "attempts": 2
  },
  "hiscox": {
   "dc": null,
   "site": null,
   "name": "Hiscox",
+  "attempts": 2
+ },
+ "hitachi": {
+  "dc": "wd1",
+  "site": "hitachi",
+  "name": "Hitachi Energy"
+ },
+ "hkex": {
+  "dc": null,
+  "site": null,
+  "name": "Hong Kong Exchanges",
+  "attempts": 1
+ },
+ "hntb": {
+  "dc": "wd5",
+  "site": "hntb_careers",
+  "name": "HNTB"
+ },
+ "hollandhospital": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Holland Hospital"
+ },
+ "holmanautogroup": {
+  "dc": null,
+  "site": null,
+  "name": "Holman",
   "attempts": 1
  },
  "hp": {
@@ -3666,7 +3693,7 @@
   "dc": null,
   "site": null,
   "name": "Hewlett Packard Enterprise",
-  "attempts": 2
+  "attempts": 4
  },
  "hpinc": {
   "dc": "wd5",
