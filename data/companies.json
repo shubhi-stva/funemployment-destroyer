@@ -7740,6 +7740,11 @@
   "ats": "lever"
  },
  {
+  "name": "Extropic",
+  "slug": "extropic",
+  "ats": "ashby"
+ },
+ {
   "name": "Eyebot",
   "slug": "eyebot",
   "ats": "ashby"
@@ -8923,6 +8928,11 @@
   "name": "Generation West Virginia",
   "slug": "generation-west-virginia-1",
   "ats": "workable"
+ },
+ {
+  "name": "Genesis AI",
+  "slug": "genesis",
+  "ats": "ashby"
  },
  {
   "name": "Genesis Therapeutics",
@@ -10665,6 +10675,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "incident.io",
+  "slug": "incident",
+  "ats": "ashby"
+ },
+ {
   "name": "Inclined Technologies",
   "slug": "inclined",
   "ats": "ashby"
@@ -11698,6 +11713,11 @@
   "name": "Kirin",
   "slug": "kirin",
   "ats": "ashby"
+ },
+ {
+  "name": "Kite Pharma",
+  "slug": "gilead",
+  "ats": "workday"
  },
  {
   "name": "Kite Ping",
@@ -23548,6 +23568,11 @@
   "name": "Zip",
   "slug": "zip",
   "ats": "ashby"
+ },
+ {
+  "name": "Zippd",
+  "slug": "zippd",
+  "ats": "workable"
  },
  {
   "name": "Zocdoc",
