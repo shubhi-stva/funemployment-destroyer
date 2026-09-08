@@ -376,9 +376,26 @@ will pause if I stop touching this entirely.
 
 ## Things that are true and slightly annoying
 
-Every 30 minutes is the floor. GitHub's cron queue isn't punctual and a
-static site has nothing to push to, so expect 30 to 60 minutes in practice.
-The Run workflow button is instant.
+The 30 minute schedule is aspirational. GitHub runs scheduled workflows on a
+best-effort basis and deprioritises them heavily: measured over six days, the
+cron fired 5 to 8 times a day rather than 48, with a median gap of 200
+minutes and a worst case of six hours. Nothing in the repo can force this.
+The cron sits at :07 and :37 rather than :00 and :30, since the queue is
+worst on the hour, but that is a nudge and not a fix.
+
+The Run workflow button in the Actions tab is instant and always works. For a
+genuinely reliable 30 minute cadence the trigger has to come from outside
+GitHub: a free service like cron-job.org calling
+
+    POST /repos/shubhi-stva/funemployment-destroyer/actions/workflows/collect.yml/dispatches
+
+with a fine-grained token that has Actions write. That needs a token I create
+myself, so it is a manual step.
+
+An open browser tab refreshes its own data every 30 minutes regardless, so a
+tab left open picks up new listings without being reloaded. It keeps the
+current tab, filters, search and scroll position, and does nothing while the
+tab is in the background.
 
 Work mode is often "Not specified" because Greenhouse doesn't expose it and
 plenty of postings never say.

@@ -23,6 +23,7 @@
     fallbackUrl: './data/jobs.js',      // same data as a <script>, for file://
     newWindowHours: 24,
     pageSize: 60,               // cards rendered before 'Show more'
+    refreshMinutes: 30,         // how often an open tab re-checks for new jobs
     storageKey: 'fd.state.v1',
     filterFields: [
       'type',
@@ -174,6 +175,7 @@
     query: '',
     sort: 'newest',
     seasonVocabulary: [],
+    loadedAt: null,
     page: 1,      // how many pages of results are currently rendered
     filters: {}   // field -> selected value ('' means any)
   };
@@ -858,6 +860,42 @@
     el.resultCount.textContent = '';
   }
 
+  // A tab left open goes stale, since the data behind it is rebuilt on a
+  // schedule. Re-fetch quietly on an interval and swap the jobs in if the
+  // file has actually changed, keeping the current tab, filters, search and
+  // scroll position exactly as they were.
+  function watchForUpdates() {
+    var everyMs = CONFIG.refreshMinutes * 60 * 1000;
+
+    setInterval(function () {
+      if (document.hidden) return;   // don't poll a backgrounded tab
+
+      loadJobs()
+        .then(function (jobs) {
+          if (!jobs.length) return;
+          if (UI.generatedAt === UI.loadedAt) return;   // nothing new
+
+          var scroll = window.pageYOffset;
+          UI.jobs = jobs;
+          UI.loadedAt = UI.generatedAt;
+          renderFilterOptions();
+          stampGeneratedAt();
+          render();
+          window.scrollTo(0, scroll);
+        })
+        .catch(function (err) {
+          // A failed refresh is not worth disturbing the page over; the
+          // listings already on screen are still perfectly usable.
+          console.warn('[FD] background refresh failed:', err.message);
+        });
+    }, everyMs);
+  }
+
+  function stampGeneratedAt() {
+    if (!UI.generatedAt) return;
+    el.dataStamp.textContent = 'Job data last generated ' + formatDateTime(UI.generatedAt) + '.';
+  }
+
   function init() {
     cacheElements();
     Storage.load();
@@ -867,11 +905,11 @@
     loadJobs()
       .then(function (jobs) {
         UI.jobs = jobs;
+        UI.loadedAt = UI.generatedAt;
         renderFilterOptions();
-        if (UI.generatedAt) {
-          el.dataStamp.textContent = 'Job data last generated ' + formatDate(UI.generatedAt) + '.';
-        }
+        stampGeneratedAt();
         render();
+        watchForUpdates();
       })
       .catch(function (err) {
         console.error('[FD] failed to load jobs:', err);

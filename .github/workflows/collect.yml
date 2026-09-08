@@ -4,7 +4,11 @@ name: Collect jobs
 # queue makes anything tighter than ~30 minutes unreliable in practice.
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    # Deliberately not on the hour or half hour. GitHub's scheduler is
+    # best-effort and most congested at :00 and :30, where the majority of
+    # repos pile up. Odd minutes get through more often. GitHub still honours
+    # only a fraction of these, so this is a nudge rather than a guarantee.
+    - cron: "7,37 * * * *"
   workflow_dispatch:
     inputs:
       include_unspecified:
