@@ -1062,7 +1062,7 @@
   "dc": null,
   "site": null,
   "name": "Horizon NJ Health",
-  "attempts": 1
+  "attempts": 2
  },
  "bcbsri": {
   "dc": "wd1",
@@ -1096,6 +1096,12 @@
   "site": null,
   "name": "Becton Dickinson",
   "attempts": 4
+ },
+ "beautyhealth": {
+  "dc": null,
+  "site": null,
+  "name": "Hydrafacial",
+  "attempts": 1
  },
  "becu": {
   "dc": "wd1",
@@ -3682,18 +3688,23 @@
   "dc": null,
   "site": null,
   "name": "Hong Kong Exchanges",
-  "attempts": 2
+  "attempts": 3
  },
  "hl": {
   "dc": null,
   "site": null,
   "name": "Houlihan Lokey",
-  "attempts": 1
+  "attempts": 2
  },
  "hntb": {
   "dc": "wd5",
   "site": "hntb_careers",
   "name": "HNTB"
+ },
+ "hoganas": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "Höganäs"
  },
  "hollandhospital": {
   "dc": "wd1",
@@ -3704,19 +3715,19 @@
   "dc": null,
   "site": null,
   "name": "Holman",
-  "attempts": 2
+  "attempts": 3
  },
  "horizonmedia": {
   "dc": null,
   "site": null,
   "name": "Horizon media",
-  "attempts": 1
+  "attempts": 2
  },
  "howard": {
   "dc": null,
   "site": null,
   "name": "Howard University",
-  "attempts": 1
+  "attempts": 2
  },
  "hp": {
   "dc": "wd5",
@@ -3759,24 +3770,88 @@
   "dc": null,
   "site": null,
   "name": "Hunt Electric",
-  "attempts": 1
+  "attempts": 2
  },
  "huntington": {
   "dc": null,
   "site": null,
   "name": "Huntington Bancshares",
-  "attempts": 1
+  "attempts": 2
+ },
+ "huntsman": {
+  "dc": "wd1",
+  "site": "huntsman",
+  "name": "Huntsman"
+ },
+ "huron": {
+  "dc": "wd1",
+  "site": "huroncareers",
+  "name": "Huron"
+ },
+ "husqvarnagroup": {
+  "dc": "wd3",
+  "site": "External_Career_Site",
+  "name": "Husqvarna Group"
  },
  "hyperiongrp": {
   "dc": null,
   "site": null,
   "name": "Howden",
+  "attempts": 2
+ },
+ "hysteryale": {
+  "dc": null,
+  "site": null,
+  "name": "Hyster-Yale Materials Handling",
   "attempts": 1
+ },
+ "hyvee": {
+  "dc": "wd1",
+  "site": "hyveecareers",
+  "name": "Hy-Vee"
+ },
+ "ia": {
+  "dc": "wd3",
+  "site": "professional",
+  "name": "iA American"
  },
  "iatinsurancegroup": {
   "dc": "wd1",
   "site": "iat",
   "name": "IAT Insurance Group"
+ },
+ "ibc": {
+  "dc": "wd5",
+  "site": "ibc_careers",
+  "name": "IBC Bank"
+ },
+ "iberdrola": {
+  "dc": "wd3",
+  "site": "iberdrola",
+  "name": "Iberdrola Group"
+ },
+ "ibotta": {
+  "dc": null,
+  "site": null,
+  "name": "ibotta",
+  "attempts": 1
+ },
+ "icf": {
+  "dc": null,
+  "site": null,
+  "name": "ICF",
+  "attempts": 1
+ },
+ "icon": {
+  "dc": null,
+  "site": null,
+  "name": "Icon",
+  "attempts": 1
+ },
+ "idahopowercompany": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Idaho Power"
  },
  "idexx": {
   "dc": "wd1",
@@ -3970,6 +4045,12 @@
   "dc": "wd5",
   "site": "Global",
   "name": "Cencora"
+ },
+ "mymvw": {
+  "dc": null,
+  "site": null,
+  "name": "Hyatt Vacation Club",
+  "attempts": 1
  },
  "ncnu": {
   "dc": null,
@@ -4201,6 +4282,12 @@
   "dc": "wd1",
   "site": "StrykerCareers",
   "name": "Stryker"
+ },
+ "synnex": {
+  "dc": null,
+  "site": null,
+  "name": "Hyve Solutions",
+  "attempts": 1
  },
  "tcbrands": {
   "dc": null,
