@@ -213,6 +213,12 @@
   "site": "agilent_careers",
   "name": "Agilent Technologies"
  },
+ "agilitas": {
+  "dc": null,
+  "site": null,
+  "name": "Le Moyne College",
+  "attempts": 1
+ },
  "agiliti": {
   "dc": "wd5",
   "site": "Careers",
@@ -3644,7 +3650,7 @@
   "dc": null,
   "site": null,
   "name": "Kraft Heinz",
-  "attempts": 2
+  "attempts": 4
  },
  "helenoftroy": {
   "dc": null,
@@ -4252,7 +4258,7 @@
   "dc": null,
   "site": null,
   "name": "Kontoor Brands",
-  "attempts": 2
+  "attempts": 3
  },
  "kbr": {
   "dc": "wd5",
@@ -4268,13 +4274,13 @@
   "dc": null,
   "site": null,
   "name": "Kenco Management Services",
-  "attempts": 2
+  "attempts": 3
  },
  "kengarff": {
   "dc": null,
   "site": null,
   "name": "Ken Garff Auto Group",
-  "attempts": 2
+  "attempts": 3
  },
  "keybank": {
   "dc": "wd5",
@@ -4290,7 +4296,7 @@
   "dc": null,
   "site": null,
   "name": "Kith",
-  "attempts": 2
+  "attempts": 3
  },
  "kla": {
   "dc": "wd1",
@@ -4306,7 +4312,7 @@
   "dc": null,
   "site": null,
   "name": "Kohl's",
-  "attempts": 2
+  "attempts": 3
  },
  "kokosing": {
   "dc": "wd5",
@@ -4332,13 +4338,13 @@
   "dc": null,
   "site": null,
   "name": "KSM",
-  "attempts": 1
+  "attempts": 2
  },
  "kyndryl": {
   "dc": null,
   "site": null,
   "name": "Kyndryl",
-  "attempts": 2
+  "attempts": 4
  },
  "labcorp": {
   "dc": "wd1",
@@ -4349,23 +4355,60 @@
   "dc": null,
   "site": null,
   "name": "Lamb Weston",
-  "attempts": 1
+  "attempts": 3
+ },
+ "landolakes": {
+  "dc": "wd1",
+  "site": "landolakes",
+  "name": "Land O'Lakes"
  },
  "largo": {
   "dc": "wd1",
   "site": "External",
   "name": "City of Largo"
  },
+ "laticrete": {
+  "dc": null,
+  "site": null,
+  "name": "Laticrete",
+  "attempts": 1
+ },
  "lazboy": {
   "dc": null,
   "site": null,
   "name": "La-Z-Boy",
-  "attempts": 1
+  "attempts": 2
+ },
+ "learfield": {
+  "dc": "wd5",
+  "site": "learfield",
+  "name": "Learfield Amplify"
+ },
+ "ledcor": {
+  "dc": "wd3",
+  "site": "ledcor_External",
+  "name": "Ledcor"
+ },
+ "lego": {
+  "dc": "wd103",
+  "site": "lego_External",
+  "name": "Lego"
  },
  "leidos": {
   "dc": "wd5",
   "site": "External",
   "name": "Leidos"
+ },
+ "lendingclub": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "LendingClub"
+ },
+ "lennar": {
+  "dc": null,
+  "site": null,
+  "name": "Lennar Corporation",
+  "attempts": 1
  },
  "lilly": {
   "dc": null,
@@ -4396,6 +4439,12 @@
   "name": "Ann & Robert H. Lurie Children’s Hospital of Chicago",
   "attempts": 3
  },
+ "lvvwd": {
+  "dc": null,
+  "site": null,
+  "name": "Las Vegas Valley Water District",
+  "attempts": 1
+ },
  "maersk": {
   "dc": "wd3",
   "site": "maersk_careers",
@@ -4415,7 +4464,7 @@
   "dc": null,
   "site": null,
   "name": "Judicial Branch of Arizona in Maricopa County",
-  "attempts": 2
+  "attempts": 3
  },
  "marmon": {
   "dc": "wd501",
@@ -4464,6 +4513,12 @@
   "dc": "wd1",
   "site": "External",
   "name": "Micron"
+ },
+ "milestone": {
+  "dc": null,
+  "site": null,
+  "name": "Legrand",
+  "attempts": 1
  },
  "mines": {
   "dc": "wd1",
@@ -4680,7 +4735,7 @@
   "dc": null,
   "site": null,
   "name": "Kobo",
-  "attempts": 2
+  "attempts": 3
  },
  "relx": {
   "dc": "wd3",
