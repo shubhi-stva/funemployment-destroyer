@@ -217,7 +217,7 @@
   "dc": null,
   "site": null,
   "name": "Le Moyne College",
-  "attempts": 1
+  "attempts": 2
  },
  "agiliti": {
   "dc": "wd5",
@@ -1389,6 +1389,12 @@
   "dc": "wd12",
   "site": "External",
   "name": "BTI Solutions"
+ },
+ "buildertrend": {
+  "dc": null,
+  "site": null,
+  "name": "Buildertrend",
+  "attempts": 1
  },
  "bupa": {
   "dc": null,
@@ -3910,6 +3916,12 @@
   "site": "iko_careers",
   "name": "IKO"
  },
+ "ilitch": {
+  "dc": null,
+  "site": null,
+  "name": "Little Caesars Enterprises",
+  "attempts": 1
+ },
  "illumina": {
   "dc": null,
   "site": null,
@@ -4338,7 +4350,7 @@
   "dc": null,
   "site": null,
   "name": "KSM",
-  "attempts": 2
+  "attempts": 3
  },
  "kyndryl": {
   "dc": null,
@@ -4371,13 +4383,13 @@
   "dc": null,
   "site": null,
   "name": "Laticrete",
-  "attempts": 1
+  "attempts": 2
  },
  "lazboy": {
   "dc": null,
   "site": null,
   "name": "La-Z-Boy",
-  "attempts": 2
+  "attempts": 3
  },
  "learfield": {
   "dc": "wd5",
@@ -4408,7 +4420,40 @@
   "dc": null,
   "site": null,
   "name": "Lennar Corporation",
+  "attempts": 2
+ },
+ "leonardocompany": {
+  "dc": null,
+  "site": null,
+  "name": "Leonardo",
   "attempts": 1
+ },
+ "levistraussandco": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Levi Strauss & Co."
+ },
+ "liberty": {
+  "dc": null,
+  "site": null,
+  "name": "Liberty University",
+  "attempts": 1
+ },
+ "lifefitness": {
+  "dc": null,
+  "site": null,
+  "name": "Life Fitness",
+  "attempts": 1
+ },
+ "lifetime": {
+  "dc": "wd1",
+  "site": "lifetime",
+  "name": "Life Time"
+ },
+ "likewize": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Likewize"
  },
  "lilly": {
   "dc": null,
@@ -4416,16 +4461,67 @@
   "name": "Eli Lilly and Company",
   "attempts": 3
  },
+ "linklogistics": {
+  "dc": null,
+  "site": null,
+  "name": "Link Logistics",
+  "attempts": 1
+ },
+ "litera": {
+  "dc": "wd12",
+  "site": "litera_careers",
+  "name": "Litera"
+ },
+ "lithia": {
+  "dc": null,
+  "site": null,
+  "name": "Lithia Motors",
+  "attempts": 1
+ },
+ "littelfuse": {
+  "dc": null,
+  "site": null,
+  "name": "Littelfuse",
+  "attempts": 1
+ },
+ "livanova": {
+  "dc": "wd5",
+  "site": "Search",
+  "name": "LivaNova"
+ },
  "livenation": {
   "dc": null,
   "site": null,
   "name": "Insomniac",
   "attempts": 3
  },
+ "liveoakbancshares": {
+  "dc": null,
+  "site": null,
+  "name": "Live Oak Bank",
+  "attempts": 1
+ },
+ "liveramp": {
+  "dc": "wd5",
+  "site": "liverampcareers",
+  "name": "LiveRamp"
+ },
+ "livingspaces": {
+  "dc": null,
+  "site": null,
+  "name": "Living Spaces",
+  "attempts": 1
+ },
  "llbean": {
   "dc": "wd1",
   "site": "llbean_careers",
   "name": "L.L.Bean"
+ },
+ "lnw": {
+  "dc": null,
+  "site": null,
+  "name": "Light & Wonder",
+  "attempts": 1
  },
  "lthc": {
   "dc": null,
@@ -4443,7 +4539,7 @@
   "dc": null,
   "site": null,
   "name": "Las Vegas Valley Water District",
-  "attempts": 1
+  "attempts": 2
  },
  "maersk": {
   "dc": "wd3",
@@ -4518,7 +4614,7 @@
   "dc": null,
   "site": null,
   "name": "Legrand",
-  "attempts": 1
+  "attempts": 2
  },
  "mines": {
   "dc": "wd1",
@@ -4630,6 +4726,11 @@
   "dc": "wd1",
   "site": "olatheks",
   "name": "City Of Olathe"
+ },
+ "onelineage": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Lineage Logistics"
  },
  "oneok": {
   "dc": "wd1",

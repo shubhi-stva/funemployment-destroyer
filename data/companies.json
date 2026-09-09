@@ -295,6 +295,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Accora",
+  "slug": "accora",
+  "ats": "workable"
+ },
+ {
   "name": "Accuray",
   "slug": "accuray",
   "ats": "workday"
@@ -518,6 +523,11 @@
   "name": "AECOM",
   "slug": "AECOM2",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "AEG",
+  "slug": "aegworldwide",
+  "ats": "greenhouse"
  },
  {
   "name": "Aegis Therapies",
@@ -2750,6 +2760,11 @@
   "ats": "workday"
  },
  {
+  "name": "Bedrock Robotics",
+  "slug": "bedrock-robotics",
+  "ats": "ashby"
+ },
+ {
   "name": "Beghou Consulting",
   "slug": "beghouconsulting",
   "ats": "lever"
@@ -3665,6 +3680,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Buildertrend",
+  "slug": "buildertrend",
+  "ats": "workday"
+ },
+ {
   "name": "Built Technologies",
   "slug": "getbuilt",
   "ats": "greenhouse"
@@ -4380,6 +4400,11 @@
   "ats": "workday"
  },
  {
+  "name": "CHAOS Industries",
+  "slug": "chaosindustries",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Character.AI",
   "slug": "character",
   "ats": "ashby"
@@ -4573,6 +4598,11 @@
   "name": "Cineplex",
   "slug": "cineplex",
   "ats": "workday"
+ },
+ {
+  "name": "Cintal",
+  "slug": "cintal",
+  "ats": "rippling"
  },
  {
   "name": "Circle",
@@ -5320,6 +5350,11 @@
   "ats": "workday"
  },
  {
+  "name": "ConductorAI",
+  "slug": "conductorai",
+  "ats": "ashby"
+ },
+ {
   "name": "ConductorOne",
   "slug": "conductorone",
   "ats": "ashby"
@@ -5490,6 +5525,11 @@
   "ats": "workday"
  },
  {
+  "name": "Coretek Services",
+  "slug": "coretek-services",
+  "ats": "workable"
+ },
+ {
   "name": "CoreWeave",
   "slug": "coreweave",
   "ats": "greenhouse"
@@ -5583,6 +5623,11 @@
   "name": "Cottingham & Butler",
   "slug": "cottinghambutlerinsuranceservicesinc",
   "ats": "greenhouse"
+ },
+ {
+  "name": "COUNTRY Financial",
+  "slug": "countryfinancial",
+  "ats": "workday"
  },
  {
   "name": "COUNTRY Financial",
@@ -6268,6 +6313,11 @@
   "name": "Dematic",
   "slug": "kiongroup",
   "ats": "workday"
+ },
+ {
+  "name": "Demiurge Studios",
+  "slug": "demiurgestudios",
+  "ats": "lever"
  },
  {
   "name": "Democratic Governors Association",
@@ -7873,6 +7923,11 @@
   "name": "Farsight",
   "slug": "farsight",
   "ats": "ashby"
+ },
+ {
+  "name": "Fasanara",
+  "slug": "fasanara",
+  "ats": "workable"
  },
  {
   "name": "Fashion Nova",
@@ -10313,6 +10368,11 @@
   "name": "Humana",
   "slug": "humana",
   "ats": "workday"
+ },
+ {
+  "name": "Humanoid",
+  "slug": "humanoid",
+  "ats": "ashby"
  },
  {
   "name": "HumanSignal",
@@ -15280,6 +15340,11 @@
   "ats": "ashby"
  },
  {
+  "name": "ONE Finance",
+  "slug": "oneapp",
+  "ats": "ashby"
+ },
+ {
   "name": "OneDigital",
   "slug": "onedigital",
   "ats": "workday"
@@ -16443,6 +16508,11 @@
   "name": "Point C",
   "slug": "pointc",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Point32Health",
+  "slug": "point32health",
+  "ats": "workday"
  },
  {
   "name": "Point72",
@@ -20175,6 +20245,11 @@
   "ats": "workday"
  },
  {
+  "name": "Syntiant",
+  "slug": "syntiant",
+  "ats": "workable"
+ },
+ {
   "name": "Sysco",
   "slug": "sysco",
   "ats": "workday"
@@ -22445,6 +22520,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Viam",
+  "slug": "viamrobotics",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Viatris",
   "slug": "viatris",
   "ats": "workday"
@@ -23473,6 +23553,11 @@
   "name": "Yum! Brands",
   "slug": "eczd.fa.us2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Zaber Technologies",
+  "slug": "zaber",
+  "ats": "workable"
  },
  {
   "name": "Zachry Group",
