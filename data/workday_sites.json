@@ -1394,7 +1394,7 @@
   "dc": null,
   "site": null,
   "name": "Buildertrend",
-  "attempts": 2
+  "attempts": 3
  },
  "bupa": {
   "dc": null,
@@ -3920,7 +3920,7 @@
   "dc": null,
   "site": null,
   "name": "Little Caesars Enterprises",
-  "attempts": 2
+  "attempts": 3
  },
  "illumina": {
   "dc": null,
@@ -4319,7 +4319,7 @@
   "dc": null,
   "site": null,
   "name": "Loft",
-  "attempts": 1
+  "attempts": 2
  },
  "kodiakgas": {
   "dc": "wd12",
@@ -4437,7 +4437,7 @@
   "dc": null,
   "site": null,
   "name": "Leonardo",
-  "attempts": 2
+  "attempts": 3
  },
  "levistraussandco": {
   "dc": "wd5",
@@ -4448,13 +4448,13 @@
   "dc": null,
   "site": null,
   "name": "Liberty University",
-  "attempts": 2
+  "attempts": 3
  },
  "lifefitness": {
   "dc": null,
   "site": null,
   "name": "Life Fitness",
-  "attempts": 2
+  "attempts": 3
  },
  "lifetime": {
   "dc": "wd1",
@@ -4476,7 +4476,7 @@
   "dc": null,
   "site": null,
   "name": "Link Logistics",
-  "attempts": 2
+  "attempts": 3
  },
  "litera": {
   "dc": "wd12",
@@ -4487,13 +4487,13 @@
   "dc": null,
   "site": null,
   "name": "Lithia Motors",
-  "attempts": 2
+  "attempts": 3
  },
  "littelfuse": {
   "dc": null,
   "site": null,
   "name": "Littelfuse",
-  "attempts": 2
+  "attempts": 3
  },
  "livanova": {
   "dc": "wd5",
@@ -4510,7 +4510,7 @@
   "dc": null,
   "site": null,
   "name": "Live Oak Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "liveramp": {
   "dc": "wd5",
@@ -4521,7 +4521,7 @@
   "dc": null,
   "site": null,
   "name": "Living Spaces",
-  "attempts": 2
+  "attempts": 3
  },
  "llbean": {
   "dc": "wd1",
@@ -4537,7 +4537,7 @@
   "dc": null,
   "site": null,
   "name": "Light & Wonder",
-  "attempts": 2
+  "attempts": 3
  },
  "logitech": {
   "dc": "wd5",
@@ -4553,7 +4553,17 @@
   "dc": null,
   "site": null,
   "name": "Lowe's",
-  "attempts": 1
+  "attempts": 2
+ },
+ "lplfinancial": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "LPL Financial Holdings"
+ },
+ "lseg": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "LSEG"
  },
  "lsu": {
   "dc": "wd1",
@@ -4566,6 +4576,18 @@
   "name": "Excellus BCBS",
   "attempts": 3
  },
+ "lumentum": {
+  "dc": null,
+  "site": null,
+  "name": "Lumentum",
+  "attempts": 1
+ },
+ "lumeris": {
+  "dc": null,
+  "site": null,
+  "name": "Lumeris",
+  "attempts": 1
+ },
  "luriechildrens": {
   "dc": null,
   "site": null,
@@ -4577,6 +4599,23 @@
   "site": null,
   "name": "Las Vegas Valley Water District",
   "attempts": 3
+ },
+ "lyten": {
+  "dc": null,
+  "site": null,
+  "name": "Lyten",
+  "attempts": 1
+ },
+ "lytx": {
+  "dc": "wd1",
+  "site": "lytx",
+  "name": "Lytx Careers"
+ },
+ "madixinc": {
+  "dc": null,
+  "site": null,
+  "name": "Madix",
+  "attempts": 1
  },
  "maersk": {
   "dc": "wd3",
@@ -4632,6 +4671,12 @@
   "name": "DotDash Meredith",
   "attempts": 3
  },
+ "mgpru": {
+  "dc": null,
+  "site": null,
+  "name": "M&G",
+  "attempts": 1
+ },
  "mhs": {
   "dc": "wd1",
   "site": "Careers",
@@ -4672,6 +4717,11 @@
   "dc": "wd5",
   "site": "Careers",
   "name": "Motorola"
+ },
+ "mtb": {
+  "dc": "wd5",
+  "site": "mtb",
+  "name": "M&T Bank"
  },
  "my7elevenhr": {
   "dc": "wd12",
