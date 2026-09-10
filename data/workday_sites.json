@@ -1498,6 +1498,12 @@
   "name": "Cambridge Associates",
   "attempts": 4
  },
+ "campaignmonitor": {
+  "dc": null,
+  "site": null,
+  "name": "Marigold",
+  "attempts": 1
+ },
  "campbellsoup": {
   "dc": null,
   "site": null,
@@ -4319,7 +4325,7 @@
   "dc": null,
   "site": null,
   "name": "Loft",
-  "attempts": 2
+  "attempts": 3
  },
  "kodiakgas": {
   "dc": "wd12",
@@ -4553,7 +4559,7 @@
   "dc": null,
   "site": null,
   "name": "Lowe's",
-  "attempts": 2
+  "attempts": 3
  },
  "lplfinancial": {
   "dc": "wd1",
@@ -4580,13 +4586,13 @@
   "dc": null,
   "site": null,
   "name": "Lumentum",
-  "attempts": 1
+  "attempts": 2
  },
  "lumeris": {
   "dc": null,
   "site": null,
   "name": "Lumeris",
-  "attempts": 1
+  "attempts": 2
  },
  "luriechildrens": {
   "dc": null,
@@ -4604,7 +4610,7 @@
   "dc": null,
   "site": null,
   "name": "Lyten",
-  "attempts": 1
+  "attempts": 2
  },
  "lytx": {
   "dc": "wd1",
@@ -4615,17 +4621,33 @@
   "dc": null,
   "site": null,
   "name": "Madix",
-  "attempts": 1
+  "attempts": 2
  },
  "maersk": {
   "dc": "wd3",
   "site": "maersk_careers",
   "name": "APM Terminals"
  },
+ "magellanhealth": {
+  "dc": null,
+  "site": null,
+  "name": "Magellan Health",
+  "attempts": 1
+ },
  "magna": {
   "dc": "wd3",
   "site": "Magna",
   "name": "Magna International"
+ },
+ "mainegeneral": {
+  "dc": "wd5",
+  "site": "mainegeneralcareers",
+  "name": "MaineGeneral Health"
+ },
+ "manh": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Manhattan Associates"
  },
  "manulife": {
   "dc": "wd3",
@@ -4638,15 +4660,65 @@
   "name": "Judicial Branch of Arizona in Maricopa County",
   "attempts": 3
  },
+ "marinabaysands": {
+  "dc": null,
+  "site": null,
+  "name": "Marinabaysands",
+  "attempts": 1
+ },
+ "maritz": {
+  "dc": "wd1",
+  "site": "maritz",
+  "name": "Maritz"
+ },
+ "markelcorp": {
+  "dc": "wd5",
+  "site": "GlobalCareers",
+  "name": "Markel Group, Inc."
+ },
  "marmon": {
   "dc": "wd501",
   "site": "Marmon_Careers",
   "name": "Marmon Holdings"
  },
+ "mars": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Mars"
+ },
+ "marshfieldclinichealthsystems": {
+  "dc": null,
+  "site": null,
+  "name": "Marshfield Clinic Health System",
+  "attempts": 1
+ },
  "marvell": {
   "dc": "wd1",
   "site": "marvellcareers",
   "name": "Marvell"
+ },
+ "maryfreebed": {
+  "dc": null,
+  "site": null,
+  "name": "Mary Free Bed Rehabilitation Hospital",
+  "attempts": 1
+ },
+ "masco": {
+  "dc": "wd1",
+  "site": "masco",
+  "name": "Masco"
+ },
+ "massgeneralbrigham": {
+  "dc": null,
+  "site": null,
+  "name": "Mass General Brigham",
+  "attempts": 1
+ },
+ "massmutual": {
+  "dc": null,
+  "site": null,
+  "name": "MassMutual Ascend",
+  "attempts": 1
  },
  "mastercard": {
   "dc": "wd1",
@@ -4675,7 +4747,7 @@
   "dc": null,
   "site": null,
   "name": "M&G",
-  "attempts": 1
+  "attempts": 2
  },
  "mhs": {
   "dc": "wd1",
@@ -4703,6 +4775,16 @@
   "site": "mines_careers",
   "name": "Colorado School of Mines"
  },
+ "mlse": {
+  "dc": "wd3",
+  "site": "mlse",
+  "name": "Maple Leaf Sports & Entertainment Partnership (MLSE)"
+ },
+ "mmc": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Marsh"
+ },
  "monolithicpower": {
   "dc": "wd12",
   "site": "MPS_Careers",
@@ -4717,6 +4799,11 @@
   "dc": "wd5",
   "site": "Careers",
   "name": "Motorola"
+ },
+ "mpc": {
+  "dc": "wd1",
+  "site": "mpccareers",
+  "name": "Marathon Petroleum"
  },
  "mtb": {
   "dc": "wd5",
@@ -4870,6 +4957,12 @@
   "name": "Enterprise Bank & Trust",
   "attempts": 3
  },
+ "osv-rubicon": {
+  "dc": null,
+  "site": null,
+  "name": "Magnite",
+  "attempts": 1
+ },
  "osv-tifec": {
   "dc": null,
   "site": null,
@@ -4992,6 +5085,12 @@
   "dc": "wd12",
   "site": "standoutforgood",
   "name": "Altar'd State"
+ },
+ "sterlingmets": {
+  "dc": null,
+  "site": null,
+  "name": "Major League Baseball",
+  "attempts": 1
  },
  "stryker": {
   "dc": "wd1",
