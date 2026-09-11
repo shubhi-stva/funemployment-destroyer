@@ -920,6 +920,11 @@
   "ats": "workday"
  },
  {
+  "name": "AllianceBernstein",
+  "slug": "abglobal",
+  "ats": "workday"
+ },
+ {
   "name": "Alliant Energy",
   "slug": "alliantenergy",
   "ats": "workday"
@@ -2745,6 +2750,11 @@
   "ats": "workable"
  },
  {
+  "name": "BDC Venture Capital",
+  "slug": "bdc",
+  "ats": "workday"
+ },
+ {
   "name": "BDO Canada",
   "slug": "bdo",
   "ats": "workday"
@@ -3883,6 +3893,11 @@
   "name": "Calix",
   "slug": "calix",
   "ats": "workday"
+ },
+ {
+  "name": "Callan",
+  "slug": "callan",
+  "ats": "lever"
  },
  {
   "name": "Callaway Golf",
@@ -6330,6 +6345,11 @@
   "ats": "workday"
  },
  {
+  "name": "Delta Faucet",
+  "slug": "masco",
+  "ats": "workday"
+ },
+ {
   "name": "Deluxe",
   "slug": "deluxe",
   "ats": "workday"
@@ -7755,6 +7775,11 @@
   "ats": "workday"
  },
  {
+  "name": "Exegy",
+  "slug": "exegy",
+  "ats": "ashby"
+ },
+ {
   "name": "Exelixis",
   "slug": "exelixis",
   "ats": "workday"
@@ -8788,6 +8813,11 @@
   "name": "G2",
   "slug": "g2",
   "ats": "ashby"
+ },
+ {
+  "name": "Gables Residential",
+  "slug": "gables",
+  "ats": "workday"
  },
  {
   "name": "GAF",
@@ -10085,6 +10115,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Hightouch",
+  "slug": "hightouch",
+  "ats": "ashby"
+ },
+ {
   "name": "Hiive",
   "slug": "hiive",
   "ats": "ashby"
@@ -10505,6 +10540,11 @@
   "ats": "workable"
  },
  {
+  "name": "Hypertherm",
+  "slug": "hypertherm",
+  "ats": "workday"
+ },
+ {
   "name": "Hyster-Yale Materials Handling",
   "slug": "hysteryale",
   "ats": "workday"
@@ -10822,6 +10862,11 @@
  {
   "name": "Inductive Automation",
   "slug": "inductive-automation-llc",
+  "ats": "ashby"
+ },
+ {
+  "name": "Inferact",
+  "slug": "inferact",
   "ats": "ashby"
  },
  {
@@ -11485,6 +11530,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "John Gore Organization",
+  "slug": "johngore",
+  "ats": "workday"
+ },
+ {
   "name": "John Lewis Partnership",
   "slug": "jlp",
   "ats": "workday"
@@ -11760,6 +11810,11 @@
   "ats": "workable"
  },
  {
+  "name": "Ketjen",
+  "slug": "albemarle",
+  "ats": "workday"
+ },
+ {
   "name": "KeyBank",
   "slug": "keybank",
   "ats": "workday"
@@ -11898,6 +11953,11 @@
   "name": "Klue",
   "slug": "klue",
   "ats": "ashby"
+ },
+ {
+  "name": "Knobelsdorff Enterprises",
+  "slug": "KnobelsdorffEnterprises",
+  "ats": "smartrecruiters"
  },
  {
   "name": "Knock",
@@ -12256,6 +12316,11 @@
  },
  {
   "name": "Lego",
+  "slug": "lego",
+  "ats": "workday"
+ },
+ {
+  "name": "LEGO",
   "slug": "lego",
   "ats": "workday"
  },
@@ -17220,6 +17285,11 @@
   "ats": "lever"
  },
  {
+  "name": "Quick Release",
+  "slug": "quick-release",
+  "ats": "greenhouse"
+ },
+ {
   "name": "QuidelOrtho",
   "slug": "orthoclinical",
   "ats": "workday"
@@ -17843,6 +17913,11 @@
   "name": "Richemont",
   "slug": "richemont",
   "ats": "workday"
+ },
+ {
+  "name": "Ridgeline",
+  "slug": "ridgeline",
+  "ats": "greenhouse"
  },
  {
   "name": "Rigetti",
@@ -20225,6 +20300,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Swarm Aero",
+  "slug": "swarmaero",
+  "ats": "ashby"
+ },
+ {
   "name": "SWBC",
   "slug": "swbc",
   "ats": "workday"
@@ -20473,6 +20553,11 @@
   "name": "Tangram Interiors",
   "slug": "tangraminteriors",
   "ats": "lever"
+ },
+ {
+  "name": "Tanium",
+  "slug": "tanium",
+  "ats": "greenhouse"
  },
  {
   "name": "Tapcart",
@@ -20988,6 +21073,11 @@
   "name": "The Kinetic Group",
   "slug": "thekineticgroup",
   "ats": "workday"
+ },
+ {
+  "name": "The MJ Companies",
+  "slug": "themjcos",
+  "ats": "greenhouse"
  },
  {
   "name": "The Movement Cooperative",
