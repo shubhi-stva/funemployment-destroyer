@@ -328,6 +328,12 @@
   "name": "Allegro MicroSystems",
   "attempts": 3
  },
+ "alliance": {
+  "dc": null,
+  "site": null,
+  "name": "Nissan",
+  "attempts": 1
+ },
  "alliancedata": {
   "dc": null,
   "site": null,
@@ -5157,7 +5163,7 @@
   "dc": null,
   "site": null,
   "name": "Munters",
-  "attempts": 2
+  "attempts": 3
  },
  "musc": {
   "dc": "wd1",
@@ -5197,6 +5203,12 @@
   "site": "Careers",
   "name": "Loblaw Companies"
  },
+ "nabancard": {
+  "dc": null,
+  "site": null,
+  "name": "NorthAB",
+  "attempts": 1
+ },
  "namsa": {
   "dc": "wd5",
   "site": "namsa",
@@ -5211,25 +5223,25 @@
   "dc": null,
   "site": null,
   "name": "Nasdaq",
-  "attempts": 2
+  "attempts": 3
  },
  "nationwide": {
   "dc": null,
   "site": null,
   "name": "Nationwide",
-  "attempts": 2
+  "attempts": 3
  },
  "nationwidechildrens": {
   "dc": null,
   "site": null,
   "name": "Nationwide Children's Hospital",
-  "attempts": 2
+  "attempts": 3
  },
  "navcanada": {
   "dc": null,
   "site": null,
   "name": "NAV CANADA",
-  "attempts": 2
+  "attempts": 3
  },
  "nb": {
   "dc": "wd1",
@@ -5240,13 +5252,13 @@
   "dc": null,
   "site": null,
   "name": "NBT Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "ncino": {
   "dc": null,
   "site": null,
   "name": "Ncino",
-  "attempts": 2
+  "attempts": 3
  },
  "ncnu": {
   "dc": null,
@@ -5264,7 +5276,7 @@
   "dc": null,
   "site": null,
   "name": "NCR Atleos",
-  "attempts": 2
+  "attempts": 3
  },
  "nebraskablue": {
   "dc": "wd1",
@@ -5275,13 +5287,13 @@
   "dc": null,
   "site": null,
   "name": "Neighborly",
-  "attempts": 2
+  "attempts": 3
  },
  "nelnet": {
   "dc": null,
   "site": null,
   "name": "Nelnet",
-  "attempts": 2
+  "attempts": 3
  },
  "neogen": {
   "dc": "wd5",
@@ -5292,7 +5304,7 @@
   "dc": null,
   "site": null,
   "name": "Netflix",
-  "attempts": 1
+  "attempts": 2
  },
  "neurocrine": {
   "dc": "wd5",
@@ -5314,15 +5326,67 @@
   "site": "NRZ",
   "name": "Newrez"
  },
+ "nexstar": {
+  "dc": "wd5",
+  "site": "nexstar",
+  "name": "Nexstar"
+ },
  "ngc": {
   "dc": "wd1",
   "site": "Northrop_Grumman_External_Site",
   "name": "Northrop Grumman"
  },
+ "niagarawater": {
+  "dc": null,
+  "site": null,
+  "name": "Niagara Bottling",
+  "attempts": 1
+ },
+ "nidec": {
+  "dc": "wd1",
+  "site": "nidec",
+  "name": "Nidec"
+ },
  "nike": {
   "dc": "wd1",
   "site": "nke",
   "name": "Nike"
+ },
+ "nio": {
+  "dc": "wd3",
+  "site": "nio_careers",
+  "name": "Nio"
+ },
+ "nisource": {
+  "dc": "wd1",
+  "site": "nisource",
+  "name": "NiSource"
+ },
+ "njm": {
+  "dc": "wd1",
+  "site": "njm",
+  "name": "NJM Insurance Group"
+ },
+ "nordic": {
+  "dc": "wd1",
+  "site": "nordic",
+  "name": "Nordic"
+ },
+ "nordsonhcm": {
+  "dc": null,
+  "site": null,
+  "name": "Nordson",
+  "attempts": 1
+ },
+ "nordstrom": {
+  "dc": "wd501",
+  "site": "nordstrom_careers",
+  "name": "Nordstrom"
+ },
+ "northeastern": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Northeastern University"
  },
  "northwesternmutual": {
   "dc": "wd5",
@@ -5360,6 +5424,17 @@
   "dc": "wd5",
   "site": "NVIDIAExternalCareerSite",
   "name": "NVIDIA"
+ },
+ "nwis": {
+  "dc": null,
+  "site": null,
+  "name": "Nightwing Intelligence Solutions",
+  "attempts": 1
+ },
+ "nyp": {
+  "dc": "wd1",
+  "site": "nypcareers",
+  "name": "NewYork-Presbyterian"
  },
  "olatheks": {
   "dc": "wd1",

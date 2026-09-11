@@ -845,11 +845,9 @@
 "smartrecruiters:BoschGroup:744000142898574": "2026-08-11T15:29:27+00:00",
 "smartrecruiters:BoschGroup:744000145507908": "2026-08-25T13:25:43+00:00",
 "smartrecruiters:BoschGroup:744000145785190": "2026-08-26T17:14:22+00:00",
-"smartrecruiters:BoschGroup:744000148250710": "2026-09-08T14:11:58.228000+00:00",
 "smartrecruiters:BoschGroup:744000148595878": "2026-09-09T19:37:50.663000+00:00",
 "smartrecruiters:CityofPhiladelphia:744000146469759": "2026-08-31T13:17:11.465000+00:00",
 "smartrecruiters:EgisGroup:744000147539499": "2026-09-04T14:42:17.401000+00:00",
-"smartrecruiters:Eurofins:744000147319680": "2026-09-03T17:19:52.553000+00:00",
 "smartrecruiters:Eurofins:744000148856049": "2026-09-10T19:30:33.434000+00:00",
 "smartrecruiters:InfiniteQuant:744000147161390": "2026-09-03T11:24:20+00:00",
 "smartrecruiters:InfiniteQuant:744000147163879": "2026-09-03T11:24:20+00:00",
@@ -1386,8 +1384,13 @@
 "workday:newrez:/job/TX-Coppell/XMLNAME-2027-Summer-Internship---Investor-Reporting-Data-Systems_R10352": "2026-09-01",
 "workday:newrez:/job/TX-Coppell/XMLNAME-2027-Summer-Internship---Software-Developer_R10390": "2026-09-01T15:48:01+00:00",
 "workday:ngc:/job/United-States-California-El-Segundo/XMLNAME-2027-Fall-Co-Op---Survivability-Engineer_R10250417": "2026-09-10",
+"workday:nidec:/job/North-AmericaUSAArkansasFt-Smith-AR/Electrical-Engineering-Co-op_R0017331": "2026-08-18",
 "workday:nike:/job/Beaverton-Oregon/NIKE--Inc-Artificial-Intelligence--Data----Machine-Learning-Engineering-Undergraduate-Internship_R-91110": "2026-08-31T21:22:18+00:00",
 "workday:nike:/job/Beaverton-Oregon/NIKE--Inc-Software-Engineering-Undergraduate-Internship_R-91111": "2026-08-31T21:22:18+00:00",
+"workday:nio:/job/San-Jose-US/AI-Robotics-Researcher-Intern--Dexterous-Manipulation-_R-000144": "2026-06-19",
+"workday:nisource:/job/Columbus-OH-East-Op-Ctr/Intern-Engineering_R00943370": "2026-09-01",
+"workday:nisource:/job/Columbus-OH-Meter-Shop-Fisher/Intern-Design-Engineering_R00943321": "2026-09-01",
+"workday:northeastern:/job/Boston-MA-Main-Campus/Associate-Research-Scientist_R141382-2": "2026-08-18",
 "workday:nrel:/job/Golden-CO/Graduate--6-12-month--Intern---Data-Center-Load-Modeling-for-Transmission-Planning-Studies_R14384": "2026-07-13",
 "workday:nrel:/job/Golden-CO/Post-Undergraduate-Intern--Year-Round----Separations-Engineering_R14447": "2026-08-10",
 "workday:nrel:/job/Golden-CO/Undergraduate-graduate-intern---software-and-data-infrastructure-for-autonomous-thin-film-experimentation--Year-Round-_R14394": "2026-08-26T19:35:41+00:00",
@@ -1496,6 +1499,7 @@
 "workday:xcelenergy:/job/Minneapolis-MN-55401/Transmission-and-Substation-Engineering-Standards-Intern---MN--CO_JR115718-1": "2026-09-07",
 "workday:xcelenergy:/job/Pueblo-CO-81006/Reliability-Plant-Engineering-Intern--CO_JR115735-1": "2026-09-07",
 "workday:xcelenergy:/job/Welch-MN-55089/Nuclear-Reactor-Engineer-Intern---MN_JR116032": "2026-09-07",
-"workday:zoom:/job/San-Jose-CA/Software-Development-Engineer_R19357-1": "2026-09-10"
+"workday:zoom:/job/San-Jose-CA/Software-Development-Engineer_R19357-1": "2026-09-10",
+"workday:zoom:/job/San-Jose-CA/Software-Engineer_R19646-1": "2026-09-11"
 }
 }
