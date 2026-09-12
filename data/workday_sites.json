@@ -2117,7 +2117,7 @@
   "dc": null,
   "site": null,
   "name": "Radian",
-  "attempts": 1
+  "attempts": 2
  },
  "compassion": {
   "dc": "wd5",
@@ -4196,7 +4196,7 @@
   "dc": null,
   "site": null,
   "name": "PSP Investments",
-  "attempts": 1
+  "attempts": 2
  },
  "invitationhomes": {
   "dc": null,
@@ -5300,6 +5300,11 @@
   "name": "OneMain Financial",
   "attempts": 3
  },
+ "mymoose": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Rapid7"
+ },
  "mymvw": {
   "dc": null,
   "site": null,
@@ -5935,7 +5940,7 @@
   "dc": null,
   "site": null,
   "name": "Procter & Gamble (P&G)",
-  "attempts": 2
+  "attempts": 3
  },
  "phigroup": {
   "dc": null,
@@ -6093,7 +6098,7 @@
   "dc": null,
   "site": null,
   "name": "Primerica",
-  "attempts": 2
+  "attempts": 3
  },
  "printpack": {
   "dc": "wd1",
@@ -6104,13 +6109,13 @@
   "dc": null,
   "site": null,
   "name": "Professional Case Management",
-  "attempts": 2
+  "attempts": 3
  },
  "procore": {
   "dc": null,
   "site": null,
   "name": "Procore Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "progyny": {
   "dc": "wd5",
@@ -6126,7 +6131,7 @@
   "dc": null,
   "site": null,
   "name": "ProPharma Group",
-  "attempts": 2
+  "attempts": 3
  },
  "pros": {
   "dc": "wd5",
@@ -6163,19 +6168,19 @@
   "dc": null,
   "site": null,
   "name": "Public Partnerships (PPL)",
-  "attempts": 1
+  "attempts": 2
  },
  "pultegroup": {
   "dc": null,
   "site": null,
   "name": "PulteGroup",
-  "attempts": 1
+  "attempts": 2
  },
  "pureinsurance": {
   "dc": null,
   "site": null,
   "name": "PURE Insurance",
-  "attempts": 1
+  "attempts": 2
  },
  "pvh": {
   "dc": "wd1",
@@ -6192,13 +6197,13 @@
   "dc": null,
   "site": null,
   "name": "Q2",
-  "attempts": 1
+  "attempts": 2
  },
  "qbe": {
   "dc": null,
   "site": null,
   "name": "QBE Insurance",
-  "attempts": 1
+  "attempts": 2
  },
  "qtsdatacenters": {
   "dc": "wd5",
@@ -6209,13 +6214,13 @@
   "dc": null,
   "site": null,
   "name": "Qualifacts",
-  "attempts": 1
+  "attempts": 2
  },
  "qvc": {
   "dc": null,
   "site": null,
   "name": "QVC Group",
-  "attempts": 1
+  "attempts": 2
  },
  "r1rcm": {
   "dc": "wd1",
@@ -6226,6 +6231,12 @@
   "dc": null,
   "site": null,
   "name": "RaceTrac",
+  "attempts": 2
+ },
+ "radiancetech": {
+  "dc": null,
+  "site": null,
+  "name": "Radiance Technologies",
   "attempts": 1
  },
  "rakuten": {
@@ -6234,10 +6245,48 @@
   "name": "Kobo",
   "attempts": 3
  },
+ "raymondjames": {
+  "dc": "wd1",
+  "site": "raymondjamescareers",
+  "name": "Raymond James Financial"
+ },
+ "rbi": {
+  "dc": "wd3",
+  "site": "RBI_External_Career_Site",
+  "name": "RBI"
+ },
  "rbs": {
   "dc": "wd3",
   "site": "rbs",
   "name": "NatWest Group"
+ },
+ "realtyincome": {
+  "dc": null,
+  "site": null,
+  "name": "Realty Income",
+  "attempts": 1
+ },
+ "redbulltechnology": {
+  "dc": null,
+  "site": null,
+  "name": "Red Bull Advanced Technologies",
+  "attempts": 1
+ },
+ "redfin": {
+  "dc": null,
+  "site": null,
+  "name": "Redfin",
+  "attempts": 1
+ },
+ "redriver": {
+  "dc": "wd5",
+  "site": "redrivercareers",
+  "name": "Red River"
+ },
+ "regalrexnord": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Regal Rexnord"
  },
  "relx": {
   "dc": "wd3",
