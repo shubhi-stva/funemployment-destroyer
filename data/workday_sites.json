@@ -3880,6 +3880,12 @@
   "site": "hpinc",
   "name": "Helmerich & Payne"
  },
+ "hq": {
+  "dc": null,
+  "site": null,
+  "name": "Securian Financial Group",
+  "attempts": 1
+ },
  "hrhub": {
   "dc": null,
   "site": null,
@@ -6530,7 +6536,7 @@
   "dc": null,
   "site": null,
   "name": "Ryan Specialty",
-  "attempts": 2
+  "attempts": 3
  },
  "ryder": {
   "dc": "wd5",
@@ -6541,7 +6547,7 @@
   "dc": null,
   "site": null,
   "name": "Saab",
-  "attempts": 2
+  "attempts": 3
  },
  "sabre": {
   "dc": "wd1",
@@ -6557,19 +6563,19 @@
   "dc": null,
   "site": null,
   "name": "Saint Leo University",
-  "attempts": 2
+  "attempts": 3
  },
  "saintlukes": {
   "dc": null,
   "site": null,
   "name": "Saint Luke's",
-  "attempts": 2
+  "attempts": 3
  },
  "saks": {
   "dc": null,
   "site": null,
   "name": "Saks Global",
-  "attempts": 2
+  "attempts": 3
  },
  "salesforce": {
   "dc": "wd12",
@@ -6580,19 +6586,19 @@
   "dc": null,
   "site": null,
   "name": "Sallie Mae",
-  "attempts": 2
+  "attempts": 3
  },
  "sandvik": {
   "dc": null,
   "site": null,
   "name": "Sandvik",
-  "attempts": 1
+  "attempts": 2
  },
  "sanford": {
   "dc": null,
   "site": null,
   "name": "Sanford Health",
-  "attempts": 1
+  "attempts": 2
  },
  "sanofi": {
   "dc": "wd3",
@@ -6608,7 +6614,7 @@
   "dc": null,
   "site": null,
   "name": "Saputo",
-  "attempts": 1
+  "attempts": 2
  },
  "sarahbush": {
   "dc": "wd1",
@@ -6629,7 +6635,7 @@
   "dc": null,
   "site": null,
   "name": "SBA Communications Corporation",
-  "attempts": 1
+  "attempts": 2
  },
  "sbdinc": {
   "dc": "wd1",
@@ -6640,22 +6646,86 @@
   "dc": null,
   "site": null,
   "name": "SCAN",
-  "attempts": 1
+  "attempts": 2
  },
  "scgov": {
   "dc": "wd5",
   "site": "scgov",
   "name": "Sarasota County"
  },
+ "schnucks": {
+  "dc": "wd5",
+  "site": "schnuckscareers",
+  "name": "Schnucks"
+ },
+ "schreiberfoods": {
+  "dc": null,
+  "site": null,
+  "name": "Schreiber Foods",
+  "attempts": 1
+ },
  "scj": {
   "dc": "wd5",
   "site": "External_Career_Site",
   "name": "SC Johnson"
  },
+ "scottishwater": {
+  "dc": null,
+  "site": null,
+  "name": "Scottish Water",
+  "attempts": 1
+ },
+ "scottsmiraclegro": {
+  "dc": null,
+  "site": null,
+  "name": "Scotts Miracle-Gro",
+  "attempts": 1
+ },
+ "scripps": {
+  "dc": null,
+  "site": null,
+  "name": "Scripps",
+  "attempts": 1
+ },
  "sec": {
   "dc": null,
   "site": null,
   "name": "Samsung",
+  "attempts": 2
+ },
+ "sedgwick": {
+  "dc": "wd1",
+  "site": "sedgwick",
+  "name": "Sedgwick Claims Management Services"
+ },
+ "seic": {
+  "dc": null,
+  "site": null,
+  "name": "SEI",
+  "attempts": 1
+ },
+ "sekologistics": {
+  "dc": null,
+  "site": null,
+  "name": "SEKO Logistics",
+  "attempts": 1
+ },
+ "selectmilk": {
+  "dc": null,
+  "site": null,
+  "name": "Select Milk Producers",
+  "attempts": 1
+ },
+ "selinc": {
+  "dc": null,
+  "site": null,
+  "name": "Schweitzer Engineering Laboratories",
+  "attempts": 1
+ },
+ "sglottery": {
+  "dc": null,
+  "site": null,
+  "name": "Scientific Games",
   "attempts": 1
  },
  "signetjewelers": {
@@ -6705,7 +6775,7 @@
   "dc": null,
   "site": null,
   "name": "S&T Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "sterlingmets": {
   "dc": null,
