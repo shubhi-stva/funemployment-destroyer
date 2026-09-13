@@ -6230,7 +6230,7 @@
   "dc": null,
   "site": null,
   "name": "Rocket Companies",
-  "attempts": 2
+  "attempts": 3
  },
  "qvc": {
   "dc": null,
@@ -6470,19 +6470,19 @@
   "dc": null,
   "site": null,
   "name": "ROCKWOOL Group",
-  "attempts": 2
+  "attempts": 3
  },
  "rogersbh": {
   "dc": null,
   "site": null,
   "name": "Rogers Behavioral Health",
-  "attempts": 2
+  "attempts": 3
  },
  "roguefitness": {
   "dc": null,
   "site": null,
   "name": "Rogue Fitness",
-  "attempts": 2
+  "attempts": 3
  },
  "rollsroyce": {
   "dc": "wd3",
@@ -6493,7 +6493,7 @@
   "dc": null,
   "site": null,
   "name": "Roswell Park Comprehensive Cancer Center",
-  "attempts": 2
+  "attempts": 3
  },
  "rrhs": {
   "dc": null,
@@ -6530,7 +6530,7 @@
   "dc": null,
   "site": null,
   "name": "Ryan Specialty",
-  "attempts": 1
+  "attempts": 2
  },
  "ryder": {
   "dc": "wd5",
@@ -6541,7 +6541,7 @@
   "dc": null,
   "site": null,
   "name": "Saab",
-  "attempts": 1
+  "attempts": 2
  },
  "sabre": {
   "dc": "wd1",
@@ -6557,19 +6557,19 @@
   "dc": null,
   "site": null,
   "name": "Saint Leo University",
-  "attempts": 1
+  "attempts": 2
  },
  "saintlukes": {
   "dc": null,
   "site": null,
   "name": "Saint Luke's",
-  "attempts": 1
+  "attempts": 2
  },
  "saks": {
   "dc": null,
   "site": null,
   "name": "Saks Global",
-  "attempts": 1
+  "attempts": 2
  },
  "salesforce": {
   "dc": "wd12",
@@ -6580,12 +6580,83 @@
   "dc": null,
   "site": null,
   "name": "Sallie Mae",
+  "attempts": 2
+ },
+ "sandvik": {
+  "dc": null,
+  "site": null,
+  "name": "Sandvik",
+  "attempts": 1
+ },
+ "sanford": {
+  "dc": null,
+  "site": null,
+  "name": "Sanford Health",
+  "attempts": 1
+ },
+ "sanofi": {
+  "dc": "wd3",
+  "site": "sanoficareers",
+  "name": "Sanofi"
+ },
+ "santander": {
+  "dc": "wd3",
+  "site": "santandercareers",
+  "name": "Santander"
+ },
+ "saputo": {
+  "dc": null,
+  "site": null,
+  "name": "Saputo",
+  "attempts": 1
+ },
+ "sarahbush": {
+  "dc": "wd1",
+  "site": "sarahbush",
+  "name": "Sarah Bush Lincoln Health Center"
+ },
+ "sarepta": {
+  "dc": "wd5",
+  "site": "sarepta_External",
+  "name": "Sarepta"
+ },
+ "sartorius": {
+  "dc": "wd3",
+  "site": "sartoriuscareers",
+  "name": "Sartorius"
+ },
+ "sbasite": {
+  "dc": null,
+  "site": null,
+  "name": "SBA Communications Corporation",
   "attempts": 1
  },
  "sbdinc": {
   "dc": "wd1",
   "site": "Stanley_Black_Decker_Career_Site",
   "name": "Stanley Black & Decker"
+ },
+ "scanhealthplan": {
+  "dc": null,
+  "site": null,
+  "name": "SCAN",
+  "attempts": 1
+ },
+ "scgov": {
+  "dc": "wd5",
+  "site": "scgov",
+  "name": "Sarasota County"
+ },
+ "scj": {
+  "dc": "wd5",
+  "site": "External_Career_Site",
+  "name": "SC Johnson"
+ },
+ "sec": {
+  "dc": null,
+  "site": null,
+  "name": "Samsung",
+  "attempts": 1
  },
  "signetjewelers": {
   "dc": null,
@@ -6634,7 +6705,7 @@
   "dc": null,
   "site": null,
   "name": "S&T Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "sterlingmets": {
   "dc": null,
