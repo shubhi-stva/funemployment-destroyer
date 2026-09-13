@@ -1157,6 +1157,11 @@
   "site": "Careers",
   "name": "Belk"
  },
+ "belron": {
+  "dc": "wd3",
+  "site": "belron_careers",
+  "name": "Safelite"
+ },
  "benefis": {
   "dc": null,
   "site": null,
@@ -6225,7 +6230,7 @@
   "dc": null,
   "site": null,
   "name": "Rocket Companies",
-  "attempts": 1
+  "attempts": 2
  },
  "qvc": {
   "dc": null,
@@ -6389,7 +6394,7 @@
   "dc": null,
   "site": null,
   "name": "RFCUNY",
-  "attempts": 2
+  "attempts": 3
  },
  "rgare": {
   "dc": "wd1",
@@ -6406,7 +6411,7 @@
   "dc": null,
   "site": null,
   "name": "Richardson",
-  "attempts": 2
+  "attempts": 3
  },
  "richemont": {
   "dc": "wd3",
@@ -6432,13 +6437,13 @@
   "dc": null,
   "site": null,
   "name": "Rite Hite",
-  "attempts": 2
+  "attempts": 3
  },
  "rlicorp": {
   "dc": null,
   "site": null,
   "name": "RLI",
-  "attempts": 2
+  "attempts": 3
  },
  "roberthalf": {
   "dc": "wd1",
@@ -6465,19 +6470,19 @@
   "dc": null,
   "site": null,
   "name": "ROCKWOOL Group",
-  "attempts": 1
+  "attempts": 2
  },
  "rogersbh": {
   "dc": null,
   "site": null,
   "name": "Rogers Behavioral Health",
-  "attempts": 1
+  "attempts": 2
  },
  "roguefitness": {
   "dc": null,
   "site": null,
   "name": "Rogue Fitness",
-  "attempts": 1
+  "attempts": 2
  },
  "rollsroyce": {
   "dc": "wd3",
@@ -6488,13 +6493,13 @@
   "dc": null,
   "site": null,
   "name": "Roswell Park Comprehensive Cancer Center",
-  "attempts": 1
+  "attempts": 2
  },
  "rrhs": {
   "dc": null,
   "site": null,
   "name": "Rochester Regional Health",
-  "attempts": 2
+  "attempts": 3
  },
  "rrts": {
   "dc": "wd1",
@@ -6511,10 +6516,71 @@
   "site": "rxojobs",
   "name": "RXO"
  },
+ "ryan": {
+  "dc": "wd1",
+  "site": "ryancareers",
+  "name": "Ryan"
+ },
+ "ryancompanies": {
+  "dc": "wd5",
+  "site": "ryancompanies",
+  "name": "Ryan Companies"
+ },
+ "ryansg": {
+  "dc": null,
+  "site": null,
+  "name": "Ryan Specialty",
+  "attempts": 1
+ },
+ "ryder": {
+  "dc": "wd5",
+  "site": "rydercareers",
+  "name": "Ryder System"
+ },
+ "saabusa": {
+  "dc": null,
+  "site": null,
+  "name": "Saab",
+  "attempts": 1
+ },
+ "sabre": {
+  "dc": "wd1",
+  "site": "sabrejobs",
+  "name": "Sabre"
+ },
+ "sailpoint": {
+  "dc": "wd1",
+  "site": "sailpoint",
+  "name": "SailPoint"
+ },
+ "saintleo": {
+  "dc": null,
+  "site": null,
+  "name": "Saint Leo University",
+  "attempts": 1
+ },
+ "saintlukes": {
+  "dc": null,
+  "site": null,
+  "name": "Saint Luke's",
+  "attempts": 1
+ },
+ "saks": {
+  "dc": null,
+  "site": null,
+  "name": "Saks Global",
+  "attempts": 1
+ },
  "salesforce": {
   "dc": "wd12",
   "site": "External_Career_Site",
   "name": "Salesforce"
+ },
+ "sallie-mae": {
+  "dc": null,
+  "site": null,
+  "name": "Sallie Mae",
+  "attempts": 1
  },
  "sbdinc": {
   "dc": "wd1",
@@ -6563,6 +6629,12 @@
   "dc": "wd12",
   "site": "standoutforgood",
   "name": "Altar'd State"
+ },
+ "stbancorp": {
+  "dc": null,
+  "site": null,
+  "name": "S&T Bank",
+  "attempts": 1
  },
  "sterlingmets": {
   "dc": null,
@@ -6727,7 +6799,7 @@
   "dc": null,
   "site": null,
   "name": "Ribbon",
-  "attempts": 2
+  "attempts": 3
  },
  "vhr-osvhr": {
   "dc": null,
