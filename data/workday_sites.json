@@ -6242,7 +6242,7 @@
   "dc": null,
   "site": null,
   "name": "Radiance Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "rakuten": {
   "dc": null,
@@ -6269,19 +6269,19 @@
   "dc": null,
   "site": null,
   "name": "Realty Income",
-  "attempts": 2
+  "attempts": 3
  },
  "redbulltechnology": {
   "dc": null,
   "site": null,
   "name": "Red Bull Advanced Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "redfin": {
   "dc": null,
   "site": null,
   "name": "Redfin",
-  "attempts": 2
+  "attempts": 3
  },
  "redriver": {
   "dc": "wd5",
@@ -6307,7 +6307,7 @@
   "dc": null,
   "site": null,
   "name": "Rehiko",
-  "attempts": 1
+  "attempts": 2
  },
  "reliaquest": {
   "dc": "wd5",
@@ -6328,7 +6328,7 @@
   "dc": null,
   "site": null,
   "name": "Repligen",
-  "attempts": 1
+  "attempts": 2
  },
  "repsol": {
   "dc": "wd3",
@@ -6350,13 +6350,39 @@
   "dc": null,
   "site": null,
   "name": "Resolve Tech Solutions",
-  "attempts": 1
+  "attempts": 2
  },
  "restauranttechnologies": {
   "dc": null,
   "site": null,
   "name": "Restaurant Technologies",
+  "attempts": 2
+ },
+ "revantage": {
+  "dc": "wd1",
+  "site": "revantage",
+  "name": "Revantage Corporate Services"
+ },
+ "revvity": {
+  "dc": "wd103",
+  "site": "External",
+  "name": "Revvity"
+ },
+ "reworld": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Reworld"
+ },
+ "rfcuny": {
+  "dc": null,
+  "site": null,
+  "name": "RFCUNY",
   "attempts": 1
+ },
+ "rgare": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "RGA Reinsurance Company"
  },
  "rhsc": {
   "dc": null,
@@ -6364,15 +6390,70 @@
   "name": "Delta Dental",
   "attempts": 3
  },
+ "richardson": {
+  "dc": null,
+  "site": null,
+  "name": "Richardson",
+  "attempts": 1
+ },
+ "richemont": {
+  "dc": "wd3",
+  "site": "richemont",
+  "name": "Richemont"
+ },
+ "ringcentral": {
+  "dc": "wd1",
+  "site": "ringcentral_careers",
+  "name": "RingCentral"
+ },
+ "riotinto": {
+  "dc": "wd3",
+  "site": "riotinto_careers",
+  "name": "Rio Tinto"
+ },
+ "rit": {
+  "dc": "wd12",
+  "site": "Careers",
+  "name": "Rochester Institute of Technology"
+ },
+ "ritehite": {
+  "dc": null,
+  "site": null,
+  "name": "Rite Hite",
+  "attempts": 1
+ },
+ "rlicorp": {
+  "dc": null,
+  "site": null,
+  "name": "RLI",
+  "attempts": 1
+ },
  "roberthalf": {
   "dc": "wd1",
   "site": "roberthalfcareers",
   "name": "Protiviti"
  },
+ "roche": {
+  "dc": null,
+  "site": null,
+  "name": "Roche",
+  "attempts": 2
+ },
  "rockwellautomation": {
   "dc": "wd1",
   "site": "External_Rockwell_Automation",
   "name": "Rockwell Automation"
+ },
+ "rrhs": {
+  "dc": null,
+  "site": null,
+  "name": "Rochester Regional Health",
+  "attempts": 1
+ },
+ "rrts": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Road Runner"
  },
  "salesforce": {
   "dc": "wd12",
@@ -6585,6 +6666,12 @@
   "site": null,
   "name": "EPRI",
   "attempts": 3
+ },
+ "vhr-genband": {
+  "dc": null,
+  "site": null,
+  "name": "Ribbon",
+  "attempts": 1
  },
  "vhr-osvhr": {
   "dc": null,
