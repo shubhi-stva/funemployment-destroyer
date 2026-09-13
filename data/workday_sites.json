@@ -6221,6 +6221,12 @@
   "name": "Qualifacts",
   "attempts": 3
  },
+ "quickenloans": {
+  "dc": null,
+  "site": null,
+  "name": "Rocket Companies",
+  "attempts": 1
+ },
  "qvc": {
   "dc": null,
   "site": null,
@@ -6254,6 +6260,12 @@
   "dc": "wd1",
   "site": "raymondjamescareers",
   "name": "Raymond James Financial"
+ },
+ "rbc": {
+  "dc": null,
+  "site": null,
+  "name": "Royal Bank of Canada",
+  "attempts": 3
  },
  "rbi": {
   "dc": "wd3",
@@ -6307,7 +6319,7 @@
   "dc": null,
   "site": null,
   "name": "Rehiko",
-  "attempts": 2
+  "attempts": 3
  },
  "reliaquest": {
   "dc": "wd5",
@@ -6328,7 +6340,7 @@
   "dc": null,
   "site": null,
   "name": "Repligen",
-  "attempts": 2
+  "attempts": 3
  },
  "repsol": {
   "dc": "wd3",
@@ -6350,13 +6362,13 @@
   "dc": null,
   "site": null,
   "name": "Resolve Tech Solutions",
-  "attempts": 2
+  "attempts": 3
  },
  "restauranttechnologies": {
   "dc": null,
   "site": null,
   "name": "Restaurant Technologies",
-  "attempts": 2
+  "attempts": 3
  },
  "revantage": {
   "dc": "wd1",
@@ -6377,7 +6389,7 @@
   "dc": null,
   "site": null,
   "name": "RFCUNY",
-  "attempts": 1
+  "attempts": 2
  },
  "rgare": {
   "dc": "wd1",
@@ -6394,7 +6406,7 @@
   "dc": null,
   "site": null,
   "name": "Richardson",
-  "attempts": 1
+  "attempts": 2
  },
  "richemont": {
   "dc": "wd3",
@@ -6420,13 +6432,13 @@
   "dc": null,
   "site": null,
   "name": "Rite Hite",
-  "attempts": 1
+  "attempts": 2
  },
  "rlicorp": {
   "dc": null,
   "site": null,
   "name": "RLI",
-  "attempts": 1
+  "attempts": 2
  },
  "roberthalf": {
   "dc": "wd1",
@@ -6437,23 +6449,67 @@
   "dc": null,
   "site": null,
   "name": "Roche",
-  "attempts": 2
+  "attempts": 4
+ },
+ "rocket": {
+  "dc": "wd5",
+  "site": "rocket_careers",
+  "name": "Rocket Software"
  },
  "rockwellautomation": {
   "dc": "wd1",
   "site": "External_Rockwell_Automation",
   "name": "Rockwell Automation"
  },
+ "rockwoolgroup": {
+  "dc": null,
+  "site": null,
+  "name": "ROCKWOOL Group",
+  "attempts": 1
+ },
+ "rogersbh": {
+  "dc": null,
+  "site": null,
+  "name": "Rogers Behavioral Health",
+  "attempts": 1
+ },
+ "roguefitness": {
+  "dc": null,
+  "site": null,
+  "name": "Rogue Fitness",
+  "attempts": 1
+ },
+ "rollsroyce": {
+  "dc": "wd3",
+  "site": "professional",
+  "name": "Rolls-Royce"
+ },
+ "roswellpark": {
+  "dc": null,
+  "site": null,
+  "name": "Roswell Park Comprehensive Cancer Center",
+  "attempts": 1
+ },
  "rrhs": {
   "dc": null,
   "site": null,
   "name": "Rochester Regional Health",
-  "attempts": 1
+  "attempts": 2
  },
  "rrts": {
   "dc": "wd1",
   "site": "Careers",
   "name": "Road Runner"
+ },
+ "rsm": {
+  "dc": "wd1",
+  "site": "rsmcareers",
+  "name": "RSM"
+ },
+ "rxo": {
+  "dc": "wd501",
+  "site": "rxojobs",
+  "name": "RXO"
  },
  "salesforce": {
   "dc": "wd12",
@@ -6671,7 +6727,7 @@
   "dc": null,
   "site": null,
   "name": "Ribbon",
-  "attempts": 1
+  "attempts": 2
  },
  "vhr-osvhr": {
   "dc": null,
