@@ -2117,7 +2117,7 @@
   "dc": null,
   "site": null,
   "name": "Radian",
-  "attempts": 2
+  "attempts": 3
  },
  "compassion": {
   "dc": "wd5",
@@ -4196,7 +4196,7 @@
   "dc": null,
   "site": null,
   "name": "PSP Investments",
-  "attempts": 2
+  "attempts": 3
  },
  "invitationhomes": {
   "dc": null,
@@ -4405,6 +4405,11 @@
   "dc": "wd5",
   "site": "KBR_Careers",
   "name": "KBR"
+ },
+ "kcura": {
+  "dc": "wd1",
+  "site": "External_Career_Site",
+  "name": "Relativity"
  },
  "kemper": {
   "dc": "wd5",
@@ -6168,19 +6173,19 @@
   "dc": null,
   "site": null,
   "name": "Public Partnerships (PPL)",
-  "attempts": 2
+  "attempts": 3
  },
  "pultegroup": {
   "dc": null,
   "site": null,
   "name": "PulteGroup",
-  "attempts": 2
+  "attempts": 3
  },
  "pureinsurance": {
   "dc": null,
   "site": null,
   "name": "PURE Insurance",
-  "attempts": 2
+  "attempts": 3
  },
  "pvh": {
   "dc": "wd1",
@@ -6197,13 +6202,13 @@
   "dc": null,
   "site": null,
   "name": "Q2",
-  "attempts": 2
+  "attempts": 3
  },
  "qbe": {
   "dc": null,
   "site": null,
   "name": "QBE Insurance",
-  "attempts": 2
+  "attempts": 3
  },
  "qtsdatacenters": {
   "dc": "wd5",
@@ -6214,13 +6219,13 @@
   "dc": null,
   "site": null,
   "name": "Qualifacts",
-  "attempts": 2
+  "attempts": 3
  },
  "qvc": {
   "dc": null,
   "site": null,
   "name": "QVC Group",
-  "attempts": 2
+  "attempts": 3
  },
  "r1rcm": {
   "dc": "wd1",
@@ -6231,13 +6236,13 @@
   "dc": null,
   "site": null,
   "name": "RaceTrac",
-  "attempts": 2
+  "attempts": 3
  },
  "radiancetech": {
   "dc": null,
   "site": null,
   "name": "Radiance Technologies",
-  "attempts": 1
+  "attempts": 2
  },
  "rakuten": {
   "dc": null,
@@ -6264,19 +6269,19 @@
   "dc": null,
   "site": null,
   "name": "Realty Income",
-  "attempts": 1
+  "attempts": 2
  },
  "redbulltechnology": {
   "dc": null,
   "site": null,
   "name": "Red Bull Advanced Technologies",
-  "attempts": 1
+  "attempts": 2
  },
  "redfin": {
   "dc": null,
   "site": null,
   "name": "Redfin",
-  "attempts": 1
+  "attempts": 2
  },
  "redriver": {
   "dc": "wd5",
@@ -6288,16 +6293,70 @@
   "site": "Careers",
   "name": "Regal Rexnord"
  },
+ "regeneron": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Regeneron Pharmaceuticals"
+ },
+ "regions": {
+  "dc": "wd5",
+  "site": "regions_careers",
+  "name": "Regions Bank"
+ },
+ "rehlko": {
+  "dc": null,
+  "site": null,
+  "name": "Rehiko",
+  "attempts": 1
+ },
+ "reliaquest": {
+  "dc": "wd5",
+  "site": "reliaquest_careers",
+  "name": "ReliaQuest"
+ },
  "relx": {
   "dc": "wd3",
   "site": "relx",
   "name": "Elsevier"
+ },
+ "remitly": {
+  "dc": "wd5",
+  "site": "remitly_careers",
+  "name": "Remitly"
+ },
+ "repligen": {
+  "dc": null,
+  "site": null,
+  "name": "Repligen",
+  "attempts": 1
+ },
+ "repsol": {
+  "dc": "wd3",
+  "site": "repsol",
+  "name": "Repsol"
+ },
+ "republic": {
+  "dc": "wd5",
+  "site": "republic",
+  "name": "Republic Services"
  },
  "resmed": {
   "dc": null,
   "site": null,
   "name": "MatrixCare",
   "attempts": 3
+ },
+ "resolvetech": {
+  "dc": null,
+  "site": null,
+  "name": "Resolve Tech Solutions",
+  "attempts": 1
+ },
+ "restauranttechnologies": {
+  "dc": null,
+  "site": null,
+  "name": "Restaurant Technologies",
+  "attempts": 1
  },
  "rhsc": {
   "dc": null,
