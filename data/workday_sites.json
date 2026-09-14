@@ -3884,7 +3884,7 @@
   "dc": null,
   "site": null,
   "name": "Securian Financial Group",
-  "attempts": 2
+  "attempts": 3
  },
  "hrhub": {
   "dc": null,
@@ -6109,7 +6109,7 @@
   "dc": null,
   "site": null,
   "name": "Selene",
-  "attempts": 1
+  "attempts": 2
  },
  "priceline": {
   "dc": "wd1",
@@ -6668,7 +6668,7 @@
   "dc": null,
   "site": null,
   "name": "Schreiber Foods",
-  "attempts": 2
+  "attempts": 3
  },
  "sci": {
   "dc": "wd5",
@@ -6684,19 +6684,19 @@
   "dc": null,
   "site": null,
   "name": "Scottish Water",
-  "attempts": 2
+  "attempts": 3
  },
  "scottsmiraclegro": {
   "dc": null,
   "site": null,
   "name": "Scotts Miracle-Gro",
-  "attempts": 2
+  "attempts": 3
  },
  "scripps": {
   "dc": null,
   "site": null,
   "name": "Scripps",
-  "attempts": 2
+  "attempts": 3
  },
  "sec": {
   "dc": null,
@@ -6713,31 +6713,31 @@
   "dc": null,
   "site": null,
   "name": "SEI",
-  "attempts": 2
+  "attempts": 3
  },
  "sekologistics": {
   "dc": null,
   "site": null,
   "name": "SEKO Logistics",
-  "attempts": 2
+  "attempts": 3
  },
  "selectmilk": {
   "dc": null,
   "site": null,
   "name": "Select Milk Producers",
-  "attempts": 2
+  "attempts": 3
  },
  "selinc": {
   "dc": null,
   "site": null,
   "name": "Schweitzer Engineering Laboratories",
-  "attempts": 2
+  "attempts": 3
  },
  "seminolehardrock": {
   "dc": null,
   "site": null,
   "name": "Seminole Hard Rock",
-  "attempts": 1
+  "attempts": 2
  },
  "semtech": {
   "dc": "wd1",
@@ -6748,30 +6748,72 @@
   "dc": null,
   "site": null,
   "name": "Sensata",
-  "attempts": 1
+  "attempts": 2
  },
  "sentara": {
   "dc": null,
   "site": null,
   "name": "Sentara Health",
-  "attempts": 1
+  "attempts": 2
  },
  "sentryinsurance": {
   "dc": null,
   "site": null,
   "name": "Sentry Insurance",
-  "attempts": 1
+  "attempts": 2
  },
  "sglottery": {
   "dc": null,
   "site": null,
   "name": "Scientific Games",
-  "attempts": 2
+  "attempts": 3
  },
  "shakeshack": {
   "dc": "wd5",
   "site": "External",
   "name": "Shake Shack"
+ },
+ "sharecare": {
+  "dc": "wd1",
+  "site": "sharecare_careers",
+  "name": "Sharecare"
+ },
+ "sharpservices": {
+  "dc": null,
+  "site": null,
+  "name": "Sharp Packaging Services",
+  "attempts": 1
+ },
+ "shawinc": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Shaw Industries Group"
+ },
+ "shell": {
+  "dc": "wd3",
+  "site": "shellcareers",
+  "name": "Shell"
+ },
+ "shi": {
+  "dc": "wd12",
+  "site": "shicareers",
+  "name": "SHI International"
+ },
+ "shipt": {
+  "dc": "wd1",
+  "site": "shipt_External",
+  "name": "Shipt"
+ },
+ "sierraspace": {
+  "dc": null,
+  "site": null,
+  "name": "Sierra Space",
+  "attempts": 1
+ },
+ "sifive": {
+  "dc": "wd1",
+  "site": "sifivecareers",
+  "name": "SiFive"
  },
  "signetjewelers": {
   "dc": null,
@@ -6795,6 +6837,11 @@
   "site": "snap",
   "name": "Snap"
  },
+ "snc": {
+  "dc": "wd1",
+  "site": "SNC_External_Career_Site",
+  "name": "Sierra Nevada Corporation"
+ },
  "spectris": {
   "dc": "wd3",
   "site": "spectris_careers",
@@ -6810,6 +6857,11 @@
   "dc": "wd5",
   "site": "spgi_careers",
   "name": "automotiveMastermind"
+ },
+ "sralab": {
+  "dc": "wd1",
+  "site": "sralabcareers",
+  "name": "Shirley Ryan AbilityLab"
  },
  "standoutforgood": {
   "dc": "wd12",
