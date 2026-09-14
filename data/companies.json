@@ -18955,6 +18955,11 @@
   "ats": "workday"
  },
  {
+  "name": "SEP",
+  "slug": "sep",
+  "ats": "lever"
+ },
+ {
   "name": "Sequence Holdings",
   "slug": "seqholdings",
   "ats": "ashby"
@@ -19488,6 +19493,11 @@
   "name": "Snyk",
   "slug": "snyk",
   "ats": "workday"
+ },
+ {
+  "name": "Snyk",
+  "slug": "snyk",
+  "ats": "ashby"
  },
  {
   "name": "SOCi",

@@ -2763,6 +2763,12 @@
   "site": "Search",
   "name": "Encova"
  },
+ "endurance": {
+  "dc": null,
+  "site": null,
+  "name": "Sompo International Holdings",
+  "attempts": 1
+ },
  "energynorthwest": {
   "dc": "wd1",
   "site": "External",
@@ -3722,6 +3728,11 @@
   "site": "External",
   "name": "HD Supply"
  },
+ "healthcare": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "Solventum"
+ },
  "healthfirst": {
   "dc": "wd1",
   "site": "healthfirst",
@@ -4616,7 +4627,7 @@
   "dc": null,
   "site": null,
   "name": "Signify",
-  "attempts": 1
+  "attempts": 2
  },
  "likewize": {
   "dc": "wd1",
@@ -5858,6 +5869,11 @@
   "name": "Owens & Minor",
   "attempts": 3
  },
+ "oxford": {
+  "dc": "wd5",
+  "site": "oxford",
+  "name": "Southern Tide"
+ },
  "oxy": {
   "dc": null,
   "site": null,
@@ -6310,7 +6326,7 @@
   "dc": null,
   "site": null,
   "name": "Slate Auto",
-  "attempts": 1
+  "attempts": 2
  },
  "redbulltechnology": {
   "dc": null,
@@ -6794,7 +6810,7 @@
   "dc": null,
   "site": null,
   "name": "Sharp Packaging Services",
-  "attempts": 2
+  "attempts": 3
  },
  "shawinc": {
   "dc": "wd1",
@@ -6820,7 +6836,7 @@
   "dc": null,
   "site": null,
   "name": "Sierra Space",
-  "attempts": 2
+  "attempts": 3
  },
  "sifive": {
   "dc": "wd1",
@@ -6837,19 +6853,19 @@
   "dc": null,
   "site": null,
   "name": "Silicon Laboratories",
-  "attempts": 1
+  "attempts": 2
  },
  "silgancontainers": {
   "dc": null,
   "site": null,
   "name": "Silgan",
-  "attempts": 1
+  "attempts": 2
  },
  "simmonsbank": {
   "dc": null,
   "site": null,
   "name": "Simmons Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "simon": {
   "dc": "wd1",
@@ -6865,7 +6881,7 @@
   "dc": null,
   "site": null,
   "name": "Simpro",
-  "attempts": 1
+  "attempts": 2
  },
  "situsamc": {
   "dc": "wd1",
@@ -6876,7 +6892,7 @@
   "dc": null,
   "site": null,
   "name": "Skechers",
-  "attempts": 1
+  "attempts": 2
  },
  "slihrms": {
   "dc": "wd3",
@@ -6908,12 +6924,18 @@
   "dc": null,
   "site": null,
   "name": "Snap Finance",
-  "attempts": 1
+  "attempts": 2
  },
  "snc": {
   "dc": "wd1",
   "site": "SNC_External_Career_Site",
   "name": "Sierra Nevada Corporation"
+ },
+ "snhu": {
+  "dc": null,
+  "site": null,
+  "name": "Southern New Hampshire University",
+  "attempts": 1
  },
  "snyk": {
   "dc": "wd103",
@@ -6929,12 +6951,49 @@
   "dc": null,
   "site": null,
   "name": "Solera Holdings",
+  "attempts": 2
+ },
+ "sonoco": {
+  "dc": null,
+  "site": null,
+  "name": "Sonoco",
+  "attempts": 1
+ },
+ "sonos": {
+  "dc": "wd1",
+  "site": "sonos",
+  "name": "Sonos"
+ },
+ "sonyglobal": {
+  "dc": "wd1",
+  "site": "sonyglobalcareers",
+  "name": "Sony"
+ },
+ "soti": {
+  "dc": "wd3",
+  "site": "Careers",
+  "name": "SOTI"
+ },
+ "southstatebank": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "SouthState Bank"
+ },
+ "spe": {
+  "dc": null,
+  "site": null,
+  "name": "Sony Pictures Entertainment",
   "attempts": 1
  },
  "spectris": {
   "dc": "wd3",
   "site": "spectris_careers",
   "name": "Hottinger Brüel & Kjaer (HBK)"
+ },
+ "spectrumcontrol": {
+  "dc": "wd1",
+  "site": "spectrumcontrol",
+  "name": "Spectrum Control"
  },
  "spectrumhealth": {
   "dc": null,
@@ -6983,6 +7042,11 @@
   "dc": "wd1",
   "site": "StrykerCareers",
   "name": "Stryker"
+ },
+ "swa": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Southwest Airlines"
  },
  "synnex": {
   "dc": null,
