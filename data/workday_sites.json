@@ -3884,7 +3884,7 @@
   "dc": null,
   "site": null,
   "name": "Securian Financial Group",
-  "attempts": 1
+  "attempts": 2
  },
  "hrhub": {
   "dc": null,
@@ -6105,6 +6105,12 @@
   "name": "Premier",
   "attempts": 3
  },
+ "pretiumenterpriseservices": {
+  "dc": null,
+  "site": null,
+  "name": "Selene",
+  "attempts": 1
+ },
  "priceline": {
   "dc": "wd1",
   "site": "priceline",
@@ -6592,13 +6598,13 @@
   "dc": null,
   "site": null,
   "name": "Sandvik",
-  "attempts": 2
+  "attempts": 3
  },
  "sanford": {
   "dc": null,
   "site": null,
   "name": "Sanford Health",
-  "attempts": 2
+  "attempts": 3
  },
  "sanofi": {
   "dc": "wd3",
@@ -6614,7 +6620,7 @@
   "dc": null,
   "site": null,
   "name": "Saputo",
-  "attempts": 2
+  "attempts": 3
  },
  "sarahbush": {
   "dc": "wd1",
@@ -6635,7 +6641,7 @@
   "dc": null,
   "site": null,
   "name": "SBA Communications Corporation",
-  "attempts": 2
+  "attempts": 3
  },
  "sbdinc": {
   "dc": "wd1",
@@ -6646,7 +6652,7 @@
   "dc": null,
   "site": null,
   "name": "SCAN",
-  "attempts": 2
+  "attempts": 3
  },
  "scgov": {
   "dc": "wd5",
@@ -6662,7 +6668,12 @@
   "dc": null,
   "site": null,
   "name": "Schreiber Foods",
-  "attempts": 1
+  "attempts": 2
+ },
+ "sci": {
+  "dc": "wd5",
+  "site": "sci",
+  "name": "Service Corporation International"
  },
  "scj": {
   "dc": "wd5",
@@ -6673,25 +6684,25 @@
   "dc": null,
   "site": null,
   "name": "Scottish Water",
-  "attempts": 1
+  "attempts": 2
  },
  "scottsmiraclegro": {
   "dc": null,
   "site": null,
   "name": "Scotts Miracle-Gro",
-  "attempts": 1
+  "attempts": 2
  },
  "scripps": {
   "dc": null,
   "site": null,
   "name": "Scripps",
-  "attempts": 1
+  "attempts": 2
  },
  "sec": {
   "dc": null,
   "site": null,
   "name": "Samsung",
-  "attempts": 2
+  "attempts": 3
  },
  "sedgwick": {
   "dc": "wd1",
@@ -6702,31 +6713,65 @@
   "dc": null,
   "site": null,
   "name": "SEI",
-  "attempts": 1
+  "attempts": 2
  },
  "sekologistics": {
   "dc": null,
   "site": null,
   "name": "SEKO Logistics",
-  "attempts": 1
+  "attempts": 2
  },
  "selectmilk": {
   "dc": null,
   "site": null,
   "name": "Select Milk Producers",
-  "attempts": 1
+  "attempts": 2
  },
  "selinc": {
   "dc": null,
   "site": null,
   "name": "Schweitzer Engineering Laboratories",
+  "attempts": 2
+ },
+ "seminolehardrock": {
+  "dc": null,
+  "site": null,
+  "name": "Seminole Hard Rock",
+  "attempts": 1
+ },
+ "semtech": {
+  "dc": "wd1",
+  "site": "semtechcareers",
+  "name": "Semtech"
+ },
+ "sensata": {
+  "dc": null,
+  "site": null,
+  "name": "Sensata",
+  "attempts": 1
+ },
+ "sentara": {
+  "dc": null,
+  "site": null,
+  "name": "Sentara Health",
+  "attempts": 1
+ },
+ "sentryinsurance": {
+  "dc": null,
+  "site": null,
+  "name": "Sentry Insurance",
   "attempts": 1
  },
  "sglottery": {
   "dc": null,
   "site": null,
   "name": "Scientific Games",
-  "attempts": 1
+  "attempts": 2
+ },
+ "shakeshack": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Shake Shack"
  },
  "signetjewelers": {
   "dc": null,
