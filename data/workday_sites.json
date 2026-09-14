@@ -378,6 +378,12 @@
   "site": "allstate_careers",
   "name": "Allstate Insurance Company"
  },
+ "alsacstjude": {
+  "dc": null,
+  "site": null,
+  "name": "St. Jude Children's Research Hospital",
+  "attempts": 1
+ },
  "alsglobal": {
   "dc": "wd103",
   "site": "External",
@@ -2767,7 +2773,7 @@
   "dc": null,
   "site": null,
   "name": "Sompo International Holdings",
-  "attempts": 1
+  "attempts": 2
  },
  "energynorthwest": {
   "dc": "wd1",
@@ -4627,7 +4633,7 @@
   "dc": null,
   "site": null,
   "name": "Signify",
-  "attempts": 2
+  "attempts": 3
  },
  "likewize": {
   "dc": "wd1",
@@ -6326,7 +6332,7 @@
   "dc": null,
   "site": null,
   "name": "Slate Auto",
-  "attempts": 2
+  "attempts": 3
  },
  "redbulltechnology": {
   "dc": null,
@@ -6853,19 +6859,19 @@
   "dc": null,
   "site": null,
   "name": "Silicon Laboratories",
-  "attempts": 2
+  "attempts": 3
  },
  "silgancontainers": {
   "dc": null,
   "site": null,
   "name": "Silgan",
-  "attempts": 2
+  "attempts": 3
  },
  "simmonsbank": {
   "dc": null,
   "site": null,
   "name": "Simmons Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "simon": {
   "dc": "wd1",
@@ -6881,7 +6887,7 @@
   "dc": null,
   "site": null,
   "name": "Simpro",
-  "attempts": 2
+  "attempts": 3
  },
  "situsamc": {
   "dc": "wd1",
@@ -6892,12 +6898,22 @@
   "dc": null,
   "site": null,
   "name": "Skechers",
-  "attempts": 2
+  "attempts": 3
  },
  "slihrms": {
   "dc": "wd3",
   "site": "Careers",
   "name": "AtkinsRéalis"
+ },
+ "slu": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "St. Louis University"
+ },
+ "sluhn": {
+  "dc": "wd1",
+  "site": "sluhn",
+  "name": "St. Luke's University Health Network"
  },
  "smithfieldfoods": {
   "dc": "wd1",
@@ -6924,7 +6940,7 @@
   "dc": null,
   "site": null,
   "name": "Snap Finance",
-  "attempts": 2
+  "attempts": 3
  },
  "snc": {
   "dc": "wd1",
@@ -6935,7 +6951,7 @@
   "dc": null,
   "site": null,
   "name": "Southern New Hampshire University",
-  "attempts": 1
+  "attempts": 2
  },
  "snyk": {
   "dc": "wd103",
@@ -6951,13 +6967,13 @@
   "dc": null,
   "site": null,
   "name": "Solera Holdings",
-  "attempts": 2
+  "attempts": 3
  },
  "sonoco": {
   "dc": null,
   "site": null,
   "name": "Sonoco",
-  "attempts": 1
+  "attempts": 2
  },
  "sonos": {
   "dc": "wd1",
@@ -6983,7 +6999,7 @@
   "dc": null,
   "site": null,
   "name": "Sony Pictures Entertainment",
-  "attempts": 1
+  "attempts": 2
  },
  "spectris": {
   "dc": "wd3",
@@ -7001,20 +7017,63 @@
   "name": "Corewell Health",
   "attempts": 3
  },
+ "spellmanhv": {
+  "dc": "wd1",
+  "site": "spellmanhvcareers",
+  "name": "Spellman High Voltage Electronics"
+ },
  "spgi": {
   "dc": "wd5",
   "site": "spgi_careers",
   "name": "automotiveMastermind"
+ },
+ "spinmaster": {
+  "dc": "wd3",
+  "site": "spinmaster_careers",
+  "name": "Spin Master Corp."
+ },
+ "sprinklr": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Sprinklr"
  },
  "sralab": {
   "dc": "wd1",
   "site": "sralabcareers",
   "name": "Shirley Ryan AbilityLab"
  },
+ "ssctech": {
+  "dc": null,
+  "site": null,
+  "name": "SS&C",
+  "attempts": 1
+ },
+ "ssmh": {
+  "dc": null,
+  "site": null,
+  "name": "SSM Health",
+  "attempts": 1
+ },
+ "standard": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "Standard Insurance"
+ },
  "standoutforgood": {
   "dc": "wd12",
   "site": "standoutforgood",
   "name": "Altar'd State"
+ },
+ "stanfordhealthcare": {
+  "dc": null,
+  "site": null,
+  "name": "Stanford Health Care",
+  "attempts": 1
+ },
+ "starrcompanies": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Starr Insurance"
  },
  "stbancorp": {
   "dc": null,
@@ -7032,6 +7091,11 @@
   "site": null,
   "name": "Major League Baseball",
   "attempts": 3
+ },
+ "stjude": {
+  "dc": "wd1",
+  "site": "stjude",
+  "name": "St. Jude Children's Research Hospital"
  },
  "strongtie": {
   "dc": "wd1",
