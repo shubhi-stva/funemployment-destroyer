@@ -555,7 +555,7 @@
   "dc": null,
   "site": null,
   "name": "The Andersons",
-  "attempts": 1
+  "attempts": 2
  },
  "angc": {
   "dc": "wd5",
@@ -1350,7 +1350,7 @@
   "dc": null,
   "site": null,
   "name": "The Boyd Group",
-  "attempts": 1
+  "attempts": 2
  },
  "boystown": {
   "dc": "wd1",
@@ -2100,6 +2100,12 @@
   "site": "cohesity_careers",
   "name": "Cohesity"
  },
+ "coke": {
+  "dc": null,
+  "site": null,
+  "name": "The Coca-Cola Company",
+  "attempts": 1
+ },
  "collectorsuniverse": {
   "dc": null,
   "site": null,
@@ -2412,6 +2418,12 @@
   "name": "Dalcour Maclaren",
   "attempts": 3
  },
+ "dallascityhall": {
+  "dc": null,
+  "site": null,
+  "name": "The City of Dallas",
+  "attempts": 1
+ },
  "dallascollege": {
   "dc": null,
   "site": null,
@@ -2581,6 +2593,12 @@
   "dc": "wd1",
   "site": "Careers",
   "name": "DIRECTV"
+ },
+ "disney": {
+  "dc": null,
+  "site": null,
+  "name": "The Walt Disney Company",
+  "attempts": 2
  },
  "dlapiper": {
   "dc": "wd1",
@@ -3897,6 +3915,12 @@
   "name": "Holman",
   "attempts": 3
  },
+ "homedepot": {
+  "dc": null,
+  "site": null,
+  "name": "The Home Depot",
+  "attempts": 2
+ },
  "horizonmedia": {
   "dc": null,
   "site": null,
@@ -4434,6 +4458,11 @@
   "site": null,
   "name": "Fabletics",
   "attempts": 3
+ },
+ "kansashealthsystem": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "The University of Kansas Health System"
  },
  "kantar": {
   "dc": "wd3",
@@ -5533,6 +5562,11 @@
   "site": "NRZ",
   "name": "Newrez"
  },
+ "newschool": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "The New School"
+ },
  "nexstar": {
   "dc": "wd5",
   "site": "nexstar",
@@ -6355,12 +6389,18 @@
   "dc": null,
   "site": null,
   "name": "Texas Rangers",
-  "attempts": 1
+  "attempts": 2
  },
  "raymondjames": {
   "dc": "wd1",
   "site": "raymondjamescareers",
   "name": "Raymond James Financial"
+ },
+ "rb": {
+  "dc": null,
+  "site": null,
+  "name": "The Federal Reserve System",
+  "attempts": 1
  },
  "rbc": {
   "dc": null,
@@ -7298,7 +7338,7 @@
   "dc": null,
   "site": null,
   "name": "Takeda",
-  "attempts": 2
+  "attempts": 3
  },
  "talentmanagementsolution": {
   "dc": null,
@@ -7346,25 +7386,25 @@
   "dc": null,
   "site": null,
   "name": "TC Energy",
-  "attempts": 2
+  "attempts": 3
  },
  "td": {
   "dc": null,
   "site": null,
   "name": "TD Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "tdwilliamson": {
   "dc": null,
   "site": null,
   "name": "T.D. Williamson",
-  "attempts": 2
+  "attempts": 3
  },
  "tedsmontanagrill": {
   "dc": null,
   "site": null,
   "name": "Ted's Montana Grill",
-  "attempts": 2
+  "attempts": 3
  },
  "tempus": {
   "dc": "wd5",
@@ -7380,7 +7420,7 @@
   "dc": null,
   "site": null,
   "name": "Teranet",
-  "attempts": 1
+  "attempts": 2
  },
  "terex": {
   "dc": "wd1",
@@ -7406,13 +7446,19 @@
   "dc": null,
   "site": null,
   "name": "The Access Group",
-  "attempts": 1
+  "attempts": 2
  },
  "theclaremontcolleges": {
   "dc": null,
   "site": null,
   "name": "Claremont McKenna College",
   "attempts": 3
+ },
+ "thecsp": {
+  "dc": null,
+  "site": null,
+  "name": "The Composites Solution Partner (CSP)",
+  "attempts": 1
  },
  "thehartford": {
   "dc": "wd5",
@@ -7424,6 +7470,18 @@
   "site": null,
   "name": "International Rescue Committee (IRC)",
   "attempts": 3
+ },
+ "thejacksonlaboratory": {
+  "dc": null,
+  "site": null,
+  "name": "The Jackson Laboratory",
+  "attempts": 1
+ },
+ "thekineticgroup": {
+  "dc": null,
+  "site": null,
+  "name": "The Kinetic Group",
+  "attempts": 1
  },
  "theocc": {
   "dc": "wd5",
@@ -7463,6 +7521,11 @@
   "name": "Aegon Asset Management",
   "attempts": 3
  },
+ "travelers": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "The Travelers Companies"
+ },
  "troweprice": {
   "dc": "wd5",
   "site": "troweprice",
@@ -7477,6 +7540,12 @@
   "dc": "wd1",
   "site": "tsys",
   "name": "Global Payments"
+ },
+ "ttc": {
+  "dc": null,
+  "site": null,
+  "name": "The Toro Company",
+  "attempts": 1
  },
  "tti": {
   "dc": null,
@@ -7531,6 +7600,11 @@
   "dc": "wd5",
   "site": "externalcareersite",
   "name": "Vermeer"
+ },
+ "vfc": {
+  "dc": "wd5",
+  "site": "vfc_careers",
+  "name": "The North Face"
  },
  "vhr-epri": {
   "dc": null,
