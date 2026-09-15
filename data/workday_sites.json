@@ -555,7 +555,7 @@
   "dc": null,
   "site": null,
   "name": "The Andersons",
-  "attempts": 2
+  "attempts": 3
  },
  "angc": {
   "dc": "wd5",
@@ -1350,7 +1350,7 @@
   "dc": null,
   "site": null,
   "name": "The Boyd Group",
-  "attempts": 2
+  "attempts": 3
  },
  "boystown": {
   "dc": "wd1",
@@ -2104,7 +2104,7 @@
   "dc": null,
   "site": null,
   "name": "The Coca-Cola Company",
-  "attempts": 1
+  "attempts": 2
  },
  "collectorsuniverse": {
   "dc": null,
@@ -2422,7 +2422,7 @@
   "dc": null,
   "site": null,
   "name": "The City of Dallas",
-  "attempts": 1
+  "attempts": 2
  },
  "dallascollege": {
   "dc": null,
@@ -2598,7 +2598,7 @@
   "dc": null,
   "site": null,
   "name": "The Walt Disney Company",
-  "attempts": 2
+  "attempts": 4
  },
  "dlapiper": {
   "dc": "wd1",
@@ -3919,7 +3919,7 @@
   "dc": null,
   "site": null,
   "name": "The Home Depot",
-  "attempts": 2
+  "attempts": 4
  },
  "horizonmedia": {
   "dc": null,
@@ -6389,7 +6389,7 @@
   "dc": null,
   "site": null,
   "name": "Texas Rangers",
-  "attempts": 2
+  "attempts": 3
  },
  "raymondjames": {
   "dc": "wd1",
@@ -6400,7 +6400,7 @@
   "dc": null,
   "site": null,
   "name": "The Federal Reserve System",
-  "attempts": 1
+  "attempts": 2
  },
  "rbc": {
   "dc": null,
@@ -7420,7 +7420,7 @@
   "dc": null,
   "site": null,
   "name": "Teranet",
-  "attempts": 2
+  "attempts": 3
  },
  "terex": {
   "dc": "wd1",
@@ -7446,7 +7446,7 @@
   "dc": null,
   "site": null,
   "name": "The Access Group",
-  "attempts": 2
+  "attempts": 3
  },
  "theclaremontcolleges": {
   "dc": null,
@@ -7458,7 +7458,7 @@
   "dc": null,
   "site": null,
   "name": "The Composites Solution Partner (CSP)",
-  "attempts": 1
+  "attempts": 2
  },
  "thehartford": {
   "dc": "wd5",
@@ -7475,13 +7475,13 @@
   "dc": null,
   "site": null,
   "name": "The Jackson Laboratory",
-  "attempts": 1
+  "attempts": 2
  },
  "thekineticgroup": {
   "dc": null,
   "site": null,
   "name": "The Kinetic Group",
-  "attempts": 1
+  "attempts": 2
  },
  "theocc": {
   "dc": "wd5",
@@ -7494,6 +7494,11 @@
   "name": "Ensora Health",
   "attempts": 3
  },
+ "thermofisher": {
+  "dc": "wd5",
+  "site": "thermofishercareers",
+  "name": "Thermo Fisher Scientific"
+ },
  "thinkbrg": {
   "dc": null,
   "site": null,
@@ -7505,10 +7510,38 @@
   "site": "Global",
   "name": "Global"
  },
+ "thomsonreuters": {
+  "dc": "wd5",
+  "site": "External_Career_Site",
+  "name": "Thomson Reuters"
+ },
+ "thoughtspot": {
+  "dc": null,
+  "site": null,
+  "name": "ThoughtSpot",
+  "attempts": 1
+ },
+ "thyssenkruppmaterialsna": {
+  "dc": null,
+  "site": null,
+  "name": "thyssenkrupp",
+  "attempts": 1
+ },
  "tiaa": {
   "dc": "wd1",
   "site": "Search",
   "name": "TIAA"
+ },
+ "tibco": {
+  "dc": null,
+  "site": null,
+  "name": "TIBCO Software",
+  "attempts": 1
+ },
+ "tjx": {
+  "dc": "wd1",
+  "site": "tjx_External",
+  "name": "TJX"
  },
  "tmobile": {
   "dc": "wd1",
@@ -7545,7 +7578,7 @@
   "dc": null,
   "site": null,
   "name": "The Toro Company",
-  "attempts": 1
+  "attempts": 2
  },
  "tti": {
   "dc": null,
@@ -7563,6 +7596,12 @@
   "dc": "wd1",
   "site": "External",
   "name": "TelevisaUnivision"
+ },
+ "upenn": {
+  "dc": null,
+  "site": null,
+  "name": "The Wharton School",
+  "attempts": 1
  },
  "usbank": {
   "dc": null,
@@ -7647,6 +7686,12 @@
   "site": "global",
   "name": "Warner Bros."
  },
+ "weir": {
+  "dc": null,
+  "site": null,
+  "name": "The Weir Group",
+  "attempts": 1
+ },
  "wgl": {
   "dc": null,
   "site": null,
@@ -7673,6 +7718,11 @@
   "dc": "wd503",
   "site": "careers",
   "name": "Workiva"
+ },
+ "wwecorp": {
+  "dc": "wd5",
+  "site": "wwecorp",
+  "name": "TKO Group Holdings, Inc"
  },
  "xcelenergy": {
   "dc": "wd1",
