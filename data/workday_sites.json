@@ -196,6 +196,11 @@
   "name": "American Electric Power",
   "attempts": 3
  },
+ "aero": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "The Aerospace Corporation"
+ },
  "aes": {
   "dc": null,
   "site": null,
@@ -546,6 +551,12 @@
   "site": "ANDERSEN_External_Career_Site",
   "name": "Andersen Corporation"
  },
+ "andersonsinc": {
+  "dc": null,
+  "site": null,
+  "name": "The Andersons",
+  "attempts": 1
+ },
  "angc": {
   "dc": "wd5",
   "site": "angc",
@@ -793,6 +804,11 @@
   "dc": "wd5",
   "site": "athene_careers",
   "name": "Apollo Global"
+ },
+ "atlanticmedia": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "The Atlantic"
  },
  "atriumhospitality": {
   "dc": "wd5",
@@ -1295,6 +1311,12 @@
   "name": "Bob's Discount Furniture",
   "attempts": 3
  },
+ "boeing": {
+  "dc": null,
+  "site": null,
+  "name": "The Boeing Company",
+  "attempts": 3
+ },
  "bonterra": {
   "dc": null,
   "site": null,
@@ -1323,6 +1345,12 @@
   "site": null,
   "name": "Boyd",
   "attempts": 3
+ },
+ "boydgroup": {
+  "dc": null,
+  "site": null,
+  "name": "The Boyd Group",
+  "attempts": 1
  },
  "boystown": {
   "dc": "wd1",
@@ -4629,6 +4657,11 @@
   "site": "lifetime",
   "name": "Life Time"
  },
+ "lifeworks": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "TELUS"
+ },
  "lighting": {
   "dc": null,
   "site": null,
@@ -5310,6 +5343,11 @@
   "dc": "wd1",
   "site": "musc",
   "name": "Medical University of South Carolina"
+ },
+ "mvphealthcare": {
+  "dc": "wd5",
+  "site": "mvphealthcare",
+  "name": "MVP Health Care"
  },
  "my7elevenhr": {
   "dc": "wd12",
@@ -6313,6 +6351,12 @@
   "name": "Kobo",
   "attempts": 3
  },
+ "rangersmlb": {
+  "dc": null,
+  "site": null,
+  "name": "Texas Rangers",
+  "attempts": 1
+ },
  "raymondjames": {
   "dc": "wd1",
   "site": "raymondjamescareers",
@@ -7210,13 +7254,13 @@
   "dc": null,
   "site": null,
   "name": "Swift",
-  "attempts": 2
+  "attempts": 3
  },
  "symbotic": {
   "dc": null,
   "site": null,
   "name": "Symbotic",
-  "attempts": 2
+  "attempts": 3
  },
  "synchronyfinancial": {
   "dc": "wd5",
@@ -7232,7 +7276,7 @@
   "dc": null,
   "site": null,
   "name": "Syneos Health",
-  "attempts": 2
+  "attempts": 3
  },
  "synnex": {
   "dc": null,
@@ -7254,7 +7298,7 @@
   "dc": null,
   "site": null,
   "name": "Takeda",
-  "attempts": 1
+  "attempts": 2
  },
  "talentmanagementsolution": {
   "dc": null,
@@ -7302,35 +7346,67 @@
   "dc": null,
   "site": null,
   "name": "TC Energy",
-  "attempts": 1
+  "attempts": 2
  },
  "td": {
   "dc": null,
   "site": null,
   "name": "TD Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "tdwilliamson": {
   "dc": null,
   "site": null,
   "name": "T.D. Williamson",
-  "attempts": 1
+  "attempts": 2
  },
  "tedsmontanagrill": {
   "dc": null,
   "site": null,
   "name": "Ted's Montana Grill",
-  "attempts": 1
+  "attempts": 2
+ },
+ "tempus": {
+  "dc": "wd5",
+  "site": "tempus_careers",
+  "name": "Tempus"
  },
  "tencent": {
   "dc": "wd1",
   "site": "Tencent_Careers",
   "name": "Tencent"
  },
+ "tera": {
+  "dc": null,
+  "site": null,
+  "name": "Teranet",
+  "attempts": 1
+ },
+ "terex": {
+  "dc": "wd1",
+  "site": "terexcareers",
+  "name": "Terex"
+ },
+ "texascapitalbank": {
+  "dc": "wd12",
+  "site": "Careers",
+  "name": "Texas Capital Bank"
+ },
+ "texaspsf": {
+  "dc": "wd501",
+  "site": "texaspsfcareers",
+  "name": "Texas Permanent School Fund Corporation"
+ },
  "thales": {
   "dc": "wd3",
   "site": "careers",
   "name": "Thales"
+ },
+ "theaccessgroup": {
+  "dc": null,
+  "site": null,
+  "name": "The Access Group",
+  "attempts": 1
  },
  "theclaremontcolleges": {
   "dc": null,
@@ -7413,6 +7489,11 @@
   "site": null,
   "name": "Grant Thornton",
   "attempts": 3
+ },
+ "univision": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "TelevisaUnivision"
  },
  "usbank": {
   "dc": null,

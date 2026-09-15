@@ -1930,6 +1930,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Artificial.Agency",
+  "slug": "artificial",
+  "ats": "ashby"
+ },
+ {
   "name": "Arvinas",
   "slug": "arvinas",
   "ats": "greenhouse"
@@ -2163,6 +2168,11 @@
   "name": "Atlantic Health System",
   "slug": "erqh.fa.us2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Atlas Data Storage",
+  "slug": "atlas-data-storage",
+  "ats": "rippling"
  },
  {
   "name": "Atlas Energy Solutions",
@@ -7320,6 +7330,11 @@
   "ats": "workday"
  },
  {
+  "name": "Enact Mortgage Insurance",
+  "slug": "gnw",
+  "ats": "workday"
+ },
+ {
   "name": "Enbridge",
   "slug": "enbridge",
   "ats": "workday"
@@ -7998,6 +8013,11 @@
   "name": "FanThreeSixty",
   "slug": "osv-tifec",
   "ats": "workday"
+ },
+ {
+  "name": "Fanvue",
+  "slug": "fanvue",
+  "ats": "ashby"
  },
  {
   "name": "Faraday Future",
@@ -11535,6 +11555,11 @@
   "ats": "workday"
  },
  {
+  "name": "JeffreyM Consulting",
+  "slug": "jeffreym-consulting",
+  "ats": "workable"
+ },
+ {
   "name": "Jencap",
   "slug": "jencapinc",
   "ats": "greenhouse"
@@ -14360,6 +14385,11 @@
   "ats": "workday"
  },
  {
+  "name": "Motia",
+  "slug": "motia",
+  "ats": "workable"
+ },
+ {
   "name": "Motorola",
   "slug": "motorolasolutions",
   "ats": "workday"
@@ -14483,6 +14513,11 @@
   "name": "Mux",
   "slug": "mux",
   "ats": "ashby"
+ },
+ {
+  "name": "MVP Health Care",
+  "slug": "mvphealthcare",
+  "ats": "workday"
  },
  {
   "name": "Mycronic",
@@ -14647,6 +14682,11 @@
  {
   "name": "Ncino",
   "slug": "ncino",
+  "ats": "workday"
+ },
+ {
+  "name": "NCR Atleos",
+  "slug": "ncratleos",
   "ats": "workday"
  },
  {
@@ -15963,6 +16003,11 @@
   "name": "PA Consulting",
   "slug": "PAConsulting",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Pace",
+  "slug": "withpace",
+  "ats": "ashby"
  },
  {
   "name": "Pacific Fusion",
@@ -20350,6 +20395,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Superhuman",
+  "slug": "superhuman",
+  "ats": "ashby"
+ },
+ {
   "name": "Supernova Technology",
   "slug": "supernova-technology",
   "ats": "rippling"
@@ -20758,6 +20808,11 @@
   "name": "Tecovas",
   "slug": "tecovas",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Tecsa",
+  "slug": "tecsa",
+  "ats": "workable"
  },
  {
   "name": "Ted's Montana Grill",
@@ -23593,6 +23648,11 @@
   "name": "WorkOS",
   "slug": "workos",
   "ats": "ashby"
+ },
+ {
+  "name": "Workshop",
+  "slug": "workshop",
+  "ats": "greenhouse"
  },
  {
   "name": "Workstream",
