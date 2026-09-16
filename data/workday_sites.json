@@ -7390,7 +7390,7 @@
   "dc": null,
   "site": null,
   "name": "Triumph",
-  "attempts": 1
+  "attempts": 2
  },
  "tcbrands": {
   "dc": null,
@@ -7426,7 +7426,7 @@
   "dc": null,
   "site": null,
   "name": "Tokyo Electron",
-  "attempts": 2
+  "attempts": 3
  },
  "tempus": {
   "dc": "wd5",
@@ -7584,13 +7584,13 @@
   "dc": null,
   "site": null,
   "name": "Tokio Marine Kiln",
-  "attempts": 2
+  "attempts": 3
  },
  "topcon": {
   "dc": null,
   "site": null,
   "name": "Topcon Positioning",
-  "attempts": 2
+  "attempts": 3
  },
  "topgolf": {
   "dc": "wd501",
@@ -7601,7 +7601,7 @@
   "dc": null,
   "site": null,
   "name": "Toyota",
-  "attempts": 2
+  "attempts": 3
  },
  "transamerica": {
   "dc": null,
@@ -7633,13 +7633,13 @@
   "dc": null,
   "site": null,
   "name": "TREK",
-  "attempts": 2
+  "attempts": 3
  },
  "trellix": {
   "dc": null,
   "site": null,
   "name": "Trellix",
-  "attempts": 2
+  "attempts": 3
  },
  "trendmicro": {
   "dc": "wd3",
@@ -7660,13 +7660,13 @@
   "dc": null,
   "site": null,
   "name": "TRIMEDX",
-  "attempts": 1
+  "attempts": 2
  },
  "triumf": {
   "dc": null,
   "site": null,
   "name": "TRIUMF",
-  "attempts": 1
+  "attempts": 2
  },
  "troweprice": {
   "dc": "wd5",
@@ -7682,7 +7682,7 @@
   "dc": null,
   "site": null,
   "name": "TRUMPF",
-  "attempts": 1
+  "attempts": 2
  },
  "trustage": {
   "dc": "wd1",
@@ -7698,7 +7698,7 @@
   "dc": null,
   "site": null,
   "name": "TSC",
-  "attempts": 1
+  "attempts": 2
  },
  "tsys": {
   "dc": "wd1",
@@ -7721,24 +7721,78 @@
   "dc": null,
   "site": null,
   "name": "Tucson Talent",
-  "attempts": 1
+  "attempts": 2
  },
  "tulsacounty": {
   "dc": null,
   "site": null,
   "name": "Tulsa County",
-  "attempts": 1
+  "attempts": 2
  },
  "turo": {
   "dc": "wd12",
   "site": "turo_careers",
   "name": "Turo"
  },
+ "tutorperini": {
+  "dc": "wd12",
+  "site": "External",
+  "name": "Tutor Perini Corporation"
+ },
+ "tysonfoods": {
+  "dc": null,
+  "site": null,
+  "name": "Tyson Foods",
+  "attempts": 1
+ },
+ "ufpi": {
+  "dc": null,
+  "site": null,
+  "name": "UFP Industries",
+  "attempts": 1
+ },
+ "uhaul": {
+  "dc": "wd1",
+  "site": "uhauljobs",
+  "name": "Uhaul"
+ },
+ "uhyus": {
+  "dc": null,
+  "site": null,
+  "name": "UHY",
+  "attempts": 1
+ },
  "ukgrantt": {
   "dc": null,
   "site": null,
   "name": "Grant Thornton",
   "attempts": 3
+ },
+ "uline": {
+  "dc": "wd1",
+  "site": "uline_careers",
+  "name": "Uline"
+ },
+ "ulse": {
+  "dc": "wd5",
+  "site": "ulsecareers",
+  "name": "UL Standards & Engagement"
+ },
+ "ultra": {
+  "dc": null,
+  "site": null,
+  "name": "Ultra Intelligence and Communications",
+  "attempts": 2
+ },
+ "umb": {
+  "dc": "wd1",
+  "site": "umbExternal",
+  "name": "UMB"
+ },
+ "umchealthsystem": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "UMC Health System"
  },
  "univision": {
   "dc": "wd1",
@@ -7761,6 +7815,12 @@
   "dc": "wd1",
   "site": "usfoodscareersExternal",
   "name": "US Foods"
+ },
+ "usventure": {
+  "dc": null,
+  "site": null,
+  "name": "U.S. Venture",
+  "attempts": 1
  },
  "valeo": {
   "dc": "wd3",
