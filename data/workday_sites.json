@@ -2283,6 +2283,11 @@
   "site": "coxhealth_External",
   "name": "CoxHealth"
  },
+ "cpsi": {
+  "dc": "wd1",
+  "site": "cpsi",
+  "name": "TruBridge"
+ },
  "cranecompany": {
   "dc": "wd5",
   "site": "Careers",
@@ -7381,6 +7386,12 @@
   "site": "taylormadegolf",
   "name": "TaylorMade Golf"
  },
+ "tbkbank": {
+  "dc": null,
+  "site": null,
+  "name": "Triumph",
+  "attempts": 1
+ },
  "tcbrands": {
   "dc": null,
   "site": null,
@@ -7415,7 +7426,7 @@
   "dc": null,
   "site": null,
   "name": "Tokyo Electron",
-  "attempts": 1
+  "attempts": 2
  },
  "tempus": {
   "dc": "wd5",
@@ -7530,13 +7541,13 @@
   "dc": null,
   "site": null,
   "name": "ThoughtSpot",
-  "attempts": 2
+  "attempts": 3
  },
  "thyssenkruppmaterialsna": {
   "dc": null,
   "site": null,
   "name": "thyssenkrupp",
-  "attempts": 2
+  "attempts": 3
  },
  "tiaa": {
   "dc": "wd1",
@@ -7547,7 +7558,7 @@
   "dc": null,
   "site": null,
   "name": "TIBCO Software",
-  "attempts": 2
+  "attempts": 3
  },
  "tjx": {
   "dc": "wd1",
@@ -7573,13 +7584,13 @@
   "dc": null,
   "site": null,
   "name": "Tokio Marine Kiln",
-  "attempts": 1
+  "attempts": 2
  },
  "topcon": {
   "dc": null,
   "site": null,
   "name": "Topcon Positioning",
-  "attempts": 1
+  "attempts": 2
  },
  "topgolf": {
   "dc": "wd501",
@@ -7590,7 +7601,7 @@
   "dc": null,
   "site": null,
   "name": "Toyota",
-  "attempts": 1
+  "attempts": 2
  },
  "transamerica": {
   "dc": null,
@@ -7622,12 +7633,39 @@
   "dc": null,
   "site": null,
   "name": "TREK",
-  "attempts": 1
+  "attempts": 2
  },
  "trellix": {
   "dc": null,
   "site": null,
   "name": "Trellix",
+  "attempts": 2
+ },
+ "trendmicro": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Trend Micro"
+ },
+ "tricentis": {
+  "dc": "wd1",
+  "site": "tricentis_careers",
+  "name": "Tricentis"
+ },
+ "trimble": {
+  "dc": "wd1",
+  "site": "trimblecareers",
+  "name": "Trimble"
+ },
+ "trimedx": {
+  "dc": null,
+  "site": null,
+  "name": "TRIMEDX",
+  "attempts": 1
+ },
+ "triumf": {
+  "dc": null,
+  "site": null,
+  "name": "TRIUMF",
   "attempts": 1
  },
  "troweprice": {
@@ -7635,10 +7673,32 @@
   "site": "troweprice",
   "name": "T. Rowe Price"
  },
+ "truist": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Truist Bank"
+ },
+ "trumpf": {
+  "dc": null,
+  "site": null,
+  "name": "TRUMPF",
+  "attempts": 1
+ },
+ "trustage": {
+  "dc": "wd1",
+  "site": "trustage",
+  "name": "TruStage"
+ },
  "trwd": {
   "dc": "wd1",
   "site": "TRWDCareers",
   "name": "Tarrant Regional Water District"
+ },
+ "tsc": {
+  "dc": null,
+  "site": null,
+  "name": "TSC",
+  "attempts": 1
  },
  "tsys": {
   "dc": "wd1",
@@ -7657,6 +7717,23 @@
   "name": "Milwaukee Tool",
   "attempts": 3
  },
+ "tucsonaz": {
+  "dc": null,
+  "site": null,
+  "name": "Tucson Talent",
+  "attempts": 1
+ },
+ "tulsacounty": {
+  "dc": null,
+  "site": null,
+  "name": "Tulsa County",
+  "attempts": 1
+ },
+ "turo": {
+  "dc": "wd12",
+  "site": "turo_careers",
+  "name": "Turo"
+ },
  "ukgrantt": {
   "dc": null,
   "site": null,
@@ -7672,7 +7749,7 @@
   "dc": null,
   "site": null,
   "name": "The Wharton School",
-  "attempts": 2
+  "attempts": 3
  },
  "usbank": {
   "dc": null,
@@ -7761,7 +7838,7 @@
   "dc": null,
   "site": null,
   "name": "The Weir Group",
-  "attempts": 2
+  "attempts": 3
  },
  "wgl": {
   "dc": null,
