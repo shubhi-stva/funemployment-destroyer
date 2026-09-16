@@ -4582,6 +4582,12 @@
   "name": "KSM",
   "attempts": 3
  },
+ "kumc": {
+  "dc": null,
+  "site": null,
+  "name": "University of Kansas Medical Center",
+  "attempts": 1
+ },
  "kyndryl": {
   "dc": null,
   "site": null,
@@ -5682,6 +5688,12 @@
   "site": "External",
   "name": "Norton Rose Fulbright"
  },
+ "nshe": {
+  "dc": null,
+  "site": null,
+  "name": "University of Nevada Las Vegas (UNLV)",
+  "attempts": 2
+ },
  "nshs": {
   "dc": null,
   "site": null,
@@ -6612,6 +6624,12 @@
   "site": null,
   "name": "Roche",
   "attempts": 4
+ },
+ "rochester": {
+  "dc": null,
+  "site": null,
+  "name": "University of Rochester",
+  "attempts": 1
  },
  "rocket": {
   "dc": "wd5",
@@ -7574,7 +7592,7 @@
   "dc": null,
   "site": null,
   "name": "Tihinsurance",
-  "attempts": 1
+  "attempts": 2
  },
  "tjx": {
   "dc": "wd1",
@@ -7698,7 +7716,7 @@
   "dc": null,
   "site": null,
   "name": "University Health",
-  "attempts": 1
+  "attempts": 2
  },
  "trumpf": {
   "dc": null,
@@ -7765,23 +7783,39 @@
   "dc": null,
   "site": null,
   "name": "Tyson Foods",
-  "attempts": 2
+  "attempts": 3
  },
  "uasys": {
   "dc": "wd5",
   "site": "uasys",
   "name": "University of Arkansas"
  },
+ "ubc": {
+  "dc": null,
+  "site": null,
+  "name": "University of British Columbia",
+  "attempts": 1
+ },
  "ucar": {
   "dc": "wd5",
   "site": "ucar_careers",
   "name": "University Corporation for Atmospheric Research"
  },
+ "ucf": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "University of Central Florida"
+ },
+ "uchicago": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "University of Chicago"
+ },
  "ufpi": {
   "dc": null,
   "site": null,
   "name": "UFP Industries",
-  "attempts": 2
+  "attempts": 3
  },
  "uhaul": {
   "dc": "wd1",
@@ -7792,7 +7826,7 @@
   "dc": null,
   "site": null,
   "name": "UHY",
-  "attempts": 2
+  "attempts": 3
  },
  "ukgrantt": {
   "dc": null,
@@ -7826,17 +7860,35 @@
   "site": "External",
   "name": "UMC Health System"
  },
+ "umd": {
+  "dc": null,
+  "site": null,
+  "name": "University of Maryland - College Park",
+  "attempts": 1
+ },
+ "umiami": {
+  "dc": null,
+  "site": null,
+  "name": "University of Miami",
+  "attempts": 2
+ },
+ "ummc": {
+  "dc": null,
+  "site": null,
+  "name": "University of Mississippi Medical Center",
+  "attempts": 1
+ },
  "umusic": {
   "dc": null,
   "site": null,
   "name": "Universal Music Group Careers",
-  "attempts": 1
+  "attempts": 2
  },
  "unilever": {
   "dc": null,
   "site": null,
   "name": "Unilever",
-  "attempts": 1
+  "attempts": 2
  },
  "unisys": {
   "dc": "wd5",
@@ -7847,6 +7899,17 @@
   "dc": "wd1",
   "site": "External",
   "name": "TelevisaUnivision"
+ },
+ "uofl": {
+  "dc": null,
+  "site": null,
+  "name": "University of Louisville",
+  "attempts": 1
+ },
+ "uottawa": {
+  "dc": "wd3",
+  "site": "UOTTAWA_External_Career_Site",
+  "name": "University of Ottawa"
  },
  "upenn": {
   "dc": null,
@@ -7865,6 +7928,12 @@
   "name": "Elavon",
   "attempts": 3
  },
+ "usc": {
+  "dc": null,
+  "site": null,
+  "name": "University of Southern California",
+  "attempts": 1
+ },
  "usfoods": {
   "dc": "wd1",
   "site": "usfoodscareersExternal",
@@ -7874,6 +7943,12 @@
   "dc": null,
   "site": null,
   "name": "U.S. Venture",
+  "attempts": 3
+ },
+ "utaustin": {
+  "dc": null,
+  "site": null,
+  "name": "University of Texas at Austin",
   "attempts": 2
  },
  "valeo": {
@@ -7941,7 +8016,7 @@
   "dc": null,
   "site": null,
   "name": "United Therapeutics Corporation",
-  "attempts": 1
+  "attempts": 2
  },
  "volarisgroup": {
   "dc": null,
