@@ -2104,7 +2104,7 @@
   "dc": null,
   "site": null,
   "name": "The Coca-Cola Company",
-  "attempts": 2
+  "attempts": 3
  },
  "collectorsuniverse": {
   "dc": null,
@@ -2422,7 +2422,7 @@
   "dc": null,
   "site": null,
   "name": "The City of Dallas",
-  "attempts": 2
+  "attempts": 3
  },
  "dallascollege": {
   "dc": null,
@@ -6400,7 +6400,7 @@
   "dc": null,
   "site": null,
   "name": "The Federal Reserve System",
-  "attempts": 2
+  "attempts": 3
  },
  "rbc": {
   "dc": null,
@@ -7172,6 +7172,11 @@
   "name": "Stanford Health Care",
   "attempts": 3
  },
+ "starfish": {
+  "dc": "wd501",
+  "site": "Careers",
+  "name": "Torch Technologies"
+ },
  "starrcompanies": {
   "dc": "wd1",
   "site": "Careers",
@@ -7406,6 +7411,12 @@
   "name": "Ted's Montana Grill",
   "attempts": 3
  },
+ "tel": {
+  "dc": null,
+  "site": null,
+  "name": "Tokyo Electron",
+  "attempts": 1
+ },
  "tempus": {
   "dc": "wd5",
   "site": "tempus_careers",
@@ -7458,7 +7469,7 @@
   "dc": null,
   "site": null,
   "name": "The Composites Solution Partner (CSP)",
-  "attempts": 2
+  "attempts": 3
  },
  "thehartford": {
   "dc": "wd5",
@@ -7475,13 +7486,13 @@
   "dc": null,
   "site": null,
   "name": "The Jackson Laboratory",
-  "attempts": 2
+  "attempts": 3
  },
  "thekineticgroup": {
   "dc": null,
   "site": null,
   "name": "The Kinetic Group",
-  "attempts": 2
+  "attempts": 3
  },
  "theocc": {
   "dc": "wd5",
@@ -7519,13 +7530,13 @@
   "dc": null,
   "site": null,
   "name": "ThoughtSpot",
-  "attempts": 1
+  "attempts": 2
  },
  "thyssenkruppmaterialsna": {
   "dc": null,
   "site": null,
   "name": "thyssenkrupp",
-  "attempts": 1
+  "attempts": 2
  },
  "tiaa": {
   "dc": "wd1",
@@ -7536,7 +7547,7 @@
   "dc": null,
   "site": null,
   "name": "TIBCO Software",
-  "attempts": 1
+  "attempts": 2
  },
  "tjx": {
   "dc": "wd1",
@@ -7548,16 +7559,76 @@
   "site": "External",
   "name": "T-Mobile"
  },
+ "tmx": {
+  "dc": "wd3",
+  "site": "tmx_careers",
+  "name": "TMX Group"
+ },
+ "tnsi": {
+  "dc": "wd1",
+  "site": "Search",
+  "name": "TNS"
+ },
+ "tokiomarinekiln": {
+  "dc": null,
+  "site": null,
+  "name": "Tokio Marine Kiln",
+  "attempts": 1
+ },
+ "topcon": {
+  "dc": null,
+  "site": null,
+  "name": "Topcon Positioning",
+  "attempts": 1
+ },
+ "topgolf": {
+  "dc": "wd501",
+  "site": "topgolfcareers",
+  "name": "Topgolf International"
+ },
+ "toyota": {
+  "dc": null,
+  "site": null,
+  "name": "Toyota",
+  "attempts": 1
+ },
  "transamerica": {
   "dc": null,
   "site": null,
   "name": "Aegon Asset Management",
   "attempts": 3
  },
+ "transperfect": {
+  "dc": "wd5",
+  "site": "transperfect",
+  "name": "TransPerfect"
+ },
+ "transunion": {
+  "dc": "wd5",
+  "site": "transunion",
+  "name": "TransUnion"
+ },
  "travelers": {
   "dc": "wd5",
   "site": "External",
   "name": "The Travelers Companies"
+ },
+ "treehouse": {
+  "dc": "wd1",
+  "site": "treehousecareers",
+  "name": "TreeHouse Foods"
+ },
+ "trekbikes": {
+  "dc": null,
+  "site": null,
+  "name": "TREK",
+  "attempts": 1
+ },
+ "trellix": {
+  "dc": null,
+  "site": null,
+  "name": "Trellix",
+  "attempts": 1
  },
  "troweprice": {
   "dc": "wd5",
@@ -7578,7 +7649,7 @@
   "dc": null,
   "site": null,
   "name": "The Toro Company",
-  "attempts": 2
+  "attempts": 3
  },
  "tti": {
   "dc": null,
@@ -7601,7 +7672,7 @@
   "dc": null,
   "site": null,
   "name": "The Wharton School",
-  "attempts": 1
+  "attempts": 2
  },
  "usbank": {
   "dc": null,
@@ -7690,7 +7761,7 @@
   "dc": null,
   "site": null,
   "name": "The Weir Group",
-  "attempts": 1
+  "attempts": 2
  },
  "wgl": {
   "dc": null,
