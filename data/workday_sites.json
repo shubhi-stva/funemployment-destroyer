@@ -3056,7 +3056,7 @@
   "dc": null,
   "site": null,
   "name": "Farm Credit Canada",
-  "attempts": 2
+  "attempts": 3
  },
  "fei": {
   "dc": "wd5",
@@ -5994,6 +5994,11 @@
   "name": "BlueCross BlueShield of South Carolina",
   "attempts": 3
  },
+ "ouryahoo": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Yahoo"
+ },
  "ovative": {
   "dc": "wd12",
   "site": "ovative",
@@ -8064,7 +8069,7 @@
   "dc": null,
   "site": null,
   "name": "City of Virginia Beach",
-  "attempts": 2
+  "attempts": 3
  },
  "vca": {
   "dc": null,
@@ -8306,7 +8311,7 @@
   "dc": null,
   "site": null,
   "name": "Webster Bank",
-  "attempts": 2
+  "attempts": 3
  },
  "weir": {
   "dc": null,
@@ -8318,7 +8323,7 @@
   "dc": null,
   "site": null,
   "name": "Weld County",
-  "attempts": 1
+  "attempts": 2
  },
  "wellington": {
   "dc": "wd5",
@@ -8344,7 +8349,7 @@
   "dc": null,
   "site": null,
   "name": "Western Alliance",
-  "attempts": 1
+  "attempts": 2
  },
  "westernunion": {
   "dc": "wd5",
@@ -8365,6 +8370,12 @@
   "dc": null,
   "site": null,
   "name": "Wells Fargo",
+  "attempts": 2
+ },
+ "wfscorp": {
+  "dc": null,
+  "site": null,
+  "name": "World Kinect",
   "attempts": 1
  },
  "wgl": {
@@ -8387,7 +8398,7 @@
   "dc": null,
   "site": null,
   "name": "Wilbur-Ellis",
-  "attempts": 1
+  "attempts": 2
  },
  "wiley": {
   "dc": "wd1",
@@ -8398,18 +8409,34 @@
   "dc": null,
   "site": null,
   "name": "William & Mary",
-  "attempts": 1
+  "attempts": 2
  },
  "williams": {
   "dc": "wd5",
   "site": "External",
   "name": "Williams"
  },
+ "winlandfoods": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Winland Foods"
+ },
  "wisconsin": {
   "dc": null,
   "site": null,
   "name": "University of Wisconsin-Madison",
   "attempts": 4
+ },
+ "wisk": {
+  "dc": null,
+  "site": null,
+  "name": "Wisk",
+  "attempts": 1
+ },
+ "wk": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Wolters Kluwer"
  },
  "wmeimg": {
   "dc": null,
@@ -8423,6 +8450,22 @@
   "name": "Warner Music",
   "attempts": 3
  },
+ "wonder": {
+  "dc": null,
+  "site": null,
+  "name": "Wonder",
+  "attempts": 1
+ },
+ "woodmac": {
+  "dc": "wd3",
+  "site": "woodmaccareers",
+  "name": "Wood Mackenzie"
+ },
+ "woodward": {
+  "dc": "wd5",
+  "site": "woodward",
+  "name": "Woodward Governor"
+ },
  "workday": {
   "dc": "wd5",
   "site": "workday",
@@ -8433,21 +8476,73 @@
   "site": "careers",
   "name": "Workiva"
  },
+ "worldpay": {
+  "dc": null,
+  "site": null,
+  "name": "Worldpay",
+  "attempts": 1
+ },
+ "woundedwarriorproject": {
+  "dc": null,
+  "site": null,
+  "name": "Wounded Warrior Project",
+  "attempts": 1
+ },
+ "wpi": {
+  "dc": "wd5",
+  "site": "WPI_External_Career_Site",
+  "name": "Worcester Polytechnic Institute"
+ },
+ "wsfsbank": {
+  "dc": null,
+  "site": null,
+  "name": "WSFS Bank",
+  "attempts": 1
+ },
  "wsu": {
   "dc": null,
   "site": null,
   "name": "Washington State University",
   "attempts": 3
  },
+ "wustl": {
+  "dc": "wd1",
+  "site": "External",
+  "name": "Wustl"
+ },
+ "wvumedicine": {
+  "dc": null,
+  "site": null,
+  "name": "WVUMedicine",
+  "attempts": 1
+ },
  "wwecorp": {
   "dc": "wd5",
   "site": "wwecorp",
   "name": "TKO Group Holdings, Inc"
  },
+ "wwwinc": {
+  "dc": null,
+  "site": null,
+  "name": "Wolverine World Wide",
+  "attempts": 1
+ },
  "xcelenergy": {
   "dc": "wd1",
   "site": "External",
   "name": "Xcel Energy"
+ },
+ "xenergy": {
+  "dc": null,
+  "site": null,
+  "name": "X-energy",
+  "attempts": 1
+ },
+ "xylem": {
+  "dc": null,
+  "site": null,
+  "name": "Xylem",
+  "attempts": 1
  },
  "zoom": {
   "dc": "wd5",
