@@ -3056,7 +3056,7 @@
   "dc": null,
   "site": null,
   "name": "Farm Credit Canada",
-  "attempts": 1
+  "attempts": 2
  },
  "fei": {
   "dc": "wd5",
@@ -3567,7 +3567,7 @@
   "dc": null,
   "site": null,
   "name": "Voya Financial",
-  "attempts": 2
+  "attempts": 3
  },
  "golimitless": {
   "dc": null,
@@ -8064,7 +8064,7 @@
   "dc": null,
   "site": null,
   "name": "City of Virginia Beach",
-  "attempts": 1
+  "attempts": 2
  },
  "vca": {
   "dc": null,
@@ -8241,7 +8241,7 @@
   "dc": null,
   "site": null,
   "name": "VSP Vision",
-  "attempts": 2
+  "attempts": 3
  },
  "vst": {
   "dc": null,
@@ -8263,7 +8263,7 @@
   "dc": null,
   "site": null,
   "name": "Walker & Dunlop",
-  "attempts": 2
+  "attempts": 3
  },
  "walmart": {
   "dc": null,
@@ -8280,7 +8280,7 @@
   "dc": null,
   "site": null,
   "name": "Washpost",
-  "attempts": 2
+  "attempts": 3
  },
  "wasteconnections": {
   "dc": "wd1",
@@ -8306,7 +8306,7 @@
   "dc": null,
   "site": null,
   "name": "Webster Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "weir": {
   "dc": null,
@@ -8314,16 +8314,96 @@
   "name": "The Weir Group",
   "attempts": 3
  },
+ "weldgov": {
+  "dc": null,
+  "site": null,
+  "name": "Weld County",
+  "attempts": 1
+ },
+ "wellington": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Wellington Management"
+ },
+ "wellsky": {
+  "dc": "wd1",
+  "site": "wellskycareers",
+  "name": "WellSky"
+ },
+ "welocalize": {
+  "dc": "wd1",
+  "site": "welocalize",
+  "name": "Welocalize"
+ },
+ "western": {
+  "dc": "wd1",
+  "site": "western",
+  "name": "Western Colorado University"
+ },
+ "westernalliancebank": {
+  "dc": null,
+  "site": null,
+  "name": "Western Alliance",
+  "attempts": 1
+ },
+ "westernunion": {
+  "dc": "wd5",
+  "site": "westernunionjobs",
+  "name": "Western Union"
+ },
+ "westlake": {
+  "dc": "wd1",
+  "site": "westlake",
+  "name": "Westlake"
+ },
+ "wexinc": {
+  "dc": "wd5",
+  "site": "wexinc",
+  "name": "Wex"
+ },
+ "wf": {
+  "dc": null,
+  "site": null,
+  "name": "Wells Fargo",
+  "attempts": 1
+ },
  "wgl": {
   "dc": null,
   "site": null,
   "name": "AltaGas",
   "attempts": 3
  },
+ "wgu": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Western Governors University"
+ },
+ "whitecap": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "White Cap Supply Holdings"
+ },
+ "wilburellis": {
+  "dc": null,
+  "site": null,
+  "name": "Wilbur-Ellis",
+  "attempts": 1
+ },
  "wiley": {
   "dc": "wd1",
   "site": "wiley_careers",
   "name": "John Wiley & Sons"
+ },
+ "williammary": {
+  "dc": null,
+  "site": null,
+  "name": "William & Mary",
+  "attempts": 1
+ },
+ "williams": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Williams"
  },
  "wisconsin": {
   "dc": null,
@@ -8341,7 +8421,7 @@
   "dc": null,
   "site": null,
   "name": "Warner Music",
-  "attempts": 2
+  "attempts": 3
  },
  "workday": {
   "dc": "wd5",
@@ -8357,7 +8437,7 @@
   "dc": null,
   "site": null,
   "name": "Washington State University",
-  "attempts": 2
+  "attempts": 3
  },
  "wwecorp": {
   "dc": "wd5",
