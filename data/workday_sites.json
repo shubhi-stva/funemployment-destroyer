@@ -1815,6 +1815,12 @@
   "name": "Cystic Fibrosis Foundation",
   "attempts": 3
  },
+ "cgg": {
+  "dc": null,
+  "site": null,
+  "name": "Viridien",
+  "attempts": 1
+ },
  "chamberlain": {
   "dc": null,
   "site": null,
@@ -4981,7 +4987,7 @@
   "dc": null,
   "site": null,
   "name": "Vantor",
-  "attempts": 1
+  "attempts": 2
  },
  "mbda": {
   "dc": null,
@@ -5818,7 +5824,7 @@
   "dc": null,
   "site": null,
   "name": "Varian",
-  "attempts": 1
+  "attempts": 2
  },
  "onelineage": {
   "dc": "wd1",
@@ -7943,7 +7949,7 @@
   "dc": null,
   "site": null,
   "name": "USAA",
-  "attempts": 2
+  "attempts": 3
  },
  "usacs": {
   "dc": "wd1",
@@ -7976,7 +7982,7 @@
   "dc": null,
   "site": null,
   "name": "USIC",
-  "attempts": 1
+  "attempts": 2
  },
  "usnh": {
   "dc": "wd5",
@@ -7999,7 +8005,7 @@
   "dc": null,
   "site": null,
   "name": "University of Virginia",
-  "attempts": 2
+  "attempts": 3
  },
  "valeo": {
   "dc": "wd3",
@@ -8030,7 +8036,7 @@
   "dc": null,
   "site": null,
   "name": "Vantage Data Centers",
-  "attempts": 1
+  "attempts": 2
  },
  "vareximaging": {
   "dc": "wd103",
@@ -8063,15 +8069,50 @@
   "site": "venerablecareers",
   "name": "Venerable"
  },
+ "verabradley": {
+  "dc": null,
+  "site": null,
+  "name": "Vera Bradley",
+  "attempts": 1
+ },
+ "veralto": {
+  "dc": null,
+  "site": null,
+  "name": "Veralto",
+  "attempts": 1
+ },
  "verawholehealth": {
   "dc": "wd1",
   "site": "External",
   "name": "Millennium Physician Group"
  },
+ "verdantas": {
+  "dc": null,
+  "site": null,
+  "name": "Verdantas",
+  "attempts": 1
+ },
+ "verizon": {
+  "dc": null,
+  "site": null,
+  "name": "Verizon Communications",
+  "attempts": 1
+ },
  "vermeer": {
   "dc": "wd5",
   "site": "externalcareersite",
   "name": "Vermeer"
+ },
+ "vertexinc": {
+  "dc": "wd1",
+  "site": "vertexinc",
+  "name": "Vertex"
+ },
+ "veteransunited": {
+  "dc": null,
+  "site": null,
+  "name": "Veterans United",
+  "attempts": 1
  },
  "vfc": {
   "dc": "wd5",
@@ -8114,11 +8155,70 @@
   "name": "United Therapeutics Corporation",
   "attempts": 3
  },
+ "viatris": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Viatris"
+ },
+ "viavisolutions": {
+  "dc": "wd1",
+  "site": "Careers",
+  "name": "Viavi Solutions"
+ },
+ "vibrant": {
+  "dc": null,
+  "site": null,
+  "name": "Vibrant Emotional Health",
+  "attempts": 1
+ },
+ "virtua": {
+  "dc": null,
+  "site": null,
+  "name": "Virtua Health",
+  "attempts": 1
+ },
+ "visa": {
+  "dc": "wd5",
+  "site": "visa",
+  "name": "Visa"
+ },
+ "vishay": {
+  "dc": "wd3",
+  "site": "vishaycareers",
+  "name": "Vishay Intertechnology"
+ },
+ "vitalant": {
+  "dc": "wd12",
+  "site": "Careers",
+  "name": "Vitalant"
+ },
+ "vizient": {
+  "dc": "wd1",
+  "site": "vizient_careers",
+  "name": "Vizient"
+ },
  "volarisgroup": {
   "dc": null,
   "site": null,
   "name": "AssetWorks",
   "attempts": 4
+ },
+ "vrtx": {
+  "dc": null,
+  "site": null,
+  "name": "Vertex Pharmaceuticals",
+  "attempts": 2
+ },
+ "vsg": {
+  "dc": "wd1",
+  "site": "vsg",
+  "name": "Vinik Sports Group"
+ },
+ "vst": {
+  "dc": null,
+  "site": null,
+  "name": "Vistra",
+  "attempts": 1
  },
  "vumc": {
   "dc": "wd1",
