@@ -95,6 +95,11 @@
   "ats": "ashby"
  },
  {
+  "name": "4AG Robotics",
+  "slug": "4ag",
+  "ats": "rippling"
+ },
+ {
   "name": "4DS Corp",
   "slug": "4DSCorp",
   "ats": "smartrecruiters"
@@ -3500,6 +3505,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Brady Martz",
+  "slug": "brady-martz",
+  "ats": "workable"
+ },
+ {
   "name": "Brain Co.",
   "slug": "brainco",
   "ats": "ashby"
@@ -4652,6 +4662,11 @@
  {
   "name": "Chuck E. Cheese",
   "slug": "cecentertainment",
+  "ats": "workday"
+ },
+ {
+  "name": "Church & Dwight",
+  "slug": "churchdwight",
   "ats": "workday"
  },
  {
@@ -9380,6 +9395,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Global Engineering & Technology, Inc. (GET)",
+  "slug": "get-career-site",
+  "ats": "workable"
+ },
+ {
   "name": "Global Infrastructure",
   "slug": "gi",
   "ats": "workday"
@@ -11235,6 +11255,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Intelliguard",
+  "slug": "intelliguard",
+  "ats": "rippling"
+ },
+ {
   "name": "Interac",
   "slug": "interac",
   "ats": "workday"
@@ -11578,6 +11603,11 @@
   "name": "Jane Street",
   "slug": "janestreet",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Javelin Global Commodities",
+  "slug": "javelin-global-commodities",
+  "ats": "workable"
  },
  {
   "name": "JCC Greater Boston",
@@ -13827,6 +13857,11 @@
  {
   "name": "Mentis AI",
   "slug": "mentis",
+  "ats": "ashby"
+ },
+ {
+  "name": "Meow",
+  "slug": "meow",
   "ats": "ashby"
  },
  {
@@ -16430,6 +16465,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "PerfectServe",
+  "slug": "perfectserve",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Perficient",
   "slug": "fa-etqd-saasfaprod1.fa.ocs.oraclecloud.com",
   "ats": "oracle"
@@ -17560,6 +17600,11 @@
   "ats": "workday"
  },
  {
+  "name": "Radiant",
+  "slug": "radiant-industries",
+  "ats": "ashby"
+ },
+ {
   "name": "Radiant Info Systems",
   "slug": "RadiantInfoSystemsLtd",
   "ats": "smartrecruiters"
@@ -17955,6 +18000,11 @@
   "ats": "workday"
  },
  {
+  "name": "Republic Airways",
+  "slug": "rjet",
+  "ats": "workday"
+ },
+ {
   "name": "Republic Services",
   "slug": "republic",
   "ats": "workday"
@@ -18008,6 +18058,11 @@
   "name": "Retell AI",
   "slug": "retell-ai",
   "ats": "ashby"
+ },
+ {
+  "name": "REV Robotics",
+  "slug": "rev-robotics",
+  "ats": "rippling"
  },
  {
   "name": "Revantage Corporate Services",
@@ -18388,6 +18443,11 @@
   "name": "Roswell Park Comprehensive Cancer Center",
   "slug": "roswellpark",
   "ats": "workday"
+ },
+ {
+  "name": "Rothesay",
+  "slug": "rothesaygraduates",
+  "ats": "greenhouse"
  },
  {
   "name": "Routeware",
@@ -20105,6 +20165,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Stafford Gray",
+  "slug": "staffordgray",
+  "ats": "workable"
+ },
+ {
   "name": "STAG",
   "slug": "stag-careers",
   "ats": "rippling"
@@ -21685,6 +21750,11 @@
   "ats": "workday"
  },
  {
+  "name": "TOPPAN Packaging Americas",
+  "slug": "toppan",
+  "ats": "workday"
+ },
+ {
   "name": "Topsort",
   "slug": "topsort",
   "ats": "greenhouse"
@@ -23093,6 +23163,11 @@
   "name": "Vmax AI Corp",
   "slug": "vmax",
   "ats": "ashby"
+ },
+ {
+  "name": "VML",
+  "slug": "map",
+  "ats": "greenhouse"
  },
  {
   "name": "VML Enterprise Solutions",
