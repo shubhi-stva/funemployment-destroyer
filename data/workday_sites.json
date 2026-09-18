@@ -8323,7 +8323,7 @@
   "dc": null,
   "site": null,
   "name": "Weld County",
-  "attempts": 2
+  "attempts": 3
  },
  "wellington": {
   "dc": "wd5",
@@ -8349,7 +8349,7 @@
   "dc": null,
   "site": null,
   "name": "Western Alliance",
-  "attempts": 2
+  "attempts": 3
  },
  "westernunion": {
   "dc": "wd5",
@@ -8370,13 +8370,13 @@
   "dc": null,
   "site": null,
   "name": "Wells Fargo",
-  "attempts": 2
+  "attempts": 3
  },
  "wfscorp": {
   "dc": null,
   "site": null,
   "name": "World Kinect",
-  "attempts": 1
+  "attempts": 2
  },
  "wgl": {
   "dc": null,
@@ -8398,7 +8398,7 @@
   "dc": null,
   "site": null,
   "name": "Wilbur-Ellis",
-  "attempts": 2
+  "attempts": 3
  },
  "wiley": {
   "dc": "wd1",
@@ -8409,7 +8409,7 @@
   "dc": null,
   "site": null,
   "name": "William & Mary",
-  "attempts": 2
+  "attempts": 3
  },
  "williams": {
   "dc": "wd5",
@@ -8431,7 +8431,7 @@
   "dc": null,
   "site": null,
   "name": "Wisk",
-  "attempts": 1
+  "attempts": 2
  },
  "wk": {
   "dc": "wd3",
@@ -8454,7 +8454,7 @@
   "dc": null,
   "site": null,
   "name": "Wonder",
-  "attempts": 1
+  "attempts": 2
  },
  "woodmac": {
   "dc": "wd3",
@@ -8480,13 +8480,13 @@
   "dc": null,
   "site": null,
   "name": "Worldpay",
-  "attempts": 1
+  "attempts": 2
  },
  "woundedwarriorproject": {
   "dc": null,
   "site": null,
   "name": "Wounded Warrior Project",
-  "attempts": 1
+  "attempts": 2
  },
  "wpi": {
   "dc": "wd5",
@@ -8497,7 +8497,7 @@
   "dc": null,
   "site": null,
   "name": "WSFS Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "wsu": {
   "dc": null,
@@ -8514,7 +8514,7 @@
   "dc": null,
   "site": null,
   "name": "WVUMedicine",
-  "attempts": 1
+  "attempts": 2
  },
  "wwecorp": {
   "dc": "wd5",
@@ -8525,7 +8525,7 @@
   "dc": null,
   "site": null,
   "name": "Wolverine World Wide",
-  "attempts": 1
+  "attempts": 2
  },
  "xcelenergy": {
   "dc": "wd1",
@@ -8536,13 +8536,66 @@
   "dc": null,
   "site": null,
   "name": "X-energy",
-  "attempts": 1
+  "attempts": 2
  },
  "xylem": {
   "dc": null,
   "site": null,
   "name": "Xylem",
+  "attempts": 2
+ },
+ "yai": {
+  "dc": "wd5",
+  "site": "Careers",
+  "name": "Yai"
+ },
+ "yale": {
+  "dc": "wd1",
+  "site": "External_Career_Site",
+  "name": "Yale University"
+ },
+ "ymcaatlanta": {
+  "dc": null,
+  "site": null,
+  "name": "YMCA of Metropolitan Atlanta",
   "attempts": 1
+ },
+ "zayo": {
+  "dc": "wd1",
+  "site": "zayo_careers",
+  "name": "Zayo"
+ },
+ "zebra": {
+  "dc": "wd501",
+  "site": "zebra_careers",
+  "name": "Zebra Technologies"
+ },
+ "zeissgroup": {
+  "dc": "wd3",
+  "site": "External",
+  "name": "Zeiss"
+ },
+ "zendesk": {
+  "dc": "wd1",
+  "site": "zendesk",
+  "name": "Zendesk"
+ },
+ "zepinc": {
+  "dc": null,
+  "site": null,
+  "name": "Zep",
+  "attempts": 1
+ },
+ "zillow": {
+  "dc": null,
+  "site": null,
+  "name": "Zillow",
+  "attempts": 1
+ },
+ "zoetis": {
+  "dc": "wd5",
+  "site": "zoetis",
+  "name": "Zoetis"
  },
  "zoom": {
   "dc": "wd5",
