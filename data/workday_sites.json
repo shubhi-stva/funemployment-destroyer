@@ -1917,7 +1917,7 @@
   "dc": null,
   "site": null,
   "name": "Church & Dwight",
-  "attempts": 1
+  "attempts": 2
  },
  "cibc": {
   "dc": "wd3",
@@ -6669,7 +6669,7 @@
   "dc": null,
   "site": null,
   "name": "Republic Airways",
-  "attempts": 1
+  "attempts": 2
  },
  "rlicorp": {
   "dc": null,
@@ -7698,7 +7698,7 @@
   "dc": null,
   "site": null,
   "name": "TOPPAN Packaging Americas",
-  "attempts": 1
+  "attempts": 2
  },
  "toyota": {
   "dc": null,
