@@ -5380,6 +5380,12 @@
   "name": "Merck",
   "attempts": 3
  },
+ "msiexpress": {
+  "dc": null,
+  "site": null,
+  "name": "MSI Express",
+  "attempts": 1
+ },
  "msigna": {
   "dc": null,
   "site": null,
@@ -6654,6 +6660,12 @@
   "site": "riotinto_careers",
   "name": "Rio Tinto"
  },
+ "risepoint": {
+  "dc": null,
+  "site": null,
+  "name": "Risepoint",
+  "attempts": 1
+ },
  "rit": {
   "dc": "wd12",
   "site": "Careers",
@@ -7633,6 +7645,11 @@
   "site": null,
   "name": "ThoughtSpot",
   "attempts": 3
+ },
+ "thrivent": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Thrivent"
  },
  "thyssenkruppmaterialsna": {
   "dc": null,
