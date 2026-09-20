@@ -15135,6 +15135,11 @@
   "ats": "lever"
  },
  {
+  "name": "Ninjaholdings",
+  "slug": "ninjaholdings",
+  "ats": "breezy"
+ },
+ {
   "name": "NinjaTrader",
   "slug": "ninjatrader",
   "ats": "greenhouse"
@@ -17118,6 +17123,11 @@
   "name": "PressW",
   "slug": "pressw",
   "ats": "ashby"
+ },
+ {
+  "name": "Priceline",
+  "slug": "priceline",
+  "ats": "workday"
  },
  {
   "name": "Priceline",
@@ -23133,6 +23143,11 @@
   "name": "Visa",
   "slug": "Visa",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Visa",
+  "slug": "visa",
+  "ats": "workday"
  },
  {
   "name": "Visa",
