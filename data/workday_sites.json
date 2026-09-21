@@ -8002,6 +8002,11 @@
   "site": "UOTTAWA_External_Career_Site",
   "name": "University of Ottawa"
  },
+ "upbound": {
+  "dc": "wd501",
+  "site": "upbound",
+  "name": "Upbound Group"
+ },
  "upenn": {
   "dc": null,
   "site": null,

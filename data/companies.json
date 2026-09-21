@@ -345,6 +345,11 @@
   "ats": "lever"
  },
  {
+  "name": "Acima",
+  "slug": "upbound",
+  "ats": "workday"
+ },
+ {
   "name": "ACLU Kentucky",
   "slug": "acluinternships",
   "ats": "greenhouse"
@@ -5303,6 +5308,11 @@
   "name": "Collin College",
   "slug": "collin",
   "ats": "workday"
+ },
+ {
+  "name": "Collinear AI",
+  "slug": "collinear-ai",
+  "ats": "ashby"
  },
  {
   "name": "Cologix",
@@ -19565,6 +19575,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Sirona Medical",
+  "slug": "sironamedical",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Sitreps",
   "slug": "sitrepsllc",
   "ats": "greenhouse"
@@ -22628,6 +22643,11 @@
   "name": "Unwrap",
   "slug": "unwrap",
   "ats": "ashby"
+ },
+ {
+  "name": "Upbound Group",
+  "slug": "upbound",
+  "ats": "workday"
  },
  {
   "name": "Upgrade",
