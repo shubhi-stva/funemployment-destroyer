@@ -5835,6 +5835,11 @@
   "ats": "workday"
  },
  {
+  "name": "Cowboy Space",
+  "slug": "cowboyspace",
+  "ats": "ashby"
+ },
+ {
   "name": "Cox",
   "slug": "cox",
   "ats": "workday"
@@ -7362,6 +7367,11 @@
  {
   "name": "Embry-Riddle Aeronautical University",
   "slug": "embryriddle",
+  "ats": "workday"
+ },
+ {
+  "name": "EMC Insurance",
+  "slug": "emcins",
   "ats": "workday"
  },
  {
@@ -14840,6 +14850,11 @@
   "ats": "workday"
  },
  {
+  "name": "Nebraska Medicine",
+  "slug": "nebraskamed",
+  "ats": "workday"
+ },
+ {
   "name": "NEC Software Solutions",
   "slug": "NECSWS",
   "ats": "smartrecruiters"
@@ -18093,6 +18108,11 @@
   "name": "Restaurant Technologies",
   "slug": "restauranttechnologies",
   "ats": "workday"
+ },
+ {
+  "name": "Resultant",
+  "slug": "Resultant",
+  "ats": "smartrecruiters"
  },
  {
   "name": "Retail Information Systems",
@@ -21610,6 +21630,11 @@
   "ats": "workable"
  },
  {
+  "name": "Thought Forge",
+  "slug": "ThoughtForge",
+  "ats": "smartrecruiters"
+ },
+ {
   "name": "ThoughtSpot",
   "slug": "thoughtspot",
   "ats": "workday"
@@ -23088,6 +23113,11 @@
   "name": "Via",
   "slug": "via",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Vialto Partners",
+  "slug": "vialto",
+  "ats": "workday"
  },
  {
   "name": "Viam",
