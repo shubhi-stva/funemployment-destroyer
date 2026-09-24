@@ -8648,6 +8648,11 @@
   "site": "External",
   "name": "Zeiss"
  },
+ "zekelman": {
+  "dc": "wd12",
+  "site": "Careers",
+  "name": "Zekelman Industries"
+ },
  "zendesk": {
   "dc": "wd1",
   "site": "zendesk",
