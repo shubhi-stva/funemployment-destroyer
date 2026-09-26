@@ -955,6 +955,12 @@
   "site": "azentajobs",
   "name": "Azenta"
  },
+ "azmag": {
+  "dc": null,
+  "site": null,
+  "name": "Maricopa Association of Governments",
+  "attempts": 1
+ },
  "bacardi": {
   "dc": null,
   "site": null,
