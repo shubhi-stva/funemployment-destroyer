@@ -1365,6 +1365,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Amplitude",
+  "slug": "amplitude",
+  "ats": "ashby"
+ },
+ {
   "name": "Ampliwork, Inc",
   "slug": "ampliwork-inc",
   "ats": "rippling"
@@ -9450,6 +9455,11 @@
   "ats": "lever"
  },
  {
+  "name": "GITAI",
+  "slug": "gitai",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Gitar, Inc.",
   "slug": "gitar-careers",
   "ats": "rippling"
@@ -12478,6 +12488,11 @@
   "name": "Lambda",
   "slug": "lambda",
   "ats": "ashby"
+ },
+ {
+  "name": "Laminar",
+  "slug": "runlaminar",
+  "ats": "lever"
  },
  {
   "name": "Land O'Lakes",
