@@ -45,6 +45,11 @@
   "ats": "workday"
  },
  {
+  "name": "21Shares",
+  "slug": "21shares",
+  "ats": "greenhouse"
+ },
+ {
   "name": "23andMe",
   "slug": "23andme",
   "ats": "workday"
@@ -1180,6 +1185,11 @@
   "ats": "workday"
  },
  {
+  "name": "AMCA",
+  "slug": "amca",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Amcor",
   "slug": "amcor",
   "ats": "workday"
@@ -1512,6 +1522,11 @@
  {
   "name": "Anthropic",
   "slug": "anthropic",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Anthropic",
+  "slug": "claudecorps",
   "ats": "greenhouse"
  },
  {
@@ -5980,6 +5995,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Cribl",
+  "slug": "cribl",
+  "ats": "ashby"
+ },
+ {
   "name": "Criteo",
   "slug": "criteo",
   "ats": "workday"
@@ -6933,6 +6953,11 @@
   "name": "DP World",
   "slug": "ehpv.fa.em2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "DPD UK",
+  "slug": "DPDGroupUK1",
+  "ats": "smartrecruiters"
  },
  {
   "name": "DPR Family of Companies",
@@ -7958,6 +7983,11 @@
   "name": "Evolito",
   "slug": "evolito",
   "ats": "workday"
+ },
+ {
+  "name": "EvolutionIQ",
+  "slug": "evolutioniq",
+  "ats": "greenhouse"
  },
  {
   "name": "Evolve Technology",
@@ -13190,6 +13220,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Lucid Computing",
+  "slug": "lucidcomputing",
+  "ats": "ashby"
+ },
+ {
   "name": "Lucid Motors",
   "slug": "lucidmotors",
   "ats": "greenhouse"
@@ -14655,6 +14690,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Morse Micro",
+  "slug": "morse-micro",
+  "ats": "ashby"
+ },
+ {
   "name": "Mosaic",
   "slug": "mosaic",
   "ats": "workday"
@@ -15563,6 +15603,11 @@
   "name": "NTT DATA AIVista",
   "slug": "ntt-data-aivista",
   "ats": "ashby"
+ },
+ {
+  "name": "Nu Quantum",
+  "slug": "nu-quantum",
+  "ats": "workable"
  },
  {
   "name": "Nubank",
@@ -17025,6 +17070,11 @@
   "ats": "workday"
  },
  {
+  "name": "Plot Technologies",
+  "slug": "plot",
+  "ats": "ashby"
+ },
+ {
   "name": "PLS",
   "slug": "plscareers",
   "ats": "greenhouse"
@@ -17163,6 +17213,11 @@
   "name": "Position Imaging",
   "slug": "PositionImagingInc",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Positron",
+  "slug": "positron",
+  "ats": "rippling"
  },
  {
   "name": "Postman",
@@ -20055,6 +20110,11 @@
   "ats": "workday"
  },
  {
+  "name": "Solventum",
+  "slug": "healthcare",
+  "ats": "workday"
+ },
+ {
   "name": "Somerce",
   "slug": "somerce",
   "ats": "workable"
@@ -20933,6 +20993,11 @@
   "name": "Syngenta Group",
   "slug": "SyngentaGroup",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Synhawk",
+  "slug": "synhawk",
+  "ats": "ashby"
  },
  {
   "name": "Synlab",
@@ -24453,6 +24518,11 @@
   "name": "ZeroMark",
   "slug": "zeromark",
   "ats": "ashby"
+ },
+ {
+  "name": "Zeta Global",
+  "slug": "zetaglobal",
+  "ats": "greenhouse"
  },
  {
   "name": "Zettabyte",
