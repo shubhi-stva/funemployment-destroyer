@@ -4210,6 +4210,11 @@
   "ats": "lever"
  },
  {
+  "name": "Capstone Investment Advisors",
+  "slug": "capstoneinvestmentadvisors",
+  "ats": "greenhouse"
+ },
+ {
   "name": "CapTech Consulting",
   "slug": "CapTechConsulting",
   "ats": "smartrecruiters"
@@ -8868,6 +8873,11 @@
   "name": "Found",
   "slug": "found",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Found",
+  "slug": "found",
+  "ats": "ashby"
  },
  {
   "name": "Found Energy",
@@ -16530,6 +16540,11 @@
   "ats": "workday"
  },
  {
+  "name": "Patch My PC",
+  "slug": "patchmypc",
+  "ats": "lever"
+ },
+ {
   "name": "Path Robotics",
   "slug": "pathrobotics",
   "ats": "greenhouse"
@@ -22095,6 +22110,11 @@
   "ats": "workday"
  },
  {
+  "name": "Torus",
+  "slug": "torus",
+  "ats": "rippling"
+ },
+ {
   "name": "Toshiba Global Commerce",
   "slug": "toshibaglobalcommercesolutions",
   "ats": "greenhouse"
@@ -23897,6 +23917,11 @@
  {
   "name": "Welocalize",
   "slug": "welocalize",
+  "ats": "lever"
+ },
+ {
+  "name": "WEP Clinical",
+  "slug": "wepclinical",
   "ats": "lever"
  },
  {
