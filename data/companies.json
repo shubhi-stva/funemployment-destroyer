@@ -395,6 +395,11 @@
   "ats": "workday"
  },
  {
+  "name": "Acuity International",
+  "slug": "acuityinternational",
+  "ats": "workday"
+ },
+ {
   "name": "AcuityMD",
   "slug": "acuitymd",
   "ats": "greenhouse"
@@ -8415,6 +8420,11 @@
   "ats": "lever"
  },
  {
+  "name": "Financeit",
+  "slug": "financeit",
+  "ats": "workable"
+ },
+ {
   "name": "Financial Conduct Authority",
   "slug": "fca",
   "ats": "workday"
@@ -10333,6 +10343,11 @@
   "name": "Helen of Troy",
   "slug": "helenoftroy",
   "ats": "workday"
+ },
+ {
+  "name": "Helion Energy",
+  "slug": "helion",
+  "ats": "ashby"
  },
  {
   "name": "Heliux",
@@ -14345,6 +14360,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Mindex",
+  "slug": "mindex",
+  "ats": "workable"
+ },
+ {
   "name": "Mindlance",
   "slug": "Mindlance2",
   "ats": "smartrecruiters"
@@ -15352,6 +15372,11 @@
  {
   "name": "Nimble Gravity",
   "slug": "nimblegravity",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Nimble Robotics",
+  "slug": "nimblerobotics",
   "ats": "greenhouse"
  },
  {
@@ -17420,6 +17445,11 @@
   "ats": "workday"
  },
  {
+  "name": "Primient",
+  "slug": "primient",
+  "ats": "workday"
+ },
+ {
   "name": "Printpack",
   "slug": "printpack",
   "ats": "workday"
@@ -17968,6 +17998,11 @@
   "name": "Randstad",
   "slug": "Randstad4",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Range",
+  "slug": "range",
+  "ats": "ashby"
  },
  {
   "name": "RapDev",
@@ -19623,6 +19658,11 @@
   "name": "Shirley Ryan AbilityLab",
   "slug": "sralab",
   "ats": "workday"
+ },
+ {
+  "name": "ShopBack",
+  "slug": "shopback-2",
+  "ats": "lever"
  },
  {
   "name": "Shoppers Drug Mart",
@@ -21660,6 +21700,11 @@
   "ats": "workday"
  },
  {
+  "name": "The Focusrite Group",
+  "slug": "focusrite",
+  "ats": "workable"
+ },
+ {
   "name": "The Hartford",
   "slug": "thehartford",
   "ats": "workday"
@@ -22363,6 +22408,11 @@
   "name": "True Anomaly",
   "slug": "trueanomalyinc",
   "ats": "greenhouse"
+ },
+ {
+  "name": "True Environmental",
+  "slug": "true-environmental",
+  "ats": "lever"
  },
  {
   "name": "True Platform",

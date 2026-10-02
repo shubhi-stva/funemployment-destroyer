@@ -138,6 +138,11 @@
   "name": "Activision-Blizzard",
   "attempts": 3
  },
+ "acuityinternational": {
+  "dc": "wd5",
+  "site": "External",
+  "name": "Acuity International"
+ },
  "acushnetgolf": {
   "dc": null,
   "site": null,
@@ -6351,6 +6356,12 @@
   "site": null,
   "name": "Primerica",
   "attempts": 3
+ },
+ "primient": {
+  "dc": null,
+  "site": null,
+  "name": "Primient",
+  "attempts": 1
  },
  "printpack": {
   "dc": "wd1",
