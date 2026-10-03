@@ -37,6 +37,11 @@
   "site": "aamc",
   "name": "Association of American Medical Colleges"
  },
+ "aba": {
+  "dc": "wd1",
+  "site": "aba",
+  "name": "American Bankers Association"
+ },
  "abb": {
   "dc": "wd3",
   "site": "external_career_page",
@@ -7243,6 +7248,11 @@
   "dc": "wd5",
   "site": "External",
   "name": "SouthState Bank"
+ },
+ "spartannash": {
+  "dc": "wd1",
+  "site": "spartannash_careers",
+  "name": "SpartanNash"
  },
  "spe": {
   "dc": null,
