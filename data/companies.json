@@ -1645,6 +1645,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Apple Bank",
+  "slug": "applebank",
+  "ats": "workday"
+ },
+ {
   "name": "Applied Fluid Power",
   "slug": "applied",
   "ats": "workday"
@@ -4565,6 +4570,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Centric Software",
+  "slug": "centricsoftware",
+  "ats": "workday"
+ },
+ {
   "name": "Centrica",
   "slug": "centrica",
   "ats": "workday"
@@ -4617,6 +4627,11 @@
  {
   "name": "Chainlink Labs",
   "slug": "chainlink-labs",
+  "ats": "ashby"
+ },
+ {
+  "name": "Chalk",
+  "slug": "chalk",
   "ats": "ashby"
  },
  {
@@ -7705,6 +7720,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "England Rugby",
+  "slug": "ecer.fa.em2.oraclecloud.com",
+  "ats": "oracle"
+ },
+ {
   "name": "Enigma",
   "slug": "enigmaio",
   "ats": "greenhouse"
@@ -9800,6 +9820,11 @@
   "ats": "lever"
  },
  {
+  "name": "Goodfire",
+  "slug": "goodfire",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Goodnotes",
   "slug": "gntemp",
   "ats": "greenhouse"
@@ -10238,6 +10263,11 @@
   "name": "Hanna Andersson",
   "slug": "hannaandersson",
   "ats": "lever"
+ },
+ {
+  "name": "Happyrobot",
+  "slug": "happyrobot",
+  "ats": "ashby"
  },
  {
   "name": "Harbinger Motors",
@@ -12312,6 +12342,11 @@
  {
   "name": "Kenco Management Services",
   "slug": "kencogroup",
+  "ats": "workday"
+ },
+ {
+  "name": "Kendallgroup",
+  "slug": "kendallgroup",
   "ats": "workday"
  },
  {
@@ -20678,6 +20713,11 @@
   "name": "SpruceID",
   "slug": "sprucesystems",
   "ats": "lever"
+ },
+ {
+  "name": "SpruceID",
+  "slug": "spruceid",
+  "ats": "ashby"
  },
  {
   "name": "Spry Methods",

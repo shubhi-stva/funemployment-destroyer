@@ -593,6 +593,11 @@
   "site": "AutoOwners",
   "name": "Auto-Owners Insurance"
  },
+ "applebank": {
+  "dc": "wd5",
+  "site": "applebankcareers",
+  "name": "Apple Bank"
+ },
  "applied": {
   "dc": "wd501",
   "site": "applied",
@@ -1819,6 +1824,12 @@
   "dc": "wd3",
   "site": "centrica",
   "name": "Centrica"
+ },
+ "centricsoftware": {
+  "dc": null,
+  "site": null,
+  "name": "Centric Software",
+  "attempts": 1
  },
  "cerence": {
   "dc": "wd5",
@@ -4583,6 +4594,12 @@
   "site": null,
   "name": "Kenco Management Services",
   "attempts": 3
+ },
+ "kendallgroup": {
+  "dc": null,
+  "site": null,
+  "name": "Kendallgroup",
+  "attempts": 1
  },
  "kengarff": {
   "dc": null,
