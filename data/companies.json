@@ -125,6 +125,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "66 Degrees",
+  "slug": "66degrees",
+  "ats": "greenhouse"
+ },
+ {
   "name": "7-Eleven",
   "slug": "my7elevenhr",
   "ats": "workday"
@@ -3140,6 +3145,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "BIP Ventures",
+  "slug": "bipventures",
+  "ats": "workable"
+ },
+ {
   "name": "Bird Construction",
   "slug": "bird",
   "ats": "workday"
@@ -5098,6 +5108,11 @@
   "name": "Clarivate",
   "slug": "clarivate",
   "ats": "workday"
+ },
+ {
+  "name": "Clark",
+  "slug": "clark",
+  "ats": "ashby"
  },
  {
   "name": "Clasp",
@@ -8915,6 +8930,11 @@
   "ats": "workday"
  },
  {
+  "name": "Forge Nano",
+  "slug": "forge-nano",
+  "ats": "breezy"
+ },
+ {
   "name": "FormFactor",
   "slug": "formfactor",
   "ats": "workday"
@@ -10468,6 +10488,11 @@
   "name": "Heathrow",
   "slug": "encd.fa.em3.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Hedra",
+  "slug": "hedra",
+  "ats": "ashby"
  },
  {
   "name": "Heidelberg Materials",
@@ -15048,6 +15073,11 @@
   "name": "MUFG",
   "slug": "hcmn.fa.ap1.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "MUFG",
+  "slug": "mufgub",
+  "ats": "workday"
  },
  {
   "name": "Mulligan Funding",
@@ -22933,6 +22963,11 @@
   "name": "UBDS Group",
   "slug": "ubds",
   "ats": "workable"
+ },
+ {
+  "name": "Uber",
+  "slug": "iaziqy.fa.ocs.oraclecloud.com",
+  "ats": "oracle"
  },
  {
   "name": "Uber Freight",
