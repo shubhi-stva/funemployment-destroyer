@@ -5330,6 +5330,11 @@
   "ats": "workable"
  },
  {
+  "name": "Cmu",
+  "slug": "cmu",
+  "ats": "workday"
+ },
+ {
   "name": "CNA Insurance",
   "slug": "cna",
   "ats": "workday"
