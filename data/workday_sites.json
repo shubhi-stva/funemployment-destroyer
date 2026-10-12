@@ -160,6 +160,12 @@
   "name": "Acxiom",
   "attempts": 3
  },
+ "aderant": {
+  "dc": null,
+  "site": null,
+  "name": "Aderant",
+  "attempts": 1
+ },
  "adient": {
   "dc": "wd3",
   "site": "External",
@@ -4546,6 +4552,11 @@
   "site": null,
   "name": "Fabletics",
   "attempts": 3
+ },
+ "kainos": {
+  "dc": "wd3",
+  "site": "kainos",
+  "name": "Kainos"
  },
  "kansashealthsystem": {
   "dc": "wd1",

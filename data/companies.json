@@ -475,6 +475,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Aderant",
+  "slug": "aderant",
+  "ats": "workday"
+ },
+ {
   "name": "ADGA Group Consultants",
   "slug": "ADGAGroupConsultantsInc1",
   "ats": "smartrecruiters"
@@ -6182,6 +6187,11 @@
  {
   "name": "Crown Innovations",
   "slug": "CrownInnovationsInc",
+  "ats": "smartrecruiters"
+ },
+ {
+  "name": "Crown Innovations",
+  "slug": "TBD20261012CrownInnovationsInc",
   "ats": "smartrecruiters"
  },
  {
@@ -12300,6 +12310,11 @@
   "ats": "lever"
  },
  {
+  "name": "Kainos",
+  "slug": "kainos",
+  "ats": "workday"
+ },
+ {
   "name": "Kairos Power",
   "slug": "kairospower",
   "ats": "greenhouse"
@@ -12783,6 +12798,11 @@
   "name": "Laminar",
   "slug": "runlaminar",
   "ats": "lever"
+ },
+ {
+  "name": "Lance",
+  "slug": "lance",
+  "ats": "ashby"
  },
  {
   "name": "Land O'Lakes",
@@ -18688,6 +18708,11 @@
   "name": "Resonate",
   "slug": "resonate",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Resource Innovations",
+  "slug": "resource-innovations",
+  "ats": "workable"
  },
  {
   "name": "RESPEC",
