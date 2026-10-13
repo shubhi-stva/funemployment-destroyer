@@ -167,6 +167,7 @@ def summarise(jobs: list[dict]) -> dict:
             lambda j: (_sort_stamp(j) or datetime.min.replace(tzinfo=timezone.utc))
             >= now - window
         ),
+        "nyc": count(lambda j: j.get("nyc")),
         "noDegreeRequired": count(
             lambda j: j["degreeRequirement"] == classify.DEGREE_NO
         ),

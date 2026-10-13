@@ -104,6 +104,8 @@ def collect() -> list[dict]:
             "companyDomain": "",
             "companyUrl": record.careers_url(url),
             "notes": " · ".join(notes),
+            "nyc": classify.is_nyc_location(location),
+            "pay": "",
             "key": record.content_key(
                 record.resolve_company(row.get("company") or "", "", job_id),
                 title, location),

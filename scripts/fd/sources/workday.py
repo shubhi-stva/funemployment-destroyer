@@ -87,10 +87,10 @@ def poll(company: dict) -> list[dict]:
             title = posting.get("title") or ""
             if not path or path in candidates:
                 continue
-            # Screen on the title before paying for a description.
-            if classify.is_non_tech_title(title):
-                continue
-            if classify.classify_category(title) is None:
+            # Screen on the title before paying for a description. Non-tech
+            # roles are still worth a look in NYC, where pay decides.
+            if (classify.classify_category(title) is None
+                    and not classify.nyc_candidate(posting.get("locationsText") or "")):
                 continue
             candidates[path] = posting
 

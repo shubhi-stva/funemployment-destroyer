@@ -110,6 +110,10 @@ def _revalidate(job: dict) -> list[dict]:
     if job.get("workMode") in ("", "Not specified"):
         job["workMode"] = classify.classify_workmode(None, job.get("location", ""), low)
 
+    if job.get("nyc") and not job.get("pay"):
+        pay = classify.pay_range_hourly(text)
+        job["pay"] = classify.format_pay(pay) if pay else ""
+
     job["key"] = record.content_key(job["company"], job["title"], job["location"])
     return [job]
 

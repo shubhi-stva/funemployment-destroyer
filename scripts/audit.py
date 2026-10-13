@@ -115,7 +115,17 @@ def check(job: dict, body: str) -> list[str]:
             problems.append(f"full-time above entry level ({level})")
 
     # --- scope ---
-    if classify.is_non_tech_title(job["title"]):
+    # Non-tech roles are only allowed in NYC, and only above the pay floor.
+    if job["category"] in classify.NONTECH_CATEGORIES:
+        if not classify.is_nyc_location(job["location"]):
+            problems.append("non-tech role outside NYC")
+        else:
+            pay = classify.pay_range_hourly(text)
+            if not pay or pay[0] < config.NYC_MIN_HOURLY:
+                problems.append(
+                    f"non-tech NYC role paying under ${config.NYC_MIN_HOURLY:g}/hr "
+                    f"({classify.format_pay(pay) if pay else 'no pay found'})")
+    elif classify.is_non_tech_title(job["title"]):
         problems.append("title is not a tech role")
     if classify.is_us_location(job["location"]) is False:
         problems.append(f"location is outside the US ({job['location']})")
@@ -198,7 +208,8 @@ def main() -> int:
             problems = []
             if classify.is_graduate_only(job["title"], ""):
                 problems.append("title implies a graduate degree")
-            if classify.is_non_tech_title(job["title"]):
+            if (classify.is_non_tech_title(job["title"])
+                    and job["category"] not in classify.NONTECH_CATEGORIES):
                 problems.append("title is not a tech role")
             if classify.is_us_location(job["location"]) is False:
                 problems.append("location outside the US")

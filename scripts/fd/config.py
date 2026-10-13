@@ -103,6 +103,15 @@ FULLTIME_ALLOWED_DEGREE: tuple[str, ...] = (
 US_STRICT = os.environ.get("FD_US_STRICT", "1") == "1"
 US_ONLY = os.environ.get("FD_US_ONLY", "1") == "1"
 
+# New York City is the one place the board widens beyond tech. A posting in
+# the city is kept whatever the role -- sales, security, operations, finance
+# -- as long as the bottom of its posted pay range clears NYC_MIN_HOURLY
+# (annual salaries are converted at 2,080 hours). Tech roles in NYC need no
+# pay floor. Every other rule still applies: no years of experience, no hard
+# degree requirement, entry level only.
+NYC_ANY_ROLE = os.environ.get("FD_NYC_ANY_ROLE", "1") == "1"
+NYC_MIN_HOURLY = float(os.environ.get("FD_NYC_MIN_HOURLY", "35"))
+
 FULLTIME_MAX_LEVEL = 1  # see classify.LEVEL_RANK; 1 == Entry Level
 FULLTIME_MAX_YEARS = 0  # any quoted years-of-experience ask disqualifies
 

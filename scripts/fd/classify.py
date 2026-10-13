@@ -1318,3 +1318,177 @@ def graduates_too_early(text_lower: str, my_graduation: str) -> bool:
         return False
     latest = latest_graduation_allowed(text_lower)
     return latest is not None and latest < mine
+
+
+# --------------------------------------------------------------------- NYC
+
+# New York City gets a wider net than the rest of the board: non-tech roles
+# are welcome there too, provided they pay enough. That needs two things the
+# rest of the pipeline never asks: is this posting in the city itself, and
+# what does it pay.
+
+# Boroughs and neighbourhoods that can only mean the city.
+_NYC_PLACES_RE = re.compile(
+    r"\b(?:nyc|new york city|manhattan|brooklyn|bronx|staten island|"
+    r"long island city|queens,?\s*(?:ny|new york)|astoria,?\s*(?:ny|new york))\b"
+)
+# "New York, NY", "New York, New York", "New York NY 10001", "US-NY-New York".
+_NYC_CITY_STATE_RE = re.compile(
+    r"\bnew york\s*,?\s*(?:ny\b|new york\b|\d{5}\b)"
+    r"|\bny\s*[-,]\s*new york\b"
+)
+# A segment that is just "New York" (optionally "..., US") is the city. Here
+# "New York" sits at the start of a location entry rather than after a comma,
+# which is where a state name goes: "Albany, New York" is not the city.
+_NYC_BARE_RE = re.compile(
+    r"(?:^|[;|/]\s*|\s-\s*)new york(?:\s*,\s*(?:us|usa|united states))?\s*(?:$|[;|/(])"
+)
+
+
+def is_nyc_location(location: str) -> bool:
+    """True when any site in the location string is New York City."""
+    text = _fold(norm(location))
+    if not text:
+        return False
+    return bool(
+        _NYC_PLACES_RE.search(text)
+        or _NYC_CITY_STATE_RE.search(text)
+        or _NYC_BARE_RE.search(text)
+    )
+
+
+def nyc_candidate(location: str) -> bool:
+    """Whether a non-tech posting in this location deserves a full fetch."""
+    return config.NYC_ANY_ROLE and is_nyc_location(location)
+
+
+# Full-time hours in a year, for turning a salary into an hourly figure.
+HOURS_PER_YEAR = 2080
+
+_MONEY = r"\$\s?(\d{1,3}(?:,\d{3})+|\d+)(?:\.(\d{1,2}))?\s?(k\b)?"
+# "$85,000 - $110,000", "$30.00/hr to $40.00/hr", "$120k-$150k", or one figure.
+_PAY_RE = re.compile(
+    _MONEY
+    + r"(?:\s*(?:/\s*(?:hr|hour)|per hour|an hour|usd)?\s*(?:-|–|—|to)\s*"
+    + _MONEY.replace(r"\$", r"\$?", 1) + r")?"
+)
+_HOURLY_UNIT_RE = re.compile(r"^[^$.;]{0,40}?(?:/\s*h(?:ou)?r\b|per hour|an hour|hourly|/\s*hour)")
+_ANNUAL_UNIT_RE = re.compile(r"^[^$.;]{0,40}?(?:/\s*y(?:ea)?r\b|per year|per annum|a year|annual|annually|salary)")
+# A dollar figure near these words is not pay: a signing bonus, a stipend, a
+# 401(k) match, or the funding round the company is proud of.
+_NOT_PAY_RE = re.compile(
+    r"bonus|stipend|reimburs|allowance|401|referral|relocation|equity|"
+    r"raised|funding|valuation|revenue|series [a-f]|per month|monthly|"
+    r"per week|weekly|per diem|per visit|commission"
+)
+# "$50 million", "$2B", "$300MM".
+_BIG_NUMBER_RE = re.compile(r"^\s*(?:million|billion|trillion|mm?\b|bn?\b)")
+_NYC_LABEL_RE = re.compile(r"new york|nyc")
+
+
+def _amount(whole: str, cents: str | None, k: str | None) -> float:
+    value = float(whole.replace(",", ""))
+    if cents:
+        value += float(f"0.{cents}")
+    if k:
+        value *= 1000
+    return value
+
+
+def pay_range_hourly(text: str) -> tuple[float, float] | None:
+    """The posted base pay as an hourly (low, high), or None if none found.
+
+    NYC's pay transparency law means nearly every posting there names a
+    range. Annual salaries are converted at 2,080 hours a year. When a posting
+    quotes several ranges (one per city, say), one labelled New York wins;
+    failing that the highest is used, since NYC is almost always the top tier.
+    """
+    low_text = text.lower()
+    best: tuple[float, float] | None = None
+    best_nyc: tuple[float, float] | None = None
+
+    for m in _PAY_RE.finditer(low_text):
+        lo = _amount(m.group(1), m.group(2), m.group(3))
+        hi = _amount(m.group(4), m.group(5), m.group(6)) if m.group(4) else lo
+        # "$120-150k" puts the k on the second figure only.
+        if m.group(6) and not m.group(3) and lo < 1000 <= hi:
+            lo *= 1000
+        if hi < lo:
+            lo, hi = hi, lo
+
+        # Context stops at the previous sentence or figure, so "we raised
+        # $50 million. Salary: $70,000" does not taint the salary.
+        before = re.split(r"[.;$]", low_text[max(0, m.start() - 60):m.start()])[-1]
+        after = low_text[m.end():m.end() + 60]
+        if _BIG_NUMBER_RE.search(after):
+            continue
+        if _NOT_PAY_RE.search(before) or _NOT_PAY_RE.search(after[:20]):
+            continue
+        around = before + low_text[m.start():m.end()] + after[:25]
+
+        if _HOURLY_UNIT_RE.search(after) or (lo < 200 and "hour" in around):
+            hourly = (lo, hi)
+            if not (12 <= lo <= 400):
+                continue
+        elif lo >= 20000 or _ANNUAL_UNIT_RE.search(after):
+            if not (20000 <= lo <= 1_000_000):
+                continue
+            hourly = (lo / HOURS_PER_YEAR, hi / HOURS_PER_YEAR)
+        else:
+            continue  # a bare small figure with no unit: not readable as pay
+
+        if best is None or hourly[0] > best[0]:
+            best = hourly
+        if _NYC_LABEL_RE.search(before) and (best_nyc is None or hourly[0] > best_nyc[0]):
+            best_nyc = hourly
+    return best_nyc or best
+
+
+def format_pay(pay: tuple[float, float]) -> str:
+    lo, hi = (round(v) for v in pay)
+    return f"${lo}/hr" if lo == hi else f"${lo}–${hi}/hr"
+
+
+# Rough buckets so non-tech NYC roles still group sensibly in the Category
+# filter. The first match wins.
+NONTECH_CATEGORY_RULES: list[tuple[str, tuple[str, ...]]] = [
+    ("Sales", (
+        "sales", "account executive", "account manager", "business development",
+        "partnerships", "revenue", "sdr", "bdr", "client advisor",
+    )),
+    ("Security", (
+        "security", "protective services", "loss prevention", "safety",
+    )),
+    ("Finance", (
+        "finance", "financial", "accountant", "accounting", "analyst",
+        "payroll", "controller", "audit", "tax", "treasury", "investment",
+        "trading", "trader", "wealth", "credit", "risk",
+    )),
+    ("Product & Design", (
+        "product manager", "product management", "product owner", "design",
+        "designer", "ux", "user research",
+    )),
+    ("Marketing", (
+        "marketing", "brand", "content", "social media", "communications",
+        "public relations", "copywriter", "growth",
+    )),
+    ("Customer Success", (
+        "customer", "client", "support", "onboarding", "implementation",
+        "success",
+    )),
+    ("Operations", (
+        "operations", "coordinator", "assistant", "office", "logistics",
+        "project", "program", "recruit", "people", "talent", "hr ",
+    )),
+]
+NONTECH_CATEGORY_OTHER = "Other"
+NONTECH_CATEGORIES = frozenset(
+    [name for name, _ in NONTECH_CATEGORY_RULES] + [NONTECH_CATEGORY_OTHER])
+
+
+def classify_nontech_category(title: str) -> str:
+    hay = f" {norm(title)} "
+    for category, keywords in NONTECH_CATEGORY_RULES:
+        if _mentions_word(hay, keywords):
+            return category
+    return NONTECH_CATEGORY_OTHER

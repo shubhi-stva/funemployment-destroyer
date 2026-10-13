@@ -519,7 +519,8 @@ body {
   font-weight: 600;
 }
 
-.chip-degree {
+.chip-degree,
+.chip-pay {
   background: var(--new-soft);
   color: var(--new);
   font-weight: 600;

@@ -29,7 +29,7 @@ at all is fine. The only thing that kills it is a real requirement, either
 spelled out or sitting there as a bare bullet under Qualifications.
 
 On top of that: no GPA floors anywhere, no years of experience asked for, US
-only, and it has to be a tech role.
+only, and it has to be a tech role, except in New York City (below).
 
 The GPA rule used to apply only to full time roles, on the reasoning that
 internships quote a GPA all the time so gating on it would empty the board. A
@@ -37,6 +37,33 @@ internships quote a GPA all the time so gating on it would empty the board. A
 Fairlife's internships were showing up while plainly asking for "cumulative
 GPA of 3.0/4.0, or higher". It now applies to everything, which costs about
 150 listings.
+
+## New York City takes anything that pays
+
+In NYC the board isn't limited to tech. Sales, security, operations,
+finance, a trading assistant: any role is welcome as long as the bottom of
+its posted pay range is at least $35 an hour. Salaries are converted at
+2,080 hours a year, so that's about $72,800. Tech roles in the city don't
+need to clear a pay floor. They live in the NYC tab alongside everything
+else in the city, and the card shows the pay.
+
+This only works because of NYC's pay transparency law, which makes nearly
+every posting in the city state a range. A non-tech posting with no
+readable pay is dropped, since there's no way to tell whether it clears
+the bar.
+
+Reading the pay has the usual traps. "We raised $50 million", a $10,000
+signing bonus and a 401(k) match are all dollar figures that aren't pay,
+so a figure next to those words is skipped. When a posting lists a range
+per city, the one labelled New York wins.
+
+Every other rule still applies: no years of experience, no hard degree
+requirement, nothing above entry level. The roles cut by that last one are
+mostly enterprise account executives and in-house counsel at $100+ an hour,
+which says what they are even when the title doesn't.
+
+`FD_NYC_MIN_HOURLY` moves the floor, and `FD_NYC_ANY_ROLE=0` turns the whole
+thing off.
 
 ## How the degree filter works
 
@@ -295,7 +322,7 @@ data/
 | `companyUrl` | The board page. The company name on each card links here. |
 | `companyDomain` | Used for the icon. Empty means the card falls back to a monogram. |
 | `type` | Internship or Full Time |
-| `category` | One of eight buckets |
+| `category` | One of eight tech buckets, or for a non-tech NYC role Sales, Security, Finance, Product & Design, Marketing, Customer Success, Operations or Other |
 | `season` / `seasons` | "Spring/Summer/Fall 2027" becomes three entries so it shows under each. Empty list means no season named, treated as open to any. |
 | `workMode` | On site, Hybrid, Remote, Not specified |
 | `postedAt` | Kept date only when the source gave no time, so cards never invent a midnight |
@@ -304,6 +331,8 @@ data/
 | `experienceLevel` | Intern or Entry Level (nothing else survives) |
 | `priority` | 0 to 5, drives the priority sort |
 | `notes` | Short line shown on the card |
+| `nyc` | True when any of the posting's locations is New York City |
+| `pay` | Posted base pay as an hourly range, e.g. "$41–$53/hr". NYC postings only, empty when none was found |
 
 Missing fields get sensible defaults, so a partly populated feed still
 renders. Filter options are built from the data at runtime, so adding a new

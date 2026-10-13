@@ -126,11 +126,20 @@ def build(
         REJECTED_IDS.add(job_id)
         return None
 
+    body = classify.clean_text(description)
+    nyc = classify.is_nyc_location(location)
+    pay = classify.pay_range_hourly(body) if nyc else None
+
     category = classify.classify_category(title, department)
     if category is None:
-        return reject()  # not a tech role
+        # Not a tech role. Only New York City widens the net, and only for
+        # roles whose posted pay clears the floor.
+        if not (config.NYC_ANY_ROLE and nyc):
+            return reject()
+        if not pay or pay[0] < config.NYC_MIN_HOURLY:
+            return reject()
+        category = classify.classify_nontech_category(title)
 
-    body = classify.clean_text(description)
     text_lower = body.lower()
     haystack = f"{title.lower()} {text_lower}"
 
@@ -202,6 +211,8 @@ def build(
         "companyUrl": careers_url(url),
         "key": "",   # filled in below, once company/title/location are final
         "notes": summarise(body, degree, internship),
+        "nyc": nyc,
+        "pay": classify.format_pay(pay) if pay else "",
     }
     job["key"] = content_key(job["company"], job["title"], job["location"])
     # Internal marker (stripped before writing): this record was built from a

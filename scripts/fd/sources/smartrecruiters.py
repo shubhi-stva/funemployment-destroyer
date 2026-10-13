@@ -40,9 +40,11 @@ def poll(company: dict) -> list[dict]:
         postings = payload.get("content") or []
         for posting in postings:
             title = posting.get("name") or ""
-            if classify.is_non_tech_title(title):
-                continue
-            if classify.classify_category(title) is None:
+            loc = posting.get("location") or {}
+            where = ", ".join(p for p in (loc.get("city"), loc.get("region")) if p)
+            # Non-tech roles are still worth a look in NYC, where pay decides.
+            if (classify.classify_category(title) is None
+                    and not classify.nyc_candidate(where)):
                 continue
             candidates.append(posting)
         if len(postings) < 100:

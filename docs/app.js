@@ -83,6 +83,7 @@
     all:         function () { return true; },
     internships: function (job) { return job.type === 'Internship'; },
     fulltime:    function (job) { return job.type === 'Full Time'; },
+    nyc:         function (job) { return job.nyc; },
     'new':       function (job) { return job.isNew; },
     favorites:   function (job) { return Storage.has('favorites', job); },
     applied:     function (job) { return Storage.has('applied', job); }
@@ -242,7 +243,9 @@
       status: str(raw.status) || 'open',
       priority: typeof raw.priority === 'number' ? raw.priority : 0,
       source: str(raw.source),
-      notes: str(raw.notes)
+      notes: str(raw.notes),
+      nyc: raw.nyc === true,
+      pay: str(raw.pay)
     };
     job.firstSeenTime = toTime(job.firstSeen);
     job.postedTime = toTime(job.postedAt);
@@ -288,7 +291,7 @@
   // list only shows what is still outstanding. Favorites is excluded on
   // purpose: it is a list curated by hand, and applying to something should
   // not silently empty it.
-  var DISCOVERY_TABS = ['all', 'internships', 'fulltime', 'new'];
+  var DISCOVERY_TABS = ['all', 'internships', 'fulltime', 'nyc', 'new'];
 
   function isDiscoveryTab(name) {
     return DISCOVERY_TABS.indexOf(name) !== -1;
@@ -531,6 +534,7 @@
     // carrying it are dropped rather than shown as filler.
     setChip(field(node, 'location'), job.location);
     setChip(field(node, 'workMode'), job.workMode);
+    setChip(field(node, 'pay'), job.pay);
     // The degree chip only earns its place when it tells you something you
     // could act on. Internships are all "currently enrolled" by definition,
     // and a full-time role that merely prefers a degree is not a gate -- so
