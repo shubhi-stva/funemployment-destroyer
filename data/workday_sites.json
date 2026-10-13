@@ -4875,6 +4875,12 @@
   "site": "llbean_careers",
   "name": "L.L.Bean"
  },
+ "lmcu": {
+  "dc": null,
+  "site": null,
+  "name": "Lake Michigan Credit Union",
+  "attempts": 1
+ },
  "lmu": {
   "dc": "wd1",
   "site": "Careers",
@@ -6423,6 +6429,12 @@
   "dc": "wd5",
   "site": "progyny",
   "name": "Progyny"
+ },
+ "prologis": {
+  "dc": null,
+  "site": null,
+  "name": "Prologis",
+  "attempts": 1
  },
  "proofpoint": {
   "dc": "wd5",
