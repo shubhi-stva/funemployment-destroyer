@@ -5143,7 +5143,7 @@
   "dc": null,
   "site": null,
   "name": "Mdtkangaroo",
-  "attempts": 2
+  "attempts": 3
  },
  "mecca": {
   "dc": "wd3",
@@ -7739,7 +7739,7 @@
   "dc": null,
   "site": null,
   "name": "Thgrp",
-  "attempts": 2
+  "attempts": 3
  },
  "thinkbrg": {
   "dc": null,
@@ -7844,7 +7844,7 @@
   "dc": null,
   "site": null,
   "name": "Tranetechnologies",
-  "attempts": 2
+  "attempts": 3
  },
  "transamerica": {
   "dc": null,
@@ -8108,7 +8108,7 @@
   "dc": null,
   "site": null,
   "name": "Unity",
-  "attempts": 2
+  "attempts": 3
  },
  "univision": {
   "dc": "wd1",
