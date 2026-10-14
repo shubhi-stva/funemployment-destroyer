@@ -4879,7 +4879,7 @@
   "dc": null,
   "site": null,
   "name": "Lake Michigan Credit Union",
-  "attempts": 1
+  "attempts": 2
  },
  "lmu": {
   "dc": "wd1",
@@ -6434,7 +6434,7 @@
   "dc": null,
   "site": null,
   "name": "Prologis",
-  "attempts": 1
+  "attempts": 2
  },
  "proofpoint": {
   "dc": "wd5",
