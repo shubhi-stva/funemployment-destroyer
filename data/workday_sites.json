@@ -7362,7 +7362,7 @@
   "dc": null,
   "site": null,
   "name": "SPS Commerce",
-  "attempts": 1
+  "attempts": 2
  },
  "sralab": {
   "dc": "wd1",
@@ -8590,7 +8590,7 @@
   "dc": null,
   "site": null,
   "name": "Whataburger",
-  "attempts": 1
+  "attempts": 2
  },
  "whitecap": {
   "dc": "wd1",
