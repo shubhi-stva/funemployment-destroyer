@@ -339,6 +339,11 @@
   "name": "ALFA LAVAL",
   "attempts": 3
  },
+ "aliaxis": {
+  "dc": "wd3",
+  "site": "aliaxis",
+  "name": "Alliaxis"
+ },
  "alkami": {
   "dc": "wd12",
   "site": "alkami",
