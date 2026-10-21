@@ -8542,6 +8542,11 @@
   "site": "welocalize",
   "name": "Welocalize"
  },
+ "werner": {
+  "dc": "wd501",
+  "site": "werner",
+  "name": "Werner"
+ },
  "western": {
   "dc": "wd1",
   "site": "western",
