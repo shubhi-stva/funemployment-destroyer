@@ -6423,6 +6423,11 @@
   "name": "Primerica",
   "attempts": 3
  },
+ "primetherapeutics": {
+  "dc": "wd1",
+  "site": "primetherapeuticscareers",
+  "name": "Prime Therapeutics"
+ },
  "primient": {
   "dc": null,
   "site": null,
