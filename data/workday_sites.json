@@ -2370,7 +2370,7 @@
   "dc": null,
   "site": null,
   "name": "Crescent Energy",
-  "attempts": 1
+  "attempts": 2
  },
  "crestnicholson": {
   "dc": null,
@@ -3399,7 +3399,7 @@
   "dc": null,
   "site": null,
   "name": "FedEx Freight",
-  "attempts": 1
+  "attempts": 2
  },
  "freseniusglobal": {
   "dc": null,
@@ -5918,7 +5918,7 @@
   "dc": null,
   "site": null,
   "name": "OATEY",
-  "attempts": 1
+  "attempts": 2
  },
  "oceanspray": {
   "dc": "wd5",
