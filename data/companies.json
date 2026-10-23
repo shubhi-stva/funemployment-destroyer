@@ -1255,6 +1255,11 @@
   "ats": "workday"
  },
  {
+  "name": "AMEND Consulting",
+  "slug": "amendconsulting",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Amentum",
   "slug": "pae",
   "ats": "workday"
@@ -6205,6 +6210,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Crescent Energy",
+  "slug": "crescentenergyco",
+  "ats": "workday"
+ },
+ {
   "name": "Crest Industries",
   "slug": "crestoperations",
   "ats": "lever"
@@ -8575,6 +8585,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "FedEx Freight",
+  "slug": "freight",
+  "ats": "workday"
+ },
+ {
   "name": "Fehr & Peers",
   "slug": "fehrandpeers",
   "ats": "lever"
@@ -9673,6 +9688,11 @@
   "name": "Genesis Therapeutics",
   "slug": "genesis-therapeutics",
   "ats": "ashby"
+ },
+ {
+  "name": "Genesys",
+  "slug": "genesys",
+  "ats": "workday"
  },
  {
   "name": "Genesys",
@@ -11605,6 +11625,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Infinitum",
+  "slug": "infinitumelectric",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Inflection",
   "slug": "inflectionai",
   "ats": "greenhouse"
@@ -12205,6 +12230,11 @@
   "ats": "lever"
  },
  {
+  "name": "Jampack AI",
+  "slug": "jampack-ai",
+  "ats": "ashby"
+ },
+ {
   "name": "Jane Street",
   "slug": "janestreet",
   "ats": "greenhouse"
@@ -12443,6 +12473,11 @@
   "name": "Juniper Square",
   "slug": "junipersquare",
   "ats": "ashby"
+ },
+ {
+  "name": "Jupiter Intelligence",
+  "slug": "jupiterintel",
+  "ats": "lever"
  },
  {
   "name": "Justworks",
@@ -15420,6 +15455,11 @@
   "ats": "oracle"
  },
  {
+  "name": "Mytos",
+  "slug": "mytos",
+  "ats": "lever"
+ },
+ {
   "name": "Mytra",
   "slug": "mytra",
   "ats": "rippling"
@@ -15433,6 +15473,11 @@
   "name": "N1",
   "slug": "n1",
   "ats": "ashby"
+ },
+ {
+  "name": "N1 Health",
+  "slug": "algorex",
+  "ats": "lever"
  },
  {
   "name": "n8n",
@@ -15812,6 +15857,11 @@
  {
   "name": "Nex",
   "slug": "nex",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Nexla",
+  "slug": "nexla",
   "ats": "greenhouse"
  },
  {
@@ -16267,6 +16317,11 @@
  {
   "name": "Oaktree Capital Management",
   "slug": "oaktree",
+  "ats": "workday"
+ },
+ {
+  "name": "OATEY",
+  "slug": "oatey",
   "ats": "workday"
  },
  {
@@ -17123,6 +17178,11 @@
   "name": "Parkdepot",
   "slug": "salesdemo-jr",
   "ats": "lever"
+ },
+ {
+  "name": "Parker",
+  "slug": "parker",
+  "ats": "ashby"
  },
  {
   "name": "Parsons",
@@ -18195,6 +18255,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Prosync",
+  "slug": "prosync",
+  "ats": "workable"
+ },
+ {
   "name": "Protech Automotive Solutions",
   "slug": "calibercollision",
   "ats": "workday"
@@ -18807,6 +18872,11 @@
  {
   "name": "Regal",
   "slug": "regalvoice",
+  "ats": "lever"
+ },
+ {
+  "name": "Regal",
+  "slug": "regal",
   "ats": "lever"
  },
  {
@@ -21370,6 +21440,11 @@
   "ats": "lever"
  },
  {
+  "name": "Stefanini",
+  "slug": "Stefanini1",
+  "ats": "smartrecruiters"
+ },
+ {
   "name": "STEM Expert",
   "slug": "StemXpert1",
   "ats": "smartrecruiters"
@@ -22013,6 +22088,11 @@
   "name": "TD Synnex",
   "slug": "synnex",
   "ats": "workday"
+ },
+ {
+  "name": "TeamSnap",
+  "slug": "teamsnap",
+  "ats": "lever"
  },
  {
   "name": "Teamworks",
@@ -23995,6 +24075,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Veeda AI",
+  "slug": "veeda-ai",
+  "ats": "ashby"
+ },
+ {
   "name": "Veeva Systems",
   "slug": "veeva",
   "ats": "lever"
@@ -25090,6 +25175,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Worldscape Technology",
+  "slug": "worldscape-technology",
+  "ats": "lever"
+ },
+ {
   "name": "WorldStrides",
   "slug": "world4822stri986des",
   "ats": "greenhouse"
@@ -25363,6 +25453,11 @@
   "name": "Zen Educate",
   "slug": "zeneducate",
   "ats": "lever"
+ },
+ {
+  "name": "Zen3",
+  "slug": "Zen31",
+  "ats": "smartrecruiters"
  },
  {
   "name": "Zendesk",

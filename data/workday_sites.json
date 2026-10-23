@@ -2366,6 +2366,12 @@
   "name": "Credit Acceptance Careers",
   "attempts": 3
  },
+ "crescentenergyco": {
+  "dc": null,
+  "site": null,
+  "name": "Crescent Energy",
+  "attempts": 1
+ },
  "crestnicholson": {
   "dc": null,
   "site": null,
@@ -3388,6 +3394,12 @@
   "site": null,
   "name": "Freese and Nichols",
   "attempts": 3
+ },
+ "freight": {
+  "dc": null,
+  "site": null,
+  "name": "FedEx Freight",
+  "attempts": 1
  },
  "freseniusglobal": {
   "dc": null,
@@ -5901,6 +5913,12 @@
   "dc": "wd1",
   "site": "oaktree",
   "name": "Oaktree Capital Management"
+ },
+ "oatey": {
+  "dc": null,
+  "site": null,
+  "name": "OATEY",
+  "attempts": 1
  },
  "oceanspray": {
   "dc": "wd5",
