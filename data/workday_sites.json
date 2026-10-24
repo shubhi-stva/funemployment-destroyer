@@ -311,6 +311,12 @@
   "site": "External",
   "name": "Albemarle"
  },
+ "albertamotorassociation": {
+  "dc": null,
+  "site": null,
+  "name": "AMA",
+  "attempts": 1
+ },
  "alcoa": {
   "dc": "wd5",
   "site": "Careers",
