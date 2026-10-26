@@ -595,6 +595,11 @@
   "ats": "workday"
  },
  {
+  "name": "Aegon Asset Management",
+  "slug": "transamerica",
+  "ats": "workday"
+ },
+ {
   "name": "Aera Technology",
   "slug": "aeratechnology",
   "ats": "lever"
@@ -8560,6 +8565,11 @@
   "ats": "workday"
  },
  {
+  "name": "Farmersmutualhailinsurancecompany",
+  "slug": "farmersmutualhailinsurancecompany",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Faros AI",
   "slug": "faros-ai",
   "ats": "ashby"
@@ -11947,6 +11957,11 @@
  {
   "name": "Interdigital",
   "slug": "interdigital",
+  "ats": "workday"
+ },
+ {
+  "name": "Interface",
+  "slug": "interface",
   "ats": "workday"
  },
  {
@@ -22823,6 +22838,11 @@
   "name": "Thrive Global",
   "slug": "thriveglobal",
   "ats": "rippling"
+ },
+ {
+  "name": "Thrivent",
+  "slug": "thrivent",
+  "ats": "workday"
  },
  {
   "name": "Thrivent",
