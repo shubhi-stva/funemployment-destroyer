@@ -4191,6 +4191,11 @@
   "site": "IDEXX",
   "name": "IDEXX"
  },
+ "iff": {
+  "dc": "wd5",
+  "site": "iff_careers",
+  "name": "International Flavors & Fragrances"
+ },
  "igsenergy": {
   "dc": "wd1",
   "site": "IGS",
@@ -5622,6 +5627,12 @@
   "site": null,
   "name": "Nasdaq",
   "attempts": 3
+ },
+ "nationalindemnity": {
+  "dc": null,
+  "site": null,
+  "name": "National Indemnity Company",
+  "attempts": 1
  },
  "nationwide": {
   "dc": null,
