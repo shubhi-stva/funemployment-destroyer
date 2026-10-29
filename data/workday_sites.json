@@ -1893,6 +1893,11 @@
   "name": "Charter Manufacturing",
   "attempts": 3
  },
+ "chathamfinancial": {
+  "dc": "wd501",
+  "site": "chathamfinancial",
+  "name": "Chathamfinancial"
+ },
  "chaucergroup": {
   "dc": null,
   "site": null,
@@ -6277,6 +6282,12 @@
   "site": "pentair_careers",
   "name": "Pentair"
  },
+ "pernodricard": {
+  "dc": null,
+  "site": null,
+  "name": "Pernod Ricard, créateurs de convivialité",
+  "attempts": 1
+ },
  "petermillarllc": {
   "dc": null,
   "site": null,
@@ -7641,6 +7652,12 @@
   "dc": "wd12",
   "site": "tandemdiabetes",
   "name": "Tandem Diabetes Care"
+ },
+ "tapestry": {
+  "dc": null,
+  "site": null,
+  "name": "Tapestry",
+  "attempts": 1
  },
  "target": {
   "dc": "wd5",

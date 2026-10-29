@@ -845,6 +845,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Akuna Capital",
+  "slug": "akunacapitaloci",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Al Warren Oil Company",
   "slug": "al-warren-oil-company-inc",
   "ats": "workable"
@@ -1660,6 +1665,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "APCON",
+  "slug": "apcon",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Apera AI",
   "slug": "aperaaiinc",
   "ats": "greenhouse"
@@ -2305,6 +2315,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Astronics",
+  "slug": "astronicscorporation",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Astronomer",
   "slug": "astronomer",
   "ats": "ashby"
@@ -2382,6 +2397,11 @@
  {
   "name": "Atomic Machines",
   "slug": "atomicmachines",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Atomic Object",
+  "slug": "atomicobject",
   "ats": "greenhouse"
  },
  {
@@ -2920,6 +2940,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "BarkleyOKRP",
+  "slug": "barkleyokrp",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Barnard College",
   "slug": "barnard",
   "ats": "workday"
@@ -3023,6 +3048,11 @@
   "name": "Beaconsoftware",
   "slug": "beaconsoftware",
   "ats": "ashby"
+ },
+ {
+  "name": "Beauhurst",
+  "slug": "beauhurst",
+  "ats": "greenhouse"
  },
  {
   "name": "Becton Dickinson",
@@ -4585,6 +4615,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Castelion",
+  "slug": "castelioncorporation",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Castle",
   "slug": "castle",
   "ats": "ashby"
@@ -4713,6 +4748,11 @@
   "name": "Center for Internet Security (CIS)",
   "slug": "cisecurity",
   "ats": "workday"
+ },
+ {
+  "name": "Center for Strategic and International Studies",
+  "slug": "centerforstrategicandinternationalstudiesinc",
+  "ats": "greenhouse"
  },
  {
   "name": "Centerfield",
@@ -4883,6 +4923,11 @@
   "name": "CharterUP",
   "slug": "charterup",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Chathamfinancial",
+  "slug": "chathamfinancial",
+  "ats": "workday"
  },
  {
   "name": "Chaucer Group",
@@ -6405,6 +6450,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Crystal Dynamics",
+  "slug": "crystaldynamics",
+  "ats": "greenhouse"
+ },
+ {
   "name": "CSA Group",
   "slug": "csagroup",
   "ats": "workday"
@@ -7143,6 +7193,11 @@
   "name": "Ditto AI",
   "slug": "dittoai",
   "ats": "ashby"
+ },
+ {
+  "name": "DivcoWest",
+  "slug": "divcowest",
+  "ats": "greenhouse"
  },
  {
   "name": "Divergent Technologies",
@@ -8930,6 +8985,11 @@
   "ats": "workday"
  },
  {
+  "name": "First Due",
+  "slug": "localitymediallcdbafirstdue",
+  "ats": "greenhouse"
+ },
+ {
   "name": "First Eagle Investments",
   "slug": "fei",
   "ats": "workday"
@@ -9102,6 +9162,11 @@
  {
   "name": "Flow Traders",
   "slug": "flowtraders",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Flow Traders",
+  "slug": "ftsp27co-ops",
   "ats": "greenhouse"
  },
  {
@@ -9372,6 +9437,11 @@
  {
   "name": "Foxglove",
   "slug": "foxglove",
+  "ats": "ashby"
+ },
+ {
+  "name": "Fractile",
+  "slug": "fractile",
   "ats": "ashby"
  },
  {
@@ -10835,6 +10905,11 @@
   "ats": "oracle"
  },
  {
+  "name": "Hearst",
+  "slug": "hearst",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Heart Aerospace",
   "slug": "heartaerospace",
   "ats": "greenhouse"
@@ -11290,6 +11365,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "HPS Investment Partners",
+  "slug": "hpsinterns",
+  "ats": "greenhouse"
+ },
+ {
   "name": "HRL Laboratories",
   "slug": "dodmg",
   "ats": "lever"
@@ -11343,6 +11423,11 @@
   "name": "Human Computer Lab",
   "slug": "human-computer-lab",
   "ats": "ashby"
+ },
+ {
+  "name": "Human Interest",
+  "slug": "humaninterestswe1",
+  "ats": "greenhouse"
  },
  {
   "name": "Humana",
@@ -11468,6 +11553,11 @@
   "name": "i360technologies",
   "slug": "I360technologies",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "i360technologies",
+  "slug": "i360technologiesinc",
+  "ats": "greenhouse"
  },
  {
   "name": "iA American",
@@ -14280,6 +14370,11 @@
   "ats": "workday"
  },
  {
+  "name": "Mantari",
+  "slug": "mantari",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Manulife Financial",
   "slug": "manulife",
   "ats": "workday"
@@ -15225,6 +15320,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "MissionOne Media",
+  "slug": "missiononemedia",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Mistral AI",
   "slug": "mistral",
   "ats": "lever"
@@ -16070,6 +16170,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "New York ISO",
+  "slug": "nyisocoops",
+  "ats": "greenhouse"
+ },
+ {
   "name": "New York Post Holdings",
   "slug": "dowjones",
   "ats": "workday"
@@ -16775,6 +16880,11 @@
   "ats": "ashby"
  },
  {
+  "name": "OLIX",
+  "slug": "olix",
+  "ats": "ashby"
+ },
+ {
   "name": "Olo",
   "slug": "olo",
   "ats": "lever"
@@ -16853,6 +16963,11 @@
   "name": "OneDigital",
   "slug": "onedigital",
   "ats": "workday"
+ },
+ {
+  "name": "OneEthos",
+  "slug": "oneethos",
+  "ats": "greenhouse"
  },
  {
   "name": "OneImaging",
@@ -17745,6 +17860,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Pernod Ricard, créateurs de convivialité",
+  "slug": "pernodricard",
+  "ats": "workday"
+ },
+ {
   "name": "Perpay",
   "slug": "perpay",
   "ats": "greenhouse"
@@ -18585,6 +18705,11 @@
   "ats": "workable"
  },
  {
+  "name": "Protagonist",
+  "slug": "protagonist",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Protech Automotive Solutions",
   "slug": "calibercollision",
   "ats": "workday"
@@ -18855,6 +18980,11 @@
   "ats": "lever"
  },
  {
+  "name": "Qube Research & Technologies",
+  "slug": "quberesearchandtechnologies",
+  "ats": "greenhouse"
+ },
+ {
   "name": "QuEra Computing",
   "slug": "queracomputinginc",
   "ats": "greenhouse"
@@ -19082,6 +19212,11 @@
  {
   "name": "Reach Financial",
   "slug": "reach",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Reach3 Insights",
+  "slug": "reach3insights",
   "ats": "greenhouse"
  },
  {
@@ -20395,6 +20530,11 @@
   "ats": "workable"
  },
  {
+  "name": "SCM",
+  "slug": "scmaea",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Scopely",
   "slug": "scopely",
   "ats": "greenhouse"
@@ -21000,6 +21140,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "SiTime",
+  "slug": "sitimecorporation",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Sitreps",
   "slug": "sitrepsllc",
   "ats": "greenhouse"
@@ -21410,6 +21555,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "SoundExchange",
+  "slug": "sxinternships",
+  "ats": "greenhouse"
+ },
+ {
   "name": "SourceDirect Talent",
   "slug": "SourceDirectTalent",
   "ats": "smartrecruiters"
@@ -21447,6 +21597,11 @@
  {
   "name": "Space Kinetic",
   "slug": "spacekinetic",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "Spaceium",
+  "slug": "spaceium",
   "ats": "greenhouse"
  },
  {
@@ -21735,6 +21890,11 @@
   "ats": "oracle"
  },
  {
+  "name": "Star Catcher",
+  "slug": "star-catcher",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Starbridge",
   "slug": "starbridge",
   "ats": "ashby"
@@ -22012,6 +22172,11 @@
  {
   "name": "Substack",
   "slug": "substack",
+  "ats": "ashby"
+ },
+ {
+  "name": "Subtotal",
+  "slug": "subtotal",
   "ats": "ashby"
  },
  {
@@ -22410,6 +22575,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Tapestry",
+  "slug": "tapestry",
+  "ats": "workday"
+ },
+ {
   "name": "Target",
   "slug": "target",
   "ats": "workday"
@@ -22803,6 +22973,11 @@
   "name": "Texas Water Development Board",
   "slug": "TexasWaterDevelopmentBoardTWDB",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "TextNow",
+  "slug": "textnowinc",
+  "ats": "greenhouse"
  },
  {
   "name": "Teya",
@@ -23292,6 +23467,11 @@
  {
   "name": "Toast",
   "slug": "toast",
+  "ats": "greenhouse"
+ },
+ {
+  "name": "TobogganLabs",
+  "slug": "tobogganlabs",
   "ats": "greenhouse"
  },
  {
