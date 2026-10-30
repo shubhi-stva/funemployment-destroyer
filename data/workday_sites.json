@@ -8293,6 +8293,12 @@
   "site": "valeo_jobs",
   "name": "Valeo"
  },
+ "valeris": {
+  "dc": null,
+  "site": null,
+  "name": "Valeris",
+  "attempts": 1
+ },
  "valmet": {
   "dc": "wd103",
   "site": "External",
