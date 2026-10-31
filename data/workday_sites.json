@@ -1293,6 +1293,12 @@
   "name": "BJ's Wholesale Club",
   "attempts": 3
  },
+ "blackline": {
+  "dc": null,
+  "site": null,
+  "name": "BlackLine",
+  "attempts": 1
+ },
  "blackrock": {
   "dc": null,
   "site": null,
@@ -5018,6 +5024,12 @@
   "site": "lytx",
   "name": "Lytx Careers"
  },
+ "macfound": {
+  "dc": null,
+  "site": null,
+  "name": "John D. and Catherine T. MacArthur Foundation",
+  "attempts": 1
+ },
  "madixinc": {
   "dc": null,
   "site": null,
@@ -7172,6 +7184,11 @@
   "site": null,
   "name": "Sentry Insurance",
   "attempts": 3
+ },
+ "servicetitan": {
+  "dc": "wd1",
+  "site": "servicetitan",
+  "name": "ServiceTitan"
  },
  "sglottery": {
   "dc": null,
