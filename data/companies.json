@@ -7830,6 +7830,11 @@
   "ats": "workday"
  },
  {
+  "name": "Element Solutions",
+  "slug": "elementsolutions",
+  "ats": "lever"
+ },
+ {
   "name": "Elevance Health",
   "slug": "elevancehealth",
   "ats": "workday"
@@ -14632,6 +14637,11 @@
  {
   "name": "Marshfield Clinic Health System",
   "slug": "marshfieldclinichealthsystems",
+  "ats": "workday"
+ },
+ {
+  "name": "Martin's Point Health Care",
+  "slug": "martin",
   "ats": "workday"
  },
  {
@@ -21895,6 +21905,11 @@
   "ats": "workday"
  },
  {
+  "name": "Sperry Rail",
+  "slug": "sperry-rail-inc",
+  "ats": "rippling"
+ },
+ {
   "name": "Sphinx Defense",
   "slug": "sphinxdefense",
   "ats": "greenhouse"
@@ -22942,6 +22957,11 @@
  {
   "name": "Tecsa",
   "slug": "tecsa",
+  "ats": "workable"
+ },
+ {
+  "name": "Tecsys",
+  "slug": "tecsys",
   "ats": "workable"
  },
  {
