@@ -610,6 +610,12 @@
   "site": "AutoOwners",
   "name": "Auto-Owners Insurance"
  },
+ "apacheip": {
+  "dc": null,
+  "site": null,
+  "name": "Apache Industrial",
+  "attempts": 1
+ },
  "applebank": {
   "dc": "wd5",
   "site": "applebankcareers",
