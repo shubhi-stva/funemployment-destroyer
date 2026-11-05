@@ -487,6 +487,11 @@
   "site": "amcor_external_career_site",
   "name": "Amcor"
  },
+ "amerch": {
+  "dc": "wd1",
+  "site": "amerchcareers",
+  "name": "Anderson Merchandisers"
+ },
  "ameren": {
   "dc": "wd1",
   "site": "External",
