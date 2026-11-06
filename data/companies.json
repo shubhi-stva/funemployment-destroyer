@@ -1345,6 +1345,11 @@
   "ats": "workday"
  },
  {
+  "name": "American College of Obstetricians and Gynecologists",
+  "slug": "acog",
+  "ats": "greenhouse"
+ },
+ {
   "name": "American Electric Power",
   "slug": "aep",
   "ats": "workday"
@@ -2908,6 +2913,11 @@
   "name": "Baldwin Group",
   "slug": "baldwin",
   "ats": "workday"
+ },
+ {
+  "name": "Ballotpedia",
+  "slug": "ballotpedia",
+  "ats": "workable"
  },
  {
   "name": "BambooHR",
@@ -11425,6 +11435,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Horizon3.ai",
+  "slug": "horizon3ai",
+  "ats": "ashby"
+ },
+ {
   "name": "Hormel Foods",
   "slug": "ekkh.fa.us2.oraclecloud.com",
   "ats": "oracle"
@@ -11473,6 +11488,11 @@
   "name": "Howmet Aerospace",
   "slug": "fa-exty-saasfaprod1.fa.ocs.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "HoYoverse",
+  "slug": "hoyoverse",
+  "ats": "ashby"
  },
  {
   "name": "HP IQ",
@@ -14243,6 +14263,11 @@
   "name": "Lumaril",
   "slug": "lumaril-corporation",
   "ats": "lever"
+ },
+ {
+  "name": "Lumbermen's",
+  "slug": "lumbermens",
+  "ats": "greenhouse"
  },
  {
   "name": "Lumentum",
@@ -17060,6 +17085,11 @@
   "ats": "workday"
  },
  {
+  "name": "OHM Advisors",
+  "slug": "ohm-advisors",
+  "ats": "workable"
+ },
+ {
   "name": "Oklahoma State Government",
   "slug": "okgov",
   "ats": "workday"
@@ -18153,6 +18183,11 @@
   "name": "Perseus Group",
   "slug": "talentmanagementsolution",
   "ats": "workday"
+ },
+ {
+  "name": "Persimmons.ai",
+  "slug": "persimmons-ai",
+  "ats": "workable"
  },
  {
   "name": "Persona",
@@ -19573,6 +19608,11 @@
   "name": "Red River",
   "slug": "redriver",
   "ats": "workday"
+ },
+ {
+  "name": "Red Wing Shoe Company",
+  "slug": "RedWingShoeCompany",
+  "ats": "smartrecruiters"
  },
  {
   "name": "Reddit",
@@ -23987,6 +24027,11 @@
  {
   "name": "Trainline",
   "slug": "trainline",
+  "ats": "ashby"
+ },
+ {
+  "name": "Trajectory",
+  "slug": "trajectory",
   "ats": "ashby"
  },
  {
