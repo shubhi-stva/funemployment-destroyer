@@ -4710,6 +4710,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Category Labs",
+  "slug": "category-labs",
+  "ats": "ashby"
+ },
+ {
   "name": "Caterpillar Inc.",
   "slug": "cat",
   "ats": "workday"
@@ -6945,6 +6950,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Deeplocal",
+  "slug": "deeplocal",
+  "ats": "greenhouse"
+ },
+ {
   "name": "DeepMind",
   "slug": "deepmind",
   "ats": "greenhouse"
@@ -7890,6 +7900,11 @@
   "ats": "workable"
  },
  {
+  "name": "Elevation Autism Center",
+  "slug": "elevation-autism-center",
+  "ats": "workable"
+ },
+ {
   "name": "Elevation Capital",
   "slug": "elevationcapital",
   "ats": "rippling"
@@ -8133,6 +8148,11 @@
   "name": "ENFOS",
   "slug": "enfos-inc",
   "ats": "workable"
+ },
+ {
+  "name": "Engine",
+  "slug": "engine",
+  "ats": "greenhouse"
  },
  {
   "name": "Engineers Gate",
@@ -11075,6 +11095,11 @@
   "ats": "workday"
  },
  {
+  "name": "Helical",
+  "slug": "helical",
+  "ats": "workable"
+ },
+ {
   "name": "Helion Energy",
   "slug": "helion",
   "ats": "ashby"
@@ -11405,6 +11430,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Hootsuite",
+  "slug": "hootsuite",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Horace Mann",
   "slug": "horacemannservicecorporation",
   "ats": "greenhouse"
@@ -11493,6 +11523,11 @@
   "name": "HoYoverse",
   "slug": "hoyoverse",
   "ats": "ashby"
+ },
+ {
+  "name": "HP Inc.",
+  "slug": "hp",
+  "ats": "greenhouse"
  },
  {
   "name": "HP IQ",
@@ -13110,6 +13145,11 @@
   "ats": "workable"
  },
  {
+  "name": "Keyfactor",
+  "slug": "keyfactorinc",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Keyrock",
   "slug": "keyrock",
   "ats": "ashby"
@@ -14422,6 +14462,11 @@
  {
   "name": "Mach9",
   "slug": "mach9",
+  "ats": "ashby"
+ },
+ {
+  "name": "Machina Cognita Technologies",
+  "slug": "machinacognita",
   "ats": "ashby"
  },
  {
@@ -16705,6 +16750,11 @@
   "ats": "workday"
  },
  {
+  "name": "Northeastern Illinois University",
+  "slug": "neiu",
+  "ats": "workday"
+ },
+ {
   "name": "Northeastern University",
   "slug": "northeastern",
   "ats": "workday"
@@ -17510,6 +17560,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Orbital",
+  "slug": "orbital",
+  "ats": "ashby"
+ },
+ {
   "name": "Orbital Industries",
   "slug": "orbitalindustries",
   "ats": "ashby"
@@ -18208,6 +18263,11 @@
   "name": "Petfolk",
   "slug": "petfolk",
   "ats": "rippling"
+ },
+ {
+  "name": "PETRONAS Canada",
+  "slug": "petronascanada",
+  "ats": "workday"
  },
  {
   "name": "Pew Research Center",
@@ -22525,6 +22585,11 @@
   "ats": "oracle"
  },
  {
+  "name": "Subsense",
+  "slug": "subsense",
+  "ats": "lever"
+ },
+ {
   "name": "Subsplash",
   "slug": "subsplash",
   "ats": "greenhouse"
@@ -23658,6 +23723,11 @@
   "name": "TheGuarantors",
   "slug": "theguarantors-open-positions",
   "ats": "rippling"
+ },
+ {
+  "name": "Thehartford",
+  "slug": "thehartford",
+  "ats": "workday"
  },
  {
   "name": "Theodo",
