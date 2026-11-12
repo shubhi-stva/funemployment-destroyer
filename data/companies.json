@@ -2675,6 +2675,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Avante",
+  "slug": "avante",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Avav",
   "slug": "avav",
   "ats": "workday"
@@ -4625,6 +4630,11 @@
   "ats": "workday"
  },
  {
+  "name": "CARIAD",
+  "slug": "cariadinc",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Caris",
   "slug": "carislifesciences",
   "ats": "workday"
@@ -6135,6 +6145,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Conveo.ai",
+  "slug": "conveo",
+  "ats": "ashby"
+ },
+ {
   "name": "Conversica",
   "slug": "conversica",
   "ats": "lever"
@@ -7463,6 +7478,11 @@
   "name": "DoubleVerify",
   "slug": "doubleverify",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Dover",
+  "slug": "dover",
+  "ats": "workday"
  },
  {
   "name": "Dow Chemical Company",
@@ -10720,6 +10740,11 @@
   "ats": "workday"
  },
  {
+  "name": "Greystone",
+  "slug": "greyco",
+  "ats": "workday"
+ },
+ {
   "name": "Grid",
   "slug": "grid",
   "ats": "lever"
@@ -11960,6 +11985,11 @@
   "ats": "workday"
  },
  {
+  "name": "Illinois Tool Works",
+  "slug": "itw",
+  "ats": "workday"
+ },
+ {
   "name": "Illumia",
   "slug": "transact-campus",
   "ats": "breezy"
@@ -12218,6 +12248,11 @@
   "name": "Inova",
   "slug": "elar.fa.us2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "InsCipher",
+  "slug": "inscipher-careers",
+  "ats": "rippling"
  },
  {
   "name": "Insilico Logix",
@@ -12780,6 +12815,11 @@
   "ats": "workable"
  },
  {
+  "name": "JBT Marel",
+  "slug": "jbtm",
+  "ats": "workday"
+ },
+ {
   "name": "JCC Greater Boston",
   "slug": "jcc-greater-boston",
   "ats": "workable"
@@ -13290,6 +13330,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Kiss Products",
+  "slug": "kissusa",
+  "ats": "workday"
+ },
+ {
   "name": "Kite Pharma",
   "slug": "gilead",
   "ats": "workday"
@@ -13668,6 +13713,11 @@
   "name": "Lattice",
   "slug": "lattice",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Lattice Semiconductor",
+  "slug": "latticesemi",
+  "ats": "workday"
  },
  {
   "name": "LaunchDarkly",
@@ -14082,6 +14132,11 @@
  {
   "name": "Liquid",
   "slug": "liquid",
+  "ats": "ashby"
+ },
+ {
+  "name": "Liquid AI",
+  "slug": "liquid-ai",
   "ats": "ashby"
  },
  {
@@ -14842,6 +14897,11 @@
  {
   "name": "Marshfield Clinic Health System",
   "slug": "marshfieldclinichealthsystems",
+  "ats": "workday"
+ },
+ {
+  "name": "Martin Marietta",
+  "slug": "martinmarietta",
   "ats": "workday"
  },
  {
@@ -15730,6 +15790,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Mobility Global",
+  "slug": "mobility",
+  "ats": "workday"
+ },
+ {
   "name": "Mobilityware",
   "slug": "mobilityware",
   "ats": "greenhouse"
@@ -16095,6 +16160,11 @@
   "ats": "workday"
  },
  {
+  "name": "Multimatic",
+  "slug": "multimatic",
+  "ats": "workday"
+ },
+ {
   "name": "Multiply Labs",
   "slug": "multiplylabs",
   "ats": "lever"
@@ -16213,6 +16283,11 @@
   "name": "Nasdaq",
   "slug": "nasdaq",
   "ats": "workday"
+ },
+ {
+  "name": "Nasdaq",
+  "slug": "nasdaq",
+  "ats": "greenhouse"
  },
  {
   "name": "Nash",
@@ -16638,6 +16713,11 @@
   "name": "Nexthink",
   "slug": "Nexthink",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Nextpower",
+  "slug": "nextracker",
+  "ats": "workday"
  },
  {
   "name": "NextToken",
@@ -17345,6 +17425,11 @@
   "ats": "rippling"
  },
  {
+  "name": "Omya",
+  "slug": "omya",
+  "ats": "workday"
+ },
+ {
   "name": "Onapsis",
   "slug": "onapsis",
   "ats": "greenhouse"
@@ -17432,6 +17517,11 @@
  {
   "name": "Ontario Health",
   "slug": "oh",
+  "ats": "workday"
+ },
+ {
+  "name": "Ontario Securities Commission",
+  "slug": "osc",
   "ats": "workday"
  },
  {
@@ -17633,6 +17723,11 @@
   "name": "Oracle",
   "slug": "eeho.fa.us2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Orange County Transportation Authority",
+  "slug": "octa",
+  "ats": "workday"
  },
  {
   "name": "OraSure Technologies",
@@ -17955,6 +18050,11 @@
   "ats": "workday"
  },
  {
+  "name": "Panera Bread",
+  "slug": "panerabread",
+  "ats": "workday"
+ },
+ {
   "name": "Pangram Labs",
   "slug": "pangramlabs",
   "ats": "ashby"
@@ -17987,6 +18087,11 @@
  {
   "name": "PAR Tech",
   "slug": "par",
+  "ats": "ashby"
+ },
+ {
+  "name": "Parabola",
+  "slug": "parabola-io",
   "ats": "ashby"
  },
  {
@@ -18690,6 +18795,11 @@
   "ats": "lever"
  },
  {
+  "name": "Plusgrade",
+  "slug": "plusgrade",
+  "ats": "workday"
+ },
+ {
   "name": "PM Pediatric Care",
   "slug": "pmpediatrics",
   "ats": "workday"
@@ -19022,6 +19132,11 @@
  {
   "name": "Primient",
   "slug": "primient",
+  "ats": "workday"
+ },
+ {
+  "name": "Primoris Services",
+  "slug": "prim",
   "ats": "workday"
  },
  {
@@ -19980,6 +20095,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Renishaw",
+  "slug": "renishaw",
+  "ats": "workday"
+ },
+ {
   "name": "Rentvision",
   "slug": "rentvision",
   "ats": "workable"
@@ -20810,6 +20930,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "San Francisco Data",
+  "slug": "sfdata",
+  "ats": "ashby"
+ },
+ {
   "name": "Sanctuary AI",
   "slug": "sanctuary",
   "ats": "lever"
@@ -21458,6 +21583,11 @@
   "name": "Side",
   "slug": "sideinc",
   "ats": "lever"
+ },
+ {
+  "name": "Sidley Austin",
+  "slug": "sidley",
+  "ats": "workday"
  },
  {
   "name": "Sierra",
@@ -23585,6 +23715,11 @@
   "ats": "workday"
  },
  {
+  "name": "The Beauty Tech Group Trading",
+  "slug": "thebeautytechgroup",
+  "ats": "workable"
+ },
+ {
   "name": "The Boeing Company",
   "slug": "boeing",
   "ats": "workday"
@@ -23970,6 +24105,11 @@
   "ats": "rippling"
  },
  {
+  "name": "Tidal Wave Auto Spa",
+  "slug": "tidalwaveautospa",
+  "ats": "workday"
+ },
+ {
   "name": "Tihinsurance",
   "slug": "tihinsurance",
   "ats": "workday"
@@ -24165,6 +24305,11 @@
   "ats": "workable"
  },
  {
+  "name": "TP-Link Systems",
+  "slug": "tplink",
+  "ats": "workday"
+ },
+ {
   "name": "TPG",
   "slug": "tpgcareers",
   "ats": "greenhouse"
@@ -24353,6 +24498,11 @@
   "name": "TriNet",
   "slug": "fa-etgw-saasfaprod1.fa.ocs.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Trinity Life Sciences",
+  "slug": "trinitylifesciences",
+  "ats": "workday"
  },
  {
   "name": "Trinity Park Talent",
@@ -25243,6 +25393,11 @@
   "name": "Varick Agents",
   "slug": "varick-agents",
   "ats": "ashby"
+ },
+ {
+  "name": "Varsity Brands",
+  "slug": "varsitybrands",
+  "ats": "workday"
  },
  {
   "name": "VAST",
