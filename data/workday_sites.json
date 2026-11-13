@@ -3209,6 +3209,11 @@
   "name": "Florida Gulf Coast University",
   "attempts": 3
  },
+ "fhlb": {
+  "dc": "wd1",
+  "site": "fhlb_careers",
+  "name": "Federal Home Loan Bank of Dallas"
+ },
  "fhlbatl": {
   "dc": "wd1",
   "site": "fhlbatl",
@@ -3370,6 +3375,12 @@
   "dc": "wd3",
   "site": "fnz_careers",
   "name": "FNZ"
+ },
+ "fondsftq": {
+  "dc": null,
+  "site": null,
+  "name": "Fonds de solidarité FTQ",
+  "attempts": 1
  },
  "foresters": {
   "dc": null,
@@ -4584,6 +4595,12 @@
   "name": "JD Finish line",
   "attempts": 3
  },
+ "jdpa": {
+  "dc": null,
+  "site": null,
+  "name": "J.D. Power",
+  "attempts": 1
+ },
  "jefferson": {
   "dc": "wd5",
   "site": "External",
@@ -4641,6 +4658,12 @@
   "dc": "wd1",
   "site": "jpicareers",
   "name": "JPI"
+ },
+ "jsx": {
+  "dc": null,
+  "site": null,
+  "name": "JSX",
+  "attempts": 1
  },
  "juliusbaer": {
   "dc": "wd3",
@@ -5851,6 +5874,12 @@
   "dc": "wd1",
   "site": "Careers",
   "name": "New Balance"
+ },
+ "newbraunfels": {
+  "dc": null,
+  "site": null,
+  "name": "City of New Braunfels",
+  "attempts": 1
  },
  "newday": {
   "dc": "wd3",
@@ -7428,6 +7457,12 @@
   "dc": "wd1",
   "site": "situsamc",
   "name": "SitusAMC"
+ },
+ "sjindustries": {
+  "dc": null,
+  "site": null,
+  "name": "SJI",
+  "attempts": 1
  },
  "skechers": {
   "dc": null,
