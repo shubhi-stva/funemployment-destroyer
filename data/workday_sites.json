@@ -3380,7 +3380,7 @@
   "dc": null,
   "site": null,
   "name": "Fonds de solidarité FTQ",
-  "attempts": 2
+  "attempts": 3
  },
  "foresters": {
   "dc": null,
@@ -4599,7 +4599,7 @@
   "dc": null,
   "site": null,
   "name": "J.D. Power",
-  "attempts": 2
+  "attempts": 3
  },
  "jefferson": {
   "dc": "wd5",
@@ -4663,7 +4663,7 @@
   "dc": null,
   "site": null,
   "name": "JSX",
-  "attempts": 2
+  "attempts": 3
  },
  "juliusbaer": {
   "dc": "wd3",
@@ -5879,7 +5879,7 @@
   "dc": null,
   "site": null,
   "name": "City of New Braunfels",
-  "attempts": 2
+  "attempts": 3
  },
  "newday": {
   "dc": "wd3",
@@ -7462,7 +7462,7 @@
   "dc": null,
   "site": null,
   "name": "SJI",
-  "attempts": 2
+  "attempts": 3
  },
  "skechers": {
   "dc": null,
