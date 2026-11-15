@@ -3115,6 +3115,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Beacon Mobility",
+  "slug": "gobeacon",
+  "ats": "workday"
+ },
+ {
   "name": "Beaconsoftware",
   "slug": "beaconsoftware",
   "ats": "ashby"
@@ -3537,6 +3542,11 @@
  {
   "name": "Blizzard Entertainment",
   "slug": "activision",
+  "ats": "workday"
+ },
+ {
+  "name": "Blizzard Entertainment",
+  "slug": "xboxgaming",
   "ats": "workday"
  },
  {
@@ -4797,6 +4807,11 @@
  {
   "name": "CDK Global",
   "slug": "cdk",
+  "ats": "workday"
+ },
+ {
+  "name": "CDPHP",
+  "slug": "lthc",
   "ats": "workday"
  },
  {
@@ -9560,6 +9575,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Fort Bend County",
+  "slug": "fortbendcountytx",
+  "ats": "workday"
+ },
+ {
   "name": "Fortell",
   "slug": "fortell",
   "ats": "ashby"
@@ -11895,6 +11915,11 @@
   "ats": "ashby"
  },
  {
+  "name": "IAG Loyalty",
+  "slug": "iagloyalty",
+  "ats": "workday"
+ },
+ {
   "name": "Iambic Therapeutics",
   "slug": "iambic-therapeutics",
   "ats": "ashby"
@@ -14053,6 +14078,16 @@
   "name": "Liberis",
   "slug": "liberis",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Liberty Blume",
+  "slug": "libertyglobal",
+  "ats": "workday"
+ },
+ {
+  "name": "Liberty Global",
+  "slug": "libertyglobal",
+  "ats": "workday"
  },
  {
   "name": "Liberty Mutual Canada",
@@ -16525,6 +16560,11 @@
   "ats": "workday"
  },
  {
+  "name": "NCR Atleos",
+  "slug": "ncratleos",
+  "ats": "workday"
+ },
+ {
   "name": "NCR Voyix",
   "slug": "ncr",
   "ats": "workday"
@@ -17902,6 +17942,11 @@
  {
   "name": "Oregon State Government",
   "slug": "oregon",
+  "ats": "workday"
+ },
+ {
+  "name": "Oregon State University",
+  "slug": "oregonstate",
   "ats": "workday"
  },
  {
@@ -19810,6 +19855,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Raft",
+  "slug": "raft",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Railway",
   "slug": "railway",
   "ats": "ashby"
@@ -19917,6 +19967,11 @@
  {
   "name": "Raymond James Financial",
   "slug": "raymondjames",
+  "ats": "workday"
+ },
+ {
+  "name": "RBFCU",
+  "slug": "rbfcu",
   "ats": "workday"
  },
  {
@@ -20848,6 +20903,11 @@
   "name": "Runwise",
   "slug": "runwise",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Russell Investments",
+  "slug": "russell",
+  "ats": "workday"
  },
  {
   "name": "RWS",
@@ -24900,6 +24960,11 @@
   "ats": "workday"
  },
  {
+  "name": "Tyson Foods",
+  "slug": "tysonfoods",
+  "ats": "workday"
+ },
+ {
   "name": "U.S. Bank",
   "slug": "usbank",
   "ats": "workday"
@@ -25510,6 +25575,11 @@
   "ats": "breezy"
  },
  {
+  "name": "Vantive",
+  "slug": "vantive",
+  "ats": "workday"
+ },
+ {
   "name": "Vantor",
   "slug": "maxar",
   "ats": "workday"
@@ -25797,6 +25867,11 @@
  {
   "name": "Vibrant Emotional Health",
   "slug": "vibrant",
+  "ats": "workday"
+ },
+ {
+  "name": "Videojet",
+  "slug": "veralto",
   "ats": "workday"
  },
  {
