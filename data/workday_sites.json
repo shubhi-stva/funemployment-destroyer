@@ -3404,7 +3404,7 @@
   "dc": null,
   "site": null,
   "name": "Fort Bend County",
-  "attempts": 1
+  "attempts": 2
  },
  "fortrea": {
   "dc": "wd1",
@@ -3695,7 +3695,7 @@
   "dc": null,
   "site": null,
   "name": "Beacon Mobility",
-  "attempts": 1
+  "attempts": 2
  },
  "godirect": {
   "dc": null,
@@ -4953,7 +4953,7 @@
   "dc": null,
   "site": null,
   "name": "Liberty Global",
-  "attempts": 2
+  "attempts": 4
  },
  "lifefitness": {
   "dc": null,
@@ -6238,7 +6238,7 @@
   "dc": null,
   "site": null,
   "name": "Oregon State University",
-  "attempts": 1
+  "attempts": 2
  },
  "oreillyauto": {
   "dc": null,
@@ -6887,7 +6887,7 @@
   "dc": null,
   "site": null,
   "name": "RBFCU",
-  "attempts": 1
+  "attempts": 2
  },
  "rbi": {
   "dc": "wd3",
@@ -7161,7 +7161,7 @@
   "dc": null,
   "site": null,
   "name": "Russell Investments",
-  "attempts": 1
+  "attempts": 2
  },
  "rxo": {
   "dc": "wd501",
@@ -8593,7 +8593,7 @@
   "dc": null,
   "site": null,
   "name": "Vantive",
-  "attempts": 1
+  "attempts": 2
  },
  "vareximaging": {
   "dc": "wd103",
