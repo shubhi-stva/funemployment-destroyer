@@ -3912,6 +3912,12 @@
   "name": "Hastings Direct",
   "attempts": 3
  },
+ "havas": {
+  "dc": null,
+  "site": null,
+  "name": "Havas",
+  "attempts": 1
+ },
  "hbfuller": {
   "dc": "wd1",
   "site": "Careers",
@@ -4382,7 +4388,7 @@
   "dc": null,
   "site": null,
   "name": "Inspire Brands",
-  "attempts": 2
+  "attempts": 3
  },
  "insulet": {
   "dc": "wd5",
@@ -8237,6 +8243,12 @@
   "site": "tricentis_careers",
   "name": "Tricentis"
  },
+ "tricorbraun": {
+  "dc": null,
+  "site": null,
+  "name": "TricorBraun",
+  "attempts": 1
+ },
  "trimble": {
   "dc": "wd1",
   "site": "trimblecareers",
@@ -8729,6 +8741,12 @@
   "site": null,
   "name": "United Therapeutics Corporation",
   "attempts": 3
+ },
+ "vhr_fhlbdm": {
+  "dc": null,
+  "site": null,
+  "name": "Federal Home Loan Bank of Des Moines",
+  "attempts": 1
  },
  "vialto": {
   "dc": null,

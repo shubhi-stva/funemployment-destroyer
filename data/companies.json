@@ -275,6 +275,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Absolics",
+  "slug": "absolicsinc",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Absolute Facility Solutions",
   "slug": "AbsoluteFacilitySolutionsLLC",
   "ats": "smartrecruiters"
@@ -3875,6 +3880,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Bound",
+  "slug": "bound",
+  "ats": "rippling"
+ },
+ {
   "name": "Box",
   "slug": "boxinc",
   "ats": "greenhouse"
@@ -7415,6 +7425,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "DLR Group",
+  "slug": "dlrgroup",
+  "ats": "greenhouse"
+ },
+ {
   "name": "DLS Engineering Associates, Inc.",
   "slug": "dlsengineering",
   "ats": "rippling"
@@ -7678,6 +7693,11 @@
   "name": "DuBois Chemicals",
   "slug": "duboischemicals",
   "ats": "workday"
+ },
+ {
+  "name": "Duetti",
+  "slug": "duetti",
+  "ats": "lever"
  },
  {
   "name": "Duetto Research",
@@ -8915,6 +8935,11 @@
   "ats": "workday"
  },
  {
+  "name": "Fantom",
+  "slug": "fantom-corporation",
+  "ats": "lever"
+ },
+ {
   "name": "Fanvue",
   "slug": "fanvue",
   "ats": "ashby"
@@ -8992,6 +9017,11 @@
  {
   "name": "Federal Home Loan Bank of Dallas",
   "slug": "fhlb",
+  "ats": "workday"
+ },
+ {
+  "name": "Federal Home Loan Bank of Des Moines",
+  "slug": "vhr_fhlbdm",
   "ats": "workday"
  },
  {
@@ -11135,6 +11165,11 @@
   "ats": "lever"
  },
  {
+  "name": "Havas",
+  "slug": "havas",
+  "ats": "workday"
+ },
+ {
   "name": "Haven Studios",
   "slug": "haven",
   "ats": "greenhouse"
@@ -11348,6 +11383,11 @@
   "name": "Hex",
   "slug": "hex",
   "ats": "ashby"
+ },
+ {
+  "name": "HexArmor",
+  "slug": "hexarmor",
+  "ats": "greenhouse"
  },
  {
   "name": "HEXAWARE",
@@ -16750,6 +16790,11 @@
   "ats": "workable"
  },
  {
+  "name": "NeuroSpark",
+  "slug": "neurospark",
+  "ats": "rippling"
+ },
+ {
   "name": "Neutreeno",
   "slug": "neutreeno-1",
   "ats": "workable"
@@ -20255,6 +20300,11 @@
   "ats": "workday"
  },
  {
+  "name": "Remanence",
+  "slug": "remanence",
+  "ats": "ashby"
+ },
+ {
   "name": "Remarcable",
   "slug": "remarcable-inc",
   "ats": "ashby"
@@ -22398,6 +22448,11 @@
   "name": "Sopra Steria",
   "slug": "SopraSteria1",
   "ats": "smartrecruiters"
+ },
+ {
+  "name": "Soros Fund Management",
+  "slug": "familyoffice",
+  "ats": "greenhouse"
  },
  {
   "name": "Sorting Robotics",
@@ -24707,6 +24762,11 @@
  {
   "name": "Tricentis",
   "slug": "tricentis",
+  "ats": "workday"
+ },
+ {
+  "name": "TricorBraun",
+  "slug": "tricorbraun",
   "ats": "workday"
  },
  {
@@ -27068,6 +27128,11 @@
   "name": "Yum! Brands",
   "slug": "eczd.fa.us2.oraclecloud.com",
   "ats": "oracle"
+ },
+ {
+  "name": "Z1 Tech",
+  "slug": "z1tech",
+  "ats": "lever"
  },
  {
   "name": "Zaber Technologies",
