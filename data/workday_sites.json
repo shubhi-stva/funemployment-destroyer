@@ -3916,7 +3916,7 @@
   "dc": null,
   "site": null,
   "name": "Havas",
-  "attempts": 2
+  "attempts": 3
  },
  "hbfuller": {
   "dc": "wd1",
@@ -8247,7 +8247,7 @@
   "dc": null,
   "site": null,
   "name": "TricorBraun",
-  "attempts": 2
+  "attempts": 3
  },
  "trimble": {
   "dc": "wd1",
@@ -8746,7 +8746,7 @@
   "dc": null,
   "site": null,
   "name": "Federal Home Loan Bank of Des Moines",
-  "attempts": 2
+  "attempts": 3
  },
  "vialto": {
   "dc": null,
