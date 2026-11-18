@@ -3278,6 +3278,12 @@
   "site": "finra",
   "name": "Finra"
  },
+ "fireflyspace": {
+  "dc": null,
+  "site": null,
+  "name": "Firefly Aerospace",
+  "attempts": 1
+ },
  "firstam": {
   "dc": "wd1",
   "site": "firstamericancareers",
@@ -3652,6 +3658,12 @@
   "dc": "wd1",
   "site": "gileadcareers",
   "name": "Gilead Sciences"
+ },
+ "giro": {
+  "dc": null,
+  "site": null,
+  "name": "GIRO",
+  "attempts": 1
  },
  "gladstone": {
   "dc": null,
@@ -4584,6 +4596,12 @@
   "site": null,
   "name": "Jain Global",
   "attempts": 3
+ },
+ "jasperholdings": {
+  "dc": null,
+  "site": null,
+  "name": "Jasperholdings",
+  "attempts": 1
  },
  "jbtm": {
   "dc": null,
@@ -6438,6 +6456,12 @@
   "site": null,
   "name": "Parexel",
   "attempts": 3
+ },
+ "parklandhospital": {
+  "dc": null,
+  "site": null,
+  "name": "Parkland Health",
+  "attempts": 1
  },
  "parsons": {
   "dc": "wd5",
