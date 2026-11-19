@@ -13085,6 +13085,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Jessup University",
+  "slug": "WilliamJessupUniversityBayAreaCampus",
+  "ats": "smartrecruiters"
+ },
+ {
   "name": "Jigsaw",
   "slug": "jigsaw",
   "ats": "ashby"
@@ -14095,6 +14100,11 @@
   "ats": "workday"
  },
  {
+  "name": "Lennar",
+  "slug": "lennar",
+  "ats": "workday"
+ },
+ {
   "name": "Lennar Corporation",
   "slug": "lennar",
   "ats": "workday"
@@ -14947,6 +14957,11 @@
  {
   "name": "Makai Labs",
   "slug": "makai-labs",
+  "ats": "ashby"
+ },
+ {
+  "name": "MakerMaker",
+  "slug": "makermaker",
   "ats": "ashby"
  },
  {
@@ -21555,6 +21570,11 @@
   "ats": "lever"
  },
  {
+  "name": "Secureframe",
+  "slug": "secureframe",
+  "ats": "ashby"
+ },
+ {
   "name": "Securian Financial Group",
   "slug": "hq",
   "ats": "workday"
@@ -22567,6 +22587,11 @@
  {
   "name": "Southern Tide",
   "slug": "oxford",
+  "ats": "workday"
+ },
+ {
+  "name": "Southern Water",
+  "slug": "southernwater",
   "ats": "workday"
  },
  {
