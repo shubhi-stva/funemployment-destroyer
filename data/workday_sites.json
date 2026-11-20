@@ -7656,10 +7656,9 @@
   "name": "SOTI"
  },
  "southernwater": {
-  "dc": null,
-  "site": null,
-  "name": "Southern Water",
-  "attempts": 2
+  "dc": "wd3",
+  "site": "southernwater",
+  "name": "Southern Water"
  },
  "southstatebank": {
   "dc": "wd5",
