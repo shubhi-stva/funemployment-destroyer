@@ -1854,6 +1854,12 @@
   "site": "centerstonecareers",
   "name": "Centerstone"
  },
+ "centier": {
+  "dc": null,
+  "site": null,
+  "name": "Centier Bank",
+  "attempts": 1
+ },
  "centific": {
   "dc": null,
   "site": null,
@@ -3294,6 +3300,12 @@
   "site": null,
   "name": "FNBO",
   "attempts": 3
+ },
+ "firstpremier": {
+  "dc": null,
+  "site": null,
+  "name": "First PREMIER Bank",
+  "attempts": 1
  },
  "firstquality": {
   "dc": "wd5",
@@ -8689,6 +8701,12 @@
   "dc": "wd5",
   "site": "venerablecareers",
   "name": "Venerable"
+ },
+ "veoliauki": {
+  "dc": null,
+  "site": null,
+  "name": "Veolia",
+  "attempts": 1
  },
  "verabradley": {
   "dc": null,
