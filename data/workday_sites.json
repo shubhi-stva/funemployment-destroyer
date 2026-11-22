@@ -1858,7 +1858,7 @@
   "dc": null,
   "site": null,
   "name": "Centier Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "centific": {
   "dc": null,
@@ -3305,7 +3305,7 @@
   "dc": null,
   "site": null,
   "name": "First PREMIER Bank",
-  "attempts": 1
+  "attempts": 2
  },
  "firstquality": {
   "dc": "wd5",
@@ -8706,7 +8706,7 @@
   "dc": null,
   "site": null,
   "name": "Veolia",
-  "attempts": 1
+  "attempts": 2
  },
  "verabradley": {
   "dc": null,
