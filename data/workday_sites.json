@@ -3330,6 +3330,12 @@
   "name": "Fiserv",
   "attempts": 3
  },
+ "fiskars": {
+  "dc": null,
+  "site": null,
+  "name": "Fiskars Group",
+  "attempts": 1
+ },
  "fivebelow": {
   "dc": "wd1",
   "site": "fivebelowcareers",
@@ -7692,6 +7698,12 @@
   "site": null,
   "name": "Sony Pictures Entertainment",
   "attempts": 3
+ },
+ "specialized": {
+  "dc": null,
+  "site": null,
+  "name": "Specialized",
+  "attempts": 1
  },
  "spectris": {
   "dc": "wd3",

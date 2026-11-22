@@ -9415,6 +9415,11 @@
   "ats": "workday"
  },
  {
+  "name": "Fiskars Group",
+  "slug": "fiskars",
+  "ats": "workday"
+ },
+ {
   "name": "Five Below",
   "slug": "fivebelow",
   "ats": "workday"
@@ -22748,6 +22753,11 @@
   "name": "SpawGlass",
   "slug": "spawglass",
   "ats": "lever"
+ },
+ {
+  "name": "Specialized",
+  "slug": "specialized",
+  "ats": "workday"
  },
  {
   "name": "Specter",
