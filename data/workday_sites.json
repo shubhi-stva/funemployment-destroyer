@@ -3334,7 +3334,7 @@
   "dc": null,
   "site": null,
   "name": "Fiskars Group",
-  "attempts": 2
+  "attempts": 3
  },
  "fivebelow": {
   "dc": "wd1",
@@ -7700,10 +7700,9 @@
   "attempts": 3
  },
  "specialized": {
-  "dc": null,
-  "site": null,
-  "name": "Specialized",
-  "attempts": 2
+  "dc": "wd5",
+  "site": "SPECIALIZED_External_Career_Site",
+  "name": "Specialized"
  },
  "spectris": {
   "dc": "wd3",
