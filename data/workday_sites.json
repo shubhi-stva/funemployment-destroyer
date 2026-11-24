@@ -3051,6 +3051,12 @@
   "site": "etsy_careers",
   "name": "Depop"
  },
+ "europeantour": {
+  "dc": null,
+  "site": null,
+  "name": "European Tour Group",
+  "attempts": 1
+ },
  "evercommerce": {
   "dc": "wd1",
   "site": "evercommerce_careers",
@@ -6627,6 +6633,12 @@
   "dc": "wd1",
   "site": "Careers",
   "name": "PJT Partners"
+ },
+ "plains": {
+  "dc": null,
+  "site": null,
+  "name": "Plains All American Pipeline",
+  "attempts": 1
  },
  "plantemoran": {
   "dc": null,
