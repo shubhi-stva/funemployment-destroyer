@@ -2900,6 +2900,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Ayo Semiconductor",
+  "slug": "ayosemi",
+  "ats": "ashby"
+ },
+ {
   "name": "Aypa Power",
   "slug": "aypapower",
   "ats": "greenhouse"
@@ -5840,6 +5845,11 @@
   "ats": "ashby"
  },
  {
+  "name": "CodeRabbit",
+  "slug": "coderabbit",
+  "ats": "ashby"
+ },
+ {
   "name": "Cogeco",
   "slug": "cogeco",
   "ats": "workday"
@@ -7280,6 +7290,11 @@
   "ats": "workday"
  },
  {
+  "name": "DEPT",
+  "slug": "dept",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Descript",
   "slug": "descript",
   "ats": "greenhouse"
@@ -7403,6 +7418,11 @@
   "name": "DigiKey",
   "slug": "digikey",
   "ats": "workday"
+ },
+ {
+  "name": "Digital Control",
+  "slug": "digital-control",
+  "ats": "workable"
  },
  {
   "name": "Digs",
@@ -9928,6 +9948,11 @@
   "name": "Fragomen",
   "slug": "fragomen",
   "ats": "workday"
+ },
+ {
+  "name": "Framework",
+  "slug": "framework",
+  "ats": "rippling"
  },
  {
   "name": "Franklin Templeton",
@@ -17200,6 +17225,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Nexvel",
+  "slug": "nexvelsolutions",
+  "ats": "workable"
+ },
+ {
   "name": "Nexxen",
   "slug": "nexxen",
   "ats": "ashby"
@@ -19260,6 +19290,11 @@
   "ats": "workday"
  },
  {
+  "name": "Plug Technologies",
+  "slug": "plugmotors",
+  "ats": "ashby"
+ },
+ {
   "name": "Pluralis Research",
   "slug": "pluralis-research",
   "ats": "ashby"
@@ -20388,6 +20423,11 @@
   "name": "Rebellion",
   "slug": "rebellion",
   "ats": "workable"
+ },
+ {
+  "name": "Recidiviz",
+  "slug": "recidiviz",
+  "ats": "greenhouse"
  },
  {
   "name": "ReCor Medical",
@@ -24830,6 +24870,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Tombras",
+  "slug": "tombrascareers",
+  "ats": "rippling"
+ },
+ {
   "name": "TOMRA",
   "slug": "Tomra",
   "ats": "smartrecruiters"
@@ -27408,6 +27453,11 @@
   "name": "Xometry",
   "slug": "xometry",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Xona Space Systems",
+  "slug": "xona-space",
+  "ats": "ashby"
  },
  {
   "name": "Xpansiv",
