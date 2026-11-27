@@ -2170,6 +2170,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Artefact",
+  "slug": "artefact",
+  "ats": "greenhouse"
+ },
+ {
   "name": "Artera",
   "slug": "artera-2",
   "ats": "lever"
@@ -12220,6 +12225,11 @@
   "ats": "workday"
  },
  {
+  "name": "ICONIQ Capital",
+  "slug": "iconiqhandshake",
+  "ats": "greenhouse"
+ },
+ {
   "name": "ID.me",
   "slug": "idmeuniversityrecruiting",
   "ats": "greenhouse"
@@ -19063,6 +19073,11 @@
   "name": "Phoenix Contact",
   "slug": "phoenixcontact",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Phoenix Software",
+  "slug": "phoenix-software",
+  "ats": "workable"
  },
  {
   "name": "Phonely",
@@ -27603,6 +27618,11 @@
   "name": "Zeiss",
   "slug": "zeissgroup",
   "ats": "workday"
+ },
+ {
+  "name": "Zeit AI (YC S24)",
+  "slug": "zeit-ai",
+  "ats": "ashby"
  },
  {
   "name": "Zekelman Industries",
