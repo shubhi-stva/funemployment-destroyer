@@ -3710,6 +3710,11 @@
   "ats": "workday"
  },
  {
+  "name": "Blue Cross Blue Shield of Massachusetts",
+  "slug": "bcbsma",
+  "ats": "workday"
+ },
+ {
   "name": "Blue Cross Blue Shield of Michigan",
   "slug": "ejko.fa.us2.oraclecloud.com",
   "ats": "oracle"
@@ -5515,6 +5520,11 @@
   "ats": "workday"
  },
  {
+  "name": "City Utilities of Springfield",
+  "slug": "cityutilities",
+  "ats": "workday"
+ },
+ {
   "name": "Citylitics",
   "slug": "citylitics",
   "ats": "workable"
@@ -5643,6 +5653,11 @@
   "name": "Clearway Energy",
   "slug": "clearwayjobs",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Clemson University",
+  "slug": "clemson",
+  "ats": "workday"
  },
  {
   "name": "Clera",
@@ -7803,6 +7818,11 @@
   "name": "Dryft",
   "slug": "dryft",
   "ats": "ashby"
+ },
+ {
+  "name": "DS Smith",
+  "slug": "dssmith",
+  "ats": "workday"
  },
  {
   "name": "DS Smith",
@@ -11710,6 +11730,11 @@
   "ats": "ashby"
  },
  {
+  "name": "HireHawk",
+  "slug": "hirehawk",
+  "ats": "workable"
+ },
+ {
   "name": "HireVue",
   "slug": "HireVue",
   "ats": "smartrecruiters"
@@ -12163,6 +12188,11 @@
   "name": "IA Collaborative",
   "slug": "iacollaborative",
   "ats": "ashby"
+ },
+ {
+  "name": "iA Financial Group",
+  "slug": "ia",
+  "ats": "workday"
  },
  {
   "name": "IAG Loyalty",
@@ -14985,6 +15015,11 @@
   "ats": "lever"
  },
  {
+  "name": "Lyreco",
+  "slug": "lyreco",
+  "ats": "workday"
+ },
+ {
   "name": "Lyte AI",
   "slug": "lyte",
   "ats": "rippling"
@@ -17788,6 +17823,11 @@
   "name": "Odin Dynamics, Inc",
   "slug": "odin-dynamics",
   "ats": "ashby"
+ },
+ {
+  "name": "ODL",
+  "slug": "odl",
+  "ats": "workday"
  },
  {
   "name": "Odys Aviation",
@@ -20785,6 +20825,11 @@
   "ats": "smartrecruiters"
  },
  {
+  "name": "Resurgent Capital Services",
+  "slug": "resurgent",
+  "ats": "workday"
+ },
+ {
   "name": "Resurgent Industries",
   "slug": "resurgent-industries",
   "ats": "ashby"
@@ -20818,6 +20863,11 @@
   "name": "Revel",
   "slug": "revel",
   "ats": "ashby"
+ },
+ {
+  "name": "Revelyst",
+  "slug": "revelyst",
+  "ats": "workday"
  },
  {
   "name": "Revenue Analytics",
@@ -22010,6 +22060,11 @@
   "ats": "ashby"
  },
  {
+  "name": "Servco",
+  "slug": "servco",
+  "ats": "workday"
+ },
+ {
   "name": "Serve Robotics",
   "slug": "serverobotics",
   "ats": "ashby"
@@ -22973,6 +23028,11 @@
   "name": "Speechify",
   "slug": "speechify",
   "ats": "greenhouse"
+ },
+ {
+  "name": "Speechmatics",
+  "slug": "speechmatics",
+  "ats": "ashby"
  },
  {
   "name": "Spellman High Voltage Electronics",
@@ -25195,6 +25255,11 @@
   "ats": "greenhouse"
  },
  {
+  "name": "Trinzic",
+  "slug": "trinzic",
+  "ats": "workday"
+ },
+ {
   "name": "Trio",
   "slug": "trio",
   "ats": "lever"
@@ -25765,6 +25830,11 @@
   "ats": "workday"
  },
  {
+  "name": "University of Pennsylvania",
+  "slug": "upenn",
+  "ats": "workday"
+ },
+ {
   "name": "University of Rochester",
   "slug": "rochester",
   "ats": "workday"
@@ -26068,6 +26138,11 @@
   "name": "Vantage Point Solutions",
   "slug": "vantage-point-solutions-inc",
   "ats": "breezy"
+ },
+ {
+  "name": "Vantiva",
+  "slug": "vantiva",
+  "ats": "workday"
  },
  {
   "name": "Vantive",

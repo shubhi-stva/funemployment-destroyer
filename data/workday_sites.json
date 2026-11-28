@@ -1162,6 +1162,12 @@
   "site": "Generation_Blue",
   "name": "Louisiana Blue"
  },
+ "bcbsma": {
+  "dc": null,
+  "site": null,
+  "name": "Blue Cross Blue Shield of Massachusetts",
+  "attempts": 1
+ },
  "bcbsmn": {
   "dc": null,
   "site": null,
@@ -2080,6 +2086,12 @@
   "name": "City of Vancouver",
   "attempts": 3
  },
+ "cityutilities": {
+  "dc": null,
+  "site": null,
+  "name": "City Utilities of Springfield",
+  "attempts": 1
+ },
  "clarioclinical": {
   "dc": "wd1",
   "site": "clarioclinical_careers",
@@ -2111,6 +2123,12 @@
   "dc": "wd1",
   "site": "Clearwater_Analytics_Careers",
   "name": "CWAN"
+ },
+ "clemson": {
+  "dc": null,
+  "site": null,
+  "name": "Clemson University",
+  "attempts": 1
  },
  "cliftonlarsonallen": {
   "dc": null,
@@ -5176,6 +5194,12 @@
   "name": "Las Vegas Valley Water District",
   "attempts": 3
  },
+ "lyreco": {
+  "dc": null,
+  "site": null,
+  "name": "Lyreco",
+  "attempts": 1
+ },
  "lyten": {
   "dc": null,
   "site": null,
@@ -6194,6 +6218,12 @@
   "site": "octa_careers",
   "name": "Orange County Transportation Authority"
  },
+ "odl": {
+  "dc": null,
+  "site": null,
+  "name": "ODL",
+  "attempts": 1
+ },
  "oh": {
   "dc": "wd3",
   "site": "oh",
@@ -7073,10 +7103,22 @@
   "name": "Restaurant Technologies",
   "attempts": 3
  },
+ "resurgent": {
+  "dc": null,
+  "site": null,
+  "name": "Resurgent Capital Services",
+  "attempts": 1
+ },
  "revantage": {
   "dc": "wd1",
   "site": "revantage",
   "name": "Revantage Corporate Services"
+ },
+ "revelyst": {
+  "dc": null,
+  "site": null,
+  "name": "Revelyst",
+  "attempts": 1
  },
  "revvity": {
   "dc": "wd103",
@@ -7471,6 +7513,11 @@
   "site": null,
   "name": "Sentry Insurance",
   "attempts": 3
+ },
+ "servco": {
+  "dc": "wd5",
+  "site": "servco_careers",
+  "name": "Servco"
  },
  "servicetitan": {
   "dc": "wd1",
@@ -8334,6 +8381,12 @@
   "name": "Trinity Life Sciences",
   "attempts": 3
  },
+ "trinzic": {
+  "dc": null,
+  "site": null,
+  "name": "Trinzic",
+  "attempts": 1
+ },
  "triumf": {
   "dc": null,
   "site": null,
@@ -8674,6 +8727,12 @@
   "site": null,
   "name": "Vantage Data Centers",
   "attempts": 3
+ },
+ "vantiva": {
+  "dc": null,
+  "site": null,
+  "name": "Vantiva",
+  "attempts": 1
  },
  "vantive": {
   "dc": null,
